@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/secondary_title_bar"
+        />
+
+    <!-- <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:orientation="horizontal">
+
+         <EditText
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             android:layout_weight="10"
+             android:text="12"
+             />
+         <ImageView
+             android:layout_width="0dp"
+             android:layout_height="20dp"
+             android:layout_weight="1"
+             android:background="@drawable/search1"/>
+
+     </LinearLayout>-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="13dp"
+            android:layout_marginTop="3dp"
+            android:layout_gravity="center"
+            android:textColor="#ffaaaaaa"
+            android:textSize="12sp"
+            android:text="已选择"/>
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp">
+            <GridView
+                android:id="@+id/GridView1"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:columnWidth="90dp"
+                android:numColumns="1"
+                android:verticalSpacing="10dp"
+                android:horizontalSpacing="10dp"
+                android:stretchMode="columnWidth"
+                android:gravity="center"
+
+                />
+        </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/horiznaview_linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.gofirst.scenecollection.evidence.view.customview.PermissionSetingHorizNavView
+            android:id="@+id/custom_rec"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+        </com.gofirst.scenecollection.evidence.view.customview.PermissionSetingHorizNavView>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:id="@+id/container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/activity_background"
+                android:visibility="visible"
+                android:orientation="vertical" >
+                <com.gofirst.scenecollection.evidence.view.customview.ExpandListView
+                    android:id="@+id/all_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+                <View
+                    android:id="@+id/show_gray"
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    android:background="#ffcccccc"/>
+
+                <com.gofirst.scenecollection.evidence.view.customview.ExpandListView
+                    android:id="@+id/allpeople_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+    </FrameLayout>
+
+</LinearLayout>

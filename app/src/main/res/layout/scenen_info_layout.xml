@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:audio="http://schemas.android.com/apk/res-auto"
+    android:scrollbars="none">
+
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/rect"/>
+
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="现场天气"
+            android:textColor="#5E5E5E"
+            android:textSize="17dp"/>
+
+    </LinearLayout>
+
+    <Spinner
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_marginRight="20dp"
+        android:entries="@array/weather_strings"
+        android:background="#F8F8F8"
+        android:id="@+id/weather_spinner"
+        android:layout_height="30dp"
+        android:paddingLeft="5dp"
+        android:textSize="16dp" />
+
+    <View
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#E3E3E3"/>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/rect"/>
+
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="温度"
+            android:textColor="#5E5E5E"
+            android:textSize="17dp"/>
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/temperature"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_marginRight="20dp"
+        android:layout_height="30dp"
+        android:hint="30.5"
+        android:paddingLeft="5dp"
+        android:textSize="16dp"
+        android:background="@drawable/rect_stroke"/>
+
+    <View
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#E3E3E3"/>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/rect"/>
+
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="风向"
+            android:textColor="#5E5E5E"
+            android:textSize="17dp"/>
+
+    </LinearLayout>
+
+    <Spinner
+        android:id="@+id/wind_spinner"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_marginRight="20dp"
+        android:entries="@array/wind_direction_strings"
+        android:background="#F8F8F8"
+        android:layout_height="30dp"
+        android:paddingLeft="5dp"
+        android:textSize="16dp" />
+
+    <View
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#E3E3E3"/>
+
+    <com.gofirst.scenecollection.evidence.view.customview.AudioEditText
+        android:layout_width="match_parent"
+        android:id="@+id/weather_other"
+        audio:father="现场环境"
+        audio:child="天气备注"
+        android:layout_height="wrap_content"/>
+    <View
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#E3E3E3"/>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/rect"/>
+
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="光照条件"
+            android:textColor="#5E5E5E"
+            android:textSize="17dp"/>
+
+    </LinearLayout>
+
+    <com.gofirst.scenecollection.evidence.view.customview.SegmentedGroup
+        xmlns:segmentedgroup="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/lighting_sources"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="horizontal"
+        segmentedgroup:sc_border_width="1dp"
+        segmentedgroup:sc_tint_color="#82A8CB"
+        segmentedgroup:sc_corner_radius="10dp">
+
+        <RadioButton
+            android:id="@+id/natural_light"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textSize="14sp"
+            android:layout_height="wrap_content"
+            android:text="自然光"
+            style="@style/RadioButton" />
+
+        <RadioButton
+            android:id="@+id/bomb_light"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textSize="14sp"
+            android:layout_height="wrap_content"
+            android:text="灯光"
+            style="@style/RadioButton" />
+
+        <RadioButton
+            android:id="@+id/special_light"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="特种光"
+            android:textSize="14sp"
+            style="@style/RadioButton" />
+    </com.gofirst.scenecollection.evidence.view.customview.SegmentedGroup>
+
+   <LinearLayout
+    android:layout_marginTop="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <TextView
+        android:layout_marginLeft="10dp"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_gravity="center_vertical"
+        android:background="@drawable/rect"/>
+
+    <TextView
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="现场条件"
+        android:textColor="#5E5E5E"
+        android:textSize="17dp"/>
+
+</LinearLayout>
+
+    <com.gofirst.scenecollection.evidence.view.customview.SegmentedGroup
+        xmlns:segmentedgroup="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/report_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="horizontal"
+        segmentedgroup:sc_border_width="1dp"
+        segmentedgroup:sc_tint_color="#82A8CB"
+        segmentedgroup:sc_corner_radius="10dp">
+
+        <RadioButton
+            android:id="@+id/original_field"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:text="原始现场"
+            style="@style/RadioButton" />
+
+        <RadioButton
+            android:id="@+id/changed_field"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textSize="14sp"
+            android:layout_height="wrap_content"
+            android:text="变动现场"
+            style="@style/RadioButton" />
+    </com.gofirst.scenecollection.evidence.view.customview.SegmentedGroup>
+
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/rect"/>
+
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="保护时间"
+            android:textColor="#5E5E5E"
+            android:textSize="17dp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_marginRight="20dp"
+        android:layout_height="30dp"
+        android:gravity="center_vertical"
+        android:id="@+id/protect_date"
+        android:text="点击进行选择"
+        android:paddingLeft="5dp"
+        android:textSize="16dp"
+        android:background="@drawable/rect_stroke"/>
+    <View
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#E3E3E3"/>
+
+    <Button
+        android:id="@+id/save_btn"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="保存"
+        android:textSize="17sp"
+        android:textColor="@android:color/white"
+        android:background="@drawable/common_btn_bg"/>
+
+</LinearLayout>
+</ScrollView>

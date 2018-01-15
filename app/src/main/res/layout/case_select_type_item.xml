@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.gofirst.scenecollection.evidence.view.customview.TabTextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/type"
+    android:layout_width="100dp"
+    android:layout_height="35dp"
+    android:gravity="center"
+    android:layout_gravity="center"
+    android:textSize="17sp"
+    android:background="@drawable/rect_gray"
+    android:text="现场试验" />

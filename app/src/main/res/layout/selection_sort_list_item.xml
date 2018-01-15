@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/selection_sort_list_item_tv"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/selection_sort_list_item_height"
+        android:gravity="left|center_vertical"
+        android:text="item"
+        android:textSize="@dimen/selection_sort_list_item_text_size"
+        android:textColor="@color/selection_sort_list_item_text_normal"/>
+</LinearLayout>

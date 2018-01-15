@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- ************************************************************************************** -->
+    <!-- 通用文字颜色定义 -->
+    <!-- 蓝色文字文本颜色 -->
+    <color name="text_common_blue_color">#ff2ea2eb</color>
+    <!-- 灰色文字文本颜色 -->
+    <color name="text_common_gray_color">#ff777777</color>
+    <!-- 白色文字文本颜色 -->
+    <color name="text_common_white_color">#ffffffff</color>
+    <!-- 黑色文字文本颜色 -->
+    <color name="text_common_black_color">#ff000000</color>
+    <!-- 文本输入框提示文字文本颜色 -->
+    <color name="edit_text_common_index_color">#ff999999</color>
+    <!-- 文本输入框文本颜色 -->
+    <color name="edit_text_common_color">#ff333333</color>
+
+    <!-- 默认界面背景输入颜色 -->
+    <color name="common_background">#fff4f4f4</color>
+    <!-- 通用列表分割线颜色 -->
+    <color name="common_split_color">#ffcccccc</color>
+    <!-- 登录按钮背景颜色 ：不可点击 -->
+    <color name="login_btn_bg_disable_color">#ffeeeeee</color>
+    <!-- 登录按钮背景颜色 ：正常 -->
+    <color name="login_btn_bg_normal_color">#ff2ea2eb</color>
+    <!-- 登录按钮背景颜色 ：按下 -->
+    <color name="login_btn_bg_press_color">#ff47b7fd</color>
+    <!-- 通用按钮背景颜色 ：不可点击 -->
+    <color name="common_btn_bg_disable_color">#ffeeeeee</color>
+    <!-- 通用按钮背景颜色 ：正常 -->
+    <color name="common_btn_bg_normal_color">#ff2ea2eb</color>
+    <!-- 通用按钮背景颜色 ：按下 -->
+    <color name="common_btn_bg_press_color">#ff47b7fd</color>
+    <!-- 通用灰色按钮背景颜色 ：不可点击 -->
+    <color name="common_btn_gray_bg_disable_color">#ffffffff</color>
+    <color name="common_btn_gray_bg_edge_disable_color">#ffcccccc</color>
+    <drawable name="common_btn_gray_text_disable_color">#ffffffff</drawable>
+    <!-- 通用灰色按钮背景颜色 ：正常 -->
+    <color name="common_btn_gray_bg_normal_color">#ffffffff</color>
+    <color name="common_btn_gray_bg_edge_normal_color">#ff2ea2eb</color>
+    <drawable name="common_btn_gray_text_normal_color">#ff2ea2eb</drawable>
+    <!-- 通用灰色按钮背景颜色 ：按下 -->
+    <color name="common_btn_gray_bg_press_color">#ffffffff</color>
+    <color name="common_btn_gray_bg_edge_press_color">#ff47b7fd</color>
+    <drawable name="common_btn_gray_text_press_color">#ff47b7fd</drawable>
+
+    <!-- common button style -->
+    <color name="common_button_style_text_color">#ffffffff</color>
+    <!-- ************************************************************************************** -->
+
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="black_semi_transparent">#B2000000</color>
+    <color name="background">#e5e5e5</color>
+    <color name="half_black">#808080</color>
+    <color name="white">#fafafa</color>
+    <color name="white_pressed">#f1f1f1</color>
+    <color name="pink">#e91e63</color>
+    <color name="pink_pressed">#ec407a</color>
+    <color name="blue_semi_transparent">#805677fc</color>
+    <color name="blue_semi_transparent_pressed">#80738ffe</color>
+    <color name="wait_prospect_color">#FF9853</color>
+    <color name="milky_white">#D0D8DF</color>
+    <color name="blue">#294E70</color>
+    <color name="gray_blue">#B4C1CC</color>
+    <color name="yellow_point">#FF6600</color>
+    <color name="result_view">#b0000000</color>
+    <color name="viewfinder_mask">#60000000</color>
+    <color name="possible_result_points">#c0ffff00</color>
+    <color name="radio_button_selected_color">@android:color/black</color>
+    <color name="radio_button_unselected_color">@android:color/transparent</color>
+    <color name="main_color">#FFBBFF</color>
+    <color name="pull_color">#B4C1CC</color>
+    <color name="splite_color">#5E5E5E</color>
+    <color name="space_color">#CCCCCC</color>
+    <color name="bule_overlay">#660D92DD</color>
+
+    <!-- add on -->
+    <color name="transparent">#00000000</color>
+    <color name="transparent_50">#00000000</color>
+    <color name="work">#E3E3E3</color>
+    <!--底部点击颜色改变-->
+    <color name="bottomdeepblue">#175794</color>
+    <color name="bottomblue">#2EA2EB</color>
+
+    <!-- add zsh start -->
+    <color name="default_separator_color">#FF444444</color>
+    <!-- add zsh end -->
+    <color name="login_no_pressed">#2ea2eb</color>
+    <color name="login_pressed">#34aefa</color>
+    <color name="activity_background">#F4F4F4</color>
+    <color name="all_view_stroke">#CBCBCB</color>
+    <color name="all_text_color">#767676</color>
+
+    <color name="black_deep">#34322F</color>
+    <color name="orange">#fda76d</color>
+    <color name="orange_deep">#ff9800</color>
+    <color name="bantouming">#e0000000</color>
+    <color name="touming">#00000000</color>
+    <color name="gray_light">#f3f3f3</color>
+    <color name="gray">#dedede</color>
+    <color name="gray_item">#FFECECEC</color>
+    <color name="gray_item_press">#dad8d8</color>
+    <color name="white_trans80">#AFFF</color>
+    <color name="gray_deep">#9E9E9E</color>
+    <color name="window_background">#FFF5F5F5</color>
+    <color name="black_gray">#4d4d4d</color>
+
+    <color name="gray_new">#808080</color>
+    <color name="red">#f67f7f</color>
+    <color name="blue_light">#87bfff</color>
+    <color name="blue_deep">#708be0</color>
+    <color name="green">#66c96a</color>
+
+    <color name="font_dark">#1D1E1E</color>
+    <color name="font_light">#464e76</color>
+    <color name="font_blue">#5178b4</color>
+
+    <!-- scene list item -->
+    <color name="scene_list_item_up_down_splite_color">#ffeeeeee</color>
+    <color name="scene_list_item_details_name_color">#ff777777</color>
+    <color name="scene_list_item_details_alarm_color">#ff777777</color>
+    <color name="scene_list_item_details_type_color">#ffaaaaaa</color>
+    <color name="scene_list_item_details_adr_color">#ff333333</color>
+    <color name="scene_list_item_details_date_color">#ffaaaaaa</color>
+    <color name="scene_list_item_details_status_color">#ffffffff</color>
+    <color name="scene_list_item_details_status_new_color">#ffffffff</color>
+    <color name="scene_list_item_details_status_in_color">#ff175794</color>
+    <color name="scene_list_item_details_status_over_color">#ff2ea2eb</color>
+    <color name="scene_list_divider_color">#ffdddddd</color>
+    <color name="scene_list_item_divider_color">#ffeeeeee</color>
+
+    <!-- 分类 排序 筛选 layout -->
+    <color name="selection_layout_button_text_color">#ff777777</color>
+    <color name="selection_layout_split_color">#ffeeeeee</color>
+
+    <color name="selection_category_grid_item_text_bg_normal_color">#fff4f4f4</color>
+    <color name="selection_category_grid_item_text_normal_color">#FF333333</color>
+    <color name="selection_category_grid_item_text_bg_press_color">#ffcfecff</color>
+    <color name="selection_category_grid_item_text_press_color">#ff0090ff</color>
+    <color name="selection_category_grid_item_text_color">#ff000000</color>
+    <color name="selection_screen_group_title_text_color">#ff787878</color>
+    <color name="selection_screen_title_text_color">#ffB1B1B1</color>
+    <color name="selection_screen_reset_normal">#FFEEEEEE</color>
+    <color name="selection_screen_reset_press">#FFFFFFFF</color>
+    <color name="selection_screen_save_normal">#FF2EA2EB</color>
+    <color name="selection_screen_save_press">#FF40A2EB</color>
+    <color name="selection_sort_list_item_text_normal">#FF555555</color>
+    <color name="selection_sort_list_item_text_press">#FF2EA2EB</color>
+    <color name="selection_sort_list_splite_color">#ffeeeeee</color>
+    <color name="main_blue">#2EA1EC</color>
+
+    <drawable name="text_color_selector_normal">#ff767676</drawable>
+    <drawable name="text_color_selector_disable">#ffeeeeee</drawable>
+    <drawable name="text_color_selector_press">#ff2ea2eb</drawable>
+
+    <!-- offline map color -->
+    <color name="offline_map_normal_text_color">#ff777777</color>
+    <color name="offline_map_downloading_text_color">#ff2EA2EB</color>
+
+    <!-- prospect preview shadow color -->
+    <color name="prospect_preview_shadow_color">#b2000000</color>
+
+
+    <drawable name="transparent_background">#909090</drawable>
+    <!--<color name="blue">#67B2D5</color>-->
+    <color name="black">#282828</color>
+
+
+</resources>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/secondary_title_bar"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+               <LinearLayout
+                   android:id="@+id/take_ic_photo_layout"
+                   android:layout_width="match_parent"
+                   android:layout_height="60dp"
+                   android:background="#f4f4f4"
+                   android:orientation="horizontal"
+                   android:visibility="gone">
+
+                   <TextView
+                       android:id="@+id/take_ic_photo_btn"
+                       android:layout_width="0dp"
+                       android:layout_height="34dp"
+                       android:layout_weight="1"
+                       android:text="拍摄证件照片"
+                       android:layout_gravity="center"
+                       android:gravity="center"
+                       android:layout_marginStart="15dp"
+                       android:layout_marginEnd="15dp"
+                       android:paddingStart="6dp"
+                       android:textColor="@color/main_blue"
+                       android:background="@drawable/take_ic_photo_bac"/>
+
+                   <TextView
+                       android:id="@+id/take_id_btn"
+                       android:layout_width="0dp"
+                       android:layout_height="34dp"
+                       android:layout_weight="1"
+                       android:text="识别身份信息"
+                       android:layout_gravity="center"
+                       android:gravity="center"
+                       android:layout_marginStart="15dp"
+                       android:layout_marginEnd="15dp"
+                       android:paddingStart="6dp"
+                       android:textColor="@color/main_blue"
+                       android:background="@drawable/take_ic_photo_bac"/>
+               </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</LinearLayout>

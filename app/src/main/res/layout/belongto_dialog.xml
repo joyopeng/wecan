@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/belongto_radius"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/positionPicture_relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:text="归为方位"
+        android:paddingLeft="9dp"
+        android:paddingBottom="18dp"
+        android:paddingTop="18dp" />
+
+    <TextView
+        android:id="@+id/generalPicture_relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:text="归为概貌"
+        android:paddingLeft="9dp"
+        android:paddingBottom="18dp"
+        android:paddingTop="18dp"
+        />
+    <TextView
+        android:id="@+id/keyPicture_relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="归为重点"
+        android:paddingLeft="9dp"
+        android:paddingBottom="18dp"
+        android:paddingTop="18dp"/>
+    <TextView
+        android:id="@+id/detailPicture_relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="归为细目"
+        android:paddingLeft="9dp"
+        android:paddingBottom="18dp"
+        android:paddingTop="18dp"/>
+
+    <TextView
+        android:id="@+id/otherPicture_relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="归为其它"
+        android:paddingLeft="9dp"
+        android:paddingBottom="18dp"
+        android:paddingTop="18dp"/>
+</LinearLayout>

@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.gofirst.scenecollection.evidence">
+
+    <uses-permission android:name="com.samsung.android.providers.context.permission.WRITE_USE_APP_FEATURE_SURVEY" />
+    <uses-permission android:name="com.samsung.android.providers.context.permission.WRITE_USE_APP_FEATURE_SURVEY" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="com.huawei.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.huawei.launcher.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="com.huawei.launcher1.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.huawei.launcher1.permission.WRITE_SETTINGS" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-feature android:name="READ_PHONE_STATE READ_PHONE_STATE" />
+
+    <!-- 云知声 -->
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <!-- add for push on -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="cybertech.permission.READ_PSTORE" />
+    <uses-permission android:name="cybertech.permission.READ_PSTORE_USERINFO" />
+    <uses-permission android:name="cybertech.permission.READ_PSTORE_LINKINFO" />
+    <uses-permission android:name="cybertech.permission.READ_PSTORE_LOCATIONINFO" />
+    <uses-permission android:name="cybertech.permission.WRITE_PSTORE_OPERATIONLOG" />
+    <uses-permission android:name="cybertech.permission.READ_PSTORE_LAUNCHERGROUPS" />
+    <uses-permission android:name="cybertech.permission.READ_PSTORE_SERVER_SYNC_TIME" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
+    <!-- add for push off -->
+    <application
+        android:name=".Application.EvidenceApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/app_icon"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="isdebug"
+            android:value="${isdebug}" />
+
+        <activity android:name=".view.activity.Splash">
+            <intent-filter>
+
+                <!-- 苏州 -->
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="${categoryType}" />
+                <!-- 德州 -->
+                <!--
+                <action android:name="pstore.intent.action.MAIN" />
+                <category android:name="pstore.intent.category.APP" />
+                -->
+            </intent-filter>
+        </activity>
+
+        <!-- 勘验查询 -->
+        <activity
+            android:name=".view.activity.InquestFind"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentTheme" />
+
+        <!-- 语音测试 -->
+        <activity
+            android:name=".view.speechRecognition.ASRMedicalOnlineActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/titleBar" />
+
+        <!-- 添加物證相冊 -->
+        <activity
+            android:name=".view.activity.AddEvidencePhoto"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentTheme" />
+
+        <!-- 编辑照片 -->
+        <activity
+            android:name=".view.activity.EditPictureActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentTheme" />
+        <activity
+            android:name=".view.activity.ShowIcPhotoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentTheme" />
+        <activity
+            android:name=".view.activity.ShowImgsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentTheme" />
+
+        <!-- 相机拍照封装 -->
+        <activity
+            android:name=".view.logic.ImgsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentTheme" />
+
+        <!-- 相机拍照封装 -->
+        <activity
+            android:name=".view.logic.ImgFileListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentTheme" />
+
+        <!-- 相机拍照封装 -->
+        <activity
+            android:name=".view.activity.PhotoDialogActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentTheme" />
+
+        <!-- 设置ip -->
+        <activity
+            android:name=".view.activity.LoginIpSet"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentTheme" />
+
+        <!-- 更多警情 -->
+        <activity
+            android:name=".view.activity.MoreNewCase"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentTheme" />
+
+        <!-- 显示全部图片 -->
+        <activity
+            android:name=".view.activity.ShowAllPicturesActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentTheme" />
+
+        <!-- 勘查查询 -->
+        <activity
+            android:name=".view.activity.NvestigatQuery"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentTheme" />
+
+        <!-- 更改版本 -->
+        <activity
+            android:name=".view.activity.CheckUpdate"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentTheme" />
+
+        <!-- 更改密码 -->
+        <activity
+            android:name=".view.activity.ChangePassword"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentTheme" />
+        <!-- 物证提取添加编辑界面 -->
+        <activity
+            android:name=".view.activity.AddEvidenceEdit"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentTheme" />
+
+        <!-- 显示二维码照片 -->
+        <activity
+            android:name=".view.activity.ShowQrCodePicture"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentTheme" />
+        <!-- 添加物品 -->
+        <activity
+            android:name=".view.activity.AddEvidence"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.Light" />
+
+        <!-- 二维码扫描 -->
+        <activity
+            android:name=".view.activity.MipcaActivityCapture"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+
+        <!-- 显示 -->
+        <activity
+            android:name=".view.activity.ShowPictureActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentTheme" />
+
+        <!-- 显示 -->
+        <activity
+            android:name=".view.activity.ShowBlindActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentTheme" />
+
+        <!-- 显示 -->
+        <activity
+            android:name=".view.activity.ShowBlindPhotoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentTheme" />
+        <activity
+            android:name=".view.activity.NewestStateDetail"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentTheme" />
+
+        <!-- 最新警情的详细 -->
+        <activity
+            android:name=".view.activity.ShowPlanActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentTheme" />
+
+        <!-- 勘查查询 -->
+        <activity
+            android:name=".view.activity.NvestigationQuery"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentTheme" />
+
+        <!-- 图片显示 -->
+        <activity
+            android:name=".view.activity.ShowPhotoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentTheme" />
+        <activity
+            android:name=".view.activity.SenceEvidence"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentTheme" />
+        <activity
+            android:name=".view.activity.EvidencePhotoExplorer"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentTheme" />
+        <activity
+            android:name=".view.activity.ProspectPreview"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentTheme" />
+        <activity
+            android:name=".view.activity.EvidenceDetail"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentTheme" />
+        <activity
+            android:name=".view.activity.AddNewCase"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentTheme" />
+        <activity
+            android:name=".view.activity.DailyScheduleActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentTheme" />
+        <activity
+            android:name=".view.activity.ContactActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentTheme" />
+        <activity
+            android:name=".view.activity.OffLineMapActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentTheme" />
+        <activity
+            android:name=".view.activity.SyncDataActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentTheme" />
+        <activity
+            android:name=".view.activity.CaseHistoryDetails"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentTheme" />
+        <activity
+            android:name=".view.activity.ShapeFileSelectActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentTheme" />
+        <activity
+            android:name=".view.activity.SceneProspectList"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentTheme" />
+        <activity
+            android:name=".view.activity.ProspectInterface"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentTheme" />
+        <activity
+            android:name=".view.activity.CameraActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.activity.LawCaseScene"
+            android:label="   "
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentTheme" />
+        <activity
+            android:name=".view.activity.MessageFragmentItemDetail"
+            android:label="   "
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentTheme" />
+        <activity
+            android:name=".view.activity.AddLawCaseScene"
+            android:label="   "
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentTheme" />
+        <activity
+            android:name=".view.activity.TakeVideo"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="landscape"
+            android:theme="@style/TranslucentTheme" />
+        <activity
+            android:name=".view.activity.CaseTemplate"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentTheme" />
+        <activity
+            android:name=".view.activity.TakeRecord"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentTheme" />
+        <activity
+            android:name=".view.activity.PlayRecord"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentTheme" />
+        <activity
+            android:name=".view.activity.Login"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentTheme" />
+        <activity
+            android:name=".view.activity.MainActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentTheme" />
+        <activity
+            android:name=".view.activity.Reporter"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentTheme" />
+        <activity
+            android:name=".view.activity.ShowEvidenceExtra"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentTheme" />
+        <activity
+            android:name=".view.activity.LostGoodDetail"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentTheme" />
+        <activity
+            android:name=".view.activity.SeconddaryView"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentTheme" />
+        <activity
+            android:name=".view.activity.OrganizationsSelectActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentTheme">
+            <intent-filter>
+                <action android:name="com.gofirst.scenecollection.evidence.view.activity.OrganizationsSelectActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".view.activity.ShowOrgContactActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentTheme">
+            <intent-filter>
+                <action android:name="com.gofirst.scenecollection.evidence.view.activity.ShowOrgContactActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".view.activity.ContactDetailActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentTheme">
+            <intent-filter>
+                <action android:name="com.gofirst.scenecollection.evidence.view.activity.ContactDetailActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".view.activity.TracePointActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="landscape"
+            android:theme="@style/TranslucentTheme">
+            <intent-filter>
+                <action android:name="com.gofirst.scenecollection.evidence.view.activity.TracePointActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".view.activity.NoteActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="landscape"
+            android:theme="@style/TranslucentTheme" />
+        <activity
+            android:name=".view.activity.UploadedCaseList"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentTheme" />
+        <activity
+            android:name=".view.activity.SelectUploadCase"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentTheme" />
+        <activity
+            android:name=".view.activity.UploadingCaseListActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentTheme" />
+        <activity
+            android:name=".view.activity.NoAccountActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/LoadingDialog" />
+
+        <provider
+            android:name=".sync.MonitorDeviceInfoProvider"
+            android:authorities="com.gofirst.scenecollection.evidence.provider"
+            android:exported="true" />
+
+        <service android:name="com.amap.api.location.APSService"></service>
+        <service
+            android:name=".sync.UpLoadService"
+            android:enabled="true"
+            android:exported="true"></service>
+        <service
+            android:name=".sync.RemoteService"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":romoteservice"></service>
+
+        <receiver android:name=".sync.AlarmReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".sync.DepartmentReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.MY_BROADCAST" />
+            </intent-filter>
+        </receiver>
+
+        <!-- add for push on -->
+        <activity
+            android:name="org.androidpn.client.NotificationDetailsActivity"
+            android:label="Notification Details" />
+        <activity
+            android:name="org.androidpn.client.NotificationSettingsActivity"
+            android:label="Notification Settings" />
+
+        <service
+            android:name=".sync.UpdateNewCaseService"
+            android:enabled="true" />
+        <service
+            android:name="org.androidpn.client.NotificationService"
+            android:enabled="true"
+            android:label="NotificationService">
+            <intent-filter>
+                <action android:name="org.androidpn.client.NotificationService" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="ANDROIDPN_API_KEY"
+            android:value="1234567890" />
+        <!-- add for push off -->
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="46a2cb44e19e357afb154738c1e3135b" />
+        <!-- ca726809dab7eb168cc1b70dc531fbc4 -->
+        <!-- android:value="a8afa03f56c482d33b263f0e8c9182d5"/> -->
+        <!-- android:value="02ab71082e8f7a3dc6642a8a54dbd057" /> -->
+        <!--
+ ATTENTION: This was auto-generated to add Google Play services to your project for
+     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
+        -->
+        <activity
+            android:name="module_bluedemo.MainActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentTheme" />
+        <activity
+            android:name="module_bluedemo.Sub1TabActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentTheme" />
+
+        <service
+            android:name=".sync.ParseAssertService"
+            android:enabled="true"
+            android:exported="false"/>
+    </application>
+
+</manifest>

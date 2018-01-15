@@ -1,0 +1,308 @@
+<resources>
+    <string name="app_name">微勘</string><!--WE-CAN GEP-EMC-->
+    <string name="scene_prospect">现场勘查</string>
+    <string name="network_request_fail">请求失败</string>
+    <string name="network_fail">网络出错</string>
+    <string name="scan_text">放入框内,自动扫描</string>
+    <string name="edit">编辑</string>
+    <string name="extra_evidence">提取物证</string>
+
+    <string name="string_daily_schudle">日常排班</string>
+    <string name="version_unknown">无法获取版本号!</string>
+    <string name="click_to_input">点击输入</string>
+    <string name="drag_view_title">长按排序或删除</string>
+    <string name="click_to_input1">请选择</string>
+
+    <!-- 分类 排序 筛选 layout -->
+    <string name="selection_layout_category_button_string">分类</string>
+    <string name="selection_layout_sort_button_string">排序</string>
+    <string name="selection_layout_screen_button_string">筛选</string>
+    <string name="selection_layout_screen_criminal_string">是否刑案</string>
+    <string name="selection_layout_screen_murder_string">是否刑案</string>
+    <string name="selection_layout_screen_flip_string">现场物品翻动程度</string>
+    <string name="selection_layout_screen_prospect_string">勘查人员</string>
+
+    <string name="common_reset_button_text">重置</string>
+    <string name="common_save_button_text">确定</string>
+    <string name="slection_button_all">不限</string>
+    <string name="slection_button_true">是</string>
+    <string name="slection_button_false">否</string>
+
+    <string name="edit_input_text">请输入内容</string>
+    <string name="inquest_date_string">勘验时间</string>
+    <string name="inquest_date_string_all">@string/slection_button_all</string>
+    <string name="inquest_date_string_toay">当天</string>
+    <string name="inquest_date_string_days">三天内</string>
+    <string name="inquest_date_string_week">一周内</string>
+    <string name="inquest_date_string_month">一月内</string>
+    <string name="inquest_date_string_quarter">一季度</string>
+
+    <!-- sync data strings -->
+    <string name="sync_data_base_title">基础数据</string>
+    <string name="sync_data_base_context">主要包含人员、单位、编码表等数据，请务必及时更新。</string>
+    <string name="sync_data_contact_title">通讯录</string>
+    <string name="sync_data_contact_context">主要包含相关单位的人员联系信息。</string>
+    <string name="sync_data_schedule_title">排班信息</string>
+    <string name="sync_data_schedule_context">主要包含相关单位的人员排班信息。</string>
+    <string name="sync_data_inquest_title">勘验信息 : </string>
+    <string name="sync_data_inquest_context">主要包含相关时间段的勘验数据。</string>
+
+    <string name="sync_data_auto_upload_title">自动上传</string>
+    <string name="sync_data_auto_upload_context">选择自动上传的时间段(建议避免网络堵塞时段)。</string>
+    <string name="sync_data_auto_upload_remark">"( 默认时间 )"</string>
+    <string name="sync_data_upload_title">手动上传</string>
+    <string name="sync_data_upload_context">点击立刻上传已完成的勘验信息。</string>
+    <string name="sync_data_uploading_title">正在上传的数据</string>
+    <string name="sync_data_uploading_context">点击查看已正在上传的勘验信息。</string>
+    <string name="sync_data_uploaded_list_title">已经上传成功的数据</string>
+    <string name="sync_data_uploaded_list_context">点击查看已经完成上传的勘验信息</string>
+    <string name="tip_dialog_close_btn_text">关闭</string>
+    <string name="tip_dialog_confirm_btn_text">确定</string>
+
+    <string name="sync_wating">正在进行数据同步，请稍后···</string>
+    <string name="refresh">刷新</string>
+    <string name="prompt_refresh">刷新成功</string>
+    <string name="menu_settings">Settings</string>
+    <string name="yzs_main_function">云知声智能语音交互平台</string>
+    <string name="yzs_introduction">云知声智能语音交互平台提供语音理解(语音云和语义云)服务。
+        本 SDK 帮助开发者开发基于语音识别、语义理解及语音合成需求的客户端软件。</string>
+    <string name="lbl_set_domain">识别领域</string>
+    <string name="lbl_set_language">语  言</string>
+    <string name="btn_close_config">完成</string>
+    <string name="lbl_set_rate">采样率</string>
+    <string name="recognizer">开始识别</string>
+    <string name="start_tts">开始合成</string>
+    <string name="start_activate">开始激活</string>
+    <string name="stop_tts">停止合成</string>
+    <string name="title_name">云知声语音示例</string>
+    <string name="select_setting">选择设置</string>
+    <string name="general">通用识别</string>
+    <string name="poi">地名识别</string>
+    <string name="song">歌名识别</string>
+    <string name="movietv">影视名识别</string>
+    <string name="medical">医药领域识别</string>
+    <string name="volume">音量  : </string>
+    <string name="status">状态  : </string>
+    <string name="please_speak">请说话</string>
+    <string name="speaking">说话中</string>
+    <string name="recognizer_result">识别结果 :</string>
+    <string name="cancel">取消</string>
+    <string name="say_over">说完了</string>
+    <string name="click_say">点击说话</string>
+    <string name="no_hear_sound">没有听到声音</string>
+    <string name="info_upload_success">个性化信息上传成功</string>
+    <string name="give_up"> 放弃</string>
+    <string name="opening_recode_devices"> 正在打开录音设备</string>
+    <string name="just_recognizer">正在识别</string>
+    <string name="chinese">普通话</string>
+    <string name="english">英语</string>
+    <string name="cantonese">粤语</string>
+    <string name="test_tts_source"> 北京云知声信息技术有限公司，是专注于语音识别及语言处理技术的移动互联网公司，拥有完全自主知识产权的世界顶尖的智能语音识别和语义理解技术。
+        借助云计算平台和移动互联网技术，云知声已推出了一系列语音识别和语义理解的中间件及服务云平台，为互联网企业和用户提供专业的智能语音服务。</string>
+    <string name="activate_explain">激活您所使用的SDK，建议在app启动和app状态改变时调用，以及时向服务器提供最新的设备信息，可以给您提供更好的语音服务。</string>
+    <string name="function_select">功能选择</string>
+    <string name="asr_online_function">在线识别</string>
+    <string name="asr_offline_function">本地识别</string>
+    <string name="wakeup_offline_function">本地唤醒</string>
+    <string name="tts_offline_function">本地合成</string>
+    <string name="activate_function">激活功能</string>
+    <string name="lable_status">识别状态:</string>
+    <string name="button_asr_start">开始</string>
+    <string name="button_asr_stop">停止</string>
+    <string name="recognizer_result_text">语音识别结果</string>
+    <string name="nlu_result_text">语义解析结果</string>
+    <string  name="register_text">云知声专注于智能语音识别及语言处理技术，拥有完全自主知识产权的世界顶尖的智能语音识别技术</string>
+    <string name="tip">提示:  请在点击 注册 按钮之后大声朗读下面这条文本，朗读完之后点击 停止录音 完成声纹注册(用户ID随机生成)。
+         声纹注册成功之后点击 验证 按钮验证已注册的声纹</string>
+    <string name="wakeup_asr_online_function">离线唤醒+混合识别</string>
+    <string name="say_instruction">请说出指令</string>
+    <string name="online_recognizer_result_text">在线识别结果</string>
+    <string name="offline_recognizer_result_text">离线识别结果</string>
+    <string name="start_nlu">开始语义理解</string>
+    <string name="text_nlu_function">文本语义理解</string>
+    <string name="text_nlu_source">今天天气怎么样？</string>
+
+
+
+    <string name="action_settings">蓝牙读写器配置</string>
+    <string name="action_system">系统配置</string>
+    <string name="bleop_View_bluesetmac">蓝牙设备：</string>
+    <string name="bleop_textView_cnstate">连接状态：</string>
+    <string name="bleop_textView_framet">服务UUID：</string>
+    <string name="bleop_radio_readuuid">读UUID：</string>
+    <string name="bleop_radio_writeuuid">写UUID：</string>
+    <string name="bleop_radio_passuuid">密码UUID：</string>
+    <string name="bleop_button_clearuuid">清除UUID</string>
+    <string name="bleop_button_refreshservie">刷新服务</string>
+    <string name="bleop_button_into">确认</string>
+
+    <string name="str_paramset">设置</string>
+    <string name="str_paramget">获取</string>
+    <string name="str_bank">区域</string>
+    <string name="str_frency">频率</string>
+    <string name="str_startadr2">起址</string>
+    <string name="str_startadr4">起始地址</string>
+    <string name="str_len">长度</string>
+    <string name="str_filter">过滤</string>
+    <string name="str_filterbank">过滤bank</string>
+    <string name="str_filterdata">过滤数据</string>
+    <string name="str_pwd">密码</string>
+    <string name="str_acpwd">访问密码</string>
+    <string name="str_match">匹配</string>
+    <string name="str_nomatch">不匹配</string>
+    <string name="str_filterdisable">不启用过滤</string>
+    <string name="str_filterenable">启用过滤</string>
+    <string name="str_disable">不启用</string>
+    <string name="str_enable">启用</string>
+    <string name="str_ant">天线</string>
+    <string name="str_one">唯一</string>
+
+    <string name="systemlayout_TextView_commpar">通信参数</string>
+    <string name="systemlayout_textView_comm_oncec">帧字节</string>
+    <string name="systemlayout_textView_frametime">帧时间</string>
+    <string name="systemlayout_button_setblueframe">帧设置</string>
+
+    <string name="tab_blueset_blue_TextView_blname">蓝牙名称</string>
+
+    <string name="tab_blueset_fre_TextView_blfrescrow">频率(定住区域滑动)</string>
+    <string name="tab_blueset_fre_button_blgetfre">查看频点</string>
+    <string name="tab_blueset_fre_button_blsetfre">设置频点</string>
+
+    <string name="tab_blueset_gen2_TextView_blqv">Q值</string>
+
+    <string name="tab_blueset_mode_TextView_blmodetr">模式转换</string>
+    <string name="tab_blueset_mode_button_bltoinit">主动模式</string>
+    <string name="tab_blueset_mode_button_bltopass">被动模式</string>
+    <string name="tab_blueset_mode_TextView_blworkmode">工作模式</string>
+    <string name="tab_blueset_mode_radio_blmultag">多标签盘存</string>
+    <string name="tab_blueset_mode_radio_blreadtagmem">读标签存储区</string>
+    <string name="tab_blueset_mode_radio_blsintag">单标签盘存</string>
+    <string name="tab_blueset_mode_TextView_blreturnopt">返回标签数据项</string>
+    <string name="tab_blueset_mode_checkBox_bluereadcount">次数</string>
+
+    <string name="tab_blueset_mode_checkBox_bluefrequency">频率</string>
+    <string name="tab_blueset_mode_checkBox_bluetime">时间</string>
+    <string name="tab_blueset_mode_checkBox_bluepro">协议</string>
+    <string name="tab_blueset_mode_textView_blreadmem">读标签存储区</string>
+    <string name="tab_blueset_mode_radio_blreser">保留区</string>
+
+    <string name="tab_blueset_mode_TextView_blfrescrow">频率(定住区域滑动)</string>
+
+    <string name="tab_blueset_read_TextView_blreadopt">盘点时间</string>
+    <string name="tab_blueset_read_textView_blreadoptmils">盘存时间（毫秒）</string>
+    <string name="tab_blueset_read_textView_blreadoptfrainver">帧数据间隔</string>
+    <string name="tab_blueset_read_TextView_blreadoppowset">功率设置</string>
+    <string name="tab_blueset_read_checkBox_bluehrssi">记录最大RSSI</string>
+
+    <string name="tab_indicator_vertical_tv_indicator">天线参数</string>
+
+    <string name="tab1_connect_TextView_searchblue">搜索蓝牙读写器</string>
+    <string name="tab1_connect_button_search">搜索</string>
+    <string name="tab1_connect_checkBox_bth2">通用搜索</string>
+    <string name="tab1_connect_checkBox_bthble">BLE搜索</string>
+    <string name="tab1_connect_textView_sort">序号</string>
+    <string name="tab1_connect_textView_bluetooth">蓝牙设备</string>
+    <string name="tab1_connect_textView_type">类型</string>
+    <string name="tab1_connect_textView_rssi">信号</string>
+    <string name="tab1_connect_TextView_tb1opt">选项</string>
+    <string name="tab1_connect_textView_blue_addr">地址  </string>
+    <string name="tab1_connect_textView_tb1tp">型号</string>
+    <string name="tab1_connect_textView_tb1btp">蓝牙模块</string>
+    <string name="tab1_connect_textView_tb1antp">天线口</string>
+    <string name="tab1_connect_TextView_tb1conn">连接读写器</string>
+    <string name="tab1_connect_button_connect">连接</string>
+    <string name="tab1_connect_button_disconnect">断开</string>
+
+    <string name="tab1_debug_textView_dbif">蓝牙设备信息</string>
+    <string name="tab1_debug_View_dbblue">蓝牙设备：</string>
+    <string name="tab1_debug_textView_dbst">状态：</string>
+    <string name="tab1_debug_textView_debug">调试</string>
+    <string name="tab1_debug_textView_dbsend">   发：</string>
+    <string name="tab1_debug_textView_dbrevd">             收：</string>
+    <string name="tab1_debug_button_send1">发送1</string>
+    <string name="tab1_debug_button_send2">发送2</string>
+    <string name="tab1_debug_button_send3">发送3</string>
+    <string name="tab1_debug_hex">16进制</string>
+    <string name="tab1_debug_button_revd">接收</string>
+    <string name="tab1_debug_button_clear">清空</string>
+
+    <string name="tab2_button_start">开始</string>
+    <string name="tab2_button_stop">停止</string>
+    <string name="tab2_button_readclear">清除</string>
+    <string name="tab2_textView_oncecnt">本次读到标签个数：</string>
+    <string name="tab2_textView_tocnt">    共读到标签个数：</string>
+    <string name="tab2_textView_set_status">设备状态：</string>
+
+    <string name="tab3_lock_textView_lockopt">锁操作选项</string>
+    <string name="tab3_lock_textView_lockbk">锁区域</string>
+    <string name="tab3_lock_textView_locktp">锁类型</string>
+    <string name="tab3_lock_button_lock">锁</string>
+    <string name="tab3_lock_button_kill">销毁</string>
+
+    <string name="tab3_read_textView_rbk">选择读写器区域</string>
+    <string name="tab3_read_textView_rbank">区域</string>
+    <string name="tab3_read_textView_opstadr">起始地址</string>
+    <string name="tab3_read_textView_opblock">块数</string>
+    <string name="tab3_read_button_read">读</string>
+    <string name="tab3_read_button_write">写</string>
+    <string name="tab3_read_button_wepc">写epc</string>
+
+    <string name="tab3_textView_tb3opant">操作天线</string>
+
+    <string name="tab4_atpw_TextView_antpck">天线检测</string>
+    <string name="tab4_atpw_radio_tb4nck">不检测</string>
+    <string name="tab4_atpw_radio_tb4ck">检测</string>
+    <string name="tab4_atpw_textView_tab4pw">功率</string>
+    <string name="tab4_atpw_textView_ant1_pwr">天线1 读功率 </string>
+    <string name="tab4_atpw_textView_tab4wp">写功率</string>
+    <string name="tab4_atpw_TextView_tb4a2rp">天线2 读功率 </string>
+    <string name="tab4_atpw_textView_tb4a3rp">天线3 读功率 </string>
+    <string name="tab4_atpw_textView_tba4rp">天线4 读功率 </string>
+
+    <string name="tab4_gen2_TextView_g2q">Q值</string>
+    <string name="tab4_gen2_textView_tb4g2wm">写模式 </string>
+    <string name="tab4_gen2_textView_tb4g2ml">最大长度 </string>
+    <string name="tab4_gen2_TextView_tb4g2cd">gen2编码 </string>
+
+    <string name="tab4_emd_TextView_tb4_emdda">附加数据</string>
+    <string name="tab4_emd_textView_tb4_bcnt">字节数 </string>
+
+    <string name="tab4_fre_TextView_tb4fre">频率</string>
+    <string name="tab4_fre_checkBox_allselect">全选 </string>
+    <string name="tab4_fre_button_getfre">查看频点 </string>
+    <string name="tab4_fre_button_setfre">设置频点 </string>
+
+    <string name="tab4_usl_TextView_tb4motra">模式转换</string>
+    <string name="tab4_usl_button_toinit_pass">主动模式</string>
+    <string name="tab4_usl_button_topass_pass">被动模式</string>
+    <string name="tab4_usl_textView_tb4invpro">盘点协议</string>
+    <string name="tab4_usl_TextView_tb4oppro">操作协议 </string>
+    <string name="tab4_usl_checkBox_ant1">天线1  </string>
+    <string name="tab4_usl_checkBox_ant2">天线2  </string>
+    <string name="tab4_usl_checkBox_ant3">天线3  </string>
+    <string name="tab4_usl_checkBox_ant4">天线4  </string>
+    <string name="tab4_usl_TextView_tb4rtm">时长 </string>
+    <string name="tab4_usl_textView_tb4invtm">盘点时间 </string>
+    <string name="tab4_usl_textView_read_inve">间隔 </string>
+
+    <string name="tab4_ot_textView_tb4otaoe">天线唯一性</string>
+    <string name="tab4_ot_TextView_tb4otdaoe">附加数据唯一性</string>
+    <string name="tab4_ot_TextView_tb4otrhr">记录最高RSSI</string>
+    <string name="tab4_ot_TextView_tb4otinvmo">盘存模式 </string>
+    <string name="tab4_ot_TextView_tb46btd">Iso180006b调整深度 </string>
+
+    <string name="sub_cus_TextView_cusbkpwd">区域密码</string>
+    <string name="sub_cus_textView_cuscurpwd">当前密码 </string>
+    <string name="sub_cus_button_changearealock">带密码区域锁 </string>
+    <string name="sub_cus_button_changearealocknopwd">不带密码区域锁 </string>
+    <string name="sub_cus_textView_subcusnpwd">新密码 </string>
+    <string name="sub_cus_button_changegareapwd">修改区域密码 </string>
+    <string name="sub_cus_textView_subcuskrprcd">坤锐私有指令 </string>
+    <string name="sub_cus_textView_subcusoptt">操作超时时间(毫秒) </string>
+    <string name="sub_cus_textView_subcusbkbr">区域(User区分4格区域，一个区域32块 </string>
+    <string name="sub_cus_textView_subcusfdby">过滤数据(二进制) </string>
+
+    <string name="menu_1">私有指令 </string>
+    <string name="menu_2">系统配置</string>
+    <string name="menu_3">蓝牙调试 </string>
+</resources>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    android:elevation="0dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical">
+    <ImageView
+        android:id="@+id/imageview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"/>
+
+    <CheckBox
+        android:id="@+id/edit_picture_checkbox"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/checkbox"
+        android:layout_alignParentEnd="true"
+        android:button="@null"
+        />
+    <ImageView
+        android:id="@+id/anchor_flage_picture"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="2dp"
+        android:layout_marginBottom="2dp"
+        android:visibility="gone"
+        android:background="@drawable/anchor_flage"/>
+
+</RelativeLayout>

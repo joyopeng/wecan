@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#79999999">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/white"
+        android:layout_height="250dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:alpha="1">
+
+            <TextView
+                android:id="@+id/cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="取消"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="15dp"
+                android:textColor="@color/all_text_color"
+                android:textSize="17sp"
+                android:layout_alignParentStart="true"/>
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="接勘人"
+                android:gravity="center"
+                android:singleLine="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="15dp"
+                android:textSize="17sp"
+                android:layout_centerInParent="true"/>
+
+            <TextView
+                android:id="@+id/finish"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="完成"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="15dp"
+                android:textColor="@color/all_text_color"
+                android:textSize="17sp"
+                android:layout_alignParentEnd="true"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/all_view_stroke"
+                android:background="@color/all_view_stroke" />
+        </RelativeLayout>
+
+
+        <EditText
+            android:alpha="1"
+            android:id="@+id/text_input"
+            android:layout_marginTop="60dp"
+            android:layout_width="match_parent"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            style="@style/AppBaseTheme"
+            android:layout_height="wrap_content" />
+
+
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:orientation="horizontal"
+             android:visibility="gone">
+
+            <EditText
+                android:alpha="1"
+
+                android:layout_marginTop="60dp"
+                android:layout_width="0dp"
+                android:layout_marginStart="50dp"
+                android:layout_weight="10"
+                android:layout_marginEnd="50dp"
+                style="@style/AppBaseTheme"
+                android:layout_height="wrap_content" />
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:layout_marginEnd="50dp"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/show_mac"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/mic"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/bottm_linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ProgressBar
+                android:id="@+id/volume_progressbar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="3dp"
+                android:indeterminateOnly="false"
+                android:max="100"
+                android:layout_marginTop="20dp"
+                android:progressDrawable="@drawable/progressbar_color" />
+
+            <ImageView
+                android:id="@+id/satrt_mic"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/record1"
+                 />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>

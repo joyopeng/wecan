@@ -1,0 +1,582 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:scrollbars="none">
+<!--<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/rect"/>
+
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="勘查号："
+            android:textColor="#82A8CB"
+            android:textSize="17dp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_marginRight="20dp"
+        android:layout_height="wrap_content"
+        android:text="SJ20156544656"
+        android:textColor="@android:color/black"
+        android:gravity="center_vertical"
+        android:paddingLeft="5dp"
+        android:textSize="15sp"/>
+
+    <View
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#E3E3E3"/>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/rect"/>
+
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="现场勘验单位："
+            android:textColor="#82A8CB"
+            android:textSize="17dp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_marginRight="20dp"
+        android:layout_height="wrap_content"
+        android:text="吴中区中队"
+        android:textColor="@android:color/black"
+        android:gravity="center_vertical"
+        android:paddingLeft="5dp"
+        android:textSize="15dp"/>
+
+    <View
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#E3E3E3"/>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/rect"/>
+
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="指派/报告单位："
+            android:textColor="#82A8CB"
+            android:textSize="17dp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_marginRight="20dp"
+        android:layout_height="wrap_content"
+        android:text="吴中区公安局吴中中队"
+        android:textColor="@android:color/black"
+        android:gravity="center_vertical"
+        android:paddingLeft="5dp"
+        android:textSize="15dp"/>
+
+    <View
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#E3E3E3"/>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/rect"/>
+
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="勘验事由："
+            android:textColor="#82A8CB"
+            android:textSize="17dp"/>
+
+    </LinearLayout>
+
+   &lt;!&ndash; <TextView
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_marginRight="20dp"
+        android:layout_height="wrap_content"
+        android:text="现场发生杀人事故，现场遗留血迹，"
+        android:textColor="@android:color/black"
+        android:gravity="center_vertical"
+        android:paddingLeft="5dp"
+        android:textSize="15dp"/>
+
+
+
+    <TextView
+        android:layout_marginLeft="30dp"
+        android:layout_width="match_parent"
+        android:layout_marginRight="20dp"
+        android:layout_height="wrap_content"
+        android:text="尸体发生拖动。需要现场勘验"
+        android:textColor="@android:color/black"
+        android:gravity="center_vertical"
+        android:paddingLeft="5dp"
+        android:textSize="15dp"/>&ndash;&gt;
+    <View
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#E3E3E3"/>
+
+
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/rect"/>
+
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="现场地点："
+            android:textColor="#82A8CB"
+            android:textSize="17dp"/>
+
+    </LinearLayout>
+
+   &lt;!&ndash; <TextView
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_marginRight="20dp"
+        android:layout_height="wrap_content"
+        android:text="吴中区"
+        android:textColor="@android:color/black"
+        android:gravity="center_vertical"
+        android:paddingLeft="5dp"
+        android:textSize="15dp"/>&ndash;&gt;
+
+    <View
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#E3E3E3"/>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/rect"/>
+
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="现场保护情况："
+            android:textColor="#82A8CB"
+            android:textSize="17dp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_marginRight="20dp"
+        android:layout_height="wrap_content"
+        android:text="现场保护人：张明，吴中派出所"
+        android:textColor="@android:color/black"
+        android:gravity="center_vertical"
+        android:paddingLeft="5dp"
+        android:textSize="15dp"/>
+    <TextView
+        android:layout_marginLeft="30dp"
+        android:layout_width="match_parent"
+        android:layout_marginRight="20dp"
+        android:layout_height="wrap_content"
+        android:text="保护措施：设立警戒带"
+        android:textColor="@android:color/black"
+        android:gravity="center_vertical"
+        android:paddingLeft="5dp"
+        android:textSize="17dp"/>
+    <TextView
+        android:layout_marginLeft="30dp"
+        android:layout_width="match_parent"
+        android:layout_marginRight="20dp"
+        android:layout_height="wrap_content"
+        android:text="现场情况：原始现场"
+        android:textColor="@android:color/black"
+        android:gravity="center_vertical"
+        android:paddingLeft="5dp"
+        android:textSize="15dp"/>
+    <TextView
+        android:layout_marginLeft="30dp"
+        android:layout_width="match_parent"
+        android:layout_marginRight="20dp"
+        android:layout_height="wrap_content"
+        android:text="变动原因：事主进入"
+        android:textColor="@android:color/black"
+        android:gravity="center_vertical"
+        android:paddingLeft="5dp"
+        android:textSize="15dp"/>
+    <TextView
+        android:layout_marginLeft="30dp"
+        android:layout_width="match_parent"
+        android:layout_marginRight="20dp"
+        android:layout_height="wrap_content"
+        android:text="天气：阴"
+        android:textColor="@android:color/black"
+        android:gravity="center_vertical"
+        android:paddingLeft="5dp"
+        android:textSize="15dp"/>
+    <TextView
+        android:layout_marginLeft="30dp"
+        android:layout_width="match_parent"
+        android:layout_marginRight="20dp"
+        android:layout_height="wrap_content"
+        android:text="温度：10°C"
+        android:textColor="@android:color/black"
+        android:gravity="center_vertical"
+        android:paddingLeft="5dp"
+        android:textSize="15dp"/>
+    <TextView
+        android:layout_marginLeft="30dp"
+        android:layout_width="match_parent"
+        android:layout_marginRight="20dp"
+        android:layout_height="wrap_content"
+        android:text="湿度：50%"
+        android:textColor="@android:color/black"
+        android:gravity="center_vertical"
+        android:paddingLeft="5dp"
+        android:textSize="15dp"/>
+    <TextView
+        android:layout_marginLeft="30dp"
+        android:layout_width="match_parent"
+        android:layout_marginRight="20dp"
+        android:layout_height="wrap_content"
+        android:text="风向：东南风"
+        android:textColor="@android:color/black"
+        android:gravity="center_vertical"
+        android:paddingLeft="5dp"
+        android:textSize="15dp"/>
+    <TextView
+        android:layout_marginLeft="30dp"
+        android:layout_width="match_parent"
+        android:layout_marginRight="20dp"
+        android:layout_height="wrap_content"
+        android:text="现场勘测利用光线：自然光"
+        android:textColor="@android:color/black"
+        android:gravity="center_vertical"
+        android:paddingLeft="5dp"
+        android:textSize="15dp"/>
+
+    <TextView
+        android:layout_marginLeft="30dp"
+        android:layout_width="match_parent"
+        android:layout_marginRight="20dp"
+        android:layout_height="wrap_content"
+        android:text="现场勘验指挥人：张明"
+        android:textColor="@android:color/black"
+        android:gravity="center_vertical"
+        android:paddingLeft="5dp"
+        android:textSize="15dp"/>
+
+    <TextView
+        android:layout_marginLeft="30dp"
+        android:layout_width="match_parent"
+        android:layout_marginRight="20dp"
+        android:layout_height="wrap_content"
+        android:text="其他勘验人员：李好"
+        android:textColor="@android:color/black"
+        android:gravity="center_vertical"
+        android:paddingLeft="5dp"
+        android:textSize="15dp"/>
+    <TextView
+        android:layout_marginLeft="30dp"
+        android:layout_width="match_parent"
+        android:layout_marginRight="20dp"
+        android:layout_height="wrap_content"
+        android:text="单位：吴中派出所"
+        android:textColor="@android:color/black"
+        android:gravity="center_vertical"
+        android:paddingLeft="5dp"
+        android:textSize="15dp"/>
+
+    <View
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#E3E3E3"/>
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/rect"/>
+
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="现场勘验情况："
+            android:textColor="#82A8CB"
+            android:textSize="17dp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_marginRight="20dp"
+        android:layout_height="wrap_content"
+        android:text="现场勘验制图：3张"
+        android:textColor="@android:color/black"
+        android:gravity="center_vertical"
+        android:paddingLeft="5dp"
+        android:textSize="15dp"/>
+
+    <TextView
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_marginRight="20dp"
+        android:layout_height="wrap_content"
+        android:text="照相：15张"
+        android:textColor="@android:color/black"
+        android:gravity="center_vertical"
+        android:paddingLeft="5dp"
+        android:textSize="15dp"/>
+
+    <TextView
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_marginRight="20dp"
+        android:layout_height="wrap_content"
+        android:text="录像：4分钟"
+        android:textColor="@android:color/black"
+        android:gravity="center_vertical"
+        android:paddingLeft="5dp"
+        android:textSize="15dp"/>
+
+    <TextView
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_marginRight="20dp"
+        android:layout_height="wrap_content"
+        android:text="录音：6分钟"
+        android:textColor="@android:color/black"
+        android:gravity="center_vertical"
+        android:paddingLeft="5dp"
+        android:textSize="15dp"/>
+
+    <View
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#E3E3E3"/>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/rect"/>
+
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="现场勘验记录人员"
+            android:textColor="#82A8CB"
+            android:textSize="17dp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_marginRight="20dp"
+        android:layout_height="wrap_content"
+        android:text="现场勘验制图：3张"
+        android:textColor="@android:color/black"
+        android:gravity="center_vertical"
+        android:paddingLeft="5dp"
+        android:textSize="15dp"/>
+
+    <TextView
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_marginRight="20dp"
+        android:layout_height="wrap_content"
+        android:text="笔录人：张明"
+        android:textColor="@android:color/black"
+        android:gravity="center_vertical"
+        android:paddingLeft="5dp"
+        android:textSize="15dp"/>
+
+    <TextView
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_marginRight="20dp"
+        android:layout_height="wrap_content"
+        android:text="制图人：李好"
+        android:textColor="@android:color/black"
+        android:gravity="center_vertical"
+        android:paddingLeft="5dp"
+        android:textSize="15dp"/>
+
+    <TextView
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_marginRight="20dp"
+        android:layout_height="wrap_content"
+        android:text="照相人：王请"
+        android:textColor="@android:color/black"
+        android:gravity="center_vertical"
+        android:paddingLeft="5dp"
+        android:textSize="15dp"/>
+
+    <View
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#E3E3E3"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="修改"
+        android:textSize="18sp"
+        android:textColor="@android:color/white"
+        android:background="@drawable/rect_blue"/>
+
+
+</LinearLayout>-->
+    <LinearLayout
+        android:id="@+id/container_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+
+    </LinearLayout>
+
+</ScrollView>
+    <!--<View
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#E3E3E3"/>
+    <Button
+        android:id="@+id/btn_notedetail_edit"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="修改"
+        android:textSize="18sp"
+        android:textColor="@android:color/white"
+        android:background="@drawable/rect_blue"/>-->
+</LinearLayout>

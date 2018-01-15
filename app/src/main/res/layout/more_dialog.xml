@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/belongto_radius"
+    android:gravity="center"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/left_rotation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:text="向左旋转"
+        android:padding="10dp"
+        />
+
+    <TextView
+        android:id="@+id/right_rotation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:text="向右旋转"
+        android:padding="10dp"
+        />
+
+    <TextView
+        android:id="@+id/delete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:text="删除"
+        android:padding="10dp"
+        />
+
+
+</LinearLayout>

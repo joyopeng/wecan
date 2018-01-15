@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF8F8F8">
+
+    <LinearLayout
+        android:id="@+id/inquest_find"
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:visibility="gone"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="43dp"
+            android:layout_weight="1"
+            android:text="勘验查询"
+            android:textColor="@color/text_common_gray_color"
+            android:textSize="@dimen/common_button_text_size"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="13dp" />
+        <ImageView
+            android:layout_width="11dp"
+            android:layout_height="20dp"
+            android:layout_marginEnd="13dp"
+            android:background="@drawable/cscense_list_item_go"/>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/scene_list_divider_height"
+        android:background="@color/scene_list_divider_color"/>
+
+    <LinearLayout
+        android:id="@+id/manager_communication_btn"
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="43dp"
+            android:layout_weight="1"
+            android:text="通讯录"
+            android:textColor="@color/text_common_gray_color"
+            android:textSize="@dimen/common_button_text_size"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="13dp" />
+        <ImageView
+            android:layout_width="11dp"
+            android:layout_height="20dp"
+            android:layout_marginEnd="13dp"
+            android:background="@drawable/cscense_list_item_go"/>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/scene_list_divider_height"
+        android:background="@color/scene_list_divider_color"/>
+    <LinearLayout
+        android:id="@+id/manager_daily_btn"
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="43dp"
+            android:layout_weight="1"
+            android:text="日常排班"
+            android:textColor="@color/text_common_gray_color"
+            android:textSize="@dimen/common_button_text_size"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="13dp" />
+        <ImageView
+            android:layout_width="11dp"
+            android:layout_height="20dp"
+            android:layout_marginEnd="13dp"
+            android:background="@drawable/cscense_list_item_go"/>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/scene_list_divider_height"
+        android:background="@color/scene_list_divider_color"/>
+    <LinearLayout
+        android:id="@+id/manager_map_btn"
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="43dp"
+            android:layout_weight="1"
+            android:text="离线地图包"
+            android:textColor="@color/text_common_gray_color"
+            android:textSize="@dimen/common_button_text_size"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="13dp" />
+        <ImageView
+            android:layout_width="11dp"
+            android:layout_height="20dp"
+            android:layout_marginEnd="13dp"
+            android:background="@drawable/cscense_list_item_go"/>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/scene_list_divider_height"
+        android:background="@color/scene_list_divider_color"/>
+    <LinearLayout
+        android:id="@+id/manager_data_sync_btn"
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="43dp"
+            android:layout_weight="1"
+            android:text="数据同步"
+            android:textColor="@color/text_common_gray_color"
+            android:textSize="@dimen/common_button_text_size"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="13dp" />
+        <ImageView
+            android:id="@+id/manager_data_sync_remind_img"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_marginRight="16dp"
+            android:visibility="gone"
+            android:background="@drawable/scene_list_item_status_new"/>
+        <ImageView
+            android:layout_width="11dp"
+            android:layout_height="20dp"
+            android:layout_marginEnd="13dp"
+            android:background="@drawable/cscense_list_item_go"/>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/scene_list_divider_height"
+        android:background="@color/scene_list_divider_color"/>
+    <LinearLayout
+        android:id="@+id/upload_data_btn"
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="43dp"
+            android:layout_weight="1"
+            android:text="数据上传"
+            android:textColor="@color/text_common_gray_color"
+            android:textSize="@dimen/common_button_text_size"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="13dp" />
+        <ImageView
+            android:layout_width="11dp"
+            android:layout_height="20dp"
+            android:layout_marginEnd="13dp"
+            android:background="@drawable/cscense_list_item_go"/>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/scene_list_divider_height"
+        android:background="@color/scene_list_divider_color"/>
+
+    <LinearLayout
+        android:id="@+id/permission_setting_btn"
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+
+        >
+
+        <TextView
+            android:id="@+id/test"
+            android:layout_width="wrap_content"
+            android:layout_height="43dp"
+            android:layout_weight="1"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="13dp"
+            android:text="权限设置"
+            android:textColor="@color/text_common_gray_color"
+            android:textSize="@dimen/common_button_text_size" />
+
+        <ImageView
+            android:id="@+id/permission_setting_img"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/scene_list_item_status_new"
+            android:visibility="gone" />
+
+        <ImageView
+            android:layout_width="11dp"
+            android:layout_height="20dp"
+            android:layout_marginEnd="13dp"
+            android:background="@drawable/cscense_list_item_go" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/scene_list_divider_height"
+        android:background="@color/scene_list_divider_color"/>
+
+    <LinearLayout
+        android:id="@+id/log_upload"
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="43dp"
+            android:layout_weight="1"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="13dp"
+            android:text="日志上传"
+            android:textColor="@color/text_common_gray_color"
+            android:textSize="@dimen/common_button_text_size" />
+
+        <ImageView
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/scene_list_item_status_new"
+            android:visibility="gone" />
+
+        <ImageView
+            android:layout_width="11dp"
+            android:layout_height="20dp"
+            android:layout_marginEnd="13dp"
+            android:background="@drawable/cscense_list_item_go" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/scene_list_divider_height"
+        android:background="@color/scene_list_divider_color"/>
+</LinearLayout>

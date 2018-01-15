@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.gofirst.scenecollection.evidence.view.easytagdragview.widget.TipItemView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/tagview_delete"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:src="@drawable/ic_delete"
+        android:layout_alignParentEnd="true"
+        />
+    <TextView
+        android:id="@+id/tagview_title"
+        android:layout_width="75dp"
+        android:textColor="#ff464646"
+        android:layout_height="27dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginStart="12dp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:textSize="12sp"
+        android:background="@drawable/rect_gray"
+        android:text="现场试验" />
+
+
+</com.gofirst.scenecollection.evidence.view.easytagdragview.widget.TipItemView>

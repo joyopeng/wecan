@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<litepal>
+    <dbname value="evidence"/>
+    <version value="5" />
+
+    <list>
+       <!-- 新增案件表 -->
+        <mapping class="com.gofirst.scenecollection.evidence.model.NewCase"/>
+        <!-- 图片表 -->
+        <mapping class="com.gofirst.scenecollection.evidence.model.Pictures"/>
+        <!-- 通讯录 -->
+        <mapping class="com.gofirst.scenecollection.evidence.model.HyEmployees"/>
+        <!-- 编码表 -->
+        <mapping class="com.gofirst.scenecollection.evidence.model.CsDicts"/>
+        <!-- 组织机构 -->
+        <mapping class="com.gofirst.scenecollection.evidence.model.HyOrganizations"/>
+        <!-- 模板表 -->
+        <mapping class="com.gofirst.scenecollection.evidence.model.FirstLevelData"/>
+        <mapping class="com.gofirst.scenecollection.evidence.model.SecondLevelData"/>
+        <mapping class="com.gofirst.scenecollection.evidence.model.ThreeLevelData"/>
+        <mapping class="com.gofirst.scenecollection.evidence.model.RecordFileInfo"/>
+    </list>
+</litepal>

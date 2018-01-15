@@ -1,0 +1,40 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:mirsfang="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/main_iv"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        />
+    <TextView
+        android:id="@+id/show"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="123"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/sms"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="123"/>
+    <com.gofirst.scenecollection.evidence.view.customview.RatingBar
+        android:layout_marginTop="50dp"
+        android:layout_gravity="center"
+        android:id="@+id/ratingbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        mirsfang:clickable="true"
+        mirsfang:starFill="@drawable/grabhb_red"
+        mirsfang:starHalf="@drawable/grabhb_halfred"
+        mirsfang:starImageSize="30dp"
+        ></com.gofirst.scenecollection.evidence.view.customview.RatingBar>
+
+
+</LinearLayout>
+

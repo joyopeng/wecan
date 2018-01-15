@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="76dp"
+    android:background="@color/white">
+    <!--<View
+        android:id="@+id/up_splite"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/scene_list_item_up_down_splite_height"
+        android:background="@color/scene_list_item_up_down_splite_color"
+        />-->
+
+    <TextView
+        android:id="@+id/state"
+        android:layout_width="27dp"
+        android:layout_height="27dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/scene_list_item_status_new"
+        android:gravity="center"
+        android:text="接"
+
+        android:textColor="@color/scene_list_item_details_status_color"
+        android:textSize="@dimen/scene_list_item_status_size" />
+
+    <LinearLayout
+        android:id="@+id/scene_list_item_details_layout"
+        android:layout_width="288dp"
+        android:layout_height="76dp"
+
+        android:layout_marginLeft="17dp"
+        android:layout_toRightOf="@id/state"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/alarm_address"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="发生枪击"
+                android:textColor="@color/scene_list_item_details_adr_color"
+                android:textSize="@dimen/scene_list_item_adr_size" />
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"/>
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="日期"
+                android:textColor="@color/scene_list_item_details_adr_color"
+                android:textSize="@dimen/scene_list_item_adr_size" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="张秀山"
+                android:textColor="@color/scene_list_item_details_name_color"
+                android:textSize="@dimen/scene_list_item_name_size" />
+
+            <TextView
+                android:id="@+id/mark_or_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:singleLine="true"
+                android:text="13645517701"
+                android:textColor="@color/scene_list_item_details_alarm_color"
+                android:textSize="@dimen/scene_list_item_alarm_size" />
+
+            <ImageView
+                android:id="@+id/phone"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginLeft="6dp"
+                android:src="@drawable/contact_detail_phone_img" />
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/scene_list_item_divider_color"
+            android:layout_marginTop="4dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/case_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="强奸案"
+                android:textColor="@color/scene_list_item_details_type_color"
+                android:textSize="@dimen/scene_list_item_type_size" />
+
+            <TextView
+                android:id="@+id/case_exposure_process"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="详情"
+                android:textColor="@color/scene_list_item_details_type_color"
+                android:textSize="@dimen/scene_list_item_type_size" />
+
+            <TextView
+                android:id="@+id/case_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:paddingRight="14dp"
+                android:text="勘查中"
+                android:textColor="@color/scene_list_item_details_type_color"
+                android:textSize="@dimen/scene_list_item_type_size"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/scene_list_item_goto"
+        android:layout_width="10dp"
+        android:layout_height="20dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="8dp"
+        android:layout_toRightOf="@id/scene_list_item_details_layout"
+        android:src="@drawable/cscense_list_item_go" />
+    <!--<View
+        android:id="@+id/down_splite"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/scene_list_item_up_down_splite_height"
+        android:background="@color/scene_list_item_up_down_splite_color"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="0dp"
+        />-->
+
+</RelativeLayout>

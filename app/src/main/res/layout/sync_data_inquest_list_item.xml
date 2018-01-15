@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="43dp"
+    android:gravity="center_vertical">
+    <TextView
+        android:id="@+id/inquest_item_name_text"
+        android:layout_width="wrap_content"
+        android:layout_height="43dp"
+        android:layout_marginLeft="23dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:text="勘验数据"
+        android:textSize="@dimen/common_text_secondary_size"/>
+    <CheckBox
+        android:id="@+id/inquest_item_check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:button="@drawable/circular_checkbox"
+        android:layout_marginRight="12dp"/>
+</LinearLayout>

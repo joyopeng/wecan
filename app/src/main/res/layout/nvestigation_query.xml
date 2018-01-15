@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_margin="10dp"
+        android:background="@drawable/rounded_corners">
+        <EditText
+            android:id="@+id/find_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="案件编号、案件地址"
+            android:padding="10dp"
+            android:editable="true"/>
+        <ImageView
+            android:id="@+id/finddata"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_centerVertical="true"
+
+            android:layout_marginRight="5dp"
+            android:layout_alignParentRight="true"
+
+            android:background="@drawable/chazhao"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                android:id="@+id/all_query"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:gravity="center"
+                android:paddingBottom="5dip"
+                android:paddingTop="10dip"
+                android:text="全部"
+
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/unpolice_records"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:gravity="center"
+                android:text="待出警"
+                android:paddingBottom="5dip"
+                android:paddingTop="10dip"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/prospecting"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:gravity="center"
+                android:text="勘查中"
+                android:paddingBottom="5dip"
+                android:paddingTop="10dip"
+                android:textSize="18sp" />
+            <TextView
+                android:id="@+id/prospect_complete"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:gravity="center"
+                android:text="勘查结束"
+                android:paddingBottom="5dip"
+                android:paddingTop="10dip"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:orientation="vertical"
+            android:paddingBottom="3dip" >
+
+            <ImageView
+                android:id="@+id/iv_bottom_line"
+                android:layout_width="40dip"
+                android:layout_height="2dip"
+                android:scaleType="matrix"
+                android:src="#fff" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vPager"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1.0"
+        android:background="#000000"
+        android:flipInterval="30"
+        android:persistentDrawingCache="animation" />
+
+</LinearLayout>

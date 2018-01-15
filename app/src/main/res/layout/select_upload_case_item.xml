@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="40dp">
+
+    <CheckBox
+        android:id="@+id/check_select"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:gravity="center"
+        android:text=""
+        android:layout_centerVertical="true"
+        android:button="@null"
+        android:layout_marginLeft="13dp"
+        android:background="@drawable/multi_choicl_list_check" />
+
+    <TextView
+        android:id="@+id/caseType"
+        android:text="jjjjjjj"
+        android:textColor="#ff333333"
+        android:layout_toRightOf="@id/check_select"
+        android:textSize = "12sp"
+        android:layout_marginLeft="7dp"
+        android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_marginLeft="10dp"
+        android:text="jjjjjjj"
+        android:textSize = "10sp"
+        android:textColor="#ff777777"
+        android:layout_toRightOf="@id/caseType"
+        android:id="@+id/caseAddress"
+        android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="51dp"
+    android:background="@drawable/search_title_bg_new">
+    <ImageView
+        android:id="@+id/secondary_back_img"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+
+        android:layout_gravity="left|center_vertical"
+        android:background="@drawable/second_title_back"/>
+    <TextView
+        android:id="@+id/secondary_title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Title"
+        android:textSize="@dimen/common_activity_title_size"
+        android:textColor="@color/text_common_white_color"/>
+
+    <TextView
+        android:id="@+id/secondary_right_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|center_vertical"
+        android:text="123"
+        android:layout_marginRight="10dp"
+        android:textSize="@dimen/common_button_text_size"
+        android:textColor="@color/text_common_white_color"
+        android:visibility="gone"/>
+
+</FrameLayout>

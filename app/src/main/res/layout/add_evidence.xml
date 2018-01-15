@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/secondary_title_bar" />
+
+<ScrollView
+    android:id="@+id/scroll_View"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:scrollbars="none">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/camera_qr_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true">
+
+        <RelativeLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:id="@+id/take_picture"
+            android:layout_marginEnd="60dp">
+            <TextView
+                android:id="@+id/cross"
+                android:layout_centerHorizontal="true"
+                android:layout_width="45dp"
+                android:layout_marginTop="25dp"
+                android:layout_height="45dp"
+                android:background="@drawable/photo_new"/>
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/cross"
+                android:layout_centerHorizontal="true"
+                android:textSize="13sp"
+                android:id="@+id/add_xx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="拍照"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:id="@+id/scan_qr">
+
+            <TextView
+               android:id="@+id/scan_qr_icon"
+                android:layout_centerHorizontal="true"
+                android:layout_width="45dp"
+                android:layout_marginTop="25dp"
+                android:layout_height="45dp"
+                android:background="@drawable/qr_code"/>
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/scan_qr_icon"
+                android:layout_centerHorizontal="true"
+                android:textSize="13sp"
+                android:id="@+id/code_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="扫码"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+    </RelativeLayout>
+    <com.gofirst.scenecollection.evidence.view.customview.GridViewInScrollView
+        android:id="@+id/gridview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:columnWidth="0dp"
+        android:scrollbars="none"
+        android:gravity="center"
+        android:horizontalSpacing="10dp"
+        android:numColumns="3"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="10dp" />
+
+        <LinearLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+        </LinearLayout>
+  </LinearLayout>
+</ScrollView>
+</LinearLayout>
+

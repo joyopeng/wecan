@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="100dp"
+    android:layout_height="100dp"
+    android:id="@+id/case_template_name"
+    android:gravity="center"
+    android:textSize="22sp"
+    android:textColor="@android:color/white"
+    android:text="强奸案"
+    android:background="@drawable/case_template_drawable_one">
+
+</TextView>

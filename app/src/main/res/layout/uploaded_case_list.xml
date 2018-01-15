@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scene_prospect_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/secondary_title_bar" />
+
+    <LinearLayout
+        android:id="@+id/layout_selection"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/selection_layout_height"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="@dimen/selection_layout_split_width"
+            android:layout_height="match_parent"
+            android:background="@color/selection_layout_split_color" />
+        <!-- 排序 -->
+        <LinearLayout
+            android:id="@+id/layout_selection_sort"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/btn_selection_sort"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/selection_layout_sort_button_string"
+                android:textColor="@color/selection_layout_button_text_color"
+                android:textSize="@dimen/selection_layout_button_text_size" />
+
+            <ImageView
+                android:id="@+id/img_selection_sort"
+                android:layout_width="@dimen/selection_img_width"
+                android:layout_height="@dimen/selection_img_height"
+                android:layout_marginLeft="@dimen/selection_img_left_margin"
+                android:src="@drawable/group_2" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="@dimen/selection_layout_split_width"
+            android:layout_height="match_parent"
+            android:background="@color/selection_layout_split_color"
+
+            />
+        <!-- 筛选 -->
+        <LinearLayout
+            android:id="@+id/layout_selection_screen"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/btn_selection_screen"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/selection_layout_screen_button_string"
+                android:textColor="@color/selection_layout_button_text_color"
+                android:textSize="@dimen/selection_layout_button_text_size" />
+
+            <ImageView
+                android:id="@+id/img_selection_screen"
+                android:layout_width="@dimen/selection_img_width"
+                android:layout_height="@dimen/selection_img_height"
+                android:layout_marginLeft="@dimen/selection_img_left_margin"
+                android:src="@drawable/group_2" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ListView
+            android:id="@+id/uploaded_case_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@color/all_view_stroke"
+            android:dividerHeight="@dimen/all_view_stroke">
+
+        </ListView>
+
+        <FrameLayout
+            android:id="@+id/selection_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/layout_selection"
+            android:background="#88000000"
+            android:visibility="gone">
+
+            <ListView
+                android:id="@+id/selection_sort_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:divider="@color/selection_layout_split_color"
+                android:dividerHeight="@dimen/scene_list_item_up_down_splite_height"
+                android:paddingLeft="@dimen/selection_sort_list_item_margin_left"
+                android:paddingRight="@dimen/selection_sort_list_item_margin_right"
+                android:visibility="gone">
+            </ListView>
+        </FrameLayout>
+    </FrameLayout>
+</LinearLayout>

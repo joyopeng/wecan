@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="weather_strings">
+        <item>晴</item>
+        <item>阴</item>
+        <item>雨</item>
+        <item>雪</item>
+        <item>雾</item>
+    </string-array>
+
+    <string-array name="wind_direction_strings">
+    <item>东风</item>
+    <item>南风</item>
+        <item>西风</item>
+        <item>北风</item>
+        <item>东南风</item>
+        <item>西南风</item>
+        <item>西北风</item>
+    <item>东北风</item>
+    <item>无风</item>
+        <item>其他</item>
+</string-array>
+
+    <string-array name="ruffle_level_strings">
+        <item>未翻动</item>
+        <item>复原</item>
+        <item>不明显</item>
+        <item>一般</item>
+        <item>乱</item>
+        <item>其他</item>
+    </string-array>
+
+    <string-array name="case_enter_array">
+        <item>窗</item>
+        <item>门</item>
+        <item>阳台</item>
+        <item>房顶</item>
+        <item>墙洞</item>
+        <item>地洞</item>
+        <item>其他</item>
+    </string-array>
+
+    <string-array name="case_num_array">
+        <item>单人</item>
+        <item>两人</item>
+        <item>多人</item>
+        <item>不确定</item>
+    </string-array>
+
+    <string-array name="case_how_array">
+    <item>使用工具类</item>
+    <item>交通工具类</item>
+    <item>毒物类</item>
+    <item>爆炸物品类</item>
+    <item>工艺首饰及文物类</item>
+    <item>家用电器类</item>
+    <item>仪表仪器及计量器材</item>
+</string-array>
+
+    <string-array name="case_how_type">
+        <item>就地取材</item>
+        <item>随身携带</item>
+        <item>其他</item>
+    </string-array>
+
+</resources>

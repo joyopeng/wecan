@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:background="#F8F8F8"
+    android:layout_width="match_parent"
+    android:layout_height="60dp">
+
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_weight="2"
+        android:layout_width="0dp"
+        android:text="物证\n提取"
+        android:textColor="#909090"
+        android:textSize="15sp"
+        android:gravity="center"
+        android:layout_height="match_parent" />
+
+    <com.gofirst.scenecollection.evidence.view.customview.ProspectIndicatorItem
+        android:id="@+id/item"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

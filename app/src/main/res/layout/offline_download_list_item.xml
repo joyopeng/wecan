@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="43dp">
+    <TextView
+        android:id="@+id/offline_downloaded_citys_title"
+        android:layout_width="wrap_content"
+        android:layout_height="43dp"
+        android:layout_gravity="left|center_vertical"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="16dp"
+        android:text="全国概略图"
+        android:textSize="@dimen/common_button_text_size"
+        android:textColor="@color/text_common_gray_color"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical|right"
+        android:gravity="center_vertical">
+        <TextView
+            android:id="@+id/offline_downloaded_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:text="下载中"
+            android:textSize="@dimen/common_button_text_size"
+            android:textColor="@color/offline_map_normal_text_color"/>
+        <ImageView
+            android:id="@+id/offline_downloaded_clear"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/offline_map_remove"/>
+    </LinearLayout>
+</FrameLayout>

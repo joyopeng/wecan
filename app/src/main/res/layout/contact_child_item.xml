@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="50dp">
+
+    <ImageView
+        android:id="@+id/contact_icon"
+        android:layout_width="35dp"
+        android:src="@drawable/avatar"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="20dp"
+        android:layout_height="35dp" />
+    <TextView
+        android:id="@+id/contact_name"
+        android:layout_toRightOf="@id/contact_icon"
+        android:text="半泽直树"
+        android:layout_marginLeft="20dp"
+        android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"/>
+
+    <ImageView
+        android:layout_width="35dp"
+        android:src="@drawable/remove"
+        android:id="@+id/remove"
+        android:layout_toLeftOf="@+id/call"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="15dp"
+        android:layout_height="35dp" />
+
+    <ImageView
+        android:id="@+id/call"
+        android:layout_alignParentRight="true"
+        android:layout_width="35dp"
+        android:src="@drawable/phone"
+        android:clickable="true"
+        android:onClick="Call"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="20dp"
+        android:layout_height="35dp" />
+    <View
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#cdcdcd"/>
+</RelativeLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:Android="http://schemas.android.com/apk/res/android">
+    <padding Android:left="5sp" Android:top="5sp" Android:right="5sp" Android:bottom="5sp" />
+    <stroke Android:width="1dip" Android:color="#3696B5" />
+    <corners Android:radius="5sp"/>
+    <solid Android:color="#3696B5" />
+
+
+    <!--  里面我们定义了一个shape对象，实现背景drawable形状，其中padding代表距离边框，这里我们设置了左、上、右、下四个位置的间距。
+     stroke可以制造出一些3D立体效果，corners是四个角，radisu属性可以设置半径，值越大越圆滑，根据运行效果你可以微调，
+     最后soild是填充颜色，这里我们用了ffffff表示纯白。 -->
+
+</shape>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F8F8F8">
+    <include
+        android:id="@+id/secondary_layout"
+        layout="@layout/secondary_title_bar"/>
+    <ImageView
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="46dp"
+        android:src="@drawable/app_logo"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:text="现勘快录"
+        android:textSize="@dimen/common_text_size"/>
+
+    <TextView
+        android:id="@+id/now_version_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="12dp"
+        android:text="Version 1.0"
+        android:textSize="@dimen/common_text_size"
+        android:textColor="@color/text_common_gray_color"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/scene_list_divider_height"
+        android:layout_marginTop="35dp"
+        android:background="@color/scene_list_divider_color"/>
+    <LinearLayout
+        android:id="@+id/new_version_layout"
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="#ffffffff">
+        <TextView
+            android:id="@+id/new_version_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="43dp"
+            android:layout_weight="1"
+            android:text="New Version"
+            android:textColor="@color/text_common_gray_color"
+            android:textSize="@dimen/common_button_text_size"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="13dp" />
+        <ImageView
+            android:layout_width="11dp"
+            android:layout_height="20dp"
+            android:layout_marginEnd="13dp"
+            android:background="@drawable/cscense_list_item_go"/>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/scene_list_divider_height"
+        android:background="@color/scene_list_divider_color"/>
+</LinearLayout>

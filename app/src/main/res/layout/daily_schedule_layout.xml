@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/daily_main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/title_layout"
+        layout="@layout/secondary_title_bar"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+        <Button
+            android:id="@+id/btn_schedule_police_position"
+            android:layout_width="@dimen/width_spinner_org"
+            android:layout_height="wrap_content"
+            android:text="派出所"
+            android:background="@null"
+            android:textSize="12sp"
+            android:gravity="center">
+
+        </Button>
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_weight="1"/>
+        <Button
+            android:id="@+id/btn_schedule_date"
+            android:layout_width="@dimen/width_spinner_date"
+            android:layout_height="wrap_content"
+            android:text="2016年，12月"
+            android:textSize="12sp"
+            android:background="@null"
+            android:gravity="center">
+
+        </Button>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:visibility="gone"
+        android:paddingRight="10dp">
+        <Spinner
+            android:id="@+id/spinner_schedule_police_position"
+            android:layout_width="@dimen/width_spinner_org"
+            android:layout_height="wrap_content"
+            android:paddingRight="1dp">
+
+        </Spinner>
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_weight="1"/>
+        <Spinner
+            android:id="@+id/spinner_schedule_date"
+            android:layout_width="@dimen/width_spinner_date"
+            android:layout_height="wrap_content"
+            android:paddingRight="1dp">
+
+        </Spinner>
+    </LinearLayout>
+    <!--<CalendarView
+        android:id="@+id/calender_schedule"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_shedule_calendar"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+
+    </CalendarView>-->
+    <com.gofirst.scenecollection.evidence.view.customview.CalendarView
+        android:id="@+id/calender_schedule"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_shedule_calendar"
+
+        android:layout_gravity="center_horizontal"
+        >
+
+    </com.gofirst.scenecollection.evidence.view.customview.CalendarView>
+
+    <TextView
+        android:id="@+id/tv_daily_schedule_show"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="等待。。。"
+        android:visibility="gone"
+        android:layout_marginLeft="@dimen/margin_left_daily_schedule_show"
+        android:layout_marginTop="@dimen/margin_top_daily_schedule_show"
+        android:textSize="@dimen/size_daily_schedule_show"/>
+
+    <ListView
+        android:id="@+id/lv_daily_schedule_persons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"></ListView>
+</LinearLayout>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F8F8F8">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="99dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="#FF2EA2EB">
+        <ImageView
+            android:id="@+id/person_center_img"
+            android:layout_width="66dp"
+            android:layout_height="66dp"
+            android:background="@drawable/avatar"
+            android:layout_marginStart="13dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginStart="12dp"
+            android:gravity="center_vertical">
+            <TextView
+                android:id="@+id/person_center_name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="姓名: "
+                android:textColor="@color/text_common_white_color"/>
+            <TextView
+                android:id="@+id/person_center_account_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="账号: "
+                android:textColor="@color/text_common_white_color"/>
+            <TextView
+                android:id="@+id/person_center_position_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="单位: "
+                android:textColor="@color/text_common_white_color"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/person_center_update_pwd_btn"
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="43dp"
+            android:layout_weight="1"
+            android:text="修改密码"
+            android:textColor="@color/text_common_gray_color"
+            android:textSize="@dimen/common_button_text_size"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="13dp" />
+        <ImageView
+            android:layout_width="11dp"
+            android:layout_height="20dp"
+            android:layout_marginEnd="13dp"
+            android:background="@drawable/cscense_list_item_go"/>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/scene_list_divider_height"
+        android:background="@color/scene_list_divider_color"/>
+    <LinearLayout
+        android:id="@+id/person_center_about_btn"
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="43dp"
+            android:layout_weight="1"
+            android:text="关于"
+            android:textColor="@color/text_common_gray_color"
+            android:textSize="@dimen/common_button_text_size"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="13dp" />
+        <ImageView
+            android:layout_width="11dp"
+            android:layout_height="20dp"
+            android:layout_marginEnd="13dp"
+            android:background="@drawable/cscense_list_item_go"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/scene_list_divider_height"
+        android:background="@color/scene_list_divider_color"/>
+<View
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    />
+    <Button
+        android:id="@+id/person_center_exit_btn"
+        style="@style/common_button_style"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="16dp"
+        android:text="退出登录" />
+</LinearLayout>

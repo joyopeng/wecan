@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/outpatient_check_hospital"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12.599976dip"
+        android:layout_marginRight="12.599976dip"
+        android:gravity="center_vertical"
+        >
+
+        <LinearLayout
+            android:id="@+id/linear_layout_up"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10.0dip"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="10dip"
+                android:layout_height="10dip"
+                android:adjustViewBounds="false" />
+
+            <TextView
+                android:id="@+id/tv_device_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.0"
+                android:text="名称"
+                android:textColor="#ff323232"
+                android:textSize="14sp"
+                android:gravity="center"
+                android:typeface="monospace" />
+
+            <CheckBox
+                android:id="@+id/checkBox1"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:text=""
+                android:button="@null"
+                android:background="@drawable/multi_choicl_list_check" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>  

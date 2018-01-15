@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/secondary_title_bar" />
+
+   <ListView
+       android:layout_marginTop="51dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@color/all_view_stroke"
+        android:dividerHeight="@dimen/all_view_stroke"
+        android:id="@+id/uploaded_case_list"
+        >
+    </ListView>
+    <View
+        android:layout_below="@+id/uploaded_case_list"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/all_view_stroke"
+        android:background="@color/all_view_stroke"/>
+
+    <Button
+        android:id="@+id/upload_btn"
+        style="@style/common_button_style"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:text="立即上传"
+        android:visibility="invisible"/>
+
+</RelativeLayout>
