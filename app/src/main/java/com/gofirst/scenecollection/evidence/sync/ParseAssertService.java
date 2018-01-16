@@ -7,8 +7,10 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.IBinder;
 import android.os.Message;
+import android.text.format.DateUtils;
 
 import com.gofirst.scenecollection.evidence.Application.EvidenceApplication;
+import com.gofirst.scenecollection.evidence.model.AppOfflineMapPackage;
 import com.gofirst.scenecollection.evidence.model.User;
 import com.gofirst.scenecollection.evidence.utils.SharePre;
 import com.gofirst.scenecollection.evidence.utils.Utils;
@@ -16,12 +18,14 @@ import com.gofirst.scenecollection.evidence.utils.Utils;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.InputStream;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 import static com.gofirst.scenecollection.evidence.utils.Utils.BASE_DATA_FILE_PATH;
 
 public class ParseAssertService extends Service {
-    private static final String baseDatafile = "basedata.gz";
+    private static final String baseDatafile = "basedata";
     private static final String mapFile = "suzhou.dat";
     private SharePre sharePre;
     private String DOWNLOAD_MAP_DATA_PATH = "";
@@ -67,7 +71,7 @@ public class ParseAssertService extends Service {
         new Thread() {
             @Override
             public void run() {
-                copyFilesFassets(context, "basedata.gz", BASE_DATA_FILE_PATH);
+                copyFilesFassets(context, baseDatafile, BASE_DATA_FILE_PATH);
                 Utils.ReadTxtFile(context, BASE_DATA_FILE_PATH, myHandler);
             }
         }.start();
@@ -77,16 +81,25 @@ public class ParseAssertService extends Service {
      * 从assert复制基础数据包
      */
     private void copyMapData(final Context context) {
-        File dir = new File(DOWNLOAD_MAP_DATA_PATH);
-        if (!dir.exists()) {
-            dir.mkdirs();
-        }
         new Thread() {
             @Override
             public void run() {
                 DOWNLOAD_MAP_DATA_PATH = context.getObbDir() + "/amp/data/vmap";
+                File dir = new File(DOWNLOAD_MAP_DATA_PATH);
+                if (!dir.exists()) {
+                    dir.mkdirs();
+                }
                 copyFilesFassets(context, "suzhou.dat", DOWNLOAD_MAP_DATA_PATH + "/suzhou.dat");
                 Utils.ReadTxtFile(context, DOWNLOAD_MAP_DATA_PATH + "/suzhou.dat", myHandler);
+                AppOfflineMapPackage info = new AppOfflineMapPackage();
+                info.setAreaId("127");
+                info.setMapSpell("suzhou");
+                info.setVersionCode("5");
+                info.setFileSize("18535614");
+                info.setId("fcf15aa1c1bc4d2b84daa486131934c5");
+                info.setAreaName("苏州市");
+//                info.setCreateDatetime(Calendar.getInstance().s);
+                EvidenceApplication.db.save(info);
             }
         }.start();
     }

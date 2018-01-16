@@ -20,6 +20,7 @@
         android:layout_toRightOf="@id/caseType"
         android:id="@+id/caseAddress"
         android:layout_centerVertical="true"
+        android:maxLength="15"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 

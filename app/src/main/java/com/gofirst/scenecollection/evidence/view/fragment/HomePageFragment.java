@@ -286,30 +286,30 @@ public class HomePageFragment extends Fragment implements View.OnClickListener,M
         }
     }
 
-//    public void getData(){
-//        HomePageFragmentData homePageFragmentData;
-//        List<SceneAlarm> resultList= EvidenceApplication.db.findAll(SceneAlarm.class,"alarmDatetime desc limit 0,50");
-//
-//        list.clear();
-//        Log.d("resultList", "" + resultList.size());
-//        for(int j=0;j<resultList.size();j++) {
-//            if(resultList.get(j).getStatus().equals("0")) {
-//                homePageFragmentData = new HomePageFragmentData();
-//                //homePageFragmentData.setCaseId(resultList.get(j).getCaseNo());
-//                homePageFragmentData.setAlarmDatetime(resultList.get(j).getAlarmDatetime());
-//                homePageFragmentData.setId(resultList.get(j).getId());
-//                homePageFragmentData.setMarkOrPhone(resultList.get(j).getAlarmTel());
-//                homePageFragmentData.setName(resultList.get(j).getAlarmPeople());
-//                homePageFragmentData.setExposureProcess(resultList.get(j).getExposureProcess());
-//                homePageFragmentData.setAlarmAddress(resultList.get(j).getAlarmAddress());
-//                homePageFragmentData.setRemark(resultList.get(j).getRemark());
-//                homePageFragmentData.setState(resultList.get(j).getStatus());
-//                homePageFragmentData.setReceptionNo(resultList.get(j).getReceptionNo());
-//                //homePageFragmentData.setCrackedDate(resultList.get(j).getCrackedDate());
-//                list.add(homePageFragmentData);
-//            }
-//        }
-//    }
+    public void getData(){
+        HomePageFragmentData homePageFragmentData;
+        List<SceneAlarm> resultList= EvidenceApplication.db.findAll(SceneAlarm.class,"alarmDatetime desc limit 0,50");
+
+        list.clear();
+        Log.d("resultList", "" + resultList.size());
+        for(int j=0;j<resultList.size();j++) {
+            if(resultList.get(j).getStatus().equals("0")) {
+                homePageFragmentData = new HomePageFragmentData();
+                //homePageFragmentData.setCaseId(resultList.get(j).getCaseNo());
+                homePageFragmentData.setAlarmDatetime(resultList.get(j).getAlarmDatetime());
+                homePageFragmentData.setId(resultList.get(j).getId());
+                homePageFragmentData.setMarkOrPhone(resultList.get(j).getAlarmTel());
+                homePageFragmentData.setName(resultList.get(j).getAlarmPeople());
+                homePageFragmentData.setExposureProcess(resultList.get(j).getExposureProcess());
+                homePageFragmentData.setAlarmAddress(resultList.get(j).getAlarmAddress());
+                homePageFragmentData.setRemark(resultList.get(j).getRemark());
+                homePageFragmentData.setState(resultList.get(j).getStatus());
+                homePageFragmentData.setReceptionNo(resultList.get(j).getReceptionNo());
+                //homePageFragmentData.setCrackedDate(resultList.get(j).getCrackedDate());
+                list.add(homePageFragmentData);
+            }
+        }
+    }
 
     public void getAddCaseData(String condition){
         HomePageFragmentData homePageFragmentData;

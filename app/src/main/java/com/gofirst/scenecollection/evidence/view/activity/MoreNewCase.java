@@ -705,10 +705,7 @@ public class MoreNewCase extends Activity implements View.OnClickListener,Select
                                 .getJSONArray("data");
                         JSONObject jsonObjectdata;
                         Log.d("testcomplete", "" + jsonArray);
-
                         list.clear();
-                        list.clear();
-
                         for (int i = 0; i < jsonArray.length(); i++) {
                             jsonObjectdata = jsonArray.getJSONObject(i);
                             caseNo = jsonObjectdata.getString("id");
@@ -754,7 +751,6 @@ public class MoreNewCase extends Activity implements View.OnClickListener,Select
 
                             List<CsSceneCases> SceneCaselist = EvidenceApplication.db.findAllByWhere(CsSceneCases.class,
                                     "id = '" + caseNo + "'");
-                            SceneCaselist.size();
                             if (SceneCaselist.size() == 0) {
                                 Log.d("SceneCaselist", "save");
                                 if(jsonObjectdata.getString("status")!=null&&

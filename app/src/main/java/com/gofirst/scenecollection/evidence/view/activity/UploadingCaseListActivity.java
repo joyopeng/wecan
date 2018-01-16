@@ -126,10 +126,12 @@ public class UploadingCaseListActivity extends Activity implements View.OnClickL
             List<CsSceneCases> csSceneCases = EvidenceApplication.db.findAllByWhere(CsSceneCases.class, "caseNo = '" + unUploadJson.getCaseId() + "'");
             //
             CsSceneCases cs = csSceneCases.get(0);
-            long currentSize = uploadfilerec.getLong(cs.getCaseNo()+"_u", 0);
-            long totalSize = uploadfilerec.getLong(cs.getCaseNo(),0);
-            long percent =  (currentSize*100 / totalSize);
-            cs.setUploadTime("上传进度 "+String.valueOf(percent)+"%");
+            if(uploadfilerec !=  null) {
+                long currentSize = uploadfilerec.getLong(cs.getCaseNo() + "_u", 0);
+                long totalSize = uploadfilerec.getLong(cs.getCaseNo(), 0);
+                long percent = (currentSize * 100 / totalSize);
+                cs.setUploadTime("上传进度 " + String.valueOf(percent) + "%");
+            }
             //
             csSceneCases.get(0).setAddRec(unUploadJson.isAddRec());
             mCsSceneCasesList.add(csSceneCases.get(0));
@@ -161,6 +163,8 @@ public class UploadingCaseListActivity extends Activity implements View.OnClickL
                     if(totalSize == 0)
                         continue;
                     long percent =  (currentSize*100 / totalSize);
+                    if(percent > 100)
+                        percent = 100;
                     cases.setUploadTime("上传进度 "+String.valueOf(percent)+"%");
                     ((UploadingListAdapter)(listView.getAdapter())).notifyDataSetChanged();
                     continue;

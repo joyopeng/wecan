@@ -1,0 +1,713 @@
+open /proc/kmsg failed: Permission denied
+--------- beginning of main
+01-16 13:03:14.942 I/ServiceManager(  849): Waiting for service AtCmdFwd...
+01-16 13:03:15.302 I/MSM-irqbalance(  826): Decided to move IRQ200 from CPU4 to CPU5
+01-16 13:03:15.942 I/ServiceManager(  849): Waiting for service AtCmdFwd...
+--------- beginning of system
+01-16 13:03:15.962 D/PowerManagerService( 1208): to showLogHandlerThread quit!
+01-16 13:03:15.972 E/WifiStateMachine( 1208): WifiStateMachine CMD_START_SCAN source 10537 txSuccessRate=0.06 rxSuccessRate=0.05 targetRoamBSSID=any RSSI=-59
+01-16 13:03:15.972 D/wpa_supplicant(24232): wlan0: Control interface command 'SCAN TYPE=ONLY'
+01-16 13:03:15.972 D/wpa_supplicant(24232): wlan0: Setting scan request: 0.000000 sec
+01-16 13:03:15.972 D/wpa_supplicant(24232): Scan SSID - hexdump(len=13): 79 69 64 69 61 6e 6c 69 61 6e 6a 69 65
+01-16 13:03:15.972 D/wpa_supplicant(24232): wlan0: Starting AP scan for wildcard SSID
+01-16 13:03:15.972 D/wpa_supplicant(24232): wlan0: Add radio work 'scan'@0x5592bf5790
+01-16 13:03:15.972 D/wpa_supplicant(24232): wlan0: First radio work item in the queue - schedule start immediately
+01-16 13:03:15.972 D/wpa_supplicant(24232): wlan0: Starting radio work 'scan'@0x5592bf5790 after 0.000091 second wait
+01-16 13:03:15.972 D/wpa_supplicant(24232): wlan0: nl80211: scan request
+01-16 13:03:15.972 D/wpa_supplicant(24232): nl80211: Scan SSID - hexdump(len=13): 79 69 64 69 61 6e 6c 69 61 6e 6a 69 65
+01-16 13:03:15.972 D/wpa_supplicant(24232): nl80211: Scan SSID - hexdump(len=0): [NULL]
+01-16 13:03:15.992 D/wpa_supplicant(24232): Scan requested (ret=0) - scan timeout 30 seconds
+01-16 13:03:15.992 I/WifiHAL ( 1208): Poll result = 1
+01-16 13:03:15.992 I/WifiHAL ( 1208): Found some events!!!
+01-16 13:03:15.992 D/wpa_supplicant(24232): nl80211: Event message available
+01-16 13:03:15.992 D/WifiHAL ( 1208): no_seq_check received
+01-16 13:03:15.992 D/wpa_supplicant(24232): nl80211: Drv Event 33 (NL80211_CMD_TRIGGER_SCAN) received for wlan0
+01-16 13:03:15.992 I/WifiHAL ( 1208): event received NL80211_CMD_TRIGGER_SCAN
+01-16 13:03:15.992 D/wpa_supplicant(24232): wlan0: nl80211: Scan trigger
+01-16 13:03:15.992 I/WifiHAL ( 1208): event received NL80211_CMD_TRIGGER_SCAN, vendor_id = 0x0
+01-16 13:03:15.992 D/wpa_supplicant(24232): wlan0: Event SCAN_STARTED (49) received
+01-16 13:03:15.992 I/WifiHAL ( 1208): event ignored!!
+01-16 13:03:15.992 D/wpa_supplicant(24232): wlan0: Own scan request started a scan in 0.000270 seconds
+01-16 13:03:15.992 D/wpa_supplicant(24232): CTRL_IFACE monitor sent successfully to /data/misc/wifi/sockets/wpa_ctrl_440-19\x00
+01-16 13:03:15.992 D/wpa_supplicant(24232): CTRL_IFACE monitor sent successfully to /data/misc/wifi/sockets/wpa_ctrl_1208-9\x00
+01-16 13:03:16.062 D/StatusBar.MSimNetworkController( 6215): onSignalStrengthsChanged received on phoneId :0 subid: 2signalStrength=SignalStrength: 99 0 -120 -160 -120 -1 -1 27 -89 -8 -184 2147483647 2147483647 gsm|lte level=4
+01-16 13:03:16.872 D/wpa_supplicant(24232): wlan0: Control interface command 'SIGNAL_POLL'
+01-16 13:03:16.932 I/ServiceManager(  849): Waiting for service AtCmdFwd...
+01-16 13:03:16.962 I/WifiHAL ( 1208): Poll result = 1
+01-16 13:03:16.962 I/WifiHAL ( 1208): Found some events!!!
+01-16 13:03:16.962 D/WifiHAL ( 1208): no_seq_check received
+01-16 13:03:16.962 I/WifiHAL ( 1208): event received NL80211_CMD_NEW_SCAN_RESULTS
+01-16 13:03:16.962 I/WifiHAL ( 1208): event received NL80211_CMD_NEW_SCAN_RESULTS, vendor_id = 0x0
+01-16 13:03:16.962 I/WifiHAL ( 1208): event ignored!!
+01-16 13:03:16.962 D/wpa_supplicant(24232): nl80211: Event message available
+01-16 13:03:16.962 D/wpa_supplicant(24232): nl80211: Drv Event 34 (NL80211_CMD_NEW_SCAN_RESULTS) received for wlan0
+01-16 13:03:16.962 D/wpa_supplicant(24232): wlan0: nl80211: New scan results available
+01-16 13:03:16.962 D/wpa_supplicant(24232): nl80211: Scan probed for SSID 'yidianlianjie'
+01-16 13:03:16.962 D/wpa_supplicant(24232): nl80211: Scan probed for SSID ''
+01-16 13:03:16.962 D/wpa_supplicant(24232): nl80211: Scan included frequencies: 2412 2417 2422 2427 2432 2437 2442 2447 2452 2457 2462 2467 2472 5180 5200 5220 5240 5260 5280 5300 5320 5745 5765 5785 5805 5825
+01-16 13:03:16.962 D/wpa_supplicant(24232): wlan0: Event SCAN_RESULTS (3) received
+01-16 13:03:16.962 D/wpa_supplicant(24232): wlan0: Scan completed in 0.967458 seconds
+01-16 13:03:16.962 D/wpa_supplicant(24232): nl80211: Associated on 2442 MHz
+01-16 13:03:16.962 D/wpa_supplicant(24232): nl80211: Associated with 60:ee:5c:02:3c:a3
+01-16 13:03:16.962 D/wpa_supplicant(24232): nl80211: Received scan results (4 BSSes)
+01-16 13:03:16.962 D/wpa_supplicant(24232): nl80211: Scan results indicate BSS status with 60:ee:5c:02:3c:a3 as associated
+01-16 13:03:16.962 D/wpa_supplicant(24232): wlan0: BSS: Start scan result update 1950
+01-16 13:03:16.962 D/wpa_supplicant(24232): BSS: last_scan_res_used=4/32
+01-16 13:03:16.962 D/wpa_supplicant(24232): wlan0: Scan-only results received
+01-16 13:03:16.962 D/wpa_supplicant(24232): CTRL_IFACE monitor sent successfully to /data/misc/wifi/sockets/wpa_ctrl_440-19\x00
+01-16 13:03:16.962 D/wpa_supplicant(24232): CTRL_IFACE monitor sent successfully to /data/misc/wifi/sockets/wpa_ctrl_1208-9\x00
+01-16 13:03:16.962 D/wpa_supplicant(24232): wlan0: Radio work 'scan'@0x5592bf5790 done in 0.985246 seconds
+01-16 13:03:16.962 D/wpa_supplicant(24232): wlan0: Control interface command 'BSS RANGE=0- MASK=0x21987'
+01-16 13:03:16.962 D/wpa_supplicant(24232): WPS: Unknown Vendor Extension (Vendor ID 311)
+01-16 13:03:16.962 D/wpa_supplicant(24232): WPS: Unknown Vendor Extension (Vendor ID 311)
+01-16 13:03:16.962 D/wpa_supplicant(24232): WPS: Unknown Vendor Extension (Vendor ID 311)
+01-16 13:03:16.972 D/LBSSystemMonitorService( 1208): handleMessage what - 4
+01-16 13:03:16.972 D/Wiper_jni( 1208): Send Network Location.
+01-16 13:03:16.982 D/StatusBar.MSimNetworkController( 6215): onSignalStrengthsChanged received on phoneId :0 subid: 2signalStrength=SignalStrength: 99 0 -120 -160 -120 -1 -1 27 -89 -7 -184 2147483647 2147483647 gsm|lte level=4
+01-16 13:03:17.102 D/PowerManagerService( 1208): to showLogHandlerThread quit!
+01-16 13:03:17.102 D/ActivityManager( 1208): target_pkg = com.gofirst.scenecollection.evidence, target_process = com.gofirst.scenecollection.evidence
+01-16 13:03:17.102 D/ActivityManager( 1208): start service caller PID =32734, UID = 10537, callerPkgList = {com.gofirst.scenecollection.evidence=com.android.internal.app.ProcessStats$ProcessStateHolder@acbf1a3}, service_name = ComponentInfo{com.gofirst.scenecollection.evidence/com.gofirst.scenecollection.evidence.sync.UpLoadService}
+01-16 13:03:17.102 W/AlarmManager( 1208): none no open power log
+01-16 13:03:17.102 D/save    (32734): {"latitude":"31.350729","longitude":"31.350729","machineCode":"ae4b71d7d0b64cea8711a7c77f7c9f46","modularVersionNo":"1.0.90","userId":"119071","userName":"admin","userOrg":"32098","userOrgName":"%E8%8B%8F%E5%B7%9E%E5%B8%82%E5%85%AC%E5%AE%89%E5%B1%80"}
+01-16 13:03:17.112 D/ActivityManager( 1208): target_pkg = com.gofirst.scenecollection.evidence, target_process = com.gofirst.scenecollection.evidence:romoteservice
+01-16 13:03:17.112 D/ActivityManager( 1208): bindService caller Pid = 32734, Uid = 10537 callerApp.pkgList ={com.gofirst.scenecollection.evidence=com.android.internal.app.ProcessStats$ProcessStateHolder@acbf1a3}, service_name = ComponentInfo{com.gofirst.scenecollection.evidence/com.gofirst.scenecollection.evidence.sync.RemoteService}
+01-16 13:03:17.522 D/PowerManagerService( 1208): to showLogHandlerThread quit!
+01-16 13:03:17.522 E/GpsXtraDownloader( 1208): No XTRA servers were specified in the GPS configuration
+01-16 13:03:17.942 I/ServiceManager(  849): Waiting for service AtCmdFwd...
+01-16 13:03:17.962 D/PowerManagerService( 1208): to showLogHandlerThread quit!
+01-16 13:03:18.192 W/SQLiteConnectionPool(32734): A SQLiteConnection object for database '/storage/emulated/0/CMI-CSI/db/evidence.db' was leaked!  Please fix your application to end transactions in progress properly and to close the database when it is no longer needed.
+01-16 13:03:18.302 D/StatusBar.MSimNetworkController( 6215): onSignalStrengthsChanged received on phoneId :0 subid: 2signalStrength=SignalStrength: 99 0 -120 -160 -120 -1 -1 27 -89 -7 -184 2147483647 2147483647 gsm|lte level=4
+01-16 13:03:18.942 W/Atfwd_Sendcmd(  849): AtCmdFwd service not published, waiting... retryCnt : 4
+01-16 13:03:18.942 W/AlarmManager( 1208): none no open power log
+01-16 13:03:19.532 D/StatusBar.MSimNetworkController( 6215): refreshViews connected={ wifi } level=4 mMSimcombinedSignalIconId=0x7f0201c4/com.android.systemui:drawable/stat_sys_wifi_signal_png_4_fully mMSimcombinedActivityIconId=0x7f0201be mAirplaneMode=false mMSimDataActivity=0 mMSimPhoneSignalIconId=0x7f0201b1/com.android.systemui:drawable/stat_sys_signal_4 mMSimDataDirectionIconId=0x0 mMSimDataSignalIconId=0x7f0201b1 mMSimDataTypeIconId=0x0/(null) mNoMSimIconId=0x0/(null) mMSimMobileActivityIconId=0x0/(null) mWifiIconId=0x7f0201c4 mBluetoothTetherIconId=0x108069f
+01-16 13:03:19.762 I/Timeline(32734): Timeline: Activity_launch_request id:com.gofirst.scenecollection.evidence time:14442896
+01-16 13:03:19.762 I/ActivityManager( 1208): START u0 {cmp=com.gofirst.scenecollection.evidence/.view.activity.SyncDataActivity} from uid 10537 on display 0
+01-16 13:03:19.772 V/WindowManager( 1208): addAppToken: AppWindowToken{2ce8865c token=Token{8071ccf ActivityRecord{324f092e u0 com.gofirst.scenecollection.evidence/.view.activity.SyncDataActivity t32603}}} to stack=1 task=32603 at 1
+01-16 13:03:19.772 D/PowerManagerService( 1208): to showLogHandlerThread quit!
+01-16 13:03:19.782 I/HomePageFragment(32734): onPause time = 77785
+01-16 13:03:19.782 I/zhangsh (32734): MainActivity onPause
+01-16 13:03:19.782 E/ImeManager( 1208): System would not have a null focused window on display;0
+01-16 13:03:19.852 I/ViewRootImpl(32734): CPU Rendering VSync enable = true
+01-16 13:03:19.852 V/WindowManager( 1208): Adding window Window{1e468a3a u0 com.gofirst.scenecollection.evidence/com.gofirst.scenecollection.evidence.view.activity.SyncDataActivity} at 6 of 10 (after Window{1443bbb6 u0 com.gofirst.scenecollection.evidence/com.gofirst.scenecollection.evidence.view.activity.MainActivity})
+01-16 13:03:19.862 I/supersnapshot( 1208): current activity: clazzName: com.gofirst.scenecollection.evidence.view.activity.SyncDataActivity pkgName: com.gofirst.scenecollection.evidence
+01-16 13:03:19.892 W/FragmentManager(32734): moveToState: Fragment state for SyncDataUploadFragment{13f45e0d #0 id=0x7f0e03de} not updated inline; expected state 3 found 2
+01-16 13:03:19.912 D/tfUrl   (32734): /checkBasedataUpdate
+01-16 13:03:19.912 D/Urltest (32734): http://192.168.191.1:8090/EvidenceService/app/checkBasedataUpdate
+01-16 13:03:19.952 I/libGameXtend(32734): LUCID_1 (1516078999963) GameXtend is currently running in Automatic mode
+01-16 13:03:19.952 I/libGameXtend(32734): LUCID_1 (1516078999963) GameXtend is currently running in no_save Save power state. 
+01-16 13:03:19.952 I/libGameXtend(32734): LUCID_1 (1516078999963) com.gofirst.scenecollection.evidence is currently running with GameXtend, with PS parameter = 1. , ICE is not supported. PS parameter source is PowerXtend configuration
+01-16 13:03:19.952 I/libGameXtend(32734): LUCID_1 (1516078999964) PowerXtend touch feature is not active
+01-16 13:03:19.962 D/wpa_supplicant(24232): wlan0: Control interface command 'SIGNAL_POLL'
+01-16 13:03:19.982 D/StatusBar.MSimNetworkController( 6215): onSignalStrengthsChanged received on phoneId :0 subid: 2signalStrength=SignalStrength: 99 0 -120 -160 -120 -1 -1 27 -89 -6 -184 2147483647 2147483647 gsm|lte level=4
+01-16 13:03:20.042 D/Ulp_jni ( 1208): JNI:In update_settings:currentContextType 0, currentGpsSetting 0, currentAgpsSetting 1,currentNetworkProvSetting 0,currentWifiSetting 1,currentBatteryCharging 0,currentEnhLocationServicesSetting 0 currentPipUserSetting 0 
+01-16 13:03:20.042 D/Ulp_jni ( 1208): JNI:system_update. Event-4
+01-16 13:03:20.042 D/FitAnimSurface( 1208): nubia_start_app_transition  AppWindowToken{2ce8865c token=Token{8071ccf ActivityRecord{324f092e u0 com.gofirst.scenecollection.evidence/.view.activity.SyncDataActivity t32603}}}
+01-16 13:03:20.052 D/FitAnimSurface( 1208): nubia_surface_first_show  Window{1e468a3a u0 com.gofirst.scenecollection.evidence/com.gofirst.scenecollection.evidence.view.activity.SyncDataActivity}
+01-16 13:03:20.052 D/Ulp_jni ( 1208): JNI:In update_settings:currentContextType 0, currentGpsSetting 0, currentAgpsSetting 1,currentNetworkProvSetting 0,currentWifiSetting 1,currentBatteryCharging 0,currentEnhLocationServicesSetting 0 currentPipUserSetting 0 
+01-16 13:03:20.052 D/Ulp_jni ( 1208): JNI:system_update. Event-4
+01-16 13:03:20.052 I/ActivityManager( 1208): Displayed com.gofirst.scenecollection.evidence/.view.activity.SyncDataActivity: +270ms
+01-16 13:03:20.072 D/PowerManagerService( 1208): to showLogHandlerThread quit!
+01-16 13:03:20.082 D/SwipeUpService( 6832): setting close
+01-16 13:03:20.082 D/SwipeUpService( 6832): multi-screen open
+01-16 13:03:20.082 D/SwipeUpService( 6832): in black list
+01-16 13:03:20.082 D/SwipeUpService( 6832): in boot tutorial
+01-16 13:03:20.082 E/WifiStateMachine( 1208): WifiStateMachine CMD_START_SCAN source 10537 txSuccessRate=1.50 rxSuccessRate=1.00 targetRoamBSSID=any RSSI=-62
+01-16 13:03:20.092 D/wpa_supplicant(24232): wlan0: Control interface command 'SCAN TYPE=ONLY'
+01-16 13:03:20.092 D/wpa_supplicant(24232): wlan0: Setting scan request: 0.000000 sec
+01-16 13:03:20.092 D/wpa_supplicant(24232): Scan SSID - hexdump(len=13): 79 69 64 69 61 6e 6c 69 61 6e 6a 69 65
+01-16 13:03:20.092 D/wpa_supplicant(24232): wlan0: Starting AP scan for wildcard SSID
+01-16 13:03:20.092 D/wpa_supplicant(24232): wlan0: Add radio work 'scan'@0x5592bf5790
+01-16 13:03:20.092 D/wpa_supplicant(24232): wlan0: First radio work item in the queue - schedule start immediately
+01-16 13:03:20.092 D/wpa_supplicant(24232): wlan0: Starting radio work 'scan'@0x5592bf5790 after 0.000095 second wait
+01-16 13:03:20.092 D/wpa_supplicant(24232): wlan0: nl80211: scan request
+01-16 13:03:20.092 D/wpa_supplicant(24232): nl80211: Scan SSID - hexdump(len=13): 79 69 64 69 61 6e 6c 69 61 6e 6a 69 65
+01-16 13:03:20.092 D/wpa_supplicant(24232): nl80211: Scan SSID - hexdump(len=0): [NULL]
+01-16 13:03:20.092 D/wpa_supplicant(24232): Scan requested (ret=0) - scan timeout 30 seconds
+01-16 13:03:20.092 D/wpa_supplicant(24232): nl80211: Event message available
+01-16 13:03:20.092 D/wpa_supplicant(24232): nl80211: Drv Event 33 (NL80211_CMD_TRIGGER_SCAN) received for wlan0
+01-16 13:03:20.092 D/wpa_supplicant(24232): wlan0: nl80211: Scan trigger
+01-16 13:03:20.092 D/wpa_supplicant(24232): wlan0: Event SCAN_STARTED (49) received
+01-16 13:03:20.092 D/wpa_supplicant(24232): wlan0: Own scan request started a scan in 0.000309 seconds
+01-16 13:03:20.092 D/wpa_supplicant(24232): CTRL_IFACE monitor sent successfully to /data/misc/wifi/sockets/wpa_ctrl_440-19\x00
+01-16 13:03:20.092 D/wpa_supplicant(24232): CTRL_IFACE monitor sent successfully to /data/misc/wifi/sockets/wpa_ctrl_1208-9\x00
+01-16 13:03:20.092 I/WifiHAL ( 1208): Poll result = 1
+01-16 13:03:20.092 I/WifiHAL ( 1208): Found some events!!!
+01-16 13:03:20.092 D/WifiHAL ( 1208): no_seq_check received
+01-16 13:03:20.092 I/WifiHAL ( 1208): event received NL80211_CMD_TRIGGER_SCAN
+01-16 13:03:20.092 I/WifiHAL ( 1208): event received NL80211_CMD_TRIGGER_SCAN, vendor_id = 0x0
+01-16 13:03:20.092 I/WifiHAL ( 1208): event ignored!!
+01-16 13:03:20.242 I/Timeline(32734): Timeline: Activity_idle id: android.os.BinderProxy@2ea11f6a time:14443370
+01-16 13:03:20.302 I/MSM-irqbalance(  826): Decided to move IRQ155 from CPU4 to CPU6
+01-16 13:03:20.352 D/Ulp_jni ( 1208): JNI:In update_settings:currentContextType 0, currentGpsSetting 0, currentAgpsSetting 1,currentNetworkProvSetting 0,currentWifiSetting 1,currentBatteryCharging 0,currentEnhLocationServicesSetting 0 currentPipUserSetting 0 
+01-16 13:03:20.352 D/Ulp_jni ( 1208): JNI:system_update. Event-4
+01-16 13:03:20.352 D/FitAnimSurface( 1208): nubia_finish_app_transition  AppWindowToken{2ce8865c token=Token{8071ccf ActivityRecord{324f092e u0 com.gofirst.scenecollection.evidence/.view.activity.SyncDataActivity t32603}}}
+01-16 13:03:20.362 I/Timeline( 1208): Timeline: Activity_windows_visible id: ActivityRecord{324f092e u0 com.gofirst.scenecollection.evidence/.view.activity.SyncDataActivity t32603} time:14443490
+01-16 13:03:20.542 D/StatusBar.MSimNetworkController( 6215): onSignalStrengthsChanged received on phoneId :0 subid: 2signalStrength=SignalStrength: 99 0 -120 -160 -120 -1 -1 27 -89 -6 -184 2147483647 2147483647 gsm|lte level=4
+01-16 13:03:21.052 I/WifiHAL ( 1208): Poll result = 1
+01-16 13:03:21.052 I/WifiHAL ( 1208): Found some events!!!
+01-16 13:03:21.052 D/WifiHAL ( 1208): no_seq_check received
+01-16 13:03:21.052 I/WifiHAL ( 1208): event received NL80211_CMD_NEW_SCAN_RESULTS
+01-16 13:03:21.052 I/WifiHAL ( 1208): event received NL80211_CMD_NEW_SCAN_RESULTS, vendor_id = 0x0
+01-16 13:03:21.052 I/WifiHAL ( 1208): event ignored!!
+01-16 13:03:21.052 D/wpa_supplicant(24232): nl80211: Event message available
+01-16 13:03:21.052 D/wpa_supplicant(24232): nl80211: Drv Event 34 (NL80211_CMD_NEW_SCAN_RESULTS) received for wlan0
+01-16 13:03:21.052 D/wpa_supplicant(24232): wlan0: nl80211: New scan results available
+01-16 13:03:21.052 D/wpa_supplicant(24232): nl80211: Scan probed for SSID 'yidianlianjie'
+01-16 13:03:21.052 D/wpa_supplicant(24232): nl80211: Scan probed for SSID ''
+01-16 13:03:21.052 D/wpa_supplicant(24232): nl80211: Scan included frequencies: 2412 2417 2422 2427 2432 2437 2442 2447 2452 2457 2462 2467 2472 5180 5200 5220 5240 5260 5280 5300 5320 5745 5765 5785 5805 5825
+01-16 13:03:21.052 D/wpa_supplicant(24232): wlan0: Event SCAN_RESULTS (3) received
+01-16 13:03:21.052 D/wpa_supplicant(24232): wlan0: Scan completed in 0.959738 seconds
+01-16 13:03:21.052 D/wpa_supplicant(24232): nl80211: Associated on 2442 MHz
+01-16 13:03:21.052 D/wpa_supplicant(24232): nl80211: Associated with 60:ee:5c:02:3c:a3
+01-16 13:03:21.052 D/wpa_supplicant(24232): nl80211: Received scan results (3 BSSes)
+01-16 13:03:21.052 D/wpa_supplicant(24232): nl80211: Scan results indicate BSS status with 60:ee:5c:02:3c:a3 as associated
+01-16 13:03:21.052 D/wpa_supplicant(24232): wlan0: BSS: Start scan result update 1951
+01-16 13:03:21.052 D/wpa_supplicant(24232): wlan0: BSS: Remove id 582 BSSID d0:c7:c0:e3:28:36 SSID 'TP-LINK_2836' due to no match in scan
+01-16 13:03:21.052 D/wpa_supplicant(24232): CTRL_IFACE monitor sent successfully to /data/misc/wifi/sockets/wpa_ctrl_440-19\x00
+01-16 13:03:21.052 D/wpa_supplicant(24232): CTRL_IFACE monitor sent successfully to /data/misc/wifi/sockets/wpa_ctrl_1208-9\x00
+01-16 13:03:21.052 D/wpa_supplicant(24232): BSS: last_scan_res_used=3/32
+01-16 13:03:21.052 D/wpa_supplicant(24232): wlan0: Scan-only results received
+01-16 13:03:21.052 D/wpa_supplicant(24232): CTRL_IFACE monitor sent successfully to /data/misc/wifi/sockets/wpa_ctrl_440-19\x00
+01-16 13:03:21.052 D/wpa_supplicant(24232): CTRL_IFACE monitor sent successfully to /data/misc/wifi/sockets/wpa_ctrl_1208-9\x00
+01-16 13:03:21.052 D/wpa_supplicant(24232): wlan0: Radio work 'scan'@0x5592bf5790 done in 0.963128 seconds
+01-16 13:03:21.052 D/wpa_supplicant(24232): wlan0: Control interface command 'BSS RANGE=0- MASK=0x21987'
+01-16 13:03:21.052 D/wpa_supplicant(24232): WPS: Unknown Vendor Extension (Vendor ID 311)
+01-16 13:03:21.052 D/wpa_supplicant(24232): WPS: Unknown Vendor Extension (Vendor ID 311)
+01-16 13:03:21.052 D/wpa_supplicant(24232): WPS: Unknown Vendor Extension (Vendor ID 311)
+01-16 13:03:21.062 D/LBSSystemMonitorService( 1208): handleMessage what - 4
+01-16 13:03:21.062 D/Wiper_jni( 1208): Send Network Location.
+01-16 13:03:21.962 D/PowerManagerService( 1208): to showLogHandlerThread quit!
+01-16 13:03:22.522 D/StatusBar.MSimNetworkController( 6215): refreshViews connected={ wifi } level=4 mMSimcombinedSignalIconId=0x7f0201c4/com.android.systemui:drawable/stat_sys_wifi_signal_png_4_fully mMSimcombinedActivityIconId=0x0 mAirplaneMode=false mMSimDataActivity=0 mMSimPhoneSignalIconId=0x7f0201b1/com.android.systemui:drawable/stat_sys_signal_4 mMSimDataDirectionIconId=0x0 mMSimDataSignalIconId=0x7f0201b1 mMSimDataTypeIconId=0x0/(null) mNoMSimIconId=0x0/(null) mMSimMobileActivityIconId=0x0/(null) mWifiIconId=0x7f0201c4 mBluetoothTetherIconId=0x108069f
+01-16 13:03:22.782 D/StatusBar.MSimNetworkController( 6215): onSignalStrengthsChanged received on phoneId :0 subid: 2signalStrength=SignalStrength: 99 0 -120 -160 -120 -1 -1 27 -89 -6 -184 2147483647 2147483647 gsm|lte level=4
+01-16 13:03:22.982 D/wpa_supplicant(24232): wlan0: Control interface command 'SIGNAL_POLL'
+01-16 13:03:22.982 I/Timeline(32734): Timeline: Activity_launch_request id:com.gofirst.scenecollection.evidence time:14446108
+01-16 13:03:22.982 I/ActivityManager( 1208): START u0 {cmp=com.gofirst.scenecollection.evidence/.view.activity.SelectUploadCase} from uid 10537 on display 0
+01-16 13:03:22.992 V/WindowManager( 1208): addAppToken: AppWindowToken{58d44f4 token=Token{7d3d6c7 ActivityRecord{1031006 u0 com.gofirst.scenecollection.evidence/.view.activity.SelectUploadCase t32603}}} to stack=1 task=32603 at 2
+01-16 13:03:22.992 D/StatusBar.MSimNetworkController( 6215): onSignalStrengthsChanged received on phoneId :0 subid: 2signalStrength=SignalStrength: 99 0 -120 -160 -120 -1 -1 27 -89 -7 -184 2147483647 2147483647 gsm|lte level=4
+01-16 13:03:22.992 D/PowerManagerService( 1208): to showLogHandlerThread quit!
+01-16 13:03:23.002 E/ImeManager( 1208): System would not have a null focused window on display;0
+01-16 13:03:23.032 I/ViewRootImpl(32734): CPU Rendering VSync enable = true
+01-16 13:03:23.042 V/WindowManager( 1208): Adding window Window{20b02692 u0 com.gofirst.scenecollection.evidence/com.gofirst.scenecollection.evidence.view.activity.SelectUploadCase} at 7 of 11 (after Window{1e468a3a u0 com.gofirst.scenecollection.evidence/com.gofirst.scenecollection.evidence.view.activity.SyncDataActivity})
+01-16 13:03:23.042 I/supersnapshot( 1208): current activity: clazzName: com.gofirst.scenecollection.evidence.view.activity.SelectUploadCase pkgName: com.gofirst.scenecollection.evidence
+01-16 13:03:23.072 I/libGameXtend(32734): LUCID_1 (1516079003088) GameXtend is currently running in Automatic mode
+01-16 13:03:23.072 I/libGameXtend(32734): LUCID_1 (1516079003088) GameXtend is currently running in no_save Save power state. 
+01-16 13:03:23.072 I/libGameXtend(32734): LUCID_1 (1516079003088) com.gofirst.scenecollection.evidence is currently running with GameXtend, with PS parameter = 1. , ICE is not supported. PS parameter source is PowerXtend configuration
+01-16 13:03:23.072 I/libGameXtend(32734): LUCID_1 (1516079003088) PowerXtend touch feature is not active
+01-16 13:03:23.102 D/PowerManagerService( 1208): to showLogHandlerThread quit!
+01-16 13:03:23.132 D/FitAnimSurface( 1208): nubia_start_app_transition  AppWindowToken{58d44f4 token=Token{7d3d6c7 ActivityRecord{1031006 u0 com.gofirst.scenecollection.evidence/.view.activity.SelectUploadCase t32603}}}
+01-16 13:03:23.142 D/Ulp_jni ( 1208): JNI:In update_settings:currentContextType 0, currentGpsSetting 0, currentAgpsSetting 1,currentNetworkProvSetting 0,currentWifiSetting 1,currentBatteryCharging 0,currentEnhLocationServicesSetting 0 currentPipUserSetting 0 
+01-16 13:03:23.142 D/Ulp_jni ( 1208): JNI:system_update. Event-4
+01-16 13:03:23.142 D/FitAnimSurface( 1208): nubia_surface_first_show  Window{20b02692 u0 com.gofirst.scenecollection.evidence/com.gofirst.scenecollection.evidence.view.activity.SelectUploadCase}
+01-16 13:03:23.142 D/Ulp_jni ( 1208): JNI:In update_settings:currentContextType 0, currentGpsSetting 0, currentAgpsSetting 1,currentNetworkProvSetting 0,currentWifiSetting 1,currentBatteryCharging 0,currentEnhLocationServicesSetting 0 currentPipUserSetting 0 
+01-16 13:03:23.142 D/Ulp_jni ( 1208): JNI:system_update. Event-4
+01-16 13:03:23.142 I/ActivityManager( 1208): Displayed com.gofirst.scenecollection.evidence/.view.activity.SelectUploadCase: +143ms
+01-16 13:03:23.222 D/ActivityManager( 1208): target_pkg = com.gofirst.scenecollection.evidence, target_process = com.gofirst.scenecollection.evidence
+01-16 13:03:23.222 D/ActivityManager( 1208): start service caller PID =32734, UID = 10537, callerPkgList = {com.gofirst.scenecollection.evidence=com.android.internal.app.ProcessStats$ProcessStateHolder@acbf1a3}, service_name = ComponentInfo{com.gofirst.scenecollection.evidence/com.gofirst.scenecollection.evidence.sync.UpLoadService}
+01-16 13:03:23.232 W/AlarmManager( 1208): none no open power log
+01-16 13:03:23.242 D/save    (32734): {"latitude":"31.350729","longitude":"31.350729","machineCode":"ae4b71d7d0b64cea8711a7c77f7c9f46","modularVersionNo":"1.0.90","userId":"119071","userName":"admin","userOrg":"32098","userOrgName":"%E8%8B%8F%E5%B7%9E%E5%B8%82%E5%85%AC%E5%AE%89%E5%B1%80"}
+01-16 13:03:23.242 D/ActivityManager( 1208): target_pkg = com.gofirst.scenecollection.evidence, target_process = com.gofirst.scenecollection.evidence:romoteservice
+01-16 13:03:23.242 D/ActivityManager( 1208): bindService caller Pid = 32734, Uid = 10537 callerApp.pkgList ={com.gofirst.scenecollection.evidence=com.android.internal.app.ProcessStats$ProcessStateHolder@acbf1a3}, service_name = ComponentInfo{com.gofirst.scenecollection.evidence/com.gofirst.scenecollection.evidence.sync.RemoteService}
+01-16 13:03:23.242 I/Timeline(32734): Timeline: Activity_idle id: android.os.BinderProxy@1fe5cb7e time:14446378
+01-16 13:03:23.362 D/SwipeUpService( 6832): setting close
+01-16 13:03:23.362 D/SwipeUpService( 6832): multi-screen open
+01-16 13:03:23.362 D/SwipeUpService( 6832): in black list
+01-16 13:03:23.362 D/SwipeUpService( 6832): in boot tutorial
+01-16 13:03:23.432 D/Ulp_jni ( 1208): JNI:In update_settings:currentContextType 0, currentGpsSetting 0, currentAgpsSetting 1,currentNetworkProvSetting 0,currentWifiSetting 1,currentBatteryCharging 0,currentEnhLocationServicesSetting 0 currentPipUserSetting 0 
+01-16 13:03:23.432 D/Ulp_jni ( 1208): JNI:system_update. Event-4
+01-16 13:03:23.432 D/FitAnimSurface( 1208): nubia_finish_app_transition  AppWindowToken{58d44f4 token=Token{7d3d6c7 ActivityRecord{1031006 u0 com.gofirst.scenecollection.evidence/.view.activity.SelectUploadCase t32603}}}
+01-16 13:03:23.442 I/Timeline( 1208): Timeline: Activity_windows_visible id: ActivityRecord{1031006 u0 com.gofirst.scenecollection.evidence/.view.activity.SelectUploadCase t32603} time:14446573
+01-16 13:03:23.962 D/PowerManagerService( 1208): to showLogHandlerThread quit!
+01-16 13:03:23.982 E/WifiStateMachine( 1208): WifiStateMachine CMD_START_SCAN source 10537 txSuccessRate=1.69 rxSuccessRate=1.63 targetRoamBSSID=any RSSI=-64
+01-16 13:03:23.982 D/wpa_supplicant(24232): wlan0: Control interface command 'SCAN TYPE=ONLY'
+01-16 13:03:23.982 D/wpa_supplicant(24232): wlan0: Setting scan request: 0.000000 sec
+01-16 13:03:23.982 D/wpa_supplicant(24232): Scan SSID - hexdump(len=13): 79 69 64 69 61 6e 6c 69 61 6e 6a 69 65
+01-16 13:03:23.982 D/wpa_supplicant(24232): wlan0: Starting AP scan for wildcard SSID
+01-16 13:03:23.982 D/wpa_supplicant(24232): wlan0: Add radio work 'scan'@0x5592bf5790
+01-16 13:03:23.982 D/wpa_supplicant(24232): wlan0: First radio work item in the queue - schedule start immediately
+01-16 13:03:23.982 D/wpa_supplicant(24232): wlan0: Starting radio work 'scan'@0x5592bf5790 after 0.000083 second wait
+01-16 13:03:23.982 D/wpa_supplicant(24232): wlan0: nl80211: scan request
+01-16 13:03:23.982 D/wpa_supplicant(24232): nl80211: Scan SSID - hexdump(len=13): 79 69 64 69 61 6e 6c 69 61 6e 6a 69 65
+01-16 13:03:23.982 D/wpa_supplicant(24232): nl80211: Scan SSID - hexdump(len=0): [NULL]
+01-16 13:03:23.992 D/wpa_supplicant(24232): Scan requested (ret=0) - scan timeout 30 seconds
+01-16 13:03:23.992 I/WifiHAL ( 1208): Poll result = 1
+01-16 13:03:23.992 D/wpa_supplicant(24232): nl80211: Event message available
+01-16 13:03:23.992 I/WifiHAL ( 1208): Found some events!!!
+01-16 13:03:23.992 D/wpa_supplicant(24232): nl80211: Drv Event 33 (NL80211_CMD_TRIGGER_SCAN) received for wlan0
+01-16 13:03:23.992 D/WifiHAL ( 1208): no_seq_check received
+01-16 13:03:23.992 D/wpa_supplicant(24232): wlan0: nl80211: Scan trigger
+01-16 13:03:23.992 I/WifiHAL ( 1208): event received NL80211_CMD_TRIGGER_SCAN
+01-16 13:03:23.992 I/WifiHAL ( 1208): event received NL80211_CMD_TRIGGER_SCAN, vendor_id = 0x0
+01-16 13:03:23.992 D/wpa_supplicant(24232): wlan0: Event SCAN_STARTED (49) received
+01-16 13:03:23.992 I/WifiHAL ( 1208): event ignored!!
+01-16 13:03:23.992 D/wpa_supplicant(24232): wlan0: Own scan request started a scan in 0.000274 seconds
+01-16 13:03:23.992 D/wpa_supplicant(24232): CTRL_IFACE monitor sent successfully to /data/misc/wifi/sockets/wpa_ctrl_440-19\x00
+01-16 13:03:23.992 D/wpa_supplicant(24232): CTRL_IFACE monitor sent successfully to /data/misc/wifi/sockets/wpa_ctrl_1208-9\x00
+01-16 13:03:24.942 D/wpa_supplicant(24232): nl80211: Event message available
+01-16 13:03:24.942 D/wpa_supplicant(24232): nl80211: Drv Event 34 (NL80211_CMD_NEW_SCAN_RESULTS) received for wlan0
+01-16 13:03:24.942 D/wpa_supplicant(24232): wlan0: nl80211: New scan results available
+01-16 13:03:24.942 D/wpa_supplicant(24232): nl80211: Scan probed for SSID 'yidianlianjie'
+01-16 13:03:24.942 D/wpa_supplicant(24232): nl80211: Scan probed for SSID ''
+01-16 13:03:24.942 D/wpa_supplicant(24232): nl80211: Scan included frequencies: 2412 2417 2422 2427 2432 2437 2442 2447 2452 2457 2462 2467 2472 5180 5200 5220 5240 5260 5280 5300 5320 5745 5765 5785 5805 5825
+01-16 13:03:24.942 D/wpa_supplicant(24232): wlan0: Event SCAN_RESULTS (3) received
+01-16 13:03:24.942 D/wpa_supplicant(24232): wlan0: Scan completed in 0.952500 seconds
+01-16 13:03:24.942 D/wpa_supplicant(24232): nl80211: Associated on 2442 MHz
+01-16 13:03:24.942 D/wpa_supplicant(24232): nl80211: Associated with 60:ee:5c:02:3c:a3
+01-16 13:03:24.942 D/wpa_supplicant(24232): nl80211: Received scan results (3 BSSes)
+01-16 13:03:24.942 D/wpa_supplicant(24232): nl80211: Scan results indicate BSS status with 60:ee:5c:02:3c:a3 as associated
+01-16 13:03:24.942 D/wpa_supplicant(24232): wlan0: BSS: Start scan result update 1952
+01-16 13:03:24.952 D/wpa_supplicant(24232): wlan0: BSS: Remove id 589 BSSID fa:da:0c:43:01:0b SSID 'DIRECT-0b-HP M452 LaserJet' due to no match in scan
+01-16 13:03:24.952 D/wpa_supplicant(24232): CTRL_IFACE monitor sent successfully to /data/misc/wifi/sockets/wpa_ctrl_440-19\x00
+01-16 13:03:24.952 D/wpa_supplicant(24232): CTRL_IFACE monitor sent successfully to /data/misc/wifi/sockets/wpa_ctrl_1208-9\x00
+01-16 13:03:24.952 D/wpa_supplicant(24232): BSS: last_scan_res_used=3/32
+01-16 13:03:24.952 I/WifiHAL ( 1208): Poll result = 1
+01-16 13:03:24.952 D/wpa_supplicant(24232): wlan0: Scan-only results received
+01-16 13:03:24.952 I/WifiHAL ( 1208): Found some events!!!
+01-16 13:03:24.952 D/WifiHAL ( 1208): no_seq_check received
+01-16 13:03:24.952 D/wpa_supplicant(24232): CTRL_IFACE monitor sent successfully to /data/misc/wifi/sockets/wpa_ctrl_440-19\x00
+01-16 13:03:24.952 I/WifiHAL ( 1208): event received NL80211_CMD_NEW_SCAN_RESULTS
+01-16 13:03:24.952 D/wpa_supplicant(24232): CTRL_IFACE monitor sent successfully to /data/misc/wifi/sockets/wpa_ctrl_1208-9\x00
+01-16 13:03:24.952 I/WifiHAL ( 1208): event received NL80211_CMD_NEW_SCAN_RESULTS, vendor_id = 0x0
+01-16 13:03:24.952 I/WifiHAL ( 1208): event ignored!!
+01-16 13:03:24.952 D/wpa_supplicant(24232): wlan0: Radio work 'scan'@0x5592bf5790 done in 0.968032 seconds
+01-16 13:03:24.952 D/wpa_supplicant(24232): wlan0: Control interface command 'BSS RANGE=0- MASK=0x21987'
+01-16 13:03:24.952 D/LBSSystemMonitorService( 1208): handleMessage what - 4
+01-16 13:03:24.952 D/Wiper_jni( 1208): Send Network Location.
+01-16 13:03:24.962 D/ActivityManager( 1208): target_pkg = com.gofirst.scenecollection.evidence, target_process = com.gofirst.scenecollection.evidence
+01-16 13:03:24.962 D/ActivityManager( 1208): start service caller PID =32734, UID = 10537, callerPkgList = {com.gofirst.scenecollection.evidence=com.android.internal.app.ProcessStats$ProcessStateHolder@acbf1a3}, service_name = ComponentInfo{com.gofirst.scenecollection.evidence/com.gofirst.scenecollection.evidence.sync.UpLoadService}
+01-16 13:03:24.982 D/PowerManagerService( 1208): to showLogHandlerThread quit!
+01-16 13:03:25.002 W/AlarmManager( 1208): none no open power log
+01-16 13:03:25.002 D/save    (32734): {"latitude":"31.350729","longitude":"31.350729","machineCode":"ae4b71d7d0b64cea8711a7c77f7c9f46","modularVersionNo":"1.0.90","userId":"119071","userName":"admin","userOrg":"32098","userOrgName":"%E8%8B%8F%E5%B7%9E%E5%B8%82%E5%85%AC%E5%AE%89%E5%B1%80"}
+01-16 13:03:25.022 D/ActivityManager( 1208): target_pkg = com.gofirst.scenecollection.evidence, target_process = com.gofirst.scenecollection.evidence:romoteservice
+01-16 13:03:25.022 D/ActivityManager( 1208): bindService caller Pid = 32734, Uid = 10537 callerApp.pkgList ={com.gofirst.scenecollection.evidence=com.android.internal.app.ProcessStats$ProcessStateHolder@acbf1a3}, service_name = ComponentInfo{com.gofirst.scenecollection.evidence/com.gofirst.scenecollection.evidence.sync.RemoteService}
+01-16 13:03:25.022 D/StatusBar.MSimNetworkController( 6215): onSignalStrengthsChanged received on phoneId :0 subid: 2signalStrength=SignalStrength: 99 0 -120 -160 -120 -1 -1 27 -89 -7 -184 2147483647 2147483647 gsm|lte level=4
+01-16 13:03:25.032 I/ViewRootImpl(32734): CPU Rendering VSync enable = true
+01-16 13:03:25.032 D/onRunning(32734): onStartSpecific
+01-16 13:03:25.062 D/FitAnimSurface( 1208): nubia_start_app_transition  AppWindowToken{58d44f4 token=Token{7d3d6c7 ActivityRecord{1031006 u0 com.gofirst.scenecollection.evidence/.view.activity.SelectUploadCase t32603}}}
+01-16 13:03:25.092 D/PowerManagerService( 1208): to showLogHandlerThread quit!
+01-16 13:03:25.102 D/FitAnimSurface( 1208): nubia_surface_first_show  Window{20b02692 u0 com.gofirst.scenecollection.evidence/com.gofirst.scenecollection.evidence.view.activity.SelectUploadCase}
+01-16 13:03:25.102 I/libGameXtend(32734): LUCID_1 (1516079005111) GameXtend is currently running in Automatic mode
+01-16 13:03:25.102 I/libGameXtend(32734): LUCID_1 (1516079005111) GameXtend is currently running in no_save Save power state. 
+01-16 13:03:25.102 I/libGameXtend(32734): LUCID_1 (1516079005111) com.gofirst.scenecollection.evidence is currently running with GameXtend, with PS parameter = 1. , ICE is not supported. PS parameter source is PowerXtend configuration
+01-16 13:03:25.102 I/libGameXtend(32734): LUCID_1 (1516079005111) PowerXtend touch feature is not active
+01-16 13:03:25.112 D/tfUrl   (32734): /checkBasedataUpdate
+01-16 13:03:25.112 D/Urltest (32734): http://192.168.191.1:8090/EvidenceService/app/checkBasedataUpdate
+01-16 13:03:25.112 I/supersnapshot( 1208): current activity: clazzName: com.gofirst.scenecollection.evidence.view.activity.SyncDataActivity pkgName: com.gofirst.scenecollection.evidence
+01-16 13:03:25.152 I/Timeline(32734): Timeline: Activity_idle id: android.os.BinderProxy@2ea11f6a time:14448280
+01-16 13:03:25.222 D/onRunning(32734): select * from UnUpLoadBlock where isSpec = '1' order by id limit 0,2
+01-16 13:03:25.292 D/onRun   (32734): UploadFileHasBlock
+01-16 13:03:25.292 D/onRun   (32734): noBlockUploadFinish
+01-16 13:03:25.302 I/MSM-irqbalance(  826): Decided to move IRQ178 from CPU4 to CPU6
+01-16 13:03:25.312 D/SwipeUpService( 6832): setting close
+01-16 13:03:25.312 D/SwipeUpService( 6832): multi-screen open
+01-16 13:03:25.312 D/SwipeUpService( 6832): in black list
+01-16 13:03:25.312 D/SwipeUpService( 6832): in boot tutorial
+01-16 13:03:25.362 D/FitAnimSurface( 1208): nubia_finish_app_transition  AppWindowToken{58d44f4 token=Token{7d3d6c7 ActivityRecord{1031006 u0 com.gofirst.scenecollection.evidence/.view.activity.SelectUploadCase t32603}}}
+01-16 13:03:25.372 E/AVGFPS  (  403): com.gofirst.scenecollection.evidence/com.gofirst.scenecollection.evidence.view.activity.SelectUploadCase b- nAvgNum= 16 avgtime=20716794.00 fps=48.27
+01-16 13:03:25.372 W/SurfaceFlinger(  403): couldn't log to binary event log: overflow.
+01-16 13:03:25.532 D/StatusBar.MSimNetworkController( 6215): refreshViews connected={ wifi } level=4 mMSimcombinedSignalIconId=0x7f0201c4/com.android.systemui:drawable/stat_sys_wifi_signal_png_4_fully mMSimcombinedActivityIconId=0x7f0201be mAirplaneMode=false mMSimDataActivity=0 mMSimPhoneSignalIconId=0x7f0201b1/com.android.systemui:drawable/stat_sys_signal_4 mMSimDataDirectionIconId=0x0 mMSimDataSignalIconId=0x7f0201b1 mMSimDataTypeIconId=0x0/(null) mNoMSimIconId=0x0/(null) mMSimMobileActivityIconId=0x0/(null) mWifiIconId=0x7f0201c4 mBluetoothTetherIconId=0x108069f
+01-16 13:03:25.962 D/PowerManagerService( 1208): to showLogHandlerThread quit!
+01-16 13:03:25.992 D/wpa_supplicant(24232): wlan0: Control interface command 'SIGNAL_POLL'
+01-16 13:03:25.992 D/StatusBar.MSimNetworkController( 6215): onSignalStrengthsChanged received on phoneId :0 subid: 2signalStrength=SignalStrength: 99 0 -120 -160 -120 -1 -1 27 -89 -7 -184 2147483647 2147483647 gsm|lte level=4
+01-16 13:03:26.032 D/onRunning(32734): 1516077061794.png.part2删除成功  {"success":true}
+01-16 13:03:26.502 I/Timeline(32734): Timeline: Activity_launch_request id:com.gofirst.scenecollection.evidence time:14449634
+01-16 13:03:26.502 I/ActivityManager( 1208): START u0 {cmp=com.gofirst.scenecollection.evidence/.view.activity.UploadingCaseListActivity} from uid 10537 on display 0
+01-16 13:03:26.512 V/WindowManager( 1208): addAppToken: AppWindowToken{31b586b6 token=Token{944de51 ActivityRecord{1340b778 u0 com.gofirst.scenecollection.evidence/.view.activity.UploadingCaseListActivity t32603}}} to stack=1 task=32603 at 2
+01-16 13:03:26.512 D/PowerManagerService( 1208): to showLogHandlerThread quit!
+01-16 13:03:26.522 E/ImeManager( 1208): System would not have a null focused window on display;0
+01-16 13:03:26.552 I/ViewRootImpl(32734): CPU Rendering VSync enable = true
+01-16 13:03:26.552 V/WindowManager( 1208): Adding window Window{1585d324 u0 com.gofirst.scenecollection.evidence/com.gofirst.scenecollection.evidence.view.activity.UploadingCaseListActivity} at 7 of 12 (after Window{1e468a3a u0 com.gofirst.scenecollection.evidence/com.gofirst.scenecollection.evidence.view.activity.SyncDataActivity})
+01-16 13:03:26.562 I/supersnapshot( 1208): current activity: clazzName: com.gofirst.scenecollection.evidence.view.activity.UploadingCaseListActivity pkgName: com.gofirst.scenecollection.evidence
+01-16 13:03:26.592 I/libGameXtend(32734): LUCID_1 (1516079006606) GameXtend is currently running in Automatic mode
+01-16 13:03:26.592 I/libGameXtend(32734): LUCID_1 (1516079006606) GameXtend is currently running in no_save Save power state. 
+01-16 13:03:26.592 I/libGameXtend(32734): LUCID_1 (1516079006606) com.gofirst.scenecollection.evidence is currently running with GameXtend, with PS parameter = 1. , ICE is not supported. PS parameter source is PowerXtend configuration
+01-16 13:03:26.592 I/libGameXtend(32734): LUCID_1 (1516079006606) PowerXtend touch feature is not active
+01-16 13:03:26.642 I/ActivityManager( 1208): Displayed com.gofirst.scenecollection.evidence/.view.activity.UploadingCaseListActivity: +120ms
+01-16 13:03:26.662 D/FitAnimSurface( 1208): nubia_start_app_transition  AppWindowToken{31b586b6 token=Token{944de51 ActivityRecord{1340b778 u0 com.gofirst.scenecollection.evidence/.view.activity.UploadingCaseListActivity t32603}}}
+01-16 13:03:26.662 D/Ulp_jni ( 1208): JNI:In update_settings:currentContextType 0, currentGpsSetting 0, currentAgpsSetting 1,currentNetworkProvSetting 0,currentWifiSetting 1,currentBatteryCharging 0,currentEnhLocationServicesSetting 0 currentPipUserSetting 0 
+01-16 13:03:26.662 D/Ulp_jni ( 1208): JNI:system_update. Event-4
+01-16 13:03:26.672 D/FitAnimSurface( 1208): nubia_surface_first_show  Window{1585d324 u0 com.gofirst.scenecollection.evidence/com.gofirst.scenecollection.evidence.view.activity.UploadingCaseListActivity}
+01-16 13:03:26.672 D/Ulp_jni ( 1208): JNI:In update_settings:currentContextType 0, currentGpsSetting 0, currentAgpsSetting 1,currentNetworkProvSetting 0,currentWifiSetting 1,currentBatteryCharging 0,currentEnhLocationServicesSetting 0 currentPipUserSetting 0 
+01-16 13:03:26.672 D/Ulp_jni ( 1208): JNI:system_update. Event-4
+01-16 13:03:26.682 I/Timeline(32734): Timeline: Activity_idle id: android.os.BinderProxy@5da8c54 time:14449819
+01-16 13:03:26.822 D/SwipeUpService( 6832): setting close
+01-16 13:03:26.822 D/SwipeUpService( 6832): multi-screen open
+01-16 13:03:26.822 D/SwipeUpService( 6832): in black list
+01-16 13:03:26.822 D/SwipeUpService( 6832): in boot tutorial
+01-16 13:03:26.962 D/FitAnimSurface( 1208): nubia_finish_app_transition  AppWindowToken{31b586b6 token=Token{944de51 ActivityRecord{1340b778 u0 com.gofirst.scenecollection.evidence/.view.activity.UploadingCaseListActivity t32603}}}
+01-16 13:03:26.962 D/Ulp_jni ( 1208): JNI:In update_settings:currentContextType 0, currentGpsSetting 0, currentAgpsSetting 1,currentNetworkProvSetting 0,currentWifiSetting 1,currentBatteryCharging 0,currentEnhLocationServicesSetting 0 currentPipUserSetting 0 
+01-16 13:03:26.962 D/Ulp_jni ( 1208): JNI:system_update. Event-4
+01-16 13:03:26.962 I/Timeline( 1208): Timeline: Activity_windows_visible id: ActivityRecord{1340b778 u0 com.gofirst.scenecollection.evidence/.view.activity.UploadingCaseListActivity t32603} time:14450099
+01-16 13:03:26.982 W/art     (32734): Long monitor contention event with owner method=void com.amap.api.col.gp.a(android.content.Context, com.amap.api.col.go) from ReportUtil.java:189 waiters=0 for 124ms
+01-16 13:03:27.262 D/StatusBar.MSimNetworkController( 6215): onSignalStrengthsChanged received on phoneId :0 subid: 2signalStrength=SignalStrength: 99 0 -120 -160 -120 -1 -1 27 -89 -7 -184 2147483647 2147483647 gsm|lte level=4
+01-16 13:03:27.982 D/PowerManagerService( 1208): to showLogHandlerThread quit!
+01-16 13:03:28.002 E/WifiStateMachine( 1208): WifiStateMachine CMD_START_SCAN source 10537 txSuccessRate=25.71 rxSuccessRate=7.20 targetRoamBSSID=any RSSI=-65
+01-16 13:03:28.002 D/wpa_supplicant(24232): wlan0: Control interface command 'SCAN TYPE=ONLY'
+01-16 13:03:28.002 D/wpa_supplicant(24232): wlan0: Setting scan request: 0.000000 sec
+01-16 13:03:28.002 D/wpa_supplicant(24232): Scan SSID - hexdump(len=13): 79 69 64 69 61 6e 6c 69 61 6e 6a 69 65
+01-16 13:03:28.002 D/wpa_supplicant(24232): wlan0: Starting AP scan for wildcard SSID
+01-16 13:03:28.002 D/wpa_supplicant(24232): wlan0: Add radio work 'scan'@0x5592bf5790
+01-16 13:03:28.002 D/wpa_supplicant(24232): wlan0: First radio work item in the queue - schedule start immediately
+01-16 13:03:28.002 D/wpa_supplicant(24232): wlan0: Starting radio work 'scan'@0x5592bf5790 after 0.000082 second wait
+01-16 13:03:28.002 D/wpa_supplicant(24232): wlan0: nl80211: scan request
+01-16 13:03:28.002 D/wpa_supplicant(24232): nl80211: Scan SSID - hexdump(len=13): 79 69 64 69 61 6e 6c 69 61 6e 6a 69 65
+01-16 13:03:28.002 D/wpa_supplicant(24232): nl80211: Scan SSID - hexdump(len=0): [NULL]
+01-16 13:03:28.002 D/PowerManagerService( 1208): to showLogHandlerThread quit!
+01-16 13:03:28.012 D/wpa_supplicant(24232): Scan requested (ret=0) - scan timeout 30 seconds
+01-16 13:03:28.012 I/WifiHAL ( 1208): Poll result = 1
+01-16 13:03:28.012 I/WifiHAL ( 1208): Found some events!!!
+01-16 13:03:28.012 D/wpa_supplicant(24232): nl80211: Event message available
+01-16 13:03:28.012 D/WifiHAL ( 1208): no_seq_check received
+01-16 13:03:28.012 D/wpa_supplicant(24232): nl80211: Drv Event 33 (NL80211_CMD_TRIGGER_SCAN) received for wlan0
+01-16 13:03:28.012 I/WifiHAL ( 1208): event received NL80211_CMD_TRIGGER_SCAN
+01-16 13:03:28.012 I/WifiHAL ( 1208): event received NL80211_CMD_TRIGGER_SCAN, vendor_id = 0x0
+01-16 13:03:28.012 I/WifiHAL ( 1208): event ignored!!
+01-16 13:03:28.012 D/wpa_supplicant(24232): wlan0: nl80211: Scan trigger
+01-16 13:03:28.012 D/wpa_supplicant(24232): wlan0: Event SCAN_STARTED (49) received
+01-16 13:03:28.012 D/wpa_supplicant(24232): wlan0: Own scan request started a scan in 0.000296 seconds
+01-16 13:03:28.012 D/wpa_supplicant(24232): CTRL_IFACE monitor sent successfully to /data/misc/wifi/sockets/wpa_ctrl_440-19\x00
+01-16 13:03:28.012 D/wpa_supplicant(24232): CTRL_IFACE monitor sent successfully to /data/misc/wifi/sockets/wpa_ctrl_1208-9\x00
+01-16 13:03:28.012 D/PowerManagerService( 1208): to showLogHandlerThread quit!
+01-16 13:03:28.022 D/PowerManagerService( 1208): to showLogHandlerThread quit!
+01-16 13:03:28.992 D/StatusBar.MSimNetworkController( 6215): onSignalStrengthsChanged received on phoneId :0 subid: 2signalStrength=SignalStrength: 99 0 -120 -160 -120 -1 -1 27 -89 -7 -184 2147483647 2147483647 gsm|lte level=4
+01-16 13:03:29.002 D/wpa_supplicant(24232): wlan0: Control interface command 'SIGNAL_POLL'
+01-16 13:03:29.502 D/StatusBar.MSimNetworkController( 6215): onSignalStrengthsChanged received on phoneId :0 subid: 2signalStrength=SignalStrength: 99 0 -120 -160 -120 -1 -1 27 -89 -7 -184 2147483647 2147483647 gsm|lte level=4
+01-16 13:03:29.962 D/PowerManagerService( 1208): to showLogHandlerThread quit!
+01-16 13:03:30.012 D/wpa_supplicant(24232): nl80211: Event message available
+01-16 13:03:30.012 D/wpa_supplicant(24232): nl80211: Drv Event 34 (NL80211_CMD_NEW_SCAN_RESULTS) received for wlan0
+01-16 13:03:30.012 D/wpa_supplicant(24232): wlan0: nl80211: New scan results available
+01-16 13:03:30.012 D/wpa_supplicant(24232): nl80211: Scan probed for SSID 'yidianlianjie'
+01-16 13:03:30.012 D/wpa_supplicant(24232): nl80211: Scan probed for SSID ''
+01-16 13:03:30.012 D/wpa_supplicant(24232): nl80211: Scan included frequencies: 2412 2417 2422 2427 2432 2437 2442 2447 2452 2457 2462 2467 2472 5180 5200 5220 5240 5260 5280 5300 5320 5745 5765 5785 5805 5825
+01-16 13:03:30.012 D/wpa_supplicant(24232): wlan0: Event SCAN_RESULTS (3) received
+01-16 13:03:30.012 D/wpa_supplicant(24232): wlan0: Scan completed in 2.007185 seconds
+01-16 13:03:30.012 D/wpa_supplicant(24232): nl80211: Associated on 2442 MHz
+01-16 13:03:30.012 D/wpa_supplicant(24232): nl80211: Associated with 60:ee:5c:02:3c:a3
+01-16 13:03:30.012 D/wpa_supplicant(24232): nl80211: Received scan results (3 BSSes)
+01-16 13:03:30.012 D/wpa_supplicant(24232): nl80211: Scan results indicate BSS status with 60:ee:5c:02:3c:a3 as associated
+01-16 13:03:30.012 D/wpa_supplicant(24232): wlan0: BSS: Start scan result update 1953
+01-16 13:03:30.012 D/wpa_supplicant(24232): BSS: last_scan_res_used=3/32
+01-16 13:03:30.012 D/wpa_supplicant(24232): wlan0: Scan-only results received
+01-16 13:03:30.012 D/wpa_supplicant(24232): CTRL_IFACE monitor sent successfully to /data/misc/wifi/sockets/wpa_ctrl_440-19\x00
+01-16 13:03:30.012 D/wpa_supplicant(24232): CTRL_IFACE monitor sent successfully to /data/misc/wifi/sockets/wpa_ctrl_1208-9\x00
+01-16 13:03:30.012 D/wpa_supplicant(24232): wlan0: Radio work 'scan'@0x5592bf5790 done in 2.014389 seconds
+01-16 13:03:30.012 I/WifiHAL ( 1208): Poll result = 1
+01-16 13:03:30.012 I/WifiHAL ( 1208): Found some events!!!
+01-16 13:03:30.012 D/WifiHAL ( 1208): no_seq_check received
+01-16 13:03:30.012 I/WifiHAL ( 1208): event received NL80211_CMD_NEW_SCAN_RESULTS
+01-16 13:03:30.012 I/WifiHAL ( 1208): event received NL80211_CMD_NEW_SCAN_RESULTS, vendor_id = 0x0
+01-16 13:03:30.012 I/WifiHAL ( 1208): event ignored!!
+01-16 13:03:30.022 D/wpa_supplicant(24232): wlan0: Control interface command 'BSS RANGE=0- MASK=0x21987'
+01-16 13:03:30.022 D/LBSSystemMonitorService( 1208): handleMessage what - 4
+01-16 13:03:30.022 D/Wiper_jni( 1208): Send Network Location.
+01-16 13:03:30.302 I/MSM-irqbalance(  826): Decided to move IRQ57 from CPU4 to CPU6
+01-16 13:03:30.952 D/Netroid (32734): [847] BasicNetwork.logSlowRequests: HTTP response for request=<[ ] http://192.168.191.1:8090/EvidenceService/app/uploadFile NORMAL 2> [lifetime=5671], [size=16], [rc=200], [retryCount=0]
+01-16 13:03:30.982 D/onRunning(32734): 1516077061794.png.part1删除成功  {"success":true}
+01-16 13:03:30.982 D/Netroid (32734): [1] Request.finish: 5706 ms: [ ] http://192.168.191.1:8090/EvidenceService/app/uploadFile NORMAL 2
+01-16 13:03:31.002 D/PowerManagerService( 1208): to showLogHandlerThread quit!
+01-16 13:03:31.002 D/ActivityManager( 1208): target_pkg = com.gofirst.scenecollection.evidence, target_process = com.gofirst.scenecollection.evidence
+01-16 13:03:31.002 D/ActivityManager( 1208): start service caller PID =32734, UID = 10537, callerPkgList = {com.gofirst.scenecollection.evidence=com.android.internal.app.ProcessStats$ProcessStateHolder@acbf1a3}, service_name = ComponentInfo{com.gofirst.scenecollection.evidence/com.gofirst.scenecollection.evidence.sync.UpLoadService}
+01-16 13:03:31.012 W/AlarmManager( 1208): none no open power log
+01-16 13:03:31.012 D/save    (32734): {"latitude":"31.350773","longitude":"31.350773","machineCode":"ae4b71d7d0b64cea8711a7c77f7c9f46","modularVersionNo":"1.0.90","userId":"119071","userName":"admin","userOrg":"32098","userOrgName":"%E8%8B%8F%E5%B7%9E%E5%B8%82%E5%85%AC%E5%AE%89%E5%B1%80"}
+01-16 13:03:31.022 D/ActivityManager( 1208): target_pkg = com.gofirst.scenecollection.evidence, target_process = com.gofirst.scenecollection.evidence:romoteservice
+01-16 13:03:31.022 D/ActivityManager( 1208): bindService caller Pid = 32734, Uid = 10537 callerApp.pkgList ={com.gofirst.scenecollection.evidence=com.android.internal.app.ProcessStats$ProcessStateHolder@acbf1a3}, service_name = ComponentInfo{com.gofirst.scenecollection.evidence/com.gofirst.scenecollection.evidence.sync.RemoteService}
+01-16 13:03:31.032 D/onRunning(32734): onStartSpecific
+01-16 13:03:31.282 D/onRunning(32734): select * from UnUpLoadBlock where isSpec = '1' order by id limit 0,2
+01-16 13:03:31.392 D/onRun   (32734): UploadFileHasBlock
+01-16 13:03:31.392 D/onRun   (32734): noBlockUploadFinish
+01-16 13:03:31.742 D/StatusBar.MSimNetworkController( 6215): onSignalStrengthsChanged received on phoneId :0 subid: 2signalStrength=SignalStrength: 99 0 -120 -160 -120 -1 -1 27 -89 -7 -184 2147483647 2147483647 gsm|lte level=4
+01-16 13:03:31.962 D/PowerManagerService( 1208): to showLogHandlerThread quit!
+01-16 13:03:31.972 E/WifiStateMachine( 1208): WifiStateMachine CMD_START_SCAN source 10537 txSuccessRate=42.09 rxSuccessRate=7.40 targetRoamBSSID=any RSSI=-65
+01-16 13:03:31.972 D/wpa_supplicant(24232): wlan0: Control interface command 'SCAN TYPE=ONLY'
+01-16 13:03:31.972 D/wpa_supplicant(24232): wlan0: Setting scan request: 0.000000 sec
+01-16 13:03:31.972 D/wpa_supplicant(24232): Scan SSID - hexdump(len=13): 79 69 64 69 61 6e 6c 69 61 6e 6a 69 65
+01-16 13:03:31.972 D/wpa_supplicant(24232): wlan0: Starting AP scan for wildcard SSID
+01-16 13:03:31.972 D/wpa_supplicant(24232): wlan0: Add radio work 'scan'@0x5592c47a80
+01-16 13:03:31.972 D/wpa_supplicant(24232): wlan0: First radio work item in the queue - schedule start immediately
+01-16 13:03:31.972 D/wpa_supplicant(24232): wlan0: Starting radio work 'scan'@0x5592c47a80 after 0.000082 second wait
+01-16 13:03:31.972 D/wpa_supplicant(24232): wlan0: nl80211: scan request
+01-16 13:03:31.972 D/wpa_supplicant(24232): nl80211: Scan SSID - hexdump(len=13): 79 69 64 69 61 6e 6c 69 61 6e 6a 69 65
+01-16 13:03:31.972 D/wpa_supplicant(24232): nl80211: Scan SSID - hexdump(len=0): [NULL]
+01-16 13:03:31.982 D/wpa_supplicant(24232): Scan requested (ret=0) - scan timeout 30 seconds
+01-16 13:03:31.982 D/wpa_supplicant(24232): nl80211: Event message available
+01-16 13:03:31.982 D/wpa_supplicant(24232): nl80211: Drv Event 33 (NL80211_CMD_TRIGGER_SCAN) received for wlan0
+01-16 13:03:31.982 D/wpa_supplicant(24232): wlan0: nl80211: Scan trigger
+01-16 13:03:31.982 D/wpa_supplicant(24232): wlan0: Event SCAN_STARTED (49) received
+01-16 13:03:31.982 D/wpa_supplicant(24232): wlan0: Own scan request started a scan in 0.000326 seconds
+01-16 13:03:31.982 D/wpa_supplicant(24232): CTRL_IFACE monitor sent successfully to /data/misc/wifi/sockets/wpa_ctrl_440-19\x00
+01-16 13:03:31.982 D/wpa_supplicant(24232): CTRL_IFACE monitor sent successfully to /data/misc/wifi/sockets/wpa_ctrl_1208-9\x00
+01-16 13:03:31.982 D/wpa_supplicant(24232): nl80211: Event message available
+01-16 13:03:31.982 D/wpa_supplicant(24232): nl80211: Drv Event 34 (NL80211_CMD_NEW_SCAN_RESULTS) received for wlan0
+01-16 13:03:31.982 D/wpa_supplicant(24232): wlan0: nl80211: New scan results available
+01-16 13:03:31.982 D/wpa_supplicant(24232): nl80211: Scan probed for SSID 'yidianlianjie'
+01-16 13:03:31.982 D/wpa_supplicant(24232): nl80211: Scan probed for SSID ''
+01-16 13:03:31.982 D/wpa_supplicant(24232): nl80211: Scan included frequencies: 2412 2417 2422 2427 2432 2437 2442 2447 2452 2457 2462 2467 2472 5180 5200 5220 5240 5260 5280 5300 5320 5745 5765 5785 5805 5825
+01-16 13:03:31.982 D/wpa_supplicant(24232): wlan0: Event SCAN_RESULTS (3) received
+01-16 13:03:31.982 D/wpa_supplicant(24232): wlan0: Scan completed in 0.000625 seconds
+01-16 13:03:31.982 D/wpa_supplicant(24232): nl80211: Associated on 2442 MHz
+01-16 13:03:31.982 D/wpa_supplicant(24232): nl80211: Associated with 60:ee:5c:02:3c:a3
+01-16 13:03:31.982 D/wpa_supplicant(24232): nl80211: Received scan results (3 BSSes)
+01-16 13:03:31.982 D/wpa_supplicant(24232): nl80211: Scan results indicate BSS status with 60:ee:5c:02:3c:a3 as associated
+01-16 13:03:31.982 D/wpa_supplicant(24232): wlan0: BSS: Start scan result update 1954
+01-16 13:03:31.982 D/wpa_supplicant(24232): BSS: last_scan_res_used=3/32
+01-16 13:03:31.982 D/wpa_supplicant(24232): wlan0: Scan-only results received
+01-16 13:03:31.982 D/wpa_supplicant(24232): CTRL_IFACE monitor sent successfully to /data/misc/wifi/sockets/wpa_ctrl_440-19\x00
+01-16 13:03:31.982 D/wpa_supplicant(24232): CTRL_IFACE monitor sent successfully to /data/misc/wifi/sockets/wpa_ctrl_1208-9\x00
+01-16 13:03:31.982 D/wpa_supplicant(24232): wlan0: Radio work 'scan'@0x5592c47a80 done in 0.003545 seconds
+01-16 13:03:31.982 I/WifiHAL ( 1208): Poll result = 1
+01-16 13:03:31.982 I/WifiHAL ( 1208): Found some events!!!
+01-16 13:03:31.982 D/WifiHAL ( 1208): no_seq_check received
+01-16 13:03:31.982 I/WifiHAL ( 1208): event received NL80211_CMD_TRIGGER_SCAN
+01-16 13:03:31.982 I/WifiHAL ( 1208): event received NL80211_CMD_TRIGGER_SCAN, vendor_id = 0x0
+01-16 13:03:31.982 I/WifiHAL ( 1208): event ignored!!
+01-16 13:03:31.982 I/WifiHAL ( 1208): Poll result = 1
+01-16 13:03:31.982 I/WifiHAL ( 1208): Found some events!!!
+01-16 13:03:31.982 D/WifiHAL ( 1208): no_seq_check received
+01-16 13:03:31.982 I/WifiHAL ( 1208): event received NL80211_CMD_NEW_SCAN_RESULTS
+01-16 13:03:31.982 I/WifiHAL ( 1208): event received NL80211_CMD_NEW_SCAN_RESULTS, vendor_id = 0x0
+01-16 13:03:31.982 I/WifiHAL ( 1208): event ignored!!
+01-16 13:03:31.992 D/StatusBar.MSimNetworkController( 6215): onSignalStrengthsChanged received on phoneId :0 subid: 2signalStrength=SignalStrength: 99 0 -120 -160 -120 -1 -1 27 -89 -7 -184 2147483647 2147483647 gsm|lte level=4
+01-16 13:03:31.992 D/wpa_supplicant(24232): wlan0: Control interface command 'BSS RANGE=0- MASK=0x21987'
+01-16 13:03:32.002 D/LBSSystemMonitorService( 1208): handleMessage what - 4
+01-16 13:03:32.002 D/Wiper_jni( 1208): Send Network Location.
+01-16 13:03:32.182 D/wpa_supplicant(24232): wlan0: Control interface command 'SIGNAL_POLL'
+01-16 13:03:32.532 D/StatusBar.MSimNetworkController( 6215): refreshViews connected={ wifi } level=4 mMSimcombinedSignalIconId=0x7f0201c4/com.android.systemui:drawable/stat_sys_wifi_signal_png_4_fully mMSimcombinedActivityIconId=0x7f0201bf mAirplaneMode=false mMSimDataActivity=0 mMSimPhoneSignalIconId=0x7f0201b1/com.android.systemui:drawable/stat_sys_signal_4 mMSimDataDirectionIconId=0x0 mMSimDataSignalIconId=0x7f0201b1 mMSimDataTypeIconId=0x0/(null) mNoMSimIconId=0x0/(null) mMSimMobileActivityIconId=0x0/(null) mWifiIconId=0x7f0201c4 mBluetoothTetherIconId=0x108069f
+01-16 13:03:33.532 D/StatusBar.MSimNetworkController( 6215): refreshViews connected={ wifi } level=4 mMSimcombinedSignalIconId=0x7f0201c4/com.android.systemui:drawable/stat_sys_wifi_signal_png_4_fully mMSimcombinedActivityIconId=0x7f0201be mAirplaneMode=false mMSimDataActivity=0 mMSimPhoneSignalIconId=0x7f0201b1/com.android.systemui:drawable/stat_sys_signal_4 mMSimDataDirectionIconId=0x0 mMSimDataSignalIconId=0x7f0201b1 mMSimDataTypeIconId=0x0/(null) mNoMSimIconId=0x0/(null) mMSimMobileActivityIconId=0x0/(null) mWifiIconId=0x7f0201c4 mBluetoothTetherIconId=0x108069f
+01-16 13:03:33.962 D/PowerManagerService( 1208): to showLogHandlerThread quit!
+01-16 13:03:33.982 D/StatusBar.MSimNetworkController( 6215): onSignalStrengthsChanged received on phoneId :0 subid: 2signalStrength=SignalStrength: 99 0 -120 -160 -120 -1 -1 27 -89 -7 -184 2147483647 2147483647 gsm|lte level=4
+01-16 13:03:34.992 D/StatusBar.MSimNetworkController( 6215): onSignalStrengthsChanged received on phoneId :0 subid: 2signalStrength=SignalStrength: 99 0 -120 -160 -120 -1 -1 26 -91 -7 -184 2147483647 2147483647 gsm|lte level=4
+01-16 13:03:35.192 D/wpa_supplicant(24232): wlan0: Control interface command 'SIGNAL_POLL'
+01-16 13:03:35.312 I/MSM-irqbalance(  826): Decided to move IRQ215 from CPU5 to CPU6
+01-16 13:03:35.952 D/Netroid (32734): [848] BasicNetwork.logSlowRequests: HTTP response for request=<[ ] http://192.168.191.1:8090/EvidenceService/app/uploadFile NORMAL 3> [lifetime=4648], [size=16], [rc=200], [retryCount=0]
+01-16 13:03:35.992 D/onRunning(32734): IMG_df47b7c1ccca473a94f4b24d132ba86a.jpg.part2删除成功  {"success":true}
+01-16 13:03:35.992 D/Netroid (32734): [1] Request.finish: 4691 ms: [ ] http://192.168.191.1:8090/EvidenceService/app/uploadFile NORMAL 3
+01-16 13:03:36.002 D/PowerManagerService( 1208): to showLogHandlerThread quit!
+01-16 13:03:36.012 E/WifiStateMachine( 1208): WifiStateMachine CMD_START_SCAN source 10537 txSuccessRate=91.57 rxSuccessRate=27.78 targetRoamBSSID=any RSSI=-63
+01-16 13:03:36.012 D/wpa_supplicant(24232): wlan0: Control interface command 'SCAN TYPE=ONLY'
+01-16 13:03:36.012 D/wpa_supplicant(24232): wlan0: Setting scan request: 0.000000 sec
+01-16 13:03:36.012 D/wpa_supplicant(24232): Scan SSID - hexdump(len=13): 79 69 64 69 61 6e 6c 69 61 6e 6a 69 65
+01-16 13:03:36.012 D/wpa_supplicant(24232): wlan0: Starting AP scan for wildcard SSID
+01-16 13:03:36.012 D/wpa_supplicant(24232): wlan0: Add radio work 'scan'@0x5592bf5790
+01-16 13:03:36.012 D/wpa_supplicant(24232): wlan0: First radio work item in the queue - schedule start immediately
+01-16 13:03:36.012 D/wpa_supplicant(24232): wlan0: Starting radio work 'scan'@0x5592bf5790 after 0.000102 second wait
+01-16 13:03:36.012 D/wpa_supplicant(24232): wlan0: nl80211: scan request
+01-16 13:03:36.012 D/wpa_supplicant(24232): nl80211: Scan SSID - hexdump(len=13): 79 69 64 69 61 6e 6c 69 61 6e 6a 69 65
+01-16 13:03:36.012 D/wpa_supplicant(24232): nl80211: Scan SSID - hexdump(len=0): [NULL]
+01-16 13:03:36.012 I/WifiHAL ( 1208): Poll result = 1
+01-16 13:03:36.012 D/wpa_supplicant(24232): Scan requested (ret=0) - scan timeout 30 seconds
+01-16 13:03:36.012 I/WifiHAL ( 1208): Found some events!!!
+01-16 13:03:36.012 D/wpa_supplicant(24232): nl80211: Event message available
+01-16 13:03:36.012 D/WifiHAL ( 1208): no_seq_check received
+01-16 13:03:36.012 I/WifiHAL ( 1208): event received NL80211_CMD_TRIGGER_SCAN
+01-16 13:03:36.022 D/wpa_supplicant(24232): nl80211: Drv Event 33 (NL80211_CMD_TRIGGER_SCAN) received for wlan0
+01-16 13:03:36.022 I/WifiHAL ( 1208): event received NL80211_CMD_TRIGGER_SCAN, vendor_id = 0x0
+01-16 13:03:36.022 D/wpa_supplicant(24232): wlan0: nl80211: Scan trigger
+01-16 13:03:36.022 I/WifiHAL ( 1208): event ignored!!
+01-16 13:03:36.022 D/wpa_supplicant(24232): wlan0: Event SCAN_STARTED (49) received
+01-16 13:03:36.022 D/wpa_supplicant(24232): wlan0: Own scan request started a scan in 0.000321 seconds
+01-16 13:03:36.022 D/wpa_supplicant(24232): CTRL_IFACE monitor sent successfully to /data/misc/wifi/sockets/wpa_ctrl_440-19\x00
+01-16 13:03:36.022 D/wpa_supplicant(24232): CTRL_IFACE monitor sent successfully to /data/misc/wifi/sockets/wpa_ctrl_1208-9\x00
+01-16 13:03:36.092 D/Netroid (32734): [849] BasicNetwork.logSlowRequests: HTTP response for request=<[ ] http://192.168.191.1:8090/EvidenceService/app/uploadFile NORMAL 4> [lifetime=4728], [size=16], [rc=200], [retryCount=0]
+01-16 13:03:36.192 D/onRunning(32734): IMG_df47b7c1ccca473a94f4b24d132ba86a.jpg.part2删除成功  {"success":true}
+01-16 13:03:36.192 D/Netroid (32734): [1] Request.finish: 4832 ms: [ ] http://192.168.191.1:8090/EvidenceService/app/uploadFile NORMAL 4
+01-16 13:03:36.222 D/StatusBar.MSimNetworkController( 6215): onSignalStrengthsChanged received on phoneId :0 subid: 2signalStrength=SignalStrength: 99 0 -120 -160 -120 -1 -1 26 -91 -7 -184 2147483647 2147483647 gsm|lte level=4
+01-16 13:03:36.822 D/PowerManagerService( 1208): to showLogHandlerThread quit!
+01-16 13:03:36.842 D/FitAnimSurface( 1208): nubia_start_app_transition  AppWindowToken{31b586b6 token=Token{944de51 ActivityRecord{1340b778 u0 com.gofirst.scenecollection.evidence/.view.activity.UploadingCaseListActivity t32603}}}
+01-16 13:03:36.842 D/tfUrl   (32734): /checkBasedataUpdate
+01-16 13:03:36.842 D/Urltest (32734): http://192.168.191.1:8090/EvidenceService/app/checkBasedataUpdate
+01-16 13:03:36.842 I/supersnapshot( 1208): current activity: clazzName: com.gofirst.scenecollection.evidence.view.activity.SyncDataActivity pkgName: com.gofirst.scenecollection.evidence
+01-16 13:03:36.852 D/FitAnimSurface( 1208): nubia_surface_first_show  Window{1585d324 u0 com.gofirst.scenecollection.evidence/com.gofirst.scenecollection.evidence.view.activity.UploadingCaseListActivity}
+01-16 13:03:36.862 I/Timeline(32734): Timeline: Activity_idle id: android.os.BinderProxy@2ea11f6a time:14459997
+01-16 13:03:37.002 D/PowerManagerService( 1208): to showLogHandlerThread quit!
+01-16 13:03:37.012 D/ActivityManager( 1208): target_pkg = com.gofirst.scenecollection.evidence, target_process = com.gofirst.scenecollection.evidence
+01-16 13:03:37.012 D/ActivityManager( 1208): start service caller PID =32734, UID = 10537, callerPkgList = {com.gofirst.scenecollection.evidence=com.android.internal.app.ProcessStats$ProcessStateHolder@acbf1a3}, service_name = ComponentInfo{com.gofirst.scenecollection.evidence/com.gofirst.scenecollection.evidence.sync.UpLoadService}
+01-16 13:03:37.012 W/AlarmManager( 1208): none no open power log
+01-16 13:03:37.022 D/save    (32734): {"latitude":"31.350773","longitude":"31.350773","machineCode":"ae4b71d7d0b64cea8711a7c77f7c9f46","modularVersionNo":"1.0.90","userId":"119071","userName":"admin","userOrg":"32098","userOrgName":"%E8%8B%8F%E5%B7%9E%E5%B8%82%E5%85%AC%E5%AE%89%E5%B1%80"}
+01-16 13:03:37.032 D/ActivityManager( 1208): target_pkg = com.gofirst.scenecollection.evidence, target_process = com.gofirst.scenecollection.evidence:romoteservice
+01-16 13:03:37.032 D/ActivityManager( 1208): bindService caller Pid = 32734, Uid = 10537 callerApp.pkgList ={com.gofirst.scenecollection.evidence=com.android.internal.app.ProcessStats$ProcessStateHolder@acbf1a3}, service_name = ComponentInfo{com.gofirst.scenecollection.evidence/com.gofirst.scenecollection.evidence.sync.RemoteService}
+01-16 13:03:37.042 D/onRunning(32734): onStartSpecific
+01-16 13:03:37.122 D/SwipeUpService( 6832): setting close
+01-16 13:03:37.122 D/SwipeUpService( 6832): multi-screen open
+01-16 13:03:37.122 D/SwipeUpService( 6832): in black list
+01-16 13:03:37.122 D/SwipeUpService( 6832): in boot tutorial
+01-16 13:03:37.132 D/FitAnimSurface( 1208): nubia_finish_app_transition  AppWindowToken{31b586b6 token=Token{944de51 ActivityRecord{1340b778 u0 com.gofirst.scenecollection.evidence/.view.activity.UploadingCaseListActivity t32603}}}
+01-16 13:03:37.152 E/AVGFPS  (  403): com.gofirst.scenecollection.evidence/com.gofirst.scenecollection.evidence.view.activity.UploadingCaseListActivity b- nAvgNum= 14 avgtime=17920312.00 fps=55.80
+01-16 13:03:37.152 W/SurfaceFlinger(  403): couldn't log to binary event log: overflow.
+01-16 13:03:37.412 D/onRunning(32734): select * from UnUpLoadBlock where isSpec = '1' order by id limit 12,2
+01-16 13:03:37.462 D/onRun   (32734): UploadFileHasBlock
+01-16 13:03:37.462 D/onRun   (32734): noBlockUploadFinish
+01-16 13:03:37.912 I/Timeline(32734): Timeline: Activity_launch_request id:com.gofirst.scenecollection.evidence time:14461048
+01-16 13:03:37.922 I/ActivityManager( 1208): START u0 {cmp=com.gofirst.scenecollection.evidence/.view.activity.SelectUploadCase} from uid 10537 on display 0
+01-16 13:03:37.922 V/WindowManager( 1208): addAppToken: AppWindowToken{77444a7 token=Token{70b0966 ActivityRecord{428fdc1 u0 com.gofirst.scenecollection.evidence/.view.activity.SelectUploadCase t32603}}} to stack=1 task=32603 at 2
+01-16 13:03:37.932 D/PowerManagerService( 1208): to showLogHandlerThread quit!
+01-16 13:03:37.932 E/ImeManager( 1208): System would not have a null focused window on display;0
+01-16 13:03:37.972 I/ViewRootImpl(32734): CPU Rendering VSync enable = true
+01-16 13:03:37.972 V/WindowManager( 1208): Adding window Window{1386b4fd u0 com.gofirst.scenecollection.evidence/com.gofirst.scenecollection.evidence.view.activity.SelectUploadCase} at 7 of 11 (after Window{1e468a3a u0 com.gofirst.scenecollection.evidence/com.gofirst.scenecollection.evidence.view.activity.SyncDataActivity})
+01-16 13:03:37.982 I/supersnapshot( 1208): current activity: clazzName: com.gofirst.scenecollection.evidence.view.activity.SelectUploadCase pkgName: com.gofirst.scenecollection.evidence
+01-16 13:03:37.992 D/StatusBar.MSimNetworkController( 6215): onSignalStrengthsChanged received on phoneId :0 subid: 2signalStrength=SignalStrength: 99 0 -120 -160 -120 -1 -1 26 -91 -7 -184 2147483647 2147483647 gsm|lte level=4
+01-16 13:03:38.002 D/PowerManagerService( 1208): to showLogHandlerThread quit!
+01-16 13:03:38.032 I/libGameXtend(32734): LUCID_1 (1516079018045) GameXtend is currently running in Automatic mode
+01-16 13:03:38.032 I/libGameXtend(32734): LUCID_1 (1516079018045) GameXtend is currently running in no_save Save power state. 
+01-16 13:03:38.032 I/libGameXtend(32734): LUCID_1 (1516079018045) com.gofirst.scenecollection.evidence is currently running with GameXtend, with PS parameter = 1. , ICE is not supported. PS parameter source is PowerXtend configuration
+01-16 13:03:38.032 I/libGameXtend(32734): LUCID_1 (1516079018046) PowerXtend touch feature is not active
+01-16 13:03:38.052 D/wpa_supplicant(24232): nl80211: Event message available
+01-16 13:03:38.052 D/wpa_supplicant(24232): nl80211: Drv Event 34 (NL80211_CMD_NEW_SCAN_RESULTS) received for wlan0
+01-16 13:03:38.052 D/wpa_supplicant(24232): wlan0: nl80211: New scan results available
+01-16 13:03:38.052 D/wpa_supplicant(24232): nl80211: Scan probed for SSID 'yidianlianjie'
+01-16 13:03:38.052 D/wpa_supplicant(24232): nl80211: Scan probed for SSID ''
+01-16 13:03:38.052 D/wpa_supplicant(24232): nl80211: Scan included frequencies: 2412 2417 2422 2427 2432 2437 2442 2447 2452 2457 2462 2467 2472 5180 5200 5220 5240 5260 5280 5300 5320 5745 5765 5785 5805 5825
+01-16 13:03:38.052 D/wpa_supplicant(24232): wlan0: Event SCAN_RESULTS (3) received
+01-16 13:03:38.052 D/wpa_supplicant(24232): wlan0: Scan completed in 2.038234 seconds
+01-16 13:03:38.052 D/wpa_supplicant(24232): nl80211: Associated on 2442 MHz
+01-16 13:03:38.052 D/wpa_supplicant(24232): nl80211: Associated with 60:ee:5c:02:3c:a3
+01-16 13:03:38.052 D/wpa_supplicant(24232): nl80211: Received scan results (4 BSSes)
+01-16 13:03:38.052 D/wpa_supplicant(24232): nl80211: Scan results indicate BSS status with 60:ee:5c:02:3c:a3 as associated
+01-16 13:03:38.052 D/wpa_supplicant(24232): wlan0: BSS: Start scan result update 1955
+01-16 13:03:38.052 D/wpa_supplicant(24232): wlan0: BSS: Add new id 590 BSSID f4:cb:52:08:20:78 SSID 'BG22'
+01-16 13:03:38.052 D/wpa_supplicant(24232): CTRL_IFACE monitor sent successfully to /data/misc/wifi/sockets/wpa_ctrl_440-19\x00
+01-16 13:03:38.052 D/wpa_supplicant(24232): CTRL_IFACE monitor sent successfully to /data/misc/wifi/sockets/wpa_ctrl_1208-9\x00
+01-16 13:03:38.052 D/wpa_supplicant(24232): BSS: last_scan_res_used=4/32
+01-16 13:03:38.052 D/wpa_supplicant(24232): wlan0: Scan-only results received
+01-16 13:03:38.052 D/wpa_supplicant(24232): CTRL_IFACE monitor sent successfully to /data/misc/wifi/sockets/wpa_ctrl_440-19\x00
+01-16 13:03:38.052 D/wpa_supplicant(24232): CTRL_IFACE monitor sent successfully to /data/misc/wifi/sockets/wpa_ctrl_1208-9\x00
+01-16 13:03:38.052 D/wpa_supplicant(24232): wlan0: Radio work 'scan'@0x5592bf5790 done in 2.042269 seconds
+01-16 13:03:38.052 I/WifiHAL ( 1208): Poll result = 1
+01-16 13:03:38.052 I/WifiHAL ( 1208): Found some events!!!
+01-16 13:03:38.052 D/WifiHAL ( 1208): no_seq_check received
+01-16 13:03:38.052 I/WifiHAL ( 1208): event received NL80211_CMD_NEW_SCAN_RESULTS
+01-16 13:03:38.052 I/WifiHAL ( 1208): event received NL80211_CMD_NEW_SCAN_RESULTS, vendor_id = 0x0
+01-16 13:03:38.052 I/WifiHAL ( 1208): event ignored!!
+01-16 13:03:38.062 D/wpa_supplicant(24232): wlan0: Control interface command 'BSS RANGE=0- MASK=0x21987'
+01-16 13:03:38.062 D/LBSSystemMonitorService( 1208): handleMessage what - 4
+01-16 13:03:38.062 D/Wiper_jni( 1208): Send Network Location.
+01-16 13:03:38.072 I/ActivityManager( 1208): Displayed com.gofirst.scenecollection.evidence/.view.activity.SelectUploadCase: +133ms
+01-16 13:03:38.082 D/FitAnimSurface( 1208): nubia_start_app_transition  AppWindowToken{77444a7 token=Token{70b0966 ActivityRecord{428fdc1 u0 com.gofirst.scenecollection.evidence/.view.activity.SelectUploadCase t32603}}}
+01-16 13:03:38.082 D/Ulp_jni ( 1208): JNI:In update_settings:currentContextType 0, currentGpsSetting 0, currentAgpsSetting 1,currentNetworkProvSetting 0,currentWifiSetting 1,currentBatteryCharging 0,currentEnhLocationServicesSetting 0 currentPipUserSetting 0 
+01-16 13:03:38.092 D/Ulp_jni ( 1208): JNI:system_update. Event-4
+01-16 13:03:38.112 D/FitAnimSurface( 1208): nubia_surface_first_show  Window{1386b4fd u0 com.gofirst.scenecollection.evidence/com.gofirst.scenecollection.evidence.view.activity.SelectUploadCase}
+01-16 13:03:38.122 D/Ulp_jni ( 1208): JNI:In update_settings:currentContextType 0, currentGpsSetting 0, currentAgpsSetting 1,currentNetworkProvSetting 0,currentWifiSetting 1,currentBatteryCharging 0,currentEnhLocationServicesSetting 0 currentPipUserSetting 0 
+01-16 13:03:38.122 D/Ulp_jni ( 1208): JNI:system_update. Event-4
+01-16 13:03:38.182 I/Timeline(32734): Timeline: Activity_idle id: android.os.BinderProxy@1acf35e6 time:14461312
+01-16 13:03:38.192 D/wpa_supplicant(24232): wlan0: Control interface command 'SIGNAL_POLL'
+01-16 13:03:38.252 D/SwipeUpService( 6832): setting close
+01-16 13:03:38.252 D/SwipeUpService( 6832): multi-screen open
+01-16 13:03:38.252 D/SwipeUpService( 6832): in black list
+01-16 13:03:38.252 D/SwipeUpService( 6832): in boot tutorial
+01-16 13:03:38.392 D/FitAnimSurface( 1208): nubia_finish_app_transition  AppWindowToken{77444a7 token=Token{70b0966 ActivityRecord{428fdc1 u0 com.gofirst.scenecollection.evidence/.view.activity.SelectUploadCase t32603}}}
+01-16 13:03:38.392 D/Ulp_jni ( 1208): JNI:In update_settings:currentContextType 0, currentGpsSetting 0, currentAgpsSetting 1,currentNetworkProvSetting 0,currentWifiSetting 1,currentBatteryCharging 0,currentEnhLocationServicesSetting 0 currentPipUserSetting 0 
+01-16 13:03:38.392 D/Ulp_jni ( 1208): JNI:system_update. Event-4
+01-16 13:03:38.392 I/Timeline( 1208): Timeline: Activity_windows_visible id: ActivityRecord{428fdc1 u0 com.gofirst.scenecollection.evidence/.view.activity.SelectUploadCase t32603} time:14461529
+01-16 13:03:38.462 D/StatusBar.MSimNetworkController( 6215): onSignalStrengthsChanged received on phoneId :0 subid: 2signalStrength=SignalStrength: 99 0 -120 -160 -120 -1 -1 26 -91 -7 -184 2147483647 2147483647 gsm|lte level=4
+01-16 13:03:38.932 I/ServiceManager(  849): Waiting for service AtCmdFwd...
+01-16 13:03:39.172 D/PowerManagerService( 1208): to showLogHandlerThread quit!
+01-16 13:03:39.192 D/FitAnimSurface( 1208): nubia_start_app_transition  AppWindowToken{77444a7 token=Token{70b0966 ActivityRecord{428fdc1 u0 com.gofirst.scenecollection.evidence/.view.activity.SelectUploadCase t32603}}}
+01-16 13:03:39.192 D/FitAnimSurface( 1208): nubia_surface_first_show  Window{1386b4fd u0 com.gofirst.scenecollection.evidence/com.gofirst.scenecollection.evidence.view.activity.SelectUploadCase}
+01-16 13:03:39.202 D/tfUrl   (32734): /checkBasedataUpdate
+01-16 13:03:39.202 D/Urltest (32734): http://192.168.191.1:8090/EvidenceService/app/checkBasedataUpdate
+01-16 13:03:39.202 I/supersnapshot( 1208): current activity: clazzName: com.gofirst.scenecollection.evidence.view.activity.SyncDataActivity pkgName: com.gofirst.scenecollection.evidence
+01-16 13:03:39.232 I/Timeline(32734): Timeline: Activity_idle id: android.os.BinderProxy@2ea11f6a time:14462360
+01-16 13:03:39.472 D/SwipeUpService( 6832): setting close
+01-16 13:03:39.472 D/SwipeUpService( 6832): multi-screen open
+01-16 13:03:39.472 D/SwipeUpService( 6832): in black list
+01-16 13:03:39.472 D/SwipeUpService( 6832): in boot tutorial
+01-16 13:03:39.482 D/FitAnimSurface( 1208): nubia_finish_app_transition  AppWindowToken{77444a7 token=Token{70b0966 ActivityRecord{428fdc1 u0 com.gofirst.scenecollection.evidence/.view.activity.SelectUploadCase t32603}}}
+01-16 13:03:39.492 W/SurfaceFlinger(  403): couldn't log to binary event log: overflow.
+01-16 13:03:39.932 I/ServiceManager(  849): Waiting for service AtCmdFwd...
+01-16 13:03:39.962 I/Timeline(32734): Timeline: Activity_launch_request id:com.gofirst.scenecollection.evidence time:14463094
+01-16 13:03:39.962 I/ActivityManager( 1208): START u0 {cmp=com.gofirst.scenecollection.evidence/.view.activity.UploadingCaseListActivity} from uid 10537 on display 0
+01-16 13:03:39.972 V/WindowManager( 1208): addAppToken: AppWindowToken{23deb14a token=Token{3a8c86b5 ActivityRecord{345df2ec u0 com.gofirst.scenecollection.evidence/.view.activity.UploadingCaseListActivity t32603}}} to stack=1 task=32603 at 2
+01-16 13:03:39.972 D/PowerManagerService( 1208): to showLogHandlerThread quit!
+01-16 13:03:39.982 E/ImeManager( 1208): System would not have a null focused window on display;0
+01-16 13:03:39.982 D/PowerManagerService( 1208): to showLogHandlerThread quit!
+01-16 13:03:39.992 E/WifiStateMachine( 1208): WifiStateMachine CMD_START_SCAN source 10537 txSuccessRate=20.07 rxSuccessRate=8.47 targetRoamBSSID=any RSSI=-65
+01-16 13:03:39.992 D/wpa_supplicant(24232): wlan0: Control interface command 'SCAN TYPE=ONLY'
+01-16 13:03:39.992 D/wpa_supplicant(24232): wlan0: Setting scan request: 0.000000 sec
+01-16 13:03:39.992 D/wpa_supplicant(24232): Scan SSID - hexdump(len=13): 79 69 64 69 61 6e 6c 69 61 6e 6a 69 65
+01-16 13:03:39.992 D/wpa_supplicant(24232): wlan0: Starting AP scan for wildcard SSID
+01-16 13:03:39.992 D/wpa_supplicant(24232): wlan0: Add radio work 'scan'@0x5592c47a80
+01-16 13:03:39.992 D/wpa_supplicant(24232): wlan0: First radio work item in the queue - schedule start immediately
+01-16 13:03:39.992 D/wpa_supplicant(24232): wlan0: Starting radio work 'scan'@0x5592c47a80 after 0.000096 second wait
+01-16 13:03:39.992 D/wpa_supplicant(24232): wlan0: nl80211: scan request
+01-16 13:03:39.992 D/wpa_supplicant(24232): nl80211: Scan SSID - hexdump(len=13): 79 69 64 69 61 6e 6c 69 61 6e 6a 69 65
+01-16 13:03:39.992 D/wpa_supplicant(24232): nl80211: Scan SSID - hexdump(len=0): [NULL]
+01-16 13:03:39.992 I/WifiHAL ( 1208): Poll result = 1
+01-16 13:03:39.992 D/wpa_supplicant(24232): Scan requested (ret=0) - scan timeout 30 seconds
+01-16 13:03:39.992 I/WifiHAL ( 1208): Found some events!!!
+01-16 13:03:39.992 D/WifiHAL ( 1208): no_seq_check received
+01-16 13:03:39.992 D/wpa_supplicant(24232): nl80211: Event message available
+01-16 13:03:39.992 I/WifiHAL ( 1208): event received NL80211_CMD_TRIGGER_SCAN
+01-16 13:03:40.002 I/WifiHAL ( 1208): event received NL80211_CMD_TRIGGER_SCAN, vendor_id = 0x0
+01-16 13:03:40.002 D/wpa_supplicant(24232): nl80211: Drv Event 33 (NL80211_CMD_TRIGGER_SCAN) received for wlan0
+01-16 13:03:40.002 I/WifiHAL ( 1208): event ignored!!
+01-16 13:03:40.002 D/wpa_supplicant(24232): wlan0: nl80211: Scan trigger
+01-16 13:03:40.002 D/wpa_supplicant(24232): wlan0: Event SCAN_STARTED (49) received
+01-16 13:03:40.002 D/wpa_supplicant(24232): wlan0: Own scan request started a scan in 0.000440 seconds
+01-16 13:03:40.002 D/wpa_supplicant(24232): CTRL_IFACE monitor sent successfully to /data/misc/wifi/sockets/wpa_ctrl_440-19\x00
+01-16 13:03:40.002 D/wpa_supplicant(24232): CTRL_IFACE monitor sent successfully to /data/misc/wifi/sockets/wpa_ctrl_1208-9\x00
+01-16 13:03:40.002 D/wpa_supplicant(24232): nl80211: Event message available
+01-16 13:03:40.002 D/wpa_supplicant(24232): nl80211: Drv Event 34 (NL80211_CMD_NEW_SCAN_RESULTS) received for wlan0
+01-16 13:03:40.002 D/wpa_supplicant(24232): wlan0: nl80211: New scan results available
+01-16 13:03:40.002 D/wpa_supplicant(24232): nl80211: Scan probed for SSID 'yidianlianjie'
+01-16 13:03:40.002 D/wpa_supplicant(24232): nl80211: Scan probed for SSID ''
+01-16 13:03:40.002 D/wpa_supplicant(24232): nl80211: Scan included frequencies: 2412 2417 2422 2427 2432 2437 2442 2447 2452 2457 2462 2467 2472 5180 5200 5220 5240 5260 5280 5300 5320 5745 5765 5785 5805 5825
+01-16 13:03:40.002 D/wpa_supplicant(24232): wlan0: Event SCAN_RESULTS (3) received
+01-16 13:03:40.002 D/wpa_supplicant(24232): wlan0: Scan completed in 0.000929 seconds
+01-16 13:03:40.002 D/wpa_supplicant(24232): nl80211: Associated on 2442 MHz
+01-16 13:03:40.002 D/wpa_supplicant(24232): nl80211: Associated with 60:ee:5c:02:3c:a3
+01-16 13:03:40.002 D/wpa_supplicant(24232): nl80211: Received scan results (4 BSSes)
+01-16 13:03:40.002 D/wpa_supplicant(24232): nl80211: Scan results indicate BSS status with 60:ee:5c:02:3c:a3 as associated
+01-16 13:03:40.002 D/wpa_supplicant(24232): wlan0: BSS: Start scan result update 1956
+01-16 13:03:40.002 D/wpa_supplicant(24232): BSS: last_scan_res_used=4/32
+01-16 13:03:40.002 D/wpa_supplicant(24232): wlan0: Scan-only results received
+01-16 13:03:40.002 D/wpa_supplicant(24232): CTRL_IFACE monitor sent successfully to /data/misc/wifi/sockets/wpa_ctrl_440-19\x00
+01-16 13:03:40.002 D/wpa_supplicant(24232): CTRL_IFACE monitor sent successfully to /data/misc/wifi/sockets/wpa_ctrl_1208-9\x00
+01-16 13:03:40.002 D/wpa_supplicant(24232): wlan0: Radio work 'scan'@0x5592c47a80 done in 0.003850 seconds
+01-16 13:03:40.002 I/WifiHAL ( 1208): Poll result = 1
+01-16 13:03:40.002 I/WifiHAL ( 1208): Found some events!!!
+01-16 13:03:40.002 D/WifiHAL ( 1208): no_seq_check received
+01-16 13:03:40.002 I/WifiHAL ( 1208): event received NL80211_CMD_NEW_SCAN_RESULTS
+01-16 13:03:40.002 I/WifiHAL ( 1208): event received NL80211_CMD_NEW_SCAN_RESULTS, vendor_id = 0x0
+01-16 13:03:40.002 I/WifiHAL ( 1208): event ignored!!
+01-16 13:03:40.002 D/wpa_supplicant(24232): wlan0: Control interface command 'BSS RANGE=0- MASK=0x21987'
+01-16 13:03:40.012 D/LBSSystemMonitorService( 1208): handleMessage what - 4
+01-16 13:03:40.012 D/Wiper_jni( 1208): Send Network Location.
+01-16 13:03:40.032 I/ViewRootImpl(32734): CPU Rendering VSync enable = true
+01-16 13:03:40.032 V/WindowManager( 1208): Adding window Window{5ad51d8 u0 com.gofirst.scenecollection.evidence/com.gofirst.scenecollection.evidence.view.activity.UploadingCaseListActivity} at 7 of 11 (after Window{1e468a3a u0 com.gofirst.scenecollection.evidence/com.gofirst.scenecollection.evidence.view.activity.SyncDataActivity})
+01-16 13:03:40.032 I/supersnapshot( 1208): current activity: clazzName: com.gofirst.scenecollection.evidence.view.activity.UploadingCaseListActivity pkgName: com.gofirst.scenecollection.evidence
+01-16 13:03:40.182 I/libGameXtend(32734): LUCID_1 (1516079020192) GameXtend is currently running in Automatic mode
+01-16 13:03:40.182 I/libGameXtend(32734): LUCID_1 (1516079020192) GameXtend is currently running in no_save Save power state. 
+01-16 13:03:40.182 I/libGameXtend(32734): LUCID_1 (1516079020192) com.gofirst.scenecollection.evidence is currently running with GameXtend, with PS parameter = 1. , ICE is not supported. PS parameter source is PowerXtend configuration
+01-16 13:03:40.182 I/libGameXtend(32734): LUCID_1 (1516079020192) PowerXtend touch feature is not active
+01-16 13:03:40.212 I/ActivityManager( 1208): Displayed com.gofirst.scenecollection.evidence/.view.activity.UploadingCaseListActivity: +223ms
+01-16 13:03:40.232 D/FitAnimSurface( 1208): nubia_start_app_transition  AppWindowToken{23deb14a token=Token{3a8c86b5 ActivityRecord{345df2ec u0 com.gofirst.scenecollection.evidence/.view.activity.UploadingCaseListActivity t32603}}}
+01-16 13:03:40.232 D/Ulp_jni ( 1208): JNI:In update_settings:currentContextType 0, currentGpsSetting 0, currentAgpsSetting 1,currentNetworkProvSetting 0,currentWifiSetting 1,currentBatteryCharging 0,currentEnhLocationServicesSetting 0 currentPipUserSetting 0 
+01-16 13:03:40.232 D/Ulp_jni ( 1208): JNI:system_update. Event-4
+01-16 13:03:40.242 D/FitAnimSurface( 1208): nubia_surface_first_show  Window{5ad51d8 u0 com.gofirst.scenecollection.evidence/com.gofirst.scenecollection.evidence.view.activity.UploadingCaseListActivity}
+01-16 13:03:40.242 D/Ulp_jni ( 1208): JNI:In update_settings:currentContextType 0, currentGpsSetting 0, currentAgpsSetting 1,currentNetworkProvSetting 0,currentWifiSetting 1,currentBatteryCharging 0,currentEnhLocationServicesSetting 0 currentPipUserSetting 0 
+01-16 13:03:40.242 D/Ulp_jni ( 1208): JNI:system_update. Event-4
+01-16 13:03:40.252 I/Timeline(32734): Timeline: Activity_idle id: android.os.BinderProxy@3852c5d time:14463385
+01-16 13:03:40.292 D/SwipeUpService( 6832): setting close
+01-16 13:03:40.292 D/SwipeUpService( 6832): multi-screen open
+01-16 13:03:40.292 D/SwipeUpService( 6832): in black list
+01-16 13:03:40.292 D/SwipeUpService( 6832): in boot tutorial
+01-16 13:03:40.312 I/MSM-irqbalance(  826): Decided to move IRQ129 from CPU5 to CPU7
+01-16 13:03:40.532 D/FitAnimSurface( 1208): nubia_finish_app_transition  AppWindowToken{23deb14a token=Token{3a8c86b5 ActivityRecord{345df2ec u0 com.gofirst.scenecollection.evidence/.view.activity.UploadingCaseListActivity t32603}}}
+01-16 13:03:40.532 D/Ulp_jni ( 1208): JNI:In update_settings:currentContextType 0, currentGpsSetting 0, currentAgpsSetting 1,currentNetworkProvSetting 0,currentWifiSetting 1,currentBatteryCharging 0,currentEnhLocationServicesSetting 0 currentPipUserSetting 0 
+01-16 13:03:40.532 D/Ulp_jni ( 1208): JNI:system_update. Event-4
+01-16 13:03:40.532 I/Timeline( 1208): Timeline: Activity_windows_visible id: ActivityRecord{345df2ec u0 com.gofirst.scenecollection.evidence/.view.activity.UploadingCaseListActivity t32603} time:14463669
+01-16 13:03:40.702 D/StatusBar.MSimNetworkController( 6215): onSignalStrengthsChanged received on phoneId :0 subid: 2signalStrength=SignalStrength: 99 0 -120 -160 -120 -1 -1 26 -91 -7 -184 2147483647 2147483647 gsm|lte level=4
+01-16 13:03:40.932 I/ServiceManager(  849): Waiting for service AtCmdFwd...
+01-16 13:03:40.992 D/StatusBar.MSimNetworkController( 6215): onSignalStrengthsChanged received on phoneId :0 subid: 2signalStrength=SignalStrength: 99 0 -120 -160 -120 -1 -1 25 -91 -4 -184 2147483647 2147483647 gsm|lte level=4
+01-16 13:03:41.202 D/wpa_supplicant(24232): wlan0: Control interface command 'SIGNAL_POLL'
+01-16 13:03:41.942 I/ServiceManager(  849): Waiting for service AtCmdFwd...
+01-16 13:03:41.962 D/PowerManagerService( 1208): to showLogHandlerThread quit!
+01-16 13:03:42.932 I/ServiceManager(  849): Waiting for service AtCmdFwd...
+01-16 13:03:42.942 D/StatusBar.MSimNetworkController( 6215): onSignalStrengthsChanged received on phoneId :0 subid: 2signalStrength=SignalStrength: 99 0 -120 -160 -120 -1 -1 24 -91 -4 -184 2147483647 2147483647 gsm|lte level=4
+01-16 13:03:43.012 D/PowerManagerService( 1208): to showLogHandlerThread quit!
+01-16 13:03:43.012 D/ActivityManager( 1208): target_pkg = com.gofirst.scenecollection.evidence, target_process = com.gofirst.scenecollection.evidence
+01-16 13:03:43.012 D/ActivityManager( 1208): start service caller PID =32734, UID = 10537, callerPkgList = {com.gofirst.scenecollection.evidence=com.android.internal.app.ProcessStats$ProcessStateHolder@acbf1a3}, service_name = ComponentInfo{com.gofirst.scenecollection.evidence/com.gofirst.scenecollection.evidence.sync.UpLoadService}
+01-16 13:03:43.022 W/AlarmManager( 1208): none no open power log
+01-16 13:03:43.022 D/save    (32734): {"latitude":"31.350773","longitude":"31.350773","machineCode":"ae4b71d7d0b64cea8711a7c77f7c9f46","modularVersionNo":"1.0.90","userId":"119071","userName":"admin","userOrg":"32098","userOrgName":"%E8%8B%8F%E5%B7%9E%E5%B8%82%E5%85%AC%E5%AE%89%E5%B1%80"}
+01-16 13:03:43.042 D/onRunning(32734): onStartSpecific
+01-16 13:03:43.052 D/ActivityManager( 1208): target_pkg = com.gofirst.scenecollection.evidence, target_process = com.gofirst.scenecollection.evidence:romoteservice
+01-16 13:03:43.052 D/ActivityManager( 1208): bindService caller Pid = 32734, Uid = 10537 callerApp.pkgList ={com.gofirst.scenecollection.evidence=com.android.internal.app.ProcessStats$ProcessStateHolder@acbf1a3}, service_name = ComponentInfo{com.gofirst.scenecollection.evidence/com.gofirst.scenecollection.evidence.sync.RemoteService}
+01-16 13:03:43.252 D/onRunning(32734): select * from UnUpLoadBlock where isSpec = '1' order by id limit 0,2

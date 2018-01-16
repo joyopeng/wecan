@@ -19,7 +19,7 @@ public class PublicMsg {
 //   public static String BASEURL ="http://192.168.1.207:9191/EvidenceService/app";//ling
     public static String BASEURL_RELEASE  ="http://172.168.0.199:8080/weapp";//苏州tt
     //  public static String BASEURL ="http://127.0.0.1:6253/EvidenceService/app";//ling
-    public static final String BASEURL_TEST  ="http://192.168.191.1:8180/EvidenceService/app";
+    public static final String BASEURL_TEST  ="http://192.168.191.1:8090/EvidenceService/app";
     public static String BASEURL  ="http://192.168.191.1:8180/EvidenceService/app";
     public static String evidenceDb = "evidence.db";
     public static String belongTo="";//未分类 general key detail other
