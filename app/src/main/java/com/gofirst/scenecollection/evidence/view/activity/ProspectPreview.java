@@ -216,13 +216,27 @@ public class ProspectPreview extends Activity implements View.OnClickListener, S
                             saveSceneFileConjunctionDetails();
                             //add save 描点信息到dataTemp end
                             addWaitingUploadJson();
-                            String timeStamp = new SimpleDateFormat("yyyyMMdd")
-                                    .format(new Date());
-                            File filedirec = new File(AppPathUtil.getDataPath() +"/"+ timeStamp + "/" + caseId);
-                            if (filedirec.exists() && filedirec.isDirectory()) {
-                                uploadfilerec.edit().putLong(caseId, getTotalSizeOfFilesInDir(filedirec)).commit();
+                            long filesize =0;
+                            List<RecordFileInfo> list = EvidenceApplication.db.
+                                    findAllByWhere(RecordFileInfo.class, "caseId = '" + caseId +"' and isUpload = '0'");
+                            for(RecordFileInfo r:list){
+                                if(!TextUtils.isEmpty(r.getFilePath())){
+                                    File f = new File(AppPathUtil.getDataPath()+"/"+r.getFilePath());
+                                    if(f.exists() && f.isFile())
+                                        filesize = filesize +f.length();
+                                }
+                                if(!TextUtils.isEmpty(r.getTwoHundredFilePath())){
+                                    File f = new File(AppPathUtil.getDataPath()+"/"+r.getTwoHundredFilePath());
+                                    if(f.exists() && f.isFile())
+                                        filesize = filesize +f.length();
+                                }
+                                if(!TextUtils.isEmpty(r.getContractionsFilePath())){
+                                    File f = new File(AppPathUtil.getDataPath()+"/"+r.getContractionsFilePath());
+                                    if(f.exists() && f.isFile())
+                                        filesize = filesize +f.length();
+                                }
                             }
-
+                            uploadfilerec.edit().putLong(caseId, filesize).commit();
                             Message message = new Message();
                             message.what = FINISH_TEXT;
                             handler.sendMessage(message);

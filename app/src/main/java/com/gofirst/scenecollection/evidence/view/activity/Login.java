@@ -192,8 +192,8 @@ public  class Login extends FragmentActivity implements View.OnClickListener,
                     }
                     String alarmViewPurview = data.getString("alarmViewPurview");
 
-                    sharePre.put("user_id", userData.getString("employeeId"));
-                    sharePre.put("userId", userData.getString("userId"));
+                    sharePre.put("userId", userData.getString("employeeId"));
+                    sharePre.put("user_id", userData.getString("userId"));
                     sharePre.put("organizationId", userData.getString("organizationId"));
                     sharePre.put("prospectPerson", hyEmployees.getString("employeeName"));
                     sharePre.put("employeeNo", hyEmployees.getString("employeeNo"));

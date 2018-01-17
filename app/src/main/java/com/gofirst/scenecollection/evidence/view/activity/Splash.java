@@ -82,9 +82,9 @@ public class Splash extends Activity {
 
         //清空缓存文件夹
         AppPathUtil.deleteAllFiles(new File(AppPathUtil.getCachePath()));
-        if (StringUtil.isNullorEmpty(sharePre.getString("token", ""))) {
-            startService(new Intent(this, ParseAssertService.class));
-        }
+//        if (StringUtil.isNullorEmpty(sharePre.getString("token", ""))) {
+//            startService(new Intent(this, ParseAssertService.class));
+//        }
         new Handler().postDelayed(new Runnable() {
 
             @Override

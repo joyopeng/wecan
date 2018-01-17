@@ -591,7 +591,7 @@ public class SpinnerPopPerson implements View.OnClickListener{
         }*/
         List<HyEmployees> list =new ArrayList<>();
         //for(int i=0;i<listName.size();i++){
-             list = EvidenceApplication.db.findAllByWhere(HyEmployees.class,"employeeId = '" + sharePre.getString("user_id","") + "'");
+        list = EvidenceApplication.db.findAllByWhere(HyEmployees.class,"employeeId = '" + sharePre.getString("userId","") + "'");
        // }
         //if(list.size()>0) {
             oftenData.addAll(EvidenceApplication.db.findAllByWhere(HyEmployees.class,

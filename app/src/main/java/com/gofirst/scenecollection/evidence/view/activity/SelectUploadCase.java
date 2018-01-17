@@ -2,6 +2,7 @@ package com.gofirst.scenecollection.evidence.view.activity;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -16,12 +17,15 @@ import android.widget.Toast;
 
 import com.alibaba.fastjson.JSON;
 import com.gofirst.scenecollection.evidence.Application.EvidenceApplication;
+import com.gofirst.scenecollection.evidence.Application.PublicMsg;
 import com.gofirst.scenecollection.evidence.R;
 import com.gofirst.scenecollection.evidence.model.CsSceneCases;
 import com.gofirst.scenecollection.evidence.model.DataTemp;
+import com.gofirst.scenecollection.evidence.model.RecordFileInfo;
 import com.gofirst.scenecollection.evidence.model.UnUpLoadBlock;
 import com.gofirst.scenecollection.evidence.model.UnUploadJson;
 import com.gofirst.scenecollection.evidence.sync.UpLoadService;
+import com.gofirst.scenecollection.evidence.utils.AppPathUtil;
 import com.gofirst.scenecollection.evidence.utils.SharePre;
 import com.gofirst.scenecollection.evidence.utils.ToastUtil;
 import com.gofirst.scenecollection.evidence.view.adapter.SelectUploadCaseAdapter;
@@ -29,6 +33,7 @@ import com.gofirst.scenecollection.evidence.view.customview.ViewUtil;
 
 import net.tsz.afinal.db.sqlite.DbModel;
 
+import java.io.File;
 import java.util.List;
 
 
@@ -37,6 +42,7 @@ public class SelectUploadCase extends Activity implements View.OnClickListener,H
     private Handler handler;
     private ListView listView;
     private SharePre sharePre;
+    private SharedPreferences uploadfilerec;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,6 +55,7 @@ public class SelectUploadCase extends Activity implements View.OnClickListener,H
         listView = (ListView) findViewById(R.id.uploaded_case_list);
         findViewById(R.id.upload_btn).setOnClickListener(this);
         handler = new Handler(this);
+        uploadfilerec = getSharedPreferences(PublicMsg.UPLOADFILE_PREFRENCE, MODE_PRIVATE);
         getData();
     }
 
@@ -91,6 +98,29 @@ public class SelectUploadCase extends Activity implements View.OnClickListener,H
                             UnUploadJson unUploadJson = EvidenceApplication.db.findById(datas.get(i).getReserver1(),UnUploadJson.class);
                             unUploadJson.setSpec(true);
                             EvidenceApplication.db.update(unUploadJson);
+                            //
+                            long filesize =0;
+                            List<RecordFileInfo> list = EvidenceApplication.db.
+                                    findAllByWhere(RecordFileInfo.class, "caseId = '" + datas.get(i).getCaseNo() +"' and isUpload = '0' and addRec = '1'");
+                            for(RecordFileInfo r:list){
+                                if(!TextUtils.isEmpty(r.getFilePath())){
+                                    File f = new File(AppPathUtil.getDataPath()+"/"+r.getFilePath());
+                                    if(f.exists() && f.isFile())
+                                        filesize = filesize +f.length();
+                                }
+                                if(!TextUtils.isEmpty(r.getTwoHundredFilePath())){
+                                    File f = new File(AppPathUtil.getDataPath()+"/"+r.getTwoHundredFilePath());
+                                    if(f.exists() && f.isFile())
+                                        filesize = filesize +f.length();
+                                }
+                                if(!TextUtils.isEmpty(r.getContractionsFilePath())){
+                                    File f = new File(AppPathUtil.getDataPath()+"/"+r.getContractionsFilePath());
+                                    if(f.exists() && f.isFile())
+                                        filesize = filesize +f.length();
+                                }
+                                uploadfilerec.edit().putLong(datas.get(i).getCaseNo(), filesize).commit();
+                                //
+                            }
                         }else {
                             List<UnUploadJson> list = EvidenceApplication.db.
                                     findAllByWhere(UnUploadJson.class, "caseId = '" + csSceneCases.getCaseNo() + "'");
@@ -139,7 +169,7 @@ public class SelectUploadCase extends Activity implements View.OnClickListener,H
                 List<UnUploadJson> unUploadJsons = EvidenceApplication.db.findAllByWhere(UnUploadJson.class,"addRec = '1'and uploaded = '0' and isSpec = '0'");
                 for (UnUploadJson unUploadJson : unUploadJsons){
                     //查找出对应的案件信息
-                    DbModel dbModel = EvidenceApplication.db.findDbModelBySQL("select id,caseType,isUploaded,addRec,sceneDetail from CsSceneCases where caseNo = '" + unUploadJson.getCaseId()+"'");
+                    DbModel dbModel = EvidenceApplication.db.findDbModelBySQL("select id,caseType,isUploaded,addRec,sceneDetail,caseNo from CsSceneCases where caseNo = '" + unUploadJson.getCaseId()+"'");
                     CsSceneCases csSceneCases = new CsSceneCases();
                     csSceneCases.setAddRec(true);
                     csSceneCases.setSceneDetail(dbModel.getString("sceneDetail"));
@@ -148,6 +178,7 @@ public class SelectUploadCase extends Activity implements View.OnClickListener,H
                     csSceneCases.setReserver1(unUploadJson.getId());
                     csSceneCases.setCaseType(dbModel.getString("caseType"));
                     csSceneCases.setId(dbModel.getString("id"));
+                    csSceneCases.setCaseNo(dbModel.getString("caseNo"));
                     list.add(csSceneCases);
                 }
                 if (list != null && list.size() > 0){

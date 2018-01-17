@@ -126,7 +126,8 @@ public class UploadingCaseListActivity extends Activity implements View.OnClickL
             List<CsSceneCases> csSceneCases = EvidenceApplication.db.findAllByWhere(CsSceneCases.class, "caseNo = '" + unUploadJson.getCaseId() + "'");
             //
             CsSceneCases cs = csSceneCases.get(0);
-            if(uploadfilerec !=  null) {
+            cs.setUploadTime("上传进度 " +  "0 %");
+            if (uploadfilerec != null) {
                 long currentSize = uploadfilerec.getLong(cs.getCaseNo() + "_u", 0);
                 long totalSize = uploadfilerec.getLong(cs.getCaseNo(), 0);
                 long percent = (currentSize * 100 / totalSize);
@@ -159,14 +160,18 @@ public class UploadingCaseListActivity extends Activity implements View.OnClickL
             for (CsSceneCases cases : mCsSceneCasesList) {
                 if (key.contains(cases.getCaseNo())) {
                     long currentSize = sharedPreferences.getLong(key, 0);
-                    long totalSize = sharedPreferences.getLong(key.replace("_u",""),0);
-                    if(totalSize == 0)
-                        continue;
-                    long percent =  (currentSize*100 / totalSize);
-                    if(percent > 100)
+                    long percent = 0;
+                    long totalSize = 0;
+                    if (!sharedPreferences.contains(key.replace("_u", ""))) {
                         percent = 100;
-                    cases.setUploadTime("上传进度 "+String.valueOf(percent)+"%");
-                    ((UploadingListAdapter)(listView.getAdapter())).notifyDataSetChanged();
+                    } else {
+                        totalSize = sharedPreferences.getLong(key.replace("_u", ""), 0);
+                        percent = (currentSize * 100 / totalSize);
+                        if (totalSize == 0)
+                            continue;
+                    }
+                    cases.setUploadTime("上传进度 " + String.valueOf(percent) + "%");
+                    ((UploadingListAdapter) (listView.getAdapter())).notifyDataSetChanged();
                     continue;
                 }
             }

@@ -1,6 +1,7 @@
 package com.gofirst.scenecollection.evidence.sync;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.text.TextUtils;
 import android.util.Log;
 
@@ -26,13 +27,15 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
+import static android.content.Context.MODE_PRIVATE;
+
 /**
  * @author maxiran
  */
 public class UnUploadSingleJson {
 
     public void startUploadSingleJson(final UnUploadJson unUploadJson, final Context context, RequestQueue requestQueue) {
-        SharePre sharePre = new SharePre(context, "user_info", Context.MODE_PRIVATE);
+        SharePre sharePre = new SharePre(context, "user_info", MODE_PRIVATE);
         final String json = unUploadJson.getJson();
         Map<String, String> param = new HashMap<>();
         param.put("data", json);
@@ -65,6 +68,10 @@ public class UnUploadSingleJson {
                                 csSceneCases.setUploadTime(time);
                                 EvidenceApplication.db.update(csSceneCases);
                         }
+                        //
+                        SharedPreferences uploadfilerec = context.getSharedPreferences(PublicMsg.UPLOADFILE_PREFRENCE, MODE_PRIVATE);
+                        uploadfilerec.edit().remove(unUploadJson.getCaseId() + "_u").remove(unUploadJson.getCaseId()).commit();
+                        //
                         unUploadJson.setUploaded(true);
                         unUploadJson.setIsUploading(time);
                         EvidenceApplication.db.update(unUploadJson);
