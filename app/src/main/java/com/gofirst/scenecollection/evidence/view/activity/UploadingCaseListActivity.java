@@ -60,20 +60,15 @@ public class UploadingCaseListActivity extends Activity implements View.OnClickL
         mRightView.setText(R.string.refresh);
         mRightView.setOnClickListener(this);
         handler = new Handler(this);
+        if (uploadfilerec == null)
+            uploadfilerec = getSharedPreferences(PublicMsg.UPLOADFILE_PREFRENCE, MODE_PRIVATE);
+        uploadfilerec.registerOnSharedPreferenceChangeListener(mListener);
         loadData();
     }
 
     @Override
-    protected void onResume() {
-        super.onResume();
-        if (uploadfilerec == null)
-            uploadfilerec = getSharedPreferences(PublicMsg.UPLOADFILE_PREFRENCE, MODE_PRIVATE);
-        uploadfilerec.registerOnSharedPreferenceChangeListener(mListener);
-    }
-
-    @Override
-    protected void onPause() {
-        super.onPause();
+    protected void onDestroy() {
+        super.onDestroy();
         if (uploadfilerec == null)
             uploadfilerec = getSharedPreferences(PublicMsg.UPLOADFILE_PREFRENCE, MODE_PRIVATE);
         uploadfilerec.unregisterOnSharedPreferenceChangeListener(mListener);

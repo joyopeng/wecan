@@ -475,7 +475,7 @@ public class SyncDataDownloadFragment extends Fragment implements View.OnClickLi
     private void saveCoredataTime(String time){
         mShare.put(Utils.SHARE_SYNC_BASE_DATA_CONDITION,time);
         mShare.commit();
-        User user = EvidenceApplication.db.findAllByWhere(User.class,"userId = \"" + mShare.getString("user_id" +
+        User user = EvidenceApplication.db.findAllByWhere(User.class,"userId = \"" + mShare.getString("userId" +
                 "","") + "\"").get(0);
         user.setCoredataUpdateTime(time);
         EvidenceApplication.db.update(user);
