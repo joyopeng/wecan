@@ -92,6 +92,8 @@ public class OfflineAllCitysAdapter extends BaseAdapter {
             holder.itemPlay.setBackgroundResource(R.drawable.offline_map_redownload);
             if (Integer.parseInt(hasDownload.get(0).getVersionCode()) < Integer.parseInt(info.getVersionCode())) {
                 holder.itemUpdateStatus.setVisibility(View.VISIBLE);
+            }else {
+                holder.itemUpdateStatus.setVisibility(View.GONE);
             }
         } else {
             File temfile = new File(DOWNLOAD_MAP_DATA_PATH + "/" + info.getMapSpell() + ".dat_temp");

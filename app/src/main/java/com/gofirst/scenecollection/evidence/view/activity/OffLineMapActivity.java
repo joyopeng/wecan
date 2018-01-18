@@ -139,6 +139,7 @@ public class OffLineMapActivity extends Activity implements View.OnClickListener
                 flagSizechange = true;
             }
         });
+        mOfflineAllCitysAdapter.notifyDataSetChanged();
     }
 
     private void initViewpager(){
