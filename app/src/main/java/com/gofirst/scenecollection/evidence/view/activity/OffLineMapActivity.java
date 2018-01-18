@@ -213,6 +213,7 @@ public class OffLineMapActivity extends Activity implements View.OnClickListener
                         pa.setHostYear(object.getString("hostYear"));
                         pa.setVersionCode(object.getString("versionCode"));
                         mAllCitys.add(pa);
+
                     }
                 } catch (JSONException e) {
                     e.printStackTrace();

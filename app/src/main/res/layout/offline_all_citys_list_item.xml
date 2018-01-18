@@ -26,6 +26,10 @@
             android:textSize="@dimen/common_button_text_size"
             android:textColor="@color/offline_map_normal_text_color"/>
         <ImageView
+            android:id="@+id/sync_data_map_img"
+            style="@style/sync_data_img_style"
+            />
+        <ImageView
             android:id="@+id/offline_downlaod_btn"
             android:layout_width="20dp"
             android:layout_height="20dp"

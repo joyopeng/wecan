@@ -32,4 +32,9 @@ public class StringMap {
     public void putString(String key,String value){
         stringMap.put(key,value);
     }
+
+    public void remove(String key){
+        stringMap.remove(key);
+    }
+
 }

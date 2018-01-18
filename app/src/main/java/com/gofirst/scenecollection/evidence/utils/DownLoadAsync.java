@@ -116,13 +116,13 @@ public class DownLoadAsync extends AsyncTask<String,Integer,Boolean> {
 //    private volatile int invokeCount;
     private boolean downloadGet(String urlPath,String savePath,Map<String,String> param){
         boolean result = false;
+        File file = new File(savePath+"_temp");
         try {
             URL url = null;
             HttpURLConnection conn = null;
             InputStream inputStream = null;
             OutputStream outputStream = null;
             try {
-                File file = new File(savePath);
                 /* 未加容错，因此这里创建文件的上一级目录必须存在 */
                 if (!file.exists()) {
                     file.createNewFile();
@@ -167,6 +167,7 @@ public class DownLoadAsync extends AsyncTask<String,Integer,Boolean> {
                     outputStream.close();
                 }
             }
+            file.renameTo(new File(savePath));
             result = true;
         }catch (MalformedURLException urlException){
             Log.i(TAG,"MalformedURLException",urlException);

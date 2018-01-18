@@ -1,6 +1,7 @@
 package com.gofirst.scenecollection.evidence.model;
 
 import net.tsz.afinal.annotation.sqlite.Table;
+import net.tsz.afinal.annotation.sqlite.Transient;
 
 import java.util.Date;
 
@@ -26,6 +27,17 @@ public class AppOfflineMapPackage {
 	private String hostId;
 	private String hostYear;
 	private String versionCode;// 版本号
+
+	public boolean isUpdatestatus() {
+		return updatestatus;
+	}
+
+	public void setUpdatestatus(boolean updatestatus) {
+		this.updatestatus = updatestatus;
+
+	}
+	@Transient
+	private boolean updatestatus;// 是否有新版本
 
 	public void setId(String id) {
 		this.id = id;
