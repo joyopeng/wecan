@@ -81,6 +81,9 @@ public class ParseAssertService extends Service {
      * 从assert复制基础数据包
      */
     private void copyMapData(final Context context) {
+        List<AppOfflineMapPackage> hadDownloads = EvidenceApplication.db.findAllByWhere(AppOfflineMapPackage.class, "id = \"" + "fcf15aa1c1bc4d2b84daa486131934c5" + "\"");
+        if (hadDownloads.size() > 0)
+            return;
         new Thread() {
             @Override
             public void run() {
