@@ -199,19 +199,19 @@ public class AddEvidencePhoto extends  Activity implements View.OnClickListener 
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        Intent intent = new Intent();
         switch (requestCode) {
             case CAMERA_WITH_DATA:
-                saveImageToFile();
-                removeData();
-                saveData();
-
-                Intent intent = new Intent();
-                intent.setAction("update_blind");
-                sendBroadcast(intent);
-
-                intent = new Intent();
-                intent.putExtra("filePath", twoHundredFilePath);
-                intent.putExtra("fileName", fileName);
+                if(resultCode != 0) {
+                    saveImageToFile();
+                    removeData();
+                    saveData();
+                    intent.setAction("update_blind");
+                    sendBroadcast(intent);
+                    intent = new Intent();
+                    intent.putExtra("filePath", twoHundredFilePath);
+                    intent.putExtra("fileName", fileName);
+                }
                 setResult(AddEvidence.REQUEST_TAKE_PHOTO, intent);
                 finish();
                 break;
@@ -224,6 +224,7 @@ public class AddEvidencePhoto extends  Activity implements View.OnClickListener 
         byte[] buffer = null;
         filePath = adapter.getFilePath();
         fileName = adapter.getFileName();
+
         Bitmap originalBitmap = BitmapFactory.decodeFile(AppPathUtil.getDataPath() + "/" + filePath + fileName);
         if (originalBitmap == null) {
             return;
@@ -244,8 +245,8 @@ public class AddEvidencePhoto extends  Activity implements View.OnClickListener 
                 }
             }
         }
-        buffer = null;
         twoHundredFilePath = filePath.replace("originalPictures", "twoHundredPictures");
+        buffer = null;
         File twoHundredFile = FileUtils.makeFilePath(AppPathUtil.getDataPath() + "/" + twoHundredFilePath, fileName);
         Bitmap towHundredBitmap = BitmapUtils.comp(originalBitmap, 0);
         if (towHundredBitmap != null) {
