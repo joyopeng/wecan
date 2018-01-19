@@ -207,7 +207,8 @@ public class AddEvidence extends Activity implements View.OnClickListener {
                     @Override
                     public void run() {
                         Bitmap obmp = BitmapFactory.decodeFile(AppPathUtil.getDataPath() + "/" + filePath + fileName);
-
+                        if(obmp == null)
+                            return;
                         int width = obmp.getWidth();
                         int height = obmp.getHeight();
                         int[] data = new int[width * height];
