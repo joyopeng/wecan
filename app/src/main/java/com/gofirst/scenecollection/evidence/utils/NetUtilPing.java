@@ -197,6 +197,8 @@ public class NetUtilPing {
                         }
                     } catch (IllegalAccessException ee) {
                     }
+                    beans.setAsulevel(cellSignalStrengthGsm.getAsuLevel()+"");
+                    beans.setLeveltext(cellSignalStrengthGsm.getLevel()+"");
                 } else if (info.toString().contains("CellInfoCdma")) {
                     CellInfoCdma cellInfoCdma = (CellInfoCdma) info;
                     CellIdentityCdma cellIdentityCdma = cellInfoCdma
@@ -209,6 +211,7 @@ public class NetUtilPing {
                     beans.setLac("0");
                     beans.setMcc("0");
                     beans.setMnc("0");
+                    beans.setAsulevel(cellSignalStrengthCdma.getAsuLevel()+"");
                 }
                 results.add(beans);
             }
