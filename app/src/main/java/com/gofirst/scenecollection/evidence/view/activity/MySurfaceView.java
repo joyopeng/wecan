@@ -32,6 +32,7 @@ public class MySurfaceView extends SurfaceView implements SurfaceHolder.Callback
     @Override
     public void surfaceCreated(SurfaceHolder holder) {
         try {
+            camera.getParameters();
             camera.setPreviewDisplay(surfaceHolder);
             camera.startPreview();
             camera.cancelAutoFocus();
