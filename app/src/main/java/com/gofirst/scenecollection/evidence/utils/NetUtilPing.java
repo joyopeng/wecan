@@ -10,9 +10,11 @@ import android.telephony.CellInfo;
 import android.telephony.CellInfoCdma;
 import android.telephony.CellInfoGsm;
 import android.telephony.CellInfoLte;
+import android.telephony.CellLocation;
 import android.telephony.CellSignalStrengthCdma;
 import android.telephony.CellSignalStrengthGsm;
 import android.telephony.CellSignalStrengthLte;
+import android.telephony.NeighboringCellInfo;
 import android.telephony.TelephonyManager;
 import android.telephony.cdma.CdmaCellLocation;
 import android.telephony.gsm.GsmCellLocation;
@@ -24,6 +26,7 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -119,74 +122,98 @@ public class NetUtilPing {
      * 得到基站数据
      */
     @SuppressLint("NewApi")
-    public static void getBaseData(final Context mContext) {
+    public static List<BaseDataBean> getBaseData(final Context mContext) {
         // lac连接基站位置区域码 cellid连接基站编码 mcc MCC国家码 mnc MNC网号
         // signalstrength连接基站信号强度
-        List<BaseDataBean> list = new ArrayList<BaseDataBean>();
-        BaseDataBean beans = new BaseDataBean();
+        List<BaseDataBean> results = new ArrayList<>();
         TelephonyManager telephonyManager = (TelephonyManager) mContext
                 .getSystemService(Context.TELEPHONY_SERVICE);
-        String operator = telephonyManager.getNetworkOperator();
-        beans.setMcc(operator.substring(0, 3));
-        beans.setMnc(operator.substring(3));
-        if (telephonyManager.getPhoneType() == TelephonyManager.PHONE_TYPE_CDMA) {// 这是电信的
-            CdmaCellLocation cdmaCellLocation = (CdmaCellLocation) telephonyManager
-                    .getCellLocation();
-            beans.setCell_id(cdmaCellLocation.getBaseStationId() + "");
-            beans.setLac(cdmaCellLocation.getNetworkId() + "");
-        } else {// 这是移动和联通的
-            GsmCellLocation gsmCellLocation = (GsmCellLocation) telephonyManager
-                    .getCellLocation();
-            beans.setCell_id(gsmCellLocation.getCid() + "");
-            beans.setLac(gsmCellLocation.getLac() + "");
-        }
-        beans.setSignalstrength("0");
-        list.add(beans);
         List<CellInfo> infoLists = telephonyManager.getAllCellInfo();
         if (infoLists.size() != 0) {
             for (CellInfo info : infoLists) {
-                /** 1、GSM是通用的移动联通电信2G的基站。
-                 2、CDMA是3G的基站。
-                 3、LTE，则证明支持4G的基站。*/
-                BaseDataBean bean = new BaseDataBean();
+                BaseDataBean beans = new BaseDataBean();
                 if (info.toString().contains("CellInfoLte")) {
                     CellInfoLte cellInfoLte = (CellInfoLte) info;
                     CellIdentityLte cellIdentityLte = cellInfoLte
                             .getCellIdentity();
+                    beans.setCell_id(cellIdentityLte.getCi() + "");
+                    beans.setTac(cellIdentityLte.getTac() + "");
+                    beans.setMcc(cellIdentityLte.getMcc() + "");
+                    beans.setMnc(cellIdentityLte.getMnc() + "");
+                    beans.setPci(cellIdentityLte.getPci() + "");
+                    try {
+                        Class userCla = (Class) cellIdentityLte.getClass();
+                        Field[] fields = userCla.getDeclaredFields();
+                        for (Field f : fields) {
+                            if ("mEarfcn".equalsIgnoreCase(f.getName())) {
+                                if (!f.isAccessible()) {
+                                    f.setAccessible(true);
+                                }
+                                beans.setArfcn(f.getInt(cellIdentityLte) + "");
+                                break;
+                            }
+                        }
+                    } catch (IllegalAccessException ee) {
+                    }
+                    //
                     CellSignalStrengthLte cellSignalStrengthLte = cellInfoLte
                             .getCellSignalStrength();
-                    bean.setSignalstrength(cellSignalStrengthLte.getDbm() + "");
-                    bean.setCell_id(cellIdentityLte.getCi() + "");
-                    bean.setLac(cellIdentityLte.getTac() + "");
-                    bean.setMcc(cellIdentityLte.getMcc() + "");
-                    bean.setMnc(cellIdentityLte.getMnc() + "");
+                    beans.setSignalstrength(cellSignalStrengthLte.getDbm() + "");
+                    beans.setLeveltext(cellSignalStrengthLte.getLevel() + "");
+                    beans.setAsulevel(cellSignalStrengthLte.getAsuLevel() + "");
+                    beans.setCpi("");
+                    beans.setBsic("");
+                    beans.setLac("");
+                    beans.setTime(cellInfoLte.getTimeStamp() + "");
                 } else if (info.toString().contains("CellInfoGsm")) {
                     CellInfoGsm cellInfoGsm = (CellInfoGsm) info;
                     CellIdentityGsm cellIdentityGsm = cellInfoGsm
                             .getCellIdentity();
                     CellSignalStrengthGsm cellSignalStrengthGsm = cellInfoGsm
                             .getCellSignalStrength();
-                    bean.setSignalstrength(cellSignalStrengthGsm.getDbm() + "");
-                    bean.setCell_id(cellIdentityGsm.getCid() + "");
-                    bean.setLac(cellIdentityGsm.getLac() + "");
-                    bean.setMcc(cellIdentityGsm.getMcc() + "");
-                    bean.setMnc(cellIdentityGsm.getMnc() + "");
+                    beans.setSignalstrength(cellSignalStrengthGsm.getDbm() + "");
+                    beans.setCell_id(cellIdentityGsm.getCid() + "");
+                    beans.setLac(cellIdentityGsm.getLac() + "");
+                    beans.setMcc(cellIdentityGsm.getMcc() + "");
+                    beans.setMnc(cellIdentityGsm.getMnc() + "");
+                    try {
+                        Class userCla = (Class) cellIdentityGsm.getClass();
+                        Field[] fields = userCla.getDeclaredFields();
+                        for (Field f : fields) {
+                            if ("mBsic".equalsIgnoreCase(f.getName())) {
+                                if (!f.isAccessible()) {
+                                    f.setAccessible(true);
+                                }
+                                beans.setBsic(f.getInt(cellIdentityGsm) + "");
+                                continue;
+                            }
+                            if ("mArfcn".equalsIgnoreCase(f.getName())) {
+                                if (!f.isAccessible()) {
+                                    f.setAccessible(true);
+                                }
+                                beans.setEarfcn(f.getInt(cellIdentityGsm) + "");
+                                continue;
+                            }
+                        }
+                    } catch (IllegalAccessException ee) {
+                    }
                 } else if (info.toString().contains("CellInfoCdma")) {
                     CellInfoCdma cellInfoCdma = (CellInfoCdma) info;
                     CellIdentityCdma cellIdentityCdma = cellInfoCdma
                             .getCellIdentity();
                     CellSignalStrengthCdma cellSignalStrengthCdma = cellInfoCdma
                             .getCellSignalStrength();
-                    bean.setCell_id(cellIdentityCdma.getBasestationId() + "");
-                    bean.setSignalstrength(cellSignalStrengthCdma.getCdmaDbm()
+                    beans.setCell_id(cellIdentityCdma.getBasestationId() + "");
+                    beans.setSignalstrength(cellSignalStrengthCdma.getCdmaDbm()
                             + "");
-                    /**因为待会我要把这个list转成gson，所以这个对象的所有属性我都赋一下值，不必理会这里*/
-                    bean.setLac("0");
-                    bean.setMcc("0");
-                    bean.setMnc("0");
+                    beans.setLac("0");
+                    beans.setMcc("0");
+                    beans.setMnc("0");
                 }
-                list.add(bean);
+                results.add(beans);
             }
         }
+
+        return results;
     }
 }

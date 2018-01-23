@@ -55,6 +55,9 @@
     <uses-permission android:name="cybertech.permission.READ_PSTORE_SERVER_SYNC_TIME" />
     <uses-permission android:name="android.permission.GET_TASKS" />
 
+    //base station
+    <uses-permission android:name="ACCESS_COARSE_UPDATES" />
+
     <!-- add for push off -->
     <application
         android:name=".Application.EvidenceApplication"
