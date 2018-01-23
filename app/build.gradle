@@ -25,14 +25,27 @@ android {
             signingConfig signingConfigs.release
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            manifestPlaceholders = [isdebug: false,categoryType:"android.intent.category.DEFAULT"]
+            manifestPlaceholders = [isdebug: false, categoryType: "android.intent.category.DEFAULT"]
+//            android.applicationVariants.all { variant ->
+//                variant.outputs.all {
+//                    //这里修改apk文件名
+//                    outputFileName = "wecan-${defaultConfig.versionName}-jingwutong.apk"
+//                }
+//            }
         }
         debug {
 //            signingConfig signingConfigs.release
 //            minifyEnabled false
-            manifestPlaceholders = [isdebug: true,categoryType:"android.intent.category.LAUNCHER"]
+            manifestPlaceholders = [isdebug: true, categoryType: "android.intent.category.LAUNCHER"]
+//            android.applicationVariants.all { variant ->
+//                variant.outputs.all {
+//                    //这里修改apk文件名
+//                    outputFileName = "wecan-${defaultConfig.versionName}-test.apk"
+//                }
+//            }
         }
     }
+
     productFlavors {
     }
     splits {
@@ -49,20 +62,18 @@ android {
         }
     }*/
 
-
     /** 导入so文件 */
-   // task nativeLibsToJar(type: Zip, description: "create a jar archive of the libs") {
-   //     destinationDir file("$projectDir/libs")
-   //     baseName "libs"
-   //     extension "jar"
-   //     from fileTree(dir: "libs", include: "**/*.so")
-   //     into "lib"
-   // }
+    // task nativeLibsToJar(type: Zip, description: "create a jar archive of the libs") {
+    //     destinationDir file("$projectDir/libs")
+    //     baseName "libs"
+    //     extension "jar"
+    //     from fileTree(dir: "libs", include: "**/*.so")
+    //     into "lib"
+    // }
 
-   /* tasks.withType(JavaCompile) {
-        compileTask -> compileTask.dependsOn(nativeLibsToJar)
-    }*/
-
+    /* tasks.withType(JavaCompile) {
+         compileTask -> compileTask.dependsOn(nativeLibsToJar)
+     }*/
 
 }
 
@@ -70,6 +81,7 @@ repositories {
     flatDir {
         dirs 'libs'
     }
+    google()
 }
 
 dependencies {

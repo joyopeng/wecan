@@ -15,8 +15,79 @@ public class BaseDataBean {
     private String time;
     private String tac;//跟踪区
     private String pci;// Physical Cell Identifier
-    private String earfcn;
+    private String earfcn;//频点代码序号
 
+    public String getLeveltext() {
+        return leveltext;
+    }
+
+    public void setLeveltext(String leveltext) {
+        this.leveltext = leveltext;
+    }
+
+    public String getAsulevel() {
+        return asulevel;
+    }
+
+    public void setAsulevel(String asulevel) {
+        this.asulevel = asulevel;
+    }
+
+    public String getCpi() {
+        return cpi;
+    }
+
+    public void setCpi(String cpi) {
+        this.cpi = cpi;
+    }
+
+    public String getBsic() {
+        return bsic;
+    }
+
+    public void setBsic(String bsic) {
+        this.bsic = bsic;
+    }
+
+    public String getArfcn() {
+        return arfcn;
+    }
+
+    public void setArfcn(String arfcn) {
+        this.arfcn = arfcn;
+    }
+
+    public String getTime() {
+        return time;
+    }
+
+    public void setTime(String time) {
+        this.time = time;
+    }
+
+    public String getTac() {
+        return tac;
+    }
+
+    public void setTac(String tac) {
+        this.tac = tac;
+    }
+
+    public String getPci() {
+        return pci;
+    }
+
+    public void setPci(String pci) {
+        this.pci = pci;
+    }
+
+    public String getEarfcn() {
+        return earfcn;
+    }
+
+    public void setEarfcn(String earfcn) {
+        this.earfcn = earfcn;
+    }
 
     public String getCell_id() {
         return cell_id;
