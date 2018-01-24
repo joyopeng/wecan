@@ -130,12 +130,12 @@ public class TakeNoteDialog {
     }
 
     private void saveNoteImage(Bitmap bitmap, String belong, String father) {
-        BitmapUtils.saveBitmap(belong, activity, bitmap, name, father, name, new BitmapUtils.OnSaveSuccessListener() {
-            @Override
-            public void onSuccess(RecordFileInfo recordFileInfo) {
-                Toast.makeText(activity, "签名已保存", Toast.LENGTH_SHORT).show();
-            }
-        }, mCaseId);
+//        BitmapUtils.saveBitmap(belong, activity, bitmap, name, father, name, new BitmapUtils.OnSaveSuccessListener() {
+//            @Override
+//            public void onSuccess(RecordFileInfo recordFileInfo) {
+//                Toast.makeText(activity, "签名已保存", Toast.LENGTH_SHORT).show();
+//            }
+//        }, mCaseId);
     }
 
     public void setCaseId(String caseId) {

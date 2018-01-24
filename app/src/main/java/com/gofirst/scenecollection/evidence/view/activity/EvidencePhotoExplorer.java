@@ -23,7 +23,7 @@ import java.util.List;
 /**
  * Created by maxiran on 2016/3/14.
  */
-public class EvidencePhotoExplorer extends Activity implements View.OnClickListener{
+public class EvidencePhotoExplorer extends Activity implements View.OnClickListener {
 
 
     private ViewPager photoPager;
@@ -41,14 +41,14 @@ public class EvidencePhotoExplorer extends Activity implements View.OnClickListe
         photoPager = (ViewPager) findViewById(R.id.photo_pager);
         pager_indicator = (TextView) findViewById(R.id.pager_indicator);
         name = (TextView) findViewById(R.id.name);
-        mRemovewImg = (ImageView)findViewById(R.id.scene_direction_photo_remove_img);
+        mRemovewImg = (ImageView) findViewById(R.id.scene_direction_photo_remove_img);
         mRemovewImg.setOnClickListener(this);
         mFiles = getMapFiles();
         photoPager.setAdapter(new EvidencePhotoAdapter(mFiles, EvidencePhotoExplorer.this));
         photoPager.setOffscreenPageLimit(3);
         mCurrentPostion = getIntent().getIntExtra("position", 0);
         mode = getIntent().getStringExtra("mode");
-        if(mode != null && BaseView.VIEW.equals(mode)){
+        if (mode != null && BaseView.VIEW.equals(mode)) {
             mRemovewImg.setVisibility(View.GONE);
         }
         photoPager.setCurrentItem(mCurrentPostion);
@@ -74,7 +74,7 @@ public class EvidencePhotoExplorer extends Activity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
+        switch (v.getId()) {
             case R.id.scene_direction_photo_remove_img:
                 removeDirectionFile();
                 break;
@@ -88,26 +88,34 @@ public class EvidencePhotoExplorer extends Activity implements View.OnClickListe
                 "father = '" + getIntent().getStringExtra("father") + "' and caseId = \"" + getIntent().getStringExtra("caseId") + "\"", "fileDate desc");
     }
 
-    private void removeDirectionFile(){
+    private void removeDirectionFile() {
         RecordFileInfo info = mFiles.get(mCurrentPostion);
         File file = new File(AppPathUtil.getDataPath() + "/" + info.getFilePath());
-        if(file != null && file.exists() && file.isFile()){
+        if (file != null && file.exists() && file.isFile()) {
             EvidenceApplication.db.deleteByWhere(DataTemp.class, "father = '" + info.getFather() + info.getAttachmentId() + "picData'");
             EvidenceApplication.db.deleteByWhere(DataTemp.class, "father = '" + info.getFather() + info.getAttachmentId() + "recData'");
-            EvidenceApplication.db.deleteByWhere(RecordFileInfo.class,"id = \"" + info.getId() + "\"");
+            EvidenceApplication.db.deleteByWhere(RecordFileInfo.class, "id = \"" + info.getId() + "\"");
             file.delete();
+            //delete twohundredfile
+            File twohundredfile = new File(AppPathUtil.getDataPath() + "/" + info.getTwoHundredFilePath());
+            if (twohundredfile.exists())
+                twohundredfile.delete();
+            File contractionsfile = new File(AppPathUtil.getDataPath() + "/" + info.getContractionsFilePath());
+            if (contractionsfile.exists())
+                contractionsfile.delete();
+            //
             int size = mFiles.size();
-            if(size == 1){
+            if (size == 1) {
                 finish();
             }
             mFiles.remove(mCurrentPostion);
-            if(mCurrentPostion + 1 == size){
+            if (mCurrentPostion + 1 == size) {
                 mCurrentPostion -= 1;
             }
             photoPager.setAdapter(new EvidencePhotoAdapter(mFiles, EvidencePhotoExplorer.this));
             photoPager.setCurrentItem(mCurrentPostion);
-        }else{
-            Toast.makeText(this,"查无此文件，请确认！",Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(this, "查无此文件，请确认！", Toast.LENGTH_SHORT).show();
         }
     }
 }
