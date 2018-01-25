@@ -640,7 +640,7 @@ public class SceneDirectionFragment extends Fragment implements Animation.Animat
         mypaint.setColor(Color.BLACK);
         int[] title_rec = getStringWidth(title, stringStyle, titleSize);
         mypaint.setTextSize(titleSize);
-        mypaint.setTypeface(Typeface.DEFAULT_BOLD);
+        mypaint.setTypeface(Typeface.DEFAULT);
 
         if (title_rec[0] >= 2800) {
 

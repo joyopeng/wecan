@@ -3,6 +3,7 @@ package com.gofirst.scenecollection.evidence.utils;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Matrix;
 
 import com.gofirst.scenecollection.evidence.Application.EvidenceApplication;
 import com.gofirst.scenecollection.evidence.model.RecordFileInfo;
@@ -77,19 +78,29 @@ public class BitmapUtils {
             f.mkdirs();
         }
         try {
+            int mergepicture_w = bm[1].getWidth();
+            int mergepicture_h = bm[1].getHeight();
+
             FileOutputStream out = new FileOutputStream(filepath = new File(f, name + ".png"));
             bm[0].compress(Bitmap.CompressFormat.PNG, 100, out);
             out.flush();
             out.close();
+            bm[1].setConfig(Bitmap.Config.RGB_565);
+            BitmapFactory.Options options = new BitmapFactory.Options();
             //
+//            Matrix matrixtwohan = new Matrix();
+//            matrixtwohan.setScale(0.74f, 0.74f);
             FileOutputStream twoHundredout = new FileOutputStream(filepath = new File(f, name + "_twoHundredPictures" + ".png"));
-            compNote(bm[1], 0).compress(Bitmap.CompressFormat.PNG, 100, twoHundredout);
+            //Bitmap.createBitmap(bm[1], 0, 0, mergepicture_w, mergepicture_h, matrixtwohan, true).compress(Bitmap.CompressFormat.JPEG, 40, twoHundredout);
+            bm[1].compress(Bitmap.CompressFormat.JPEG, 88, twoHundredout);
             twoHundredout.flush();
             twoHundredout.close();
             //
             //
             FileOutputStream contractionout = new FileOutputStream(filepath = new File(f, name + "_contractionPictures" + ".png"));
-            centerSquareScaleBitmap(bm[1], 400).compress(Bitmap.CompressFormat.PNG, 100, contractionout);
+            Matrix matrix = new Matrix();
+            matrix.setScale(0.25f, 0.25f);
+            Bitmap.createBitmap(bm[1], 0, 0, mergepicture_w, mergepicture_h, matrix, true).compress(Bitmap.CompressFormat.JPEG, 20, contractionout);
             contractionout.flush();
             contractionout.close();
             //

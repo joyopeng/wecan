@@ -293,7 +293,7 @@ public class CameraActivity extends Activity implements OnClickListener, SensorE
         Camera camera = null;
         try {
             camera = camera.open();
-            camera.getParameters();
+//            camera.getParameters();
 //            List<Camera.Size> pictureSizes = camera.getParameters().getSupportedPictureSizes();
             Camera.Parameters mParameters = camera.getParameters();
             List<Camera.Size> pictureSizes = mParameters.getSupportedPictureSizes();
