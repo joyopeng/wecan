@@ -85,7 +85,7 @@ public class CameraActivity extends Activity implements OnClickListener, SensorE
     private final int TYPE_FILE_VEDIO = 2;
 
     private OrientationEventListener mOrEventListener; // 设备方向监听器
-    private Boolean mCurrentOrientation=true; // 当前设备方向 横屏竖屏true,竖屏false
+    private Boolean mCurrentOrientation = true; // 当前设备方向 横屏竖屏true,竖屏false
 
     public static final int UPDATE_TEXT = 1;
     public static final int EVIDENCE_EXTRA = 2;
@@ -112,7 +112,7 @@ public class CameraActivity extends Activity implements OnClickListener, SensorE
     private float currentDegree = 0f;
     private String direction = "正东";
     private String directionTemp = "";
-    private String showContext="";
+    private String showContext = "";
     private TextView show;
     /**
      * 调整Zoom用的seekbar
@@ -122,7 +122,7 @@ public class CameraActivity extends Activity implements OnClickListener, SensorE
     private int zoomCount = 0;
     private int zoomCountTemp = 0;
     private SharePre sharePre;
-    private String showLation="0";//0：左上方，1：右上方，2：左下方，3：右下方
+    private String showLation = "0";//0：左上方，1：右上方，2：左下方，3：右下方
     private boolean addRec;
 
     @Override
@@ -143,12 +143,12 @@ public class CameraActivity extends Activity implements OnClickListener, SensorE
         time = new TimeCount(200, 1000);//构造CountDownTimer对象
         Log.d("phoneName", phoneName);
         String v = getIntent().getStringExtra("cameraType");
-        addRec = getIntent().getBooleanExtra(BaseView.ADDREC,false);
-        ((ToggleButton)findViewById(R.id.flash_btn)).setListener(new ToggleButton.TriggerListener() {
+        addRec = getIntent().getBooleanExtra(BaseView.ADDREC, false);
+        ((ToggleButton) findViewById(R.id.flash_btn)).setListener(new ToggleButton.TriggerListener() {
             @Override
             public void onTrigger(boolean isFlashOn) {
                 Camera.Parameters parameters = camera.getParameters();
-                parameters.setFlashMode(isFlashOn ? Camera.Parameters.FLASH_MODE_TORCH :Camera.Parameters.FLASH_MODE_OFF);// 开启
+                parameters.setFlashMode(isFlashOn ? Camera.Parameters.FLASH_MODE_TORCH : Camera.Parameters.FLASH_MODE_OFF);// 开启
                 camera.setParameters(parameters);
                 camera.startPreview();
             }
@@ -181,12 +181,12 @@ public class CameraActivity extends Activity implements OnClickListener, SensorE
         btn_camera_capture.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-               // if (mCurrentOrientation) {
-                    //time.start();
+                // if (mCurrentOrientation) {
+                //time.start();
                 btn_camera_capture.setEnabled(false);
                 //btn_camera_capture.setImageResource(R.drawable.radio_unchecked1);
                 btn_camera_capture.setBackgroundResource(R.drawable.radio_unchecked1);
-                    camera.takePicture(mShutterCallback, null, pictureCallback);
+                camera.takePicture(mShutterCallback, null, pictureCallback);
             }
         });
 
@@ -194,8 +194,7 @@ public class CameraActivity extends Activity implements OnClickListener, SensorE
     }
 
     /*为了实现拍照的快门声音及拍照保存照片需要下面三个回调变量*/
-    Camera.ShutterCallback mShutterCallback = new Camera.ShutterCallback()
-    {
+    Camera.ShutterCallback mShutterCallback = new Camera.ShutterCallback() {
         public void onShutter() {
 
         }
@@ -296,10 +295,14 @@ public class CameraActivity extends Activity implements OnClickListener, SensorE
             camera = camera.open();
             camera.getParameters();
 //            List<Camera.Size> pictureSizes = camera.getParameters().getSupportedPictureSizes();
-//            Camera.Parameters mParameters = camera.getParameters();
+            Camera.Parameters mParameters = camera.getParameters();
+            List<Camera.Size> pictureSizes = mParameters.getSupportedPictureSizes();
+            for(Camera.Size p : pictureSizes){
+                Log.v("aaaa","width ="+p.width+"height="+p.height);
+            }
 //            mParameters.setPictureSize(5120, 3840);
 //            mParameters.setPictureSize(3264, 1840);
-//            camera.setParameters(mParameters);
+            camera.setParameters(mParameters);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -347,8 +350,7 @@ public class CameraActivity extends Activity implements OnClickListener, SensorE
                 buffer2 = new byte[data.length];
                 buffer3 = new byte[data.length];
                 bitmaptemp = BitmapFactory.decodeByteArray(data, 0, data.length);
-            }
-            else if (rotationtemp.equals("1")) {
+            } else if (rotationtemp.equals("1")) {
                 Bitmap bitmap = BitmapFactory.decodeByteArray(data, 0, data.length);
                 //Matrix matrix = new Matrix();
                 //matrix.setRotate(180, bitmap.getWidth() / 2, bitmap.getHeight() / 2);
@@ -357,7 +359,7 @@ public class CameraActivity extends Activity implements OnClickListener, SensorE
                 //              bitmap.recycle();
                 //             bitmap=null;
 
-                bitmaptemp=rotateBitmapByDegree(bitmap,90);
+                bitmaptemp = rotateBitmapByDegree(bitmap, 90);
                /* bitmaptemp = Bitmap.createBitmap(bitmap.getHeight(), bitmap.getWidth(), bitmap.getConfig());
                 Canvas canvas = new Canvas(bitmaptemp);
                 //主要以这个对象调用旋转方法
@@ -396,7 +398,7 @@ public class CameraActivity extends Activity implements OnClickListener, SensorE
     };
 
 
-    public  Bitmap rotateBitmapByDegree(Bitmap bm, int degree) {
+    public Bitmap rotateBitmapByDegree(Bitmap bm, int degree) {
         Bitmap returnBm = null;
 
         // 根据旋转角度，生成旋转矩阵
@@ -462,7 +464,7 @@ public class CameraActivity extends Activity implements OnClickListener, SensorE
             // 处理具体的逻辑
             String timeStamp = new SimpleDateFormat("yyyyMMdd")
                     .format(new Date());
-            Log.d("tftest",timeStamp+"");
+            Log.d("tftest", timeStamp + "");
             saveImage(timeStamp + "/" + caseId + "/originalPictures/", timeStamp + "/" + caseId + "/twoHundredPictures/", timeStamp + "/" + caseId + "/contractionPictures/");
             Log.i("zhangsh", "Run over");
         }
@@ -584,7 +586,7 @@ public class CameraActivity extends Activity implements OnClickListener, SensorE
 //                saveData(pathTemp);
             }
             Bitmap bitmap2 = comp(bitmaptemp, 0);
-            Log.d("bitmap 大小",bitmap2.getByteCount()/1024+"");
+            Log.d("bitmap 大小", bitmap2.getByteCount() / 1024 + "");
             Bitmap waterMarkBitmap2 = waterMark(bitmap2, 60, 200, 15.0f);
             buffer2 = Bitmap2Bytes(waterMarkBitmap2);
             if (buffer2 == null) {
@@ -617,7 +619,7 @@ public class CameraActivity extends Activity implements OnClickListener, SensorE
             }
             bitmaptemp.recycle();
             bitmaptemp = null;
-        }else if (rotationtemp.equals("1")) {
+        } else if (rotationtemp.equals("1")) {
             File file = getOutFile(TYPE_FILE_IMAGE, path, timeStamp);
             pathTemp1 = pathTemp;
             if (file == null) {
@@ -797,7 +799,7 @@ public class CameraActivity extends Activity implements OnClickListener, SensorE
             recordFileInfo.setSceneType(evidenceExtra.getFather());
 
             try {
-                JSONObject refKeyId=new JSONObject(evidenceExtra.getJson());
+                JSONObject refKeyId = new JSONObject(evidenceExtra.getJson());
                 refKeyId.get("ID");
                 recordFileInfo.setRefKeyId(refKeyId.get("ID").toString());
                 recordFileInfo.setPhotoId(refKeyId.get("ID").toString());
@@ -1119,7 +1121,7 @@ public class CameraActivity extends Activity implements OnClickListener, SensorE
             options -= 1;//每次都减少1
         }
         ByteArrayInputStream isBm = new ByteArrayInputStream(baos.toByteArray());//把压缩后的数据baos存放到ByteArrayInputStream中
-        return  BitmapFactory.decodeStream(isBm, null, null);
+        return BitmapFactory.decodeStream(isBm, null, null);
     }
 
 
@@ -1184,7 +1186,7 @@ public class CameraActivity extends Activity implements OnClickListener, SensorE
             }
         }
 
-        return compressImage(result,8);
+        return compressImage(result, 8);
     }
 
 
@@ -1302,7 +1304,7 @@ public class CameraActivity extends Activity implements OnClickListener, SensorE
         textPaint.setColor(Color.RED);//采用的颜色
         //textPaint.setShadowLayer(3f, 1, 1,this.getResources().getColor(android.R.color.background_dark));//影音的设置
 
-        drawShowText(canvas, textPaint, width, hight, showLation,mCurrentOrientation);
+        drawShowText(canvas, textPaint, width, hight, showLation, mCurrentOrientation);
 
 
         /*canvas.drawText(showContext, 10, 20, textPaint);//绘制上去字，开始未知x,y采用那只笔绘制  左上角
@@ -1479,28 +1481,28 @@ public class CameraActivity extends Activity implements OnClickListener, SensorE
         EvidenceApplication.finishAllActivity();
     }
 
-    private void getPhotoWaterMark(){
+    private void getPhotoWaterMark() {
         List<SysAppParamSetting> list =
                 EvidenceApplication.db.findAllByWhere(SysAppParamSetting.class, "key = 'photo_controller'");
 
-        if (list.size()>0){
+        if (list.size() > 0) {
 
             JSONArray result = null;//转换为JSONObject
             JSONObject jsonObjectdata;
             try {
-                String temop =list.get(0).getValue().toString();
+                String temop = list.get(0).getValue().toString();
                 result = new JSONArray(temop);
-                Log.d("result",result+"'");
-                for(int i=0;i<result.length();i++){
+                Log.d("result", result + "'");
+                for (int i = 0; i < result.length(); i++) {
                     jsonObjectdata = result.getJSONObject(i);
-                    String key =jsonObjectdata.get("key").toString();
-                    String value =jsonObjectdata.get("value").toString();
-                    String name =jsonObjectdata.get("name").toString();
-                    if(key.contains("SHOW")&&value.equals("1")) {
+                    String key = jsonObjectdata.get("key").toString();
+                    String value = jsonObjectdata.get("value").toString();
+                    String name = jsonObjectdata.get("name").toString();
+                    if (key.contains("SHOW") && value.equals("1")) {
                         show(key, value);
                     }
-                    if(key.equals("TEXT_DIRECTION")){
-                        showLation=value;
+                    if (key.equals("TEXT_DIRECTION")) {
+                        showLation = value;
                     }
                 }
 
@@ -1511,67 +1513,67 @@ public class CameraActivity extends Activity implements OnClickListener, SensorE
         }
     }
 
-    private void show(String key , String value){
-        showContext="";
-        if(key.equals("SHOW_GATHERER")&&value.equals("1")){
-            showContext=sharePre.getString("prospectPerson","");
+    private void show(String key, String value) {
+        showContext = "";
+        if (key.equals("SHOW_GATHERER") && value.equals("1")) {
+            showContext = sharePre.getString("prospectPerson", "");
         }
-        if(key.equals("SHOW_DIRECTION")&&value.equals("1")){
-            showContext =showContext+"  "+directionTemp;
+        if (key.equals("SHOW_DIRECTION") && value.equals("1")) {
+            showContext = showContext + "  " + directionTemp;
         }
-        if (key.equals("SHOW_LOCATION")&&value.equals("1")){
-          //  if(EvidenceApplication.latitude!=0.0) {
-                showContext = showContext + "  " + EvidenceApplication.latitude + "  " + EvidenceApplication.longitude;
-         //   }
+        if (key.equals("SHOW_LOCATION") && value.equals("1")) {
+            //  if(EvidenceApplication.latitude!=0.0) {
+            showContext = showContext + "  " + EvidenceApplication.latitude + "  " + EvidenceApplication.longitude;
+            //   }
         }
     }
 
-    private void drawShowText(Canvas canvas,Paint textPaint,int width ,int hight,String value,Boolean mCurrentOrientation ){
+    private void drawShowText(Canvas canvas, Paint textPaint, int width, int hight, String value, Boolean mCurrentOrientation) {
         //mCurrentOrientation True  横屏  false 竖屏
-        switch(value){
+        switch (value) {
             case "0":
-                if(mCurrentOrientation) {
+                if (mCurrentOrientation) {
                     canvas.drawText(showContext, 10, 20, textPaint);//绘制上去字，开始未知x,y采用那只笔绘制  左上角
-                }else{
+                } else {
                     canvas.drawText(showContext, 10, 100, textPaint);//绘制上去字，开始未知x,y采用那只笔绘制  左上角
                 }
                 break;
             case "1":
-                if(EvidenceApplication.latitude!=0.0) {
-                    if(mCurrentOrientation) {
-                        canvas.drawText(showContext, width-260, 20, textPaint);//绘制上去字，开始未知x,y采用那只笔绘制  右上角
-                    }else{
-                        canvas.drawText(showContext, width-260, 100, textPaint);//  右上角
+                if (EvidenceApplication.latitude != 0.0) {
+                    if (mCurrentOrientation) {
+                        canvas.drawText(showContext, width - 260, 20, textPaint);//绘制上去字，开始未知x,y采用那只笔绘制  右上角
+                    } else {
+                        canvas.drawText(showContext, width - 260, 100, textPaint);//  右上角
                     }
 
-                }else{
-                    if(mCurrentOrientation) {
+                } else {
+                    if (mCurrentOrientation) {
                         canvas.drawText(showContext, width - 100, 20, textPaint);//绘制上去字，开始未知x,y采用那只笔绘制  右上角
-                    }else{
+                    } else {
                         canvas.drawText(showContext, width - 100, 100, textPaint);//绘制上去字，开始未知x,y采用那只笔绘制  右上角
                     }
                 }
                 break;
             case "2":
-                if(mCurrentOrientation) {
-                    canvas.drawText(showContext, 10, hight-20, textPaint);//绘制上去字，开始未知x,y采用那只笔绘制  左下角
-                }else{
-                    canvas.drawText(showContext, 10, hight-100, textPaint);//绘制上去字，开始未知x,y采用那只笔绘制  左下角
+                if (mCurrentOrientation) {
+                    canvas.drawText(showContext, 10, hight - 20, textPaint);//绘制上去字，开始未知x,y采用那只笔绘制  左下角
+                } else {
+                    canvas.drawText(showContext, 10, hight - 100, textPaint);//绘制上去字，开始未知x,y采用那只笔绘制  左下角
                 }
 
                 break;
             case "3":
-                if(EvidenceApplication.latitude!=0.0) {
-                    if(mCurrentOrientation) {
+                if (EvidenceApplication.latitude != 0.0) {
+                    if (mCurrentOrientation) {
                         canvas.drawText(showContext, width - 260, hight - 20, textPaint);//绘制上去字，开始未知x,y采用那只笔绘制  右下角
-                    }else{
+                    } else {
                         canvas.drawText(showContext, width - 260, hight - 100, textPaint);//绘制上去字，开始未知x,y采用那只笔绘制  右下角
                     }
-                }else{
-                    if(mCurrentOrientation){
+                } else {
+                    if (mCurrentOrientation) {
                         canvas.drawText(showContext, width - 100, hight - 20, textPaint);//绘制上去字，开始未知x,y采用那只笔绘制  右下角
 
-                    }else{
+                    } else {
                         canvas.drawText(showContext, width - 100, hight - 100, textPaint);//绘制上去字，开始未知x,y采用那只笔绘制  右下角
 
                     }

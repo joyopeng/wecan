@@ -141,6 +141,18 @@ public class SpinnerPopPerson implements View.OnClickListener{
                 }
                 if (!isSel) {
                     for (int i = 0; i < listName.size(); i++) {
+                        //
+                        SharePre sharePre = new SharePre(context, "user_info", Context.MODE_PRIVATE);
+                        int userId = Integer.parseInt(sharePre.getString("userId","0"));
+                        if("现场勘验人员".equals(name) && employeeId == userId){
+                            Toast.makeText(context, "主勘人员,不能删除", Toast.LENGTH_SHORT).show();
+                            return;
+                        }
+                        if("现场指挥人员".equals(name) && listName.size() == 1){
+                            Toast.makeText(context, "现场指挥人员必须填写", Toast.LENGTH_SHORT).show();
+                            return;
+                        }
+                        //
                         if (listName.get(i).getEmployeeId().equals(employeeId)) {
                             listName.remove((i--));
                             break;
@@ -255,6 +267,17 @@ public class SpinnerPopPerson implements View.OnClickListener{
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 //Toast.makeText(context, "已添加" + position, Toast.LENGTH_SHORT).show();
+                HyEmployees employees = listName.get(position);
+                SharePre sharePre = new SharePre(context, "user_info", Context.MODE_PRIVATE);
+                int userId = Integer.parseInt(sharePre.getString("userId","0"));
+                if("现场勘验人员".equals(name) && employees.getEmployeeId() == userId){
+                    Toast.makeText(context, "主勘人员,不能删除", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                if("现场指挥人员".equals(name) && listName.size() == 1){
+                    Toast.makeText(context, "现场指挥人员必须填写", Toast.LENGTH_SHORT).show();
+                    return;
+                }
                 listName.remove(position);
                 selectGridView.setAdapter(new GetSelectDepartmentPeopleAdapter(listName));
                 oftenList.setAdapter(new OftenContentAdapter(context, getOftenListData(), listName));
@@ -310,11 +333,12 @@ public class SpinnerPopPerson implements View.OnClickListener{
                 String id = "";
                 String nameT = "";
                 if(listName.size()==0){
+                    inputDate.setTag(id);
                     inputDate.setText("请输入");
                 }else{
                     for(int i =0;i<listName.size();i++) {
-                        id = listName.get(i).getEmployeeId() + ","+id;
-                        nameT = listName.get(i).getEmployeeName() + ","+nameT;
+                        id = listName.get(i).getEmployeeId() + "、"+id;
+                        nameT = listName.get(i).getEmployeeName() + "、"+nameT;
                     }
                     inputDate.setTag(id.substring(0, id.length() - 1));
                     inputDate.setText(nameT.substring(0, nameT.length() - 1));
@@ -396,8 +420,8 @@ public class SpinnerPopPerson implements View.OnClickListener{
         if(outPutText.getText().toString().equals("请输入")){
             listName.clear();
         }else {
-            temp = outPutText.getText().toString().split(",");
-            tempId = outPutText.getTag().toString().split(",");
+            temp = outPutText.getText().toString().split("、");
+            tempId = outPutText.getTag().toString().split("、");
             for (int i = 0; i < temp.length; i++) {
                 listName.addAll(EvidenceApplication.db.findAllByWhere(HyEmployees.class,
                         "employeeId ='" + tempId[i] + "'"));

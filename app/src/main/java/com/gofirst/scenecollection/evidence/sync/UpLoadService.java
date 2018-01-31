@@ -252,7 +252,7 @@ public class UpLoadService extends Service {
         writerInfo("start init createBlocking");
         for (UploadFile recordFileInfo : getFiles(caseList)) {
             writerInfo("start " + recordFileInfo.getFilePath() + "createBlocking");
-            new CreateFileBlocks().startCreateBlocks(recordFileInfo, 256 * 1024, true, recordFileInfo.getCaseId());
+            new CreateFileBlocks().startCreateBlocks(recordFileInfo, 256 * 1024 * 4, true, recordFileInfo.getCaseId());
         }
         //上传指定媒体文件
         String sql = "select * from UnUpLoadBlock where isSpec = '1'";

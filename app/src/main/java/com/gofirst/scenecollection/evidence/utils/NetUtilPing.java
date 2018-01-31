@@ -128,8 +128,9 @@ public class NetUtilPing {
         List<BaseDataBean> results = new ArrayList<>();
         TelephonyManager telephonyManager = (TelephonyManager) mContext
                 .getSystemService(Context.TELEPHONY_SERVICE);
+        CellLocation location = telephonyManager.getCellLocation();
         List<CellInfo> infoLists = telephonyManager.getAllCellInfo();
-        if (infoLists.size() != 0) {
+        if (infoLists!= null && infoLists.size() != 0) {
             for (CellInfo info : infoLists) {
                 BaseDataBean beans = new BaseDataBean();
                 if (info.toString().contains("CellInfoLte")) {

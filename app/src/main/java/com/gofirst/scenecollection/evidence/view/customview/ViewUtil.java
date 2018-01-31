@@ -430,6 +430,9 @@ public class ViewUtil {
         try {
             jsonObject = new JSONObject(json);
             for (BaseView baseView : viewLists) {
+//                String saveKey = baseView.getSaveKey();
+//                if("INVESTIGATOR_IDS".equals(saveKey)){
+//                }
                 if (baseView.validate()){
                     jsonObject.put(baseView.getSaveKey(), baseView.getText());
                     baseView.saveName(jsonObject);

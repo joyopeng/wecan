@@ -112,7 +112,7 @@ public class ShowPictureActivity extends Activity {
                 "belongTo = '" + belongTo + "' and caseId = '" + caseId + "'");
         for (RecordFileInfo recordFileInfo : lists){
             //        mapFiles.add(new File(recordFileInfo.getFilePath()));
-            mapFiles.add(new File(recordFileInfo.getTwoHundredFilePath()));
+            mapFiles.add(new File(recordFileInfo.getFilePath()));
             //add zsh on
             if("".equals(mCaseId) || "".equals(mFather)){
                 mCaseId = recordFileInfo.getCaseId();

@@ -83,6 +83,7 @@ public class CaseBasicInfoFragment extends Fragment {
     @Override
     public void onDestroy() {
         String json = ViewUtil.viewSave2JsonNoRequire(getContext(), viewLists, caseBasicInfo.getJson());
+        json = json.replace("请输入","");
         if (json != null) {
             caseBasicInfo.setJson(saveReceptionNo(json));
             EvidenceApplication.db.update(caseBasicInfo);

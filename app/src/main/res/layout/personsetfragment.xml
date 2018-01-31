@@ -88,7 +88,31 @@
             android:layout_marginEnd="13dp"
             android:background="@drawable/cscense_list_item_go"/>
     </LinearLayout>
-
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/scene_list_divider_height"
+        android:background="@color/scene_list_divider_color"/>
+    <LinearLayout
+        android:id="@+id/person_center_sign_btn"
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="43dp"
+            android:layout_weight="1"
+            android:text="签名"
+            android:textColor="@color/text_common_gray_color"
+            android:textSize="@dimen/common_button_text_size"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="13dp" />
+        <ImageView
+            android:layout_width="11dp"
+            android:layout_height="20dp"
+            android:layout_marginEnd="13dp"
+            android:background="@drawable/cscense_list_item_go"/>
+    </LinearLayout>
     <View
         android:layout_width="match_parent"
         android:layout_height="@dimen/scene_list_divider_height"
