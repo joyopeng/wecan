@@ -167,8 +167,10 @@ public class DownLoadAsync extends AsyncTask<String,Integer,Boolean> {
                     outputStream.close();
                 }
             }
-            file.renameTo(new File(savePath));
-            result = true;
+            if(!isCancelled()) {
+                file.renameTo(new File(savePath));
+                result = true;
+            }
         }catch (MalformedURLException urlException){
             Log.i(TAG,"MalformedURLException",urlException);
         }

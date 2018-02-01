@@ -130,7 +130,7 @@ public class NetUtilPing {
                 .getSystemService(Context.TELEPHONY_SERVICE);
         CellLocation location = telephonyManager.getCellLocation();
         List<CellInfo> infoLists = telephonyManager.getAllCellInfo();
-        if (infoLists!= null && infoLists.size() != 0) {
+        if (infoLists != null && infoLists.size() != 0) {
             for (CellInfo info : infoLists) {
                 BaseDataBean beans = new BaseDataBean();
                 if (info.toString().contains("CellInfoLte")) {
@@ -198,8 +198,8 @@ public class NetUtilPing {
                         }
                     } catch (IllegalAccessException ee) {
                     }
-                    beans.setAsulevel(cellSignalStrengthGsm.getAsuLevel()+"");
-                    beans.setLeveltext(cellSignalStrengthGsm.getLevel()+"");
+                    beans.setAsulevel(cellSignalStrengthGsm.getAsuLevel() + "");
+                    beans.setLeveltext(cellSignalStrengthGsm.getLevel() + "");
                 } else if (info.toString().contains("CellInfoCdma")) {
                     CellInfoCdma cellInfoCdma = (CellInfoCdma) info;
                     CellIdentityCdma cellIdentityCdma = cellInfoCdma
@@ -212,10 +212,19 @@ public class NetUtilPing {
                     beans.setLac("0");
                     beans.setMcc("0");
                     beans.setMnc("0");
-                    beans.setAsulevel(cellSignalStrengthCdma.getAsuLevel()+"");
+                    beans.setAsulevel(cellSignalStrengthCdma.getAsuLevel() + "");
                 }
                 results.add(beans);
             }
+        } else {
+//            List<NeighboringCellInfo> list = telephonyManager.getNeighboringCellInfo();
+//            Log.v("aaaa", list.size()+"");
+//            CellLocation location1 = telephonyManager.getCellLocation();
+//            if (location1 instanceof GsmCellLocation) {
+//                location1 = (GsmCellLocation) location1;
+//                Log.v("aaaa", ((GsmCellLocation) location1).getCid() + "");
+//            }
+
         }
 
         return results;

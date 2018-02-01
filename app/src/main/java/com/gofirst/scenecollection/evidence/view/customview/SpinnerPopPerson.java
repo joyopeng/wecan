@@ -116,9 +116,8 @@ public class SpinnerPopPerson implements View.OnClickListener {
 
         show_gray = (View) view.findViewById(R.id.show_gray);
         InitLayout(view, context, outPutText);
-
-        oftenList.setAdapter(new OftenContentAdapter(context, getOftenListData(), listName));
-        new OftenContentAdapter(context, getOftenListData(), listName).setListener(new OnListener() {
+        OftenContentAdapter oftenContentAdapter = new OftenContentAdapter(context, getOftenListData(), listName);
+        oftenContentAdapter.setListener(new OnListener() {
             @Override
             public void onItemClick(String employeeName, int employeeId, Boolean isSel) {
                 //Toast.makeText(context,"tf"+position,Toast.LENGTH_SHORT).show();
@@ -167,6 +166,8 @@ public class SpinnerPopPerson implements View.OnClickListener {
                 }
             }
         });
+        oftenList.setAdapter(oftenContentAdapter);
+
         new AllDepartmentPeopleAdapter(context, getOftenListData(), listName).setAllListener(new OnListener() {
             @Override
             public void onItemClick(String employeeName, int employeeId, Boolean isSel) {
