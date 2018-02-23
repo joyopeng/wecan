@@ -202,6 +202,7 @@ public  class Login extends FragmentActivity implements View.OnClickListener,
                         sharePre.put("compartmentNo", hyCompartments.getString("compartmentNo"));
                         sharePre.put("compartmentName", hyCompartments.getString("compartmentName"));
                     }
+
                     sharePre.put("alarmViewPurview", data.getString("alarmViewPurview"));
 
                     //add off

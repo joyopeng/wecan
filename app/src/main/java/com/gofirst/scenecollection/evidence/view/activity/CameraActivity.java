@@ -297,9 +297,6 @@ public class CameraActivity extends Activity implements OnClickListener, SensorE
 //            List<Camera.Size> pictureSizes = camera.getParameters().getSupportedPictureSizes();
             Camera.Parameters mParameters = camera.getParameters();
             List<Camera.Size> pictureSizes = mParameters.getSupportedPictureSizes();
-            for(Camera.Size p : pictureSizes){
-                Log.v("aaaa","width ="+p.width+"height="+p.height);
-            }
 //            mParameters.setPictureSize(5120, 3840);
 //            mParameters.setPictureSize(3264, 1840);
             camera.setParameters(mParameters);
@@ -1259,7 +1256,8 @@ public class CameraActivity extends Activity implements OnClickListener, SensorE
             } else if (i >= 68 && i < 113) {
                 direction = "由西向东";
                 show.setText("由西向东");
-            } else if (i >= 113 && i < 158) {
+            } e
+            lse if (i >= 113 && i < 158) {
                 direction = "由西北向东南";
                 show.setText("由西北向东南");
             } else if (i >= 158 && i < 203) {

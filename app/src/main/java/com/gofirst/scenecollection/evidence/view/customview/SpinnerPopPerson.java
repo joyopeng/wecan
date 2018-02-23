@@ -39,49 +39,51 @@ import com.gofirst.scenecollection.evidence.utils.SharePre;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
+import java.util.LinkedList;
 import java.util.List;
 
 /**
  * Created by Administrator on 2017/4/11.
  */
-public class SpinnerPopPerson implements View.OnClickListener{
+public class SpinnerPopPerson implements View.OnClickListener {
 
-    private LinearLayout container,oftenConainer,searchContainer,searchShow;
+    private LinearLayout container, oftenConainer, searchContainer, searchShow;
     private List<View> levelItem = new ArrayList<>();
     private static String name;
     private String rootKey;
-    private TextView allBtn,oftenBtn,outPutText,searchBtn;
-    private View allLine,oftenLine,searchLine;
+    private TextView allBtn, oftenBtn, outPutText, searchBtn;
+    private View allLine, oftenLine, searchLine;
     private PopupWindow popupWindow;
-    private ListView oftenList,searchList;
+    private ListView oftenList, searchList;
     private SharePre sharePre;
-    private ExpandListView allDepartmentList,allDepartmentPeopleList;
+    private ExpandListView allDepartmentList, allDepartmentPeopleList;
     private List<HyOrganizations> allDepartmentData;
     private List<HyEmployees> allDepartmentPeopleData;
 
-    public  HashMap<Integer, Boolean> isSelectedData;
-    private Boolean isUpdate=false;
+    public HashMap<Integer, Boolean> isSelectedData;
+    private Boolean isUpdate = false;
 
 
     private EditText searchTxt;
     private ImageView searchImg;
     private View show_gray;
 
-   // private DepartmentNameListAdapter departmentNameAdapter;
-  //  private List<DepartmentNameListAdapter.DepartmentNameListData> list = new ArrayList<>();
+    // private DepartmentNameListAdapter departmentNameAdapter;
+    //  private List<DepartmentNameListAdapter.DepartmentNameListData> list = new ArrayList<>();
 
     private HorizNavView horizNavView;
     private ArrayList<String> datas;
     private ArrayList<String> datasId;
     private LinearLayout horiznaview_linearLayout;
-    private  RecyclerView rec;
+    private RecyclerView rec;
     private static final String ACTION = "violetjack.testaction";
 
-    private Boolean departmentRefresh=false;//部门刷新
-    private Boolean departmentPeopleRefresh=false;//部门人员刷新
+    private Boolean departmentRefresh = false;//部门刷新
+    private Boolean departmentPeopleRefresh = false;//部门人员刷新
     public GridView selectGridView;
 
-    private List <HyEmployees> listName;
+    private LinkedList<HyEmployees> listName;
 
     public SpinnerPopPerson(Context context, TextView inputDate, String name, String rootKey) {
         this.name = name;
@@ -93,32 +95,32 @@ public class SpinnerPopPerson implements View.OnClickListener{
         outPutText = inputDate;
         View view = LayoutInflater.from(context).inflate(R.layout.spinner_pop_person_layout, null);
         sharePre = new SharePre(context, "user_info", Context.MODE_PRIVATE);
-        selectGridView =(GridView)view.findViewById(R.id.GridView1);
+        selectGridView = (GridView) view.findViewById(R.id.GridView1);
         IntentFilter filter = new IntentFilter(ACTION);
         context.registerReceiver(receiver, filter);
         allBtn = (TextView) view.findViewById(R.id.all_btn);
         oftenBtn = (TextView) view.findViewById(R.id.often_btn);
-        searchBtn= (TextView) view.findViewById(R.id.search_btn);
+        searchBtn = (TextView) view.findViewById(R.id.search_btn);
         oftenBtn.setText("本单位");
         allLine = view.findViewById(R.id.all_line);
         oftenLine = view.findViewById(R.id.often_line);
-        searchLine= view.findViewById(R.id.search_line);
+        searchLine = view.findViewById(R.id.search_line);
         allBtn.setOnClickListener(this);
         oftenBtn.setOnClickListener(this);
         searchBtn.setOnClickListener(this);
         container = (LinearLayout) view.findViewById(R.id.container);
         oftenConainer = (LinearLayout) view.findViewById(R.id.often_container);
-        searchContainer= (LinearLayout) view.findViewById(R.id.search_container);
+        searchContainer = (LinearLayout) view.findViewById(R.id.search_container);
         oftenList = (ListView) view.findViewById(R.id.often_list);
         searchList = (ListView) view.findViewById(R.id.search_list);
 
         oftenList.setDividerHeight(0);
 
-        show_gray=(View)view.findViewById(R.id.show_gray);
-        InitLayout(view, context,outPutText);
+        show_gray = (View) view.findViewById(R.id.show_gray);
+        InitLayout(view, context, outPutText);
 
         oftenList.setAdapter(new OftenContentAdapter(context, getOftenListData(), listName));
-        new OftenContentAdapter(context, getOftenListData(),listName).setListener(new OftenContentAdapter.OnListener() {
+        new OftenContentAdapter(context, getOftenListData(), listName).setListener(new OftenContentAdapter.OnListener() {
             @Override
             public void onItemClick(String employeeName, int employeeId, Boolean isSel) {
                 //Toast.makeText(context,"tf"+position,Toast.LENGTH_SHORT).show();
@@ -167,7 +169,7 @@ public class SpinnerPopPerson implements View.OnClickListener{
                 }
             }
         });
-        new AllDepartmentPeopleAdapter(context,getOftenListData(),listName).setAllListener(new AllDepartmentPeopleAdapter.OnAllListener() {
+        new AllDepartmentPeopleAdapter(context, getOftenListData(), listName).setAllListener(new AllDepartmentPeopleAdapter.OnAllListener() {
             @Override
             public void onItemClick(String employeeName, int employeeId, Boolean isSel) {
                 //Toast.makeText(context,"tf"+position,Toast.LENGTH_SHORT).show();
@@ -203,7 +205,7 @@ public class SpinnerPopPerson implements View.OnClickListener{
             }
         });
 
-        new SearchAdapter(context,getSearListData(searchTxt.getText().toString()),listName).setSearchListener(new SearchAdapter.OnSearchListener() {
+        new SearchAdapter(context, getSearListData(searchTxt.getText().toString()), listName).setSearchListener(new SearchAdapter.OnSearchListener() {
             @Override
             public void onItemClick(String employeeName, int employeeId, Boolean isSel) {
                 if (isSel) {
@@ -290,21 +292,20 @@ public class SpinnerPopPerson implements View.OnClickListener{
         });
 
 
-        allDepartmentList = (ExpandListView)view.findViewById(R.id.all_list);
+        allDepartmentList = (ExpandListView) view.findViewById(R.id.all_list);
         allDepartmentList.setDividerHeight(0);
         allDepartmentList.setAdapter(new AllDepartmentAdapter(context, getAllDepartmentListData()));
 
 
-
-        allDepartmentPeopleList= (ExpandListView)view.findViewById(R.id.allpeople_list);
+        allDepartmentPeopleList = (ExpandListView) view.findViewById(R.id.allpeople_list);
         allDepartmentPeopleList.setDividerHeight(0);
         allDepartmentPeopleList.setAdapter(new AllDepartmentPeopleAdapter(context, getAllDepartmentPoepleListData(), listName));
 
 
-       // horiznaview_linearLayout.setVisibility(View.GONE);
+        // horiznaview_linearLayout.setVisibility(View.GONE);
 
         popupWindow = new PopupWindow(view, ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
-        ((TextView)view.findViewById(R.id.title).findViewById(R.id.secondary_title_tv)).setText(name);
+        ((TextView) view.findViewById(R.id.title).findViewById(R.id.secondary_title_tv)).setText(name);
         view.findViewById(R.id.title).findViewById(R.id.secondary_back_img).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -317,24 +318,26 @@ public class SpinnerPopPerson implements View.OnClickListener{
         finish.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 String id = "";
                 String nameT = "";
-                if(listName.size()==0){
+                if (listName.size() == 0) {
                     inputDate.setTag(id);
                     inputDate.setText("请输入");
-                }else{
-                    for(int i =0;i<listName.size();i++) {
-                        id = listName.get(i).getEmployeeId() + "、"+id;
-                        nameT = listName.get(i).getEmployeeName() + "、"+nameT;
+                } else {
+                    HyEmployees ee;
+                    Iterator<HyEmployees> it = listName.descendingIterator();
+                    while (it.hasNext()) {
+                        ee = it.next();
+                        id = ee.getEmployeeId() + "," + id;
+                        nameT = ee.getEmployeeName() + "、" + nameT;
                     }
                     inputDate.setTag(id.substring(0, id.length() - 1));
                     inputDate.setText(nameT.substring(0, nameT.length() - 1));
-               }
+                }
                 popupWindow.dismiss();
             }
         });
-       // addSelectLevelList(context, 1, "");
+        // addSelectLevelList(context, 1, "");
         popupWindow.setAnimationStyle(R.style.tabpopstyle);
         popupWindow.setFocusable(true);
         popupWindow.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE);
@@ -343,24 +346,22 @@ public class SpinnerPopPerson implements View.OnClickListener{
     }
 
 
-
-
     private BroadcastReceiver receiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
-            if (intent.getAction().equals(ACTION)){
+            if (intent.getAction().equals(ACTION)) {
                 int position = intent.getIntExtra("position", 0);
                 String orgId = intent.getStringExtra("orgId");
                 String orgIdName = intent.getStringExtra("orgIdName");
-                 ArrayList<String>  datasTemp,datasIdTemp= new ArrayList<>();
+                ArrayList<String> datasTemp, datasIdTemp = new ArrayList<>();
                 datasTemp = intent.getStringArrayListExtra("datas");
                 datasIdTemp = intent.getStringArrayListExtra("datasId");
                 //tvResult.setText(result);
                 datas.clear();
                 datasId.clear();
-                if(position==0){
-                    allDepartmentList.setAdapter(new AllDepartmentAdapter(context,getAllDepartmentListData()));
-                    allDepartmentPeopleList.setAdapter(new AllDepartmentPeopleAdapter(context,getAllDepartmentPoepleListData(),listName));
+                if (position == 0) {
+                    allDepartmentList.setAdapter(new AllDepartmentAdapter(context, getAllDepartmentListData()));
+                    allDepartmentPeopleList.setAdapter(new AllDepartmentPeopleAdapter(context, getAllDepartmentPoepleListData(), listName));
                     datas.clear();
                     datasId.clear();
                     datas.add(orgIdName);
@@ -369,18 +370,18 @@ public class SpinnerPopPerson implements View.OnClickListener{
                     horizNavView.initAgeList();
 
 
-               }else{
-                    for(int i=0;i<position+1;i++){
+                } else {
+                    for (int i = 0; i < position + 1; i++) {
                         datas.add(datasTemp.get(i).toString());
                         datasId.add(datasIdTemp.get(i).toString());
                     }
                     /*String orgId = list.get(position).getOrganizationId().toString();
                     String orgIdName = list.get(position).getOrganizationName().toString();
                     getDatas();*/
-                   horizNavView.setDatas(datas, datasId);
+                    horizNavView.setDatas(datas, datasId);
                     horizNavView.initAgeList();
                     //getDatas(context,orgId,orgIdName,false);
-                    getDatas(context,datasId.get(position),datas.get(position),false);
+                    getDatas(context, datasId.get(position), datas.get(position), false);
 
                 }
             }
@@ -388,28 +389,27 @@ public class SpinnerPopPerson implements View.OnClickListener{
     };
 
 
-
-    private void InitLayout(View view, final Context context,TextView outPutText){
-        searchShow=(LinearLayout) view.findViewById(R.id.search_show);
+    private void InitLayout(View view, final Context context, TextView outPutText) {
+        searchShow = (LinearLayout) view.findViewById(R.id.search_show);
         searchShow.setVisibility(View.GONE);
 
-        searchTxt=(EditText) view.findViewById(R.id.search_txt);
-        searchImg=(ImageView) view.findViewById(R.id.search_img);
+        searchTxt = (EditText) view.findViewById(R.id.search_txt);
+        searchImg = (ImageView) view.findViewById(R.id.search_img);
         searchImg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 searchList.setAdapter(new SearchAdapter(context, getSearListData(searchTxt.getText().toString()), listName));
             }
         });
-         listName=new ArrayList<>();
+        listName = new LinkedList<>();
         //listName =getAllDepartmentPoepleListData();
-        String [] temp = null;
-        String [] tempId = null;
-        if(outPutText.getText().toString().equals("请输入")){
+        String[] temp = null;
+        String[] tempId = null;
+        if (outPutText.getText().toString().equals("请输入")) {
             listName.clear();
-        }else {
+        } else {
             temp = outPutText.getText().toString().split("、");
-            tempId = outPutText.getTag().toString().split("、");
+            tempId = outPutText.getTag().toString().split(",");
             for (int i = 0; i < temp.length; i++) {
                 listName.addAll(EvidenceApplication.db.findAllByWhere(HyEmployees.class,
                         "employeeId ='" + tempId[i] + "'"));
@@ -417,31 +417,31 @@ public class SpinnerPopPerson implements View.OnClickListener{
             }
         }
 
-       // listName.addAll(EvidenceApplication.db.findAllByWhere(HyEmployees.class,
-       //         "employeeId ='" + sharePre.getString("userId","") + "'"));
+        // listName.addAll(EvidenceApplication.db.findAllByWhere(HyEmployees.class,
+        //         "employeeId ='" + sharePre.getString("userId","") + "'"));
 
         GetSelectDepartmentPeopleAdapter getSelectDepartmentPeopleAdapter;
-        getSelectDepartmentPeopleAdapter =new GetSelectDepartmentPeopleAdapter(listName);
+        getSelectDepartmentPeopleAdapter = new GetSelectDepartmentPeopleAdapter(listName);
         selectGridView.setAdapter(getSelectDepartmentPeopleAdapter);
 
-        horiznaview_linearLayout= (LinearLayout) view.findViewById(R.id.horiznaview_linearLayout);
+        horiznaview_linearLayout = (LinearLayout) view.findViewById(R.id.horiznaview_linearLayout);
         horizNavView = (HorizNavView) view.findViewById(R.id.custom_rec);
-          rec = (RecyclerView) horizNavView.findViewById(R.id.recycler);
+        rec = (RecyclerView) horizNavView.findViewById(R.id.recycler);
         //准备数据
-        String orgId = sharePre.getString("organizationId","");
-        List<HyOrganizations> list=EvidenceApplication.db.findAllByWhere(HyOrganizations.class,
+        String orgId = sharePre.getString("organizationId", "");
+        List<HyOrganizations> list = EvidenceApplication.db.findAllByWhere(HyOrganizations.class,
                 "organizationBusiUpId = '0'");
 
         List<HyOrganizations> listOrgId = EvidenceApplication.db.findAllByWhere(HyOrganizations.class,
-                "organizationId = '"+list.get(0).getOrganizationId().toString()+"'");
+                "organizationId = '" + list.get(0).getOrganizationId().toString() + "'");
         datas = new ArrayList<String>();
         datasId = new ArrayList<String>();
         //for (int i = 0; i < 5; i++) {
-        if(list.size()>0) {
+        if (list.size() > 0) {
             datas.add(list.get(0).getOrganizationName().toString());
             datasId.add(list.get(0).getOrganizationId().toString());
         }
-       // }
+        // }
 
         //添加监听器，获取到RecyclerView的宽度以设置item的宽度
         final ViewTreeObserver vt = rec.getViewTreeObserver();
@@ -449,7 +449,7 @@ public class SpinnerPopPerson implements View.OnClickListener{
             @Override
             public boolean onPreDraw() {
                 rec.getViewTreeObserver().removeOnPreDrawListener(this);
-                horizNavView.setDatas(datas,datasId);
+                horizNavView.setDatas(datas, datasId);
                 horizNavView.setRecyclerviewWidth(rec.getMeasuredWidth());
                 horizNavView.initAgeList();
                 Message message = new Message();
@@ -467,7 +467,7 @@ public class SpinnerPopPerson implements View.OnClickListener{
         public void handleMessage(Message msg) {
             switch (msg.what) {
                 case 2:
-                // 在这里可以进行UI操作
+                    // 在这里可以进行UI操作
                     horiznaview_linearLayout.setVisibility(View.GONE);
                     break;
                 default:
@@ -507,6 +507,7 @@ public class SpinnerPopPerson implements View.OnClickListener{
                 container.removeView(view);
         }
     }
+
     private void removeNextLevelSelectItem(int level) {
         for (int i = levelItem.size() - 1; i > level; i--) {
             container.removeView(levelItem.get(i));
@@ -546,30 +547,21 @@ public class SpinnerPopPerson implements View.OnClickListener{
     }
 
 
-
-
-
-
-
-
-
-
-
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
+        switch (v.getId()) {
             case R.id.all_btn:
-                changeTabState(allBtn, oftenBtn,searchBtn, allLine, oftenLine,searchLine ,container, oftenConainer,searchContainer);
+                changeTabState(allBtn, oftenBtn, searchBtn, allLine, oftenLine, searchLine, container, oftenConainer, searchContainer);
                 horiznaview_linearLayout.setVisibility(View.VISIBLE);
                 searchShow.setVisibility(View.GONE);
                 break;
             case R.id.often_btn:
-                changeTabState(oftenBtn, allBtn,searchBtn, oftenLine, allLine,searchLine, oftenConainer, container,searchContainer);
+                changeTabState(oftenBtn, allBtn, searchBtn, oftenLine, allLine, searchLine, oftenConainer, container, searchContainer);
                 horiznaview_linearLayout.setVisibility(View.GONE);
                 searchShow.setVisibility(View.GONE);
                 break;
             case R.id.search_btn:
-                changeTabState(searchBtn,oftenBtn,allBtn,searchLine, oftenLine, allLine,searchContainer, oftenConainer, container);
+                changeTabState(searchBtn, oftenBtn, allBtn, searchLine, oftenLine, allLine, searchContainer, oftenConainer, container);
                 horiznaview_linearLayout.setVisibility(View.GONE);
                 searchShow.setVisibility(View.VISIBLE);
                 break;
@@ -579,9 +571,9 @@ public class SpinnerPopPerson implements View.OnClickListener{
         }
     }
 
-    private void changeTabState(TextView self,TextView target,TextView third,
-                                View selfLine,View targetLine,View thirdLine,
-                                LinearLayout... container){
+    private void changeTabState(TextView self, TextView target, TextView third,
+                                View selfLine, View targetLine, View thirdLine,
+                                LinearLayout... container) {
         self.setTextColor(Color.parseColor("#2EA1EC"));
         selfLine.setBackgroundColor(Color.parseColor("#2EA1EC"));
         target.setTextColor(Color.parseColor("#767676"));
@@ -594,29 +586,29 @@ public class SpinnerPopPerson implements View.OnClickListener{
         container[2].setVisibility(View.INVISIBLE);
     }
 
-    private List<HyEmployees> getOftenListData(){
+    private List<HyEmployees> getOftenListData() {
         List<HyEmployees> oftenData = new ArrayList<>();
         //List<HyEmployees> list = EvidenceApplication.db.findAllByWhere(HyEmployees.class,"employeeId = '" + rootKey + "'");
         /*for (HyEmployees csDictsFavorites : list){
             oftenData.addAll(EvidenceApplication.db.findAllByWhere(HyEmployees.class,"organizationId = '" + list.getDictsId()
                     + "' and rootKey = '" + rootKey + "'"));
         }*/
-        List<HyEmployees> list =new ArrayList<>();
+        List<HyEmployees> list = new ArrayList<>();
         //for(int i=0;i<listName.size();i++){
-        list = EvidenceApplication.db.findAllByWhere(HyEmployees.class,"employeeId = '" + sharePre.getString("userId","") + "'");
-       // }
+        list = EvidenceApplication.db.findAllByWhere(HyEmployees.class, "employeeId = '" + sharePre.getString("userId", "") + "'");
+        // }
         //if(list.size()>0) {
-            oftenData.addAll(EvidenceApplication.db.findAllByWhere(HyEmployees.class,
-                    "organizationId = '" + list.get(0).getOrganizationId() + "'"));
-       // }
+        oftenData.addAll(EvidenceApplication.db.findAllByWhere(HyEmployees.class,
+                "organizationId = '" + list.get(0).getOrganizationId() + "'"));
+        // }
         return oftenData;
     }
 
-    private List<HyOrganizations> getAllDepartmentListData(){//allDepartmentList
+    private List<HyOrganizations> getAllDepartmentListData() {//allDepartmentList
 
-         allDepartmentData = new ArrayList<>();
+        allDepartmentData = new ArrayList<>();
         allDepartmentData.clear();
-        List<HyOrganizations> list=EvidenceApplication.db.findAllByWhere(HyOrganizations.class,
+        List<HyOrganizations> list = EvidenceApplication.db.findAllByWhere(HyOrganizations.class,
                 "organizationBusiUpId = '0'");
 
        /* List<HyOrganizations> listOrgId = EvidenceApplication.db.findAllByWhere(HyOrganizations.class,
@@ -627,11 +619,11 @@ public class SpinnerPopPerson implements View.OnClickListener{
     }
 
 
-    private List<HyEmployees> getAllDepartmentPoepleListData(){//allDepartmentList
+    private List<HyEmployees> getAllDepartmentPoepleListData() {//allDepartmentList
 
-         allDepartmentPeopleData = new ArrayList<>();
+        allDepartmentPeopleData = new ArrayList<>();
         allDepartmentPeopleData.clear();
-        List<HyOrganizations> list=EvidenceApplication.db.findAllByWhere(HyOrganizations.class,
+        List<HyOrganizations> list = EvidenceApplication.db.findAllByWhere(HyOrganizations.class,
                 "organizationBusiUpId = '0'");
 
        /* List<HyOrganizations> listOrgId = EvidenceApplication.db.findAllByWhere(HyOrganizations.class,
@@ -694,22 +686,22 @@ public class SpinnerPopPerson implements View.OnClickListener{
     }
 
 
-    public static  class OftenContentAdapter extends BaseAdapter {
+    public static class OftenContentAdapter extends BaseAdapter {
 
         private List<HyEmployees> list;
         private List<HyEmployees> listName;
         private int currentLevel;
         public static OnListener onListener;
-        private Boolean IsSel=false;
+        private Boolean IsSel = false;
 
         private Context context;
         // 用来控制CheckBox的选中状况
-        private  HashMap<Integer, Boolean> isSelectedData;
+        private HashMap<Integer, Boolean> isSelectedData;
 
-        public OftenContentAdapter(Context context , List<HyEmployees> list,List<HyEmployees> listName) {
+        public OftenContentAdapter(Context context, List<HyEmployees> list, List<HyEmployees> listName) {
             this.list = list;
-            this.context=context;
-            this.listName=listName;
+            this.context = context;
+            this.listName = listName;
             isSelectedData = new HashMap<Integer, Boolean>();
             init();
         }
@@ -718,10 +710,10 @@ public class SpinnerPopPerson implements View.OnClickListener{
         public void init() {
 
             for (int i = 0; i < list.size(); i++) {
-               // isSelectedData.put(i, true);
+                // isSelectedData.put(i, true);
                 getIsSelected().put(i, false);
-                for(int j = 0; j < listName.size(); j++){
-                    if(list.get(i).getEmployeeId().equals(listName.get(j).getEmployeeId())){
+                for (int j = 0; j < listName.size(); j++) {
+                    if (list.get(i).getEmployeeId().equals(listName.get(j).getEmployeeId())) {
                         getIsSelected().put(i, true);
                     }
                 }
@@ -747,9 +739,9 @@ public class SpinnerPopPerson implements View.OnClickListener{
         @Override
         public View getView(final int position, View convertView, ViewGroup parent) {
             //if (convertView == null)
-                convertView = LayoutInflater.from(parent.getContext()).inflate(R.layout.spinner_pop_person_item, parent, false);
+            convertView = LayoutInflater.from(parent.getContext()).inflate(R.layout.spinner_pop_person_item, parent, false);
             TextView nametext = (TextView) convertView.findViewById(R.id.tv_device_name);
-            final CheckBox  checkBox = (CheckBox) convertView.findViewById(R.id.checkBox1);
+            final CheckBox checkBox = (CheckBox) convertView.findViewById(R.id.checkBox1);
             nametext.setText(list.get(position).getEmployeeName());
 
 
@@ -781,7 +773,7 @@ public class SpinnerPopPerson implements View.OnClickListener{
                         if (onListener != null) {
                             //onListener.onItemClick(position);
                             onListener.onItemClick(list.get(position).getEmployeeName().toString(),
-                                    list.get(position).getEmployeeId(),false);
+                                    list.get(position).getEmployeeId(), false);
                         }
                     } else {
                         isSelectedData.put(position, true);
@@ -792,7 +784,7 @@ public class SpinnerPopPerson implements View.OnClickListener{
                         if (onListener != null) {
                             //onListener.onItemClick(position);
                             onListener.onItemClick(list.get(position).getEmployeeName().toString(),
-                                    list.get(position).getEmployeeId(),true);
+                                    list.get(position).getEmployeeId(), true);
                         }
                     }
 
@@ -822,16 +814,16 @@ public class SpinnerPopPerson implements View.OnClickListener{
                         if (onListener != null) {
                             //    onListener.onItemClick(position);
                             onListener.onItemClick(list.get(position).getEmployeeName().toString(),
-                                    list.get(position).getEmployeeId(),false);
+                                    list.get(position).getEmployeeId(), false);
                         }
 
                     } else {
                         isSelectedData.put(position, true);
                         setIsSelected(isSelectedData);
                         if (onListener != null) {
-                        //    onListener.onItemClick(position);
+                            //    onListener.onItemClick(position);
                             onListener.onItemClick(list.get(position).getEmployeeName().toString(),
-                                    list.get(position).getEmployeeId(),true);
+                                    list.get(position).getEmployeeId(), true);
                         }
                     }
 
@@ -845,11 +837,9 @@ public class SpinnerPopPerson implements View.OnClickListener{
         }
 
 
-
-
         public interface OnListener {
             //void onItemClick(int position);
-            void onItemClick(String employeeName,int employeeId,Boolean isSel);
+            void onItemClick(String employeeName, int employeeId, Boolean isSel);
         }
 
         public void setListener(OnListener listener) {
@@ -857,23 +847,16 @@ public class SpinnerPopPerson implements View.OnClickListener{
         }
 
 
-
-
-        public  HashMap<Integer, Boolean> getIsSelected() {
-        return isSelectedData;
+        public HashMap<Integer, Boolean> getIsSelected() {
+            return isSelectedData;
         }
 
-        public  void setIsSelected(HashMap<Integer, Boolean> isSelectedData) {
+        public void setIsSelected(HashMap<Integer, Boolean> isSelectedData) {
             isSelectedData = isSelectedData;
         }
 
 
-
-
     }
-
-
-
 
 
     public class AllDepartmentAdapter extends BaseAdapter {
@@ -883,9 +866,9 @@ public class SpinnerPopPerson implements View.OnClickListener{
         private Context context;
 
 
-        public AllDepartmentAdapter(Context context,List<HyOrganizations> list) {
+        public AllDepartmentAdapter(Context context, List<HyOrganizations> list) {
             this.list = list;
-                this.context=context;
+            this.context = context;
         }
 
         @Override
@@ -920,8 +903,7 @@ public class SpinnerPopPerson implements View.OnClickListener{
                     String orgIdName = list.get(position).getOrganizationName().toString();
 
 
-
-                    getDatas(context,orgId,orgIdName,true);
+                    getDatas(context, orgId, orgIdName, true);
 
                     /*List<HyOrganizations> listAllDepartment = EvidenceApplication.db.findAllByWhere(HyOrganizations.class,
                             "organizationBusiUpId = '" + orgId + "'");
@@ -1035,7 +1017,7 @@ public class SpinnerPopPerson implements View.OnClickListener{
         @Override
         public View getView(final int position, View convertView, ViewGroup parent) {
 
-                convertView = LayoutInflater.from(parent.getContext()).inflate(R.layout.get_select_department_people__item, parent, false);
+            convertView = LayoutInflater.from(parent.getContext()).inflate(R.layout.get_select_department_people__item, parent, false);
             TextView name = (TextView) convertView.findViewById(R.id.tv_device_name);
             name.setText(list.get(position).getEmployeeName());
            /* convertView.setOnClickListener(new View.OnClickListener() {
@@ -1052,22 +1034,22 @@ public class SpinnerPopPerson implements View.OnClickListener{
     }
 
 
-    public static  class AllDepartmentPeopleAdapter extends BaseAdapter {
+    public static class AllDepartmentPeopleAdapter extends BaseAdapter {
 
         private List<HyEmployees> list;
         private List<HyEmployees> listName;
         private int currentLevel;
         public static OnAllListener onAllListener;
-        private Boolean IsSel=false;
+        private Boolean IsSel = false;
 
         private Context context;
         // 用来控制CheckBox的选中状况
-        private  HashMap<Integer, Boolean> isSelectedData;
+        private HashMap<Integer, Boolean> isSelectedData;
 
-        public AllDepartmentPeopleAdapter(Context context,   List<HyEmployees> list,List<HyEmployees> listName) {
+        public AllDepartmentPeopleAdapter(Context context, List<HyEmployees> list, List<HyEmployees> listName) {
             this.list = list;
-            this.context=context;
-            this.listName=listName;
+            this.context = context;
+            this.listName = listName;
             isSelectedData = new HashMap<Integer, Boolean>();
             init();
         }
@@ -1078,8 +1060,8 @@ public class SpinnerPopPerson implements View.OnClickListener{
             for (int i = 0; i < list.size(); i++) {
                 // isSelectedData.put(i, true);
                 getIsSelected().put(i, false);
-                for(int j = 0; j < listName.size(); j++){
-                    if(list.get(i).getEmployeeId().equals(listName.get(j).getEmployeeId())){
+                for (int j = 0; j < listName.size(); j++) {
+                    if (list.get(i).getEmployeeId().equals(listName.get(j).getEmployeeId())) {
                         getIsSelected().put(i, true);
                     }
                 }
@@ -1107,7 +1089,7 @@ public class SpinnerPopPerson implements View.OnClickListener{
             //if (convertView == null)
             convertView = LayoutInflater.from(parent.getContext()).inflate(R.layout.spinner_pop_person_item, parent, false);
             TextView nametext = (TextView) convertView.findViewById(R.id.tv_device_name);
-            final CheckBox  checkBox = (CheckBox) convertView.findViewById(R.id.checkBox1);
+            final CheckBox checkBox = (CheckBox) convertView.findViewById(R.id.checkBox1);
             nametext.setText(list.get(position).getEmployeeName());
 
 
@@ -1137,7 +1119,7 @@ public class SpinnerPopPerson implements View.OnClickListener{
                         if (onAllListener != null) {
                             //onListener.onItemClick(position);
                             onAllListener.onItemClick(list.get(position).getEmployeeName().toString(),
-                                    list.get(position).getEmployeeId(),false);
+                                    list.get(position).getEmployeeId(), false);
                         }
                     } else {
                         isSelectedData.put(position, true);
@@ -1148,7 +1130,7 @@ public class SpinnerPopPerson implements View.OnClickListener{
                         if (onAllListener != null) {
                             //onListener.onItemClick(position);
                             onAllListener.onItemClick(list.get(position).getEmployeeName().toString(),
-                                    list.get(position).getEmployeeId(),true);
+                                    list.get(position).getEmployeeId(), true);
                         }
                     }
 
@@ -1178,7 +1160,7 @@ public class SpinnerPopPerson implements View.OnClickListener{
                         if (onAllListener != null) {
                             //    onListener.onItemClick(position);
                             onAllListener.onItemClick(list.get(position).getEmployeeName().toString(),
-                                    list.get(position).getEmployeeId(),false);
+                                    list.get(position).getEmployeeId(), false);
                         }
 
                     } else {
@@ -1187,7 +1169,7 @@ public class SpinnerPopPerson implements View.OnClickListener{
                         if (onAllListener != null) {
                             //    onListener.onItemClick(position);
                             onAllListener.onItemClick(list.get(position).getEmployeeName().toString(),
-                                    list.get(position).getEmployeeId(),true);
+                                    list.get(position).getEmployeeId(), true);
                         }
                     }
 
@@ -1201,11 +1183,9 @@ public class SpinnerPopPerson implements View.OnClickListener{
         }
 
 
-
-
         public interface OnAllListener {
             //void onItemClick(int position);
-            void onItemClick(String employeeName,int employeeId,Boolean isSel);
+            void onItemClick(String employeeName, int employeeId, Boolean isSel);
         }
 
         public void setAllListener(OnAllListener onAllListener) {
@@ -1213,34 +1193,32 @@ public class SpinnerPopPerson implements View.OnClickListener{
         }
 
 
-
-
-        public  HashMap<Integer, Boolean> getIsSelected() {
+        public HashMap<Integer, Boolean> getIsSelected() {
             return isSelectedData;
         }
 
-        public  void setIsSelected(HashMap<Integer, Boolean> isSelectedData) {
+        public void setIsSelected(HashMap<Integer, Boolean> isSelectedData) {
             isSelectedData = isSelectedData;
         }
     }
 
 
-    public static  class SearchAdapter extends BaseAdapter {
+    public static class SearchAdapter extends BaseAdapter {
 
         private List<HyEmployees> list;
         private List<HyEmployees> listName;
         private int currentLevel;
         public static OnSearchListener onSearchListener;
-        private Boolean IsSel=false;
+        private Boolean IsSel = false;
 
         private Context context;
         // 用来控制CheckBox的选中状况
-        private  HashMap<Integer, Boolean> isSelectedData;
+        private HashMap<Integer, Boolean> isSelectedData;
 
-        public SearchAdapter(Context context , List<HyEmployees> list,List<HyEmployees> listName) {
+        public SearchAdapter(Context context, List<HyEmployees> list, List<HyEmployees> listName) {
             this.list = list;
-            this.context=context;
-            this.listName=listName;
+            this.context = context;
+            this.listName = listName;
             isSelectedData = new HashMap<Integer, Boolean>();
             init();
         }
@@ -1251,8 +1229,8 @@ public class SpinnerPopPerson implements View.OnClickListener{
             for (int i = 0; i < list.size(); i++) {
                 // isSelectedData.put(i, true);
                 getIsSelected().put(i, false);
-                for(int j = 0; j < listName.size(); j++){
-                    if(list.get(i).getEmployeeId().equals(listName.get(j).getEmployeeId())){
+                for (int j = 0; j < listName.size(); j++) {
+                    if (list.get(i).getEmployeeId().equals(listName.get(j).getEmployeeId())) {
                         getIsSelected().put(i, true);
                     }
                 }
@@ -1281,7 +1259,7 @@ public class SpinnerPopPerson implements View.OnClickListener{
             convertView = LayoutInflater.from(parent.getContext()).inflate(R.layout.spinner_pop_person_search_item, parent, false);
             TextView nametext = (TextView) convertView.findViewById(R.id.tv_device_name);
             //TextView departmentName= (TextView) convertView.findViewById(R.id.department_name);
-            final CheckBox  checkBox = (CheckBox) convertView.findViewById(R.id.checkBox1);
+            final CheckBox checkBox = (CheckBox) convertView.findViewById(R.id.checkBox1);
             nametext.setText(list.get(position).getEmployeeName());
             convertView.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -1309,7 +1287,7 @@ public class SpinnerPopPerson implements View.OnClickListener{
                         if (onSearchListener != null) {
                             //onListener.onItemClick(position);
                             onSearchListener.onItemClick(list.get(position).getEmployeeName().toString(),
-                                    list.get(position).getEmployeeId(),false);
+                                    list.get(position).getEmployeeId(), false);
                         }
                     } else {
                         isSelectedData.put(position, true);
@@ -1320,7 +1298,7 @@ public class SpinnerPopPerson implements View.OnClickListener{
                         if (onSearchListener != null) {
                             //onListener.onItemClick(position);
                             onSearchListener.onItemClick(list.get(position).getEmployeeName().toString(),
-                                    list.get(position).getEmployeeId(),true);
+                                    list.get(position).getEmployeeId(), true);
                         }
                     }
 
@@ -1351,7 +1329,7 @@ public class SpinnerPopPerson implements View.OnClickListener{
                         if (onSearchListener != null) {
                             //    onListener.onItemClick(position);
                             onSearchListener.onItemClick(list.get(position).getEmployeeName().toString(),
-                                    list.get(position).getEmployeeId(),false);
+                                    list.get(position).getEmployeeId(), false);
                         }
 
                     } else {
@@ -1360,7 +1338,7 @@ public class SpinnerPopPerson implements View.OnClickListener{
                         if (onSearchListener != null) {
                             //    onListener.onItemClick(position);
                             onSearchListener.onItemClick(list.get(position).getEmployeeName().toString(),
-                                    list.get(position).getEmployeeId(),true);
+                                    list.get(position).getEmployeeId(), true);
                         }
                     }
 
@@ -1374,11 +1352,9 @@ public class SpinnerPopPerson implements View.OnClickListener{
         }
 
 
-
-
         public interface OnSearchListener {
             //void onItemClick(int position);
-            void onItemClick(String employeeName,int employeeId,Boolean isSel);
+            void onItemClick(String employeeName, int employeeId, Boolean isSel);
         }
 
         public void setSearchListener(OnSearchListener searchlistener) {
@@ -1386,28 +1362,19 @@ public class SpinnerPopPerson implements View.OnClickListener{
         }
 
 
-
-
-        public  HashMap<Integer, Boolean> getIsSelected() {
+        public HashMap<Integer, Boolean> getIsSelected() {
             return isSelectedData;
         }
 
-        public  void setIsSelected(HashMap<Integer, Boolean> isSelectedData) {
+        public void setIsSelected(HashMap<Integer, Boolean> isSelectedData) {
             isSelectedData = isSelectedData;
         }
-
-
 
 
     }
 
 
-
-
-
-
-
-    private void getDatas(Context context, String orgId,String orgIdName,Boolean isDelete){
+    private void getDatas(Context context, String orgId, String orgIdName, Boolean isDelete) {
 
 
         List<HyOrganizations> listAllDepartment = EvidenceApplication.db.findAllByWhere(HyOrganizations.class,
@@ -1418,13 +1385,13 @@ public class SpinnerPopPerson implements View.OnClickListener{
         if (listAllDepartment.size() > 0) {
             departmentRefresh = true;
             allDepartmentData.addAll(listAllDepartment);
-            allDepartmentList.setAdapter(new AllDepartmentAdapter(context,allDepartmentData));
+            allDepartmentList.setAdapter(new AllDepartmentAdapter(context, allDepartmentData));
 
         } else {
             allDepartmentData.clear();
-            allDepartmentList.setAdapter(new AllDepartmentAdapter(context,allDepartmentData));
+            allDepartmentList.setAdapter(new AllDepartmentAdapter(context, allDepartmentData));
         }
-        if(isDelete) {
+        if (isDelete) {
             datas.add(orgIdName);
             datasId.add(orgId);
             horizNavView.setDatas(datas, datasId);
@@ -1435,18 +1402,17 @@ public class SpinnerPopPerson implements View.OnClickListener{
         if (listAllDepartmentPeople.size() > 0) {
             departmentPeopleRefresh = true;
             allDepartmentPeopleData.addAll(listAllDepartmentPeople);
-            allDepartmentPeopleList.setAdapter(new AllDepartmentPeopleAdapter(context,allDepartmentPeopleData,listName));
+            allDepartmentPeopleList.setAdapter(new AllDepartmentPeopleAdapter(context, allDepartmentPeopleData, listName));
         } else {
             allDepartmentPeopleData.clear();
-            allDepartmentPeopleList.setAdapter(new AllDepartmentPeopleAdapter(context,allDepartmentPeopleData,listName));
+            allDepartmentPeopleList.setAdapter(new AllDepartmentPeopleAdapter(context, allDepartmentPeopleData, listName));
         }
 
 
     }
 
 
-
-    private List<HyEmployees> getSearListData(String text){
+    private List<HyEmployees> getSearListData(String text) {
 
         List<HyEmployees> oftenData = new ArrayList<>();
         oftenData.addAll(EvidenceApplication.db.findAllByWhere(HyEmployees.class,
@@ -1454,7 +1420,6 @@ public class SpinnerPopPerson implements View.OnClickListener{
         return oftenData;
 
     }
-
 
 
 }
