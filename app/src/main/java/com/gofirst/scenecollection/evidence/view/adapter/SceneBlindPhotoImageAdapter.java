@@ -17,9 +17,11 @@ import android.widget.ImageView;
 import com.gofirst.scenecollection.evidence.Application.EvidenceApplication;
 import com.gofirst.scenecollection.evidence.R;
 import com.gofirst.scenecollection.evidence.model.RecordFileInfo;
+import com.gofirst.scenecollection.evidence.sync.FloatWindowService;
 import com.gofirst.scenecollection.evidence.view.activity.CameraActivity;
 import com.gofirst.scenecollection.evidence.view.activity.ShowBlindActivity;
 import com.gofirst.scenecollection.evidence.view.customview.BaseView;
+import com.gofirst.scenecollection.evidence.view.customview.FloatWindowView;
 import com.gofirst.scenecollection.evidence.view.fragment.ScenePhotos;
 import com.gofirst.scenecollection.evidence.view.logic.ImgFileListActivity;
 
@@ -232,7 +234,13 @@ public class SceneBlindPhotoImageAdapter extends BaseAdapter {
                             if (!ScenePhotos.tabflage.equals("5") & !ScenePhotos.tabflage.equals("6")) {
                                 ScenePhotos.tabflage = "5";
                             }
-                            v.getContext().startActivity(new Intent(v.getContext(), CameraActivity.class)
+//                            v.getContext().startActivity(new Intent(v.getContext(), CameraActivity.class)
+//                                    .putExtra("belongTo", belongTo)
+//                                    .putExtra("cameraType", "blind")
+//                                    .putExtra("caseId", caseId)
+//                                    .putExtra("father", father)
+//                                    .putExtra(BaseView.ADDREC,isAddRec));
+                            v.getContext().startService(new Intent(v.getContext(), FloatWindowService.class)
                                     .putExtra("belongTo", belongTo)
                                     .putExtra("cameraType", "blind")
                                     .putExtra("caseId", caseId)

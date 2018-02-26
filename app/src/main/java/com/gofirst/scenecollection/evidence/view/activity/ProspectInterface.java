@@ -62,6 +62,8 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Locale;
 
+import static com.gofirst.scenecollection.evidence.sync.FloatWindowService.isCameraPreview;
+
 /**
  * @author maxiran
  */
@@ -309,6 +311,7 @@ public class ProspectInterface extends FragmentActivity implements ArrowTabView.
     @Override
     protected void onResume() {
         super.onResume();
+        isCameraPreview = false;
         if (onActivityResumeListener != null) {
             onActivityResumeListener.ActivityResumeListener();
         }

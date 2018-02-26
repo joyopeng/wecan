@@ -1256,8 +1256,7 @@ public class CameraActivity extends Activity implements OnClickListener, SensorE
             } else if (i >= 68 && i < 113) {
                 direction = "由西向东";
                 show.setText("由西向东");
-            } e
-            lse if (i >= 113 && i < 158) {
+            } else if (i >= 113 && i < 158) {
                 direction = "由西北向东南";
                 show.setText("由西北向东南");
             } else if (i >= 158 && i < 203) {

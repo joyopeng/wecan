@@ -17,6 +17,7 @@ import com.gofirst.scenecollection.evidence.Application.EvidenceApplication;
 import com.gofirst.scenecollection.evidence.R;
 import com.gofirst.scenecollection.evidence.model.ProspectPreViewItemData;
 import com.gofirst.scenecollection.evidence.model.RecordFileInfo;
+import com.gofirst.scenecollection.evidence.sync.FloatWindowService;
 import com.gofirst.scenecollection.evidence.utils.AppPathUtil;
 import com.gofirst.scenecollection.evidence.utils.BitmapUtils;
 import com.gofirst.scenecollection.evidence.utils.CreateThumbnailTask;
@@ -39,15 +40,15 @@ public class ProspectPreviewAdapter extends BaseAdapter {
     private String status;
 
     //public ProspectPreviewAdapter(String caseId,ArrayList<ProspectPreViewItemData> lists, ProspectPreview activity) {
-    public ProspectPreviewAdapter(String caseId,ArrayList<ProspectPreViewItemData> lists, ProspectPreview activity,String status) {
+    public ProspectPreviewAdapter(String caseId, ArrayList<ProspectPreViewItemData> lists, ProspectPreview activity, String status) {
         this.caseId = caseId;
         this.lists = lists;
         this.activity = activity;
         this.status = status;
-        for (ProspectPreViewItemData data : lists){
-            Log.d("srs",data.getName() + " " +data.getField() + " " + data.isEditOrCamera());
+        for (ProspectPreViewItemData data : lists) {
+            Log.d("srs", data.getName() + " " + data.getField() + " " + data.isEditOrCamera());
         }
-        Log.i("zhangsh","ProspectPreviewAdapter mode = " + status);
+        Log.i("zhangsh", "ProspectPreviewAdapter mode = " + status);
     }
 
     @Override
@@ -68,19 +69,19 @@ public class ProspectPreviewAdapter extends BaseAdapter {
     @Override
     public View getView(final int position, View convertView, ViewGroup parent) {
         Holder holder = null;
-     //   if (convertView == null) {
-            convertView = LayoutInflater.from(parent.getContext()).inflate(R.layout.prospect_preview_item, parent, false);
-            holder = new Holder();
-            holder.image_background = (ImageView) convertView.findViewById(R.id.image_background);
-            holder.name = (TextView) convertView.findViewById(R.id.name);
-            holder.playOrRecord = (Audio) convertView.findViewById(R.id.play_or_record);
-            holder.textBackground = (TextView) convertView.findViewById(R.id.text_background);
-            holder.edit_camera_background = (LinearLayout) convertView.findViewById(R.id.edit_camera_background);
-            holder.cameraIcon = (ImageView) convertView.findViewById(R.id.camera_icon);
-            convertView.setTag(holder);
-     //   } else {
-     //       holder = (Holder) convertView.getTag();
-     //   }
+        //   if (convertView == null) {
+        convertView = LayoutInflater.from(parent.getContext()).inflate(R.layout.prospect_preview_item, parent, false);
+        holder = new Holder();
+        holder.image_background = (ImageView) convertView.findViewById(R.id.image_background);
+        holder.name = (TextView) convertView.findViewById(R.id.name);
+        holder.playOrRecord = (Audio) convertView.findViewById(R.id.play_or_record);
+        holder.textBackground = (TextView) convertView.findViewById(R.id.text_background);
+        holder.edit_camera_background = (LinearLayout) convertView.findViewById(R.id.edit_camera_background);
+        holder.cameraIcon = (ImageView) convertView.findViewById(R.id.camera_icon);
+        convertView.setTag(holder);
+        //   } else {
+        //       holder = (Holder) convertView.getTag();
+        //   }
         //文字描述为空时，imageBackground;
         final ProspectPreViewItemData data = lists.get(position);
         if (data.getDesc().equals("")) {
@@ -90,55 +91,59 @@ public class ProspectPreviewAdapter extends BaseAdapter {
                 holder.image_background.setVisibility(View.GONE);
                 holder.textBackground.setVisibility(View.GONE);
                 holder.cameraIcon.setImageResource(R.drawable.camera_white);
-                if("1".equals(status)){
-                holder.cameraIcon.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        if (data.getField().equals("SCENE_VIDEO")) {
-                            Intent intent3 = new Intent(activity, TakeVideo.class);
-                            intent3.putExtra("caseId",activity.caseId);
-                            intent3.putExtra("father",data.getField());
-                            activity.startActivityForResult(intent3, 1);
-                        } else if (data.getField().equals("SCENE_PHOTO")) {
-                            Intent intent3 = new Intent(activity, CameraActivity.class)
-                                    //.putExtra("data", "scene")
-                                    .putExtra("data", "blind")
-                                    .putExtra("tabflage", "1")
-                                    .putExtra("belongTo", "")
-                                    .putExtra("cameraType", "blind")//scene
-                                    .putExtra("caseId", caseId)
-                                    .putExtra("father","SCENE_PHOTO");
-                            activity.startActivityForResult(intent3, 1);
-                        } else if (data.getField().equals("SCENE_BLIND_SHOOT")) {
-                            Intent intent3 = new Intent(activity, CameraActivity.class)
-                                    .putExtra("data", "blind")
-                                    .putExtra("belongTo", "")
-                                    .putExtra("cameraType", "blind")
-                                    .putExtra("tabflage", "5")
-                                    .putExtra("caseId",caseId)
-                                    .putExtra("father","SCENE_PHOTO");
-                            activity.startActivityForResult(intent3, 1);
-                        }
+                if ("1".equals(status)) {
+                    holder.cameraIcon.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            if (data.getField().equals("SCENE_VIDEO")) {
+                                Intent intent3 = new Intent(activity, TakeVideo.class);
+                                intent3.putExtra("caseId", activity.caseId);
+                                intent3.putExtra("father", data.getField());
+                                activity.startActivityForResult(intent3, 1);
+                            } else if (data.getField().equals("SCENE_PHOTO")) {
+//                            Intent intent3 = new Intent(activity, CameraActivity.class)
+                                Intent intent3 = new Intent(activity,FloatWindowService.class)
+                                        //.putExtra("data", "scene")
+                                        .putExtra("data", "blind")
+                                        .putExtra("tabflage", "1")
+                                        .putExtra("belongTo", "")
+                                        .putExtra("cameraType", "blind")//scene
+                                        .putExtra("caseId", caseId)
+                                        .putExtra("father", "SCENE_PHOTO");
+                                activity.startService(intent3);
+                            } else if (data.getField().equals("SCENE_BLIND_SHOOT")) {
+//                            Intent intent3 = new Intent(activity, CameraActivity.class)
+                                Intent intent3 = new Intent(activity,FloatWindowService.class)
+                                        .putExtra("data", "blind")
+                                        .putExtra("belongTo", "")
+                                        .putExtra("cameraType", "blind")
+                                        .putExtra("tabflage", "5")
+                                        .putExtra("caseId", caseId)
+                                        .putExtra("father", "SCENE_PHOTO");
+                                activity.startService(intent3);
+                            }
 
-                    }
-                });}
+                        }
+                    });
+                }
             } else if (data.isNeedRec()) {
                 //大录音图标
                 holder.edit_camera_background.setVisibility(View.VISIBLE);
                 holder.image_background.setVisibility(View.GONE);
                 holder.textBackground.setVisibility(View.GONE);
                 holder.cameraIcon.setImageResource(R.drawable.record_hd);
-                if("1".equals(status)){
-                holder.cameraIcon.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Intent REC = new Intent(v.getContext(), TakeRecord.class);
-                        REC.putExtra("caseId", activity.caseId);
-                        REC.putExtra("father", data.getField());
-                        REC.putExtra("child", data.getName());
-                        v.getContext().startActivity(REC);
-                    }
-                });}
+                if ("1".equals(status)) {
+                    holder.cameraIcon.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent REC = new Intent(v.getContext(), TakeRecord.class);
+                            REC.putExtra("caseId", activity.caseId);
+                            REC.putExtra("father", data.getField());
+                            REC.putExtra("child", data.getName());
+                            v.getContext().startActivity(REC);
+                        }
+                    });
+                }
             } else {
                 //图片背景
                 holder.image_background.setVisibility(View.VISIBLE);
@@ -155,16 +160,16 @@ public class ProspectPreviewAdapter extends BaseAdapter {
                     holder.edit_camera_background.setVisibility(View.VISIBLE);
                     holder.image_background.setVisibility(View.GONE);
                     holder.textBackground.setVisibility(View.GONE);
-                    if("1".equals(status)){
-                    holder.cameraIcon.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            Intent intent3 = new Intent(activity, TakeVideo.class);
-                            intent3.putExtra("caseId",activity.caseId);
-                            intent3.putExtra("father",data.getField());
-                            activity.startActivityForResult(intent3, 1);
-                        }
-                    });
+                    if ("1".equals(status)) {
+                        holder.cameraIcon.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                Intent intent3 = new Intent(activity, TakeVideo.class);
+                                intent3.putExtra("caseId", activity.caseId);
+                                intent3.putExtra("father", data.getField());
+                                activity.startActivityForResult(intent3, 1);
+                            }
+                        });
                     }
                 }
             }
@@ -176,11 +181,11 @@ public class ProspectPreviewAdapter extends BaseAdapter {
             holder.edit_camera_background.setVisibility(View.GONE);
         }
         holder.name.setText(data.getName());
-        holder.playOrRecord.setArgs(activity.caseId, data.getField(), "概要",status);
+        holder.playOrRecord.setArgs(activity.caseId, data.getField(), "概要", status);
         if (data.getField().equals("SCENE_VIDEO")) {
             RecordFileInfo path = getPreviewPath(data.getField(), "video");
             if (path != null && path.getFilePath() != null && !path.getFilePath().equals("")) {
-                Bitmap bitmap = CreateThumbnailTask.getVideoThumb(AppPathUtil.getDataPath(),path, 55, 55);
+                Bitmap bitmap = CreateThumbnailTask.getVideoThumb(AppPathUtil.getDataPath(), path, 55, 55);
                 displayBackground(holder);
                 holder.image_background.setImageBitmap(bitmap);
             }
@@ -194,11 +199,11 @@ public class ProspectPreviewAdapter extends BaseAdapter {
             }
         }
 
-        if (data.getField().equals("SCENE_PICTURE$1010")){
+        if (data.getField().equals("SCENE_PICTURE$1010")) {
             RecordFileInfo path = getPreviewPath(data.getField(), "png");
             if (path != null && path.getFilePath() != null && !path.getFilePath().equals("")) {
                 //Bitmap bitmap = BitmapFactory.decodeFile(AppPathUtil.getDataPath() + "/" + path.getFilePath());
-                Bitmap bitmap = BitmapFactory.decodeFile(Environment.getExternalStorageDirectory().getPath()+"/"+ path.getFilePath());
+                Bitmap bitmap = BitmapFactory.decodeFile(Environment.getExternalStorageDirectory().getPath() + "/" + path.getFilePath());
                 displayBackground(holder);
                 holder.image_background.setImageBitmap(bitmap);
             }

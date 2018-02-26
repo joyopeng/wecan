@@ -54,7 +54,6 @@
     <uses-permission android:name="cybertech.permission.READ_PSTORE_LAUNCHERGROUPS" />
     <uses-permission android:name="cybertech.permission.READ_PSTORE_SERVER_SYNC_TIME" />
     <uses-permission android:name="android.permission.GET_TASKS" />
-
     //base station
     <uses-permission android:name="ACCESS_COARSE_UPDATES" />
 
@@ -428,16 +427,16 @@
             android:authorities="com.gofirst.scenecollection.evidence.provider"
             android:exported="true" />
 
-        <service android:name="com.amap.api.location.APSService"></service>
+        <service android:name="com.amap.api.location.APSService" />
         <service
             android:name=".sync.UpLoadService"
             android:enabled="true"
-            android:exported="true"></service>
+            android:exported="true" />
         <service
             android:name=".sync.RemoteService"
             android:enabled="true"
             android:exported="true"
-            android:process=":romoteservice"></service>
+            android:process=":romoteservice" />
 
         <receiver android:name=".sync.AlarmReceiver">
             <intent-filter>
@@ -498,7 +497,11 @@
         <service
             android:name=".sync.ParseAssertService"
             android:enabled="true"
-            android:exported="false"/>
+            android:exported="false" />
+        <service
+            android:name=".sync.FloatWindowService"
+            android:enabled="true"
+            android:exported="false"></service>
     </application>
 
 </manifest>

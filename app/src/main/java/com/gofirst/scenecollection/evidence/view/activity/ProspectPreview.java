@@ -66,6 +66,8 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.UUID;
 
+import static com.gofirst.scenecollection.evidence.sync.FloatWindowService.isCameraPreview;
+
 /**
  * @author maxiran
  */
@@ -345,6 +347,7 @@ public class ProspectPreview extends Activity implements View.OnClickListener, S
     @Override
     protected void onResume() {
         super.onResume();
+        isCameraPreview = false;
         withCaseList.clear();
         initPreviewItem();
         if (finish_btn.getText().toString().equals("开始勘验")) {
