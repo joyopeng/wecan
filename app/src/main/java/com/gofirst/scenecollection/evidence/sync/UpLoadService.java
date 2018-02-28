@@ -245,6 +245,8 @@ public class UpLoadService extends Service {
 
     private void startSpecificUpload() {
         //分割指定文件 256kb 一份
+        SharePre sharePre = new SharePre(this, "user_info", MODE_PRIVATE);
+        String userId = sharePre.getString("user_id","");
         List<CsSceneCases> caseList = EvidenceApplication.
                 db.findAllByWhere(CsSceneCases.class, "status = '3'and isSpecific = '1'");
 
@@ -266,7 +268,7 @@ public class UpLoadService extends Service {
         String specSql = "select * from UnUpLoadBlock where isSpec = '1' order by id limit " + index + ",2";
         Log.d("onRunning", specSql);
         for (UnUpLoadBlock unUpLoadBlock : getUnLoadBlock(specSql)) {
-            new UpLoadSingleBlock(uploadfilerec).startUpLoadSingleBlock(unUpLoadBlock, requestQueue);
+            new UpLoadSingleBlock(uploadfilerec).startUpLoadSingleBlock(unUpLoadBlock, requestQueue,userId);
         }
         //上传指定文本
         String specJsonSql = "select * from UnUploadJson where isSpec = '1'and uploaded = '0'";

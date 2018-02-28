@@ -1,7 +1,9 @@
 package com.gofirst.scenecollection.evidence.sync;
 
 import android.content.SharedPreferences;
+import android.media.ExifInterface;
 import android.os.Environment;
+import android.text.TextUtils;
 import android.util.Base64;
 import android.util.Log;
 
@@ -44,9 +46,12 @@ public class UpLoadSingleBlock {
         preferences = f;
     }
 
-    public void startUpLoadSingleBlock(final UnUpLoadBlock unUpLoadBlock, RequestQueue requestQueue) {
+    public void startUpLoadSingleBlock(final UnUpLoadBlock unUpLoadBlock, RequestQueue requestQueue,String userId) {
         Map<String, String> params = new HashMap<>();
+        ExifInterface.TAG_APERTURE
         final File parentFile = new File(unUpLoadBlock.getParentPath());
+        params.put("userId", userId);
+        params.put("uuid", unUpLoadBlock.getId());
         params.put("fileName", parentFile.getName());
         params.put("flag", CreateMD5(parentFile.getName()));
         params.put("blockTotal", "" + unUpLoadBlock.getBlockTotal());

@@ -3,8 +3,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/small_window_layout"
     android:layout_width="600dip"
-    android:layout_height="100dip"
-    android:background="@color/colorAccent"
+    android:layout_height="70dip"
+    android:background="@color/black"
     >
     <TextView
         android:id="@+id/percent"

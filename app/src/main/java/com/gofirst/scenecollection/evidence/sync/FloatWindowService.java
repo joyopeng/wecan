@@ -663,7 +663,7 @@ public class FloatWindowService extends Service {
         //photo = BitmapFactory.decodeResource(this.getResources(), R.drawable.test);
         int width = photo.getWidth(), hight = photo.getHeight();
         System.out.println("宽" + width + "高" + hight);
-        icon = Bitmap.createBitmap(width, hight, Bitmap.Config.ARGB_8888); //建立一个空的BItMap
+        icon = Bitmap.createBitmap(width, hight, Bitmap.Config.RGB_565); //建立一个空的BItMap
         Canvas canvas = new Canvas(icon);//初始化画布绘制的图像到icon上
 
         Paint photoPaint = new Paint(); //建立画笔
