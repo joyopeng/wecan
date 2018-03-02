@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">gfxcky.draw</string>
+    <string name="action_settings">Settings</string>
+    <string name="main_btn_normal_txt">普通模式</string>
+    <string name="main_btn_down_txt">专家模式</string>
+</resources>

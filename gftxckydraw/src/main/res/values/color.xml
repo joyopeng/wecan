@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="sel_model_dialog_theme_title">#56000000</color>
+    <color name="sel_model_text_color">#FFFFFFFF</color>
+    <color name="sel_model_dialog_theme_btn">#55000000</color>
+    <color name="sel_model_split_line">#FFFFFFFF</color>
+    <color name="sel_model_dialog_background">#FFFFFFFF</color>
+    <color name="btn_sel_model_pressed">#FF0000AA</color>
+    <color name="btn_sel_model_normal">#56000000</color>
+
+    <color name="dialog_background_trans">#56000000</color>
+</resources>

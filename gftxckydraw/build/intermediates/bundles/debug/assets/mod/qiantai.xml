@@ -1,0 +1,989 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+  <asset>
+    <contributor>
+      <author>Administrator</author>
+      <authoring_tool>OpenCOLLADA2011</authoring_tool>
+      <comments>
+			ColladaMaya export options: 
+			bakeTransforms=0;relativePaths=0;copyTextures=0;exportTriangles=0;exportCgfxFileReferences=0;
+			isSampling=0;curveConstrainSampling=0;removeStaticCurves=0;exportPolygonMeshes=1;exportLights=0;
+			exportCameras=0;exportJointsAndSkin=0;exportAnimations=0;exportInvisibleNodes=0;exportDefaultCameras=0;
+			exportTexCoords=0;exportNormals=0;exportNormalsPerVertex=0;exportVertexColors=0;exportVertexColorsPerVertex=0;
+			exportTexTangents=0;exportTangents=0;exportReferencedMaterials=0;exportMaterialsOnly=0;
+			exportXRefs=0;dereferenceXRefs=1;exportCameraAsLookat=0;cameraXFov=0;cameraYFov=0;doublePrecision=0
+		</comments>
+      <source_data>file:///C:/Documents%20and%20Settings/Administrator/%D7%C0%C3%E6/ao/untitled</source_data>
+    </contributor>
+    <created>2012-07-06T11:31:21</created>
+    <modified>2012-07-06T11:31:21</modified>
+    <unit name="centimeter" meter="0.01"/>
+    <up_axis>Y_UP</up_axis>
+  </asset>
+  <library_materials>
+    <material id="lambert1" name="lambert1">
+      <instance_effect url="#lambert1-fx"/>
+    </material>
+  </library_materials>
+  <library_effects>
+    <effect id="lambert1-fx">
+      <profile_COMMON>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color>0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color>0 0 0 1</color>
+            </ambient>
+            <diffuse>
+              <color>0.4 0.4 0.4 1</color>
+            </diffuse>
+            <transparent opaque="RGB_ZERO">
+              <color>0 0 0 1</color>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_geometries>
+    <geometry id="polySurfaceShape21" name="polySurfaceShape21">
+      <mesh>
+        <source id="polySurfaceShape21-positions" name="polySurfaceShape21-positions">
+          <float_array id="polySurfaceShape21-positions-array" count="45">0.3279043 0 1.102605 0.277491 0 1.076319 0.05630872 0 0.8227603 0 0 0.6966087 0.01153445 0 0.6340302 0.1960266 0 0.5801814 1.232794 0 0.5801814 1.320383 0 0.4119754 1.805864 0 0.283114 2.005252 0 0.6380443 1.924073 0 0.7797294 1.442979 0 1.102605 1.540331 0 0.2642405 0.06149843 0 0.5829469 1.979414 0 0.426025</float_array>
+          <technique_common>
+            <accessor source="#polySurfaceShape21-positions-array" count="15" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="polySurfaceShape21-vertices" name="polySurfaceShape21-vertices">
+          <input semantic="POSITION" source="#polySurfaceShape21-positions"/>
+        </vertices>
+        <polylist material="initialShadingGroup" count="1">
+          <input semantic="VERTEX" source="#polySurfaceShape21-vertices" offset="0"/>
+          <vcount>15</vcount>
+          <p>11 0 1 2 3 4 13 5 6 7 12 8 14 9 10</p>
+        </polylist>
+      </mesh>
+      <extra>
+        <technique profile="OpenCOLLADAMaya">
+          <originalMayaNodeId>polySurfaceShape21</originalMayaNodeId>
+          <double_sided>1</double_sided>
+        </technique>
+      </extra>
+    </geometry>
+    <geometry id="polySurfaceShape22" name="polySurfaceShape22">
+      <mesh>
+        <source id="polySurfaceShape22-positions" name="polySurfaceShape22-positions">
+          <float_array id="polySurfaceShape22-positions-array" count="12">1.924073 0 0.7797294 1.443796 0 1.102281 1.464513 0 1.132718 1.945713 0 0.8166068</float_array>
+          <technique_common>
+            <accessor source="#polySurfaceShape22-positions-array" count="4" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="polySurfaceShape22-vertices" name="polySurfaceShape22-vertices">
+          <input semantic="POSITION" source="#polySurfaceShape22-positions"/>
+        </vertices>
+        <polylist material="initialShadingGroup" count="1">
+          <input semantic="VERTEX" source="#polySurfaceShape22-vertices" offset="0"/>
+          <vcount>4</vcount>
+          <p>0 1 2 3</p>
+        </polylist>
+      </mesh>
+      <extra>
+        <technique profile="OpenCOLLADAMaya">
+          <originalMayaNodeId>polySurfaceShape22</originalMayaNodeId>
+          <double_sided>1</double_sided>
+        </technique>
+      </extra>
+    </geometry>
+    <geometry id="polySurfaceShape23" name="polySurfaceShape23">
+      <mesh>
+        <source id="polySurfaceShape23-positions" name="polySurfaceShape23-positions">
+          <float_array id="polySurfaceShape23-positions-array" count="12">0.05630872 0 0.8227603 0.277491 0 1.076319 0.2517354 0 1.097573 0.02854219 0 0.8473768</float_array>
+          <technique_common>
+            <accessor source="#polySurfaceShape23-positions-array" count="4" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="polySurfaceShape23-vertices" name="polySurfaceShape23-vertices">
+          <input semantic="POSITION" source="#polySurfaceShape23-positions"/>
+        </vertices>
+        <polylist material="initialShadingGroup" count="1">
+          <input semantic="VERTEX" source="#polySurfaceShape23-vertices" offset="0"/>
+          <vcount>4</vcount>
+          <p>0 1 2 3</p>
+        </polylist>
+      </mesh>
+      <extra>
+        <technique profile="OpenCOLLADAMaya">
+          <originalMayaNodeId>polySurfaceShape23</originalMayaNodeId>
+          <double_sided>1</double_sided>
+        </technique>
+      </extra>
+    </geometry>
+    <geometry id="polySurfaceShape24" name="polySurfaceShape24">
+      <mesh>
+        <source id="polySurfaceShape24-positions" name="polySurfaceShape24-positions">
+          <float_array id="polySurfaceShape24-positions-array" count="36">0.376191 0 0.9963225 0.3667911 0 0.9278412 0.1901826 0 0.7218107 0.1239434 0 0.7020518 0.07631575 0 0.7250572 0.04629943 0 0.7686079 0.07824504 0 0.8479077 0.238746 0 1.031902 0.298547 0 1.062879 0.3461747 0 1.039873 0.04767895 0 0.8039665 0.2641236 0 1.053702</float_array>
+          <technique_common>
+            <accessor source="#polySurfaceShape24-positions-array" count="12" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="polySurfaceShape24-vertices" name="polySurfaceShape24-vertices">
+          <input semantic="POSITION" source="#polySurfaceShape24-positions"/>
+        </vertices>
+        <polylist material="initialShadingGroup" count="1">
+          <input semantic="VERTEX" source="#polySurfaceShape24-vertices" offset="0"/>
+          <vcount>12</vcount>
+          <p>8 11 7 6 10 5 4 3 2 1 0 9</p>
+        </polylist>
+      </mesh>
+      <extra>
+        <technique profile="OpenCOLLADAMaya">
+          <originalMayaNodeId>polySurfaceShape24</originalMayaNodeId>
+          <double_sided>1</double_sided>
+        </technique>
+      </extra>
+    </geometry>
+    <geometry id="polySurfaceShape25" name="polySurfaceShape25">
+      <mesh>
+        <source id="polySurfaceShape25-positions" name="polySurfaceShape25-positions">
+          <float_array id="polySurfaceShape25-positions-array" count="36">0.6320011 0 0.4230687 0.671298 0 0.4490185 1.036727 0 0.4490185 1.076023 0 0.4230687 0.6222315 0 0.371446 1.085793 0 0.371446 0.6458722 0 0.1752478 1.062152 0 0.1752478 0.6458722 0 0.1236251 0.6827137 0 0.1115769 1.025311 0 0.1115769 1.062152 0 0.1236251</float_array>
+          <technique_common>
+            <accessor source="#polySurfaceShape25-positions-array" count="12" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="polySurfaceShape25-vertices" name="polySurfaceShape25-vertices">
+          <input semantic="POSITION" source="#polySurfaceShape25-positions"/>
+        </vertices>
+        <polylist material="initialShadingGroup" count="1">
+          <input semantic="VERTEX" source="#polySurfaceShape25-vertices" offset="0"/>
+          <vcount>12</vcount>
+          <p>7 11 10 9 8 6 4 0 1 2 3 5</p>
+        </polylist>
+      </mesh>
+      <extra>
+        <technique profile="OpenCOLLADAMaya">
+          <originalMayaNodeId>polySurfaceShape25</originalMayaNodeId>
+          <double_sided>1</double_sided>
+        </technique>
+      </extra>
+    </geometry>
+    <geometry id="polySurfaceShape26" name="polySurfaceShape26">
+      <mesh>
+        <source id="polySurfaceShape26-positions" name="polySurfaceShape26-positions">
+          <float_array id="polySurfaceShape26-positions-array" count="30">0.6670809 0 0.0390762 0.6950695 0 0.01161026 0.7672489 0 0.002204098 0.8484662 0 0 0.9296836 0 0.002204098 1.001863 0 0.01161026 1.029851 0 0.0390762 0.9391589 0 0.03677448 0.8484662 0 0.03603977 0.7577736 0 0.03677448</float_array>
+          <technique_common>
+            <accessor source="#polySurfaceShape26-positions-array" count="10" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="polySurfaceShape26-vertices" name="polySurfaceShape26-vertices">
+          <input semantic="POSITION" source="#polySurfaceShape26-positions"/>
+        </vertices>
+        <polylist material="initialShadingGroup" count="1">
+          <input semantic="VERTEX" source="#polySurfaceShape26-vertices" offset="0"/>
+          <vcount>10</vcount>
+          <p>0 1 2 3 4 5 6 7 8 9</p>
+        </polylist>
+      </mesh>
+      <extra>
+        <technique profile="OpenCOLLADAMaya">
+          <originalMayaNodeId>polySurfaceShape26</originalMayaNodeId>
+          <double_sided>1</double_sided>
+        </technique>
+      </extra>
+    </geometry>
+    <geometry id="polySurfaceShape27" name="polySurfaceShape27">
+      <mesh>
+        <source id="polySurfaceShape27-positions" name="polySurfaceShape27-positions">
+          <float_array id="polySurfaceShape27-positions-array" count="30">0.6950695 0 0.09650909 0.7672489 0 0.1059152 0.8484662 0 0.1081193 0.9296836 0 0.1059152 1.001863 0 0.09650909 1.029851 0 0.06904315 0.9391589 0 0.07134487 0.8484662 0 0.07207955 0.7577736 0 0.07134487 0.6670809 0 0.06904315</float_array>
+          <technique_common>
+            <accessor source="#polySurfaceShape27-positions-array" count="10" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="polySurfaceShape27-vertices" name="polySurfaceShape27-vertices">
+          <input semantic="POSITION" source="#polySurfaceShape27-positions"/>
+        </vertices>
+        <polylist material="initialShadingGroup" count="1">
+          <input semantic="VERTEX" source="#polySurfaceShape27-vertices" offset="0"/>
+          <vcount>10</vcount>
+          <p>0 1 2 3 4 5 6 7 8 9</p>
+        </polylist>
+      </mesh>
+      <extra>
+        <technique profile="OpenCOLLADAMaya">
+          <originalMayaNodeId>polySurfaceShape27</originalMayaNodeId>
+          <double_sided>1</double_sided>
+        </technique>
+      </extra>
+    </geometry>
+    <geometry id="polySurfaceShape28" name="polySurfaceShape28">
+      <mesh>
+        <source id="polySurfaceShape28-positions" name="polySurfaceShape28-positions">
+          <float_array id="polySurfaceShape28-positions-array" count="30">0.6670809 0 0.0390762 0.6670809 0 0.06904315 0.7577736 0 0.07134487 0.8484662 0 0.07207955 0.9391589 0 0.07134487 1.029851 0 0.06904315 1.029851 0 0.0390762 0.9391589 0 0.03677448 0.8484662 0 0.03603977 0.7577736 0 0.03677448</float_array>
+          <technique_common>
+            <accessor source="#polySurfaceShape28-positions-array" count="10" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="polySurfaceShape28-vertices" name="polySurfaceShape28-vertices">
+          <input semantic="POSITION" source="#polySurfaceShape28-positions"/>
+        </vertices>
+        <polylist material="initialShadingGroup" count="1">
+          <input semantic="VERTEX" source="#polySurfaceShape28-vertices" offset="0"/>
+          <vcount>10</vcount>
+          <p>0 1 2 3 4 5 6 7 8 9</p>
+        </polylist>
+      </mesh>
+      <extra>
+        <technique profile="OpenCOLLADAMaya">
+          <originalMayaNodeId>polySurfaceShape28</originalMayaNodeId>
+          <double_sided>1</double_sided>
+        </technique>
+      </extra>
+    </geometry>
+    <geometry id="polySurfaceShape29" name="polySurfaceShape29">
+      <mesh>
+        <source id="polySurfaceShape29-positions" name="polySurfaceShape29-positions">
+          <float_array id="polySurfaceShape29-positions-array" count="24">1.004893 0 0.3557137 1.014682 0 0.3552866 1.033309 0 0.3469442 1.040146 0 0.3399246 0.9888749 0 0.3199501 0.9957116 0 0.3129306 1.014338 0 0.3045881 1.024128 0 0.304161</float_array>
+          <technique_common>
+            <accessor source="#polySurfaceShape29-positions-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="polySurfaceShape29-vertices" name="polySurfaceShape29-vertices">
+          <input semantic="POSITION" source="#polySurfaceShape29-positions"/>
+        </vertices>
+        <polylist material="initialShadingGroup" count="1">
+          <input semantic="VERTEX" source="#polySurfaceShape29-vertices" offset="0"/>
+          <vcount>8</vcount>
+          <p>6 5 4 0 1 2 3 7</p>
+        </polylist>
+      </mesh>
+      <extra>
+        <technique profile="OpenCOLLADAMaya">
+          <originalMayaNodeId>polySurfaceShape29</originalMayaNodeId>
+          <double_sided>1</double_sided>
+        </technique>
+      </extra>
+    </geometry>
+    <geometry id="polySurfaceShape30" name="polySurfaceShape30">
+      <mesh>
+        <source id="polySurfaceShape30-positions" name="polySurfaceShape30-positions">
+          <float_array id="polySurfaceShape30-positions-array" count="24">0.8368449 0 0.4566753 0.8459538 0 0.460287 0.8663631 0 0.460287 0.8754719 0 0.4566753 0.8368449 0 0.4174884 0.8459538 0 0.4138767 0.8663631 0 0.4138767 0.8754719 0 0.4174884</float_array>
+          <technique_common>
+            <accessor source="#polySurfaceShape30-positions-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="polySurfaceShape30-vertices" name="polySurfaceShape30-vertices">
+          <input semantic="POSITION" source="#polySurfaceShape30-positions"/>
+        </vertices>
+        <polylist material="initialShadingGroup" count="1">
+          <input semantic="VERTEX" source="#polySurfaceShape30-vertices" offset="0"/>
+          <vcount>8</vcount>
+          <p>6 5 4 0 1 2 3 7</p>
+        </polylist>
+      </mesh>
+      <extra>
+        <technique profile="OpenCOLLADAMaya">
+          <originalMayaNodeId>polySurfaceShape30</originalMayaNodeId>
+          <double_sided>1</double_sided>
+        </technique>
+      </extra>
+    </geometry>
+    <geometry id="polySurfaceShape31" name="polySurfaceShape31">
+      <mesh>
+        <source id="polySurfaceShape31-positions" name="polySurfaceShape31-positions">
+          <float_array id="polySurfaceShape31-positions-array" count="24">0.6714883 0 0.3313051 0.677025 0 0.3393897 0.693952 0 0.3507923 0.7035245 0 0.352886 0.6933818 0 0.2988047 0.7029544 0 0.3008983 0.7198812 0 0.3123009 0.725418 0 0.3203855</float_array>
+          <technique_common>
+            <accessor source="#polySurfaceShape31-positions-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="polySurfaceShape31-vertices" name="polySurfaceShape31-vertices">
+          <input semantic="POSITION" source="#polySurfaceShape31-positions"/>
+        </vertices>
+        <polylist material="initialShadingGroup" count="1">
+          <input semantic="VERTEX" source="#polySurfaceShape31-vertices" offset="0"/>
+          <vcount>8</vcount>
+          <p>6 5 4 0 1 2 3 7</p>
+        </polylist>
+      </mesh>
+      <extra>
+        <technique profile="OpenCOLLADAMaya">
+          <originalMayaNodeId>polySurfaceShape31</originalMayaNodeId>
+          <double_sided>1</double_sided>
+        </technique>
+      </extra>
+    </geometry>
+    <geometry id="polySurfaceShape32" name="polySurfaceShape32">
+      <mesh>
+        <source id="polySurfaceShape32-positions" name="polySurfaceShape32-positions">
+          <float_array id="polySurfaceShape32-positions-array" count="24">0.7278165 0 0.125925 0.727607 0 0.1357215 0.7347222 0 0.1548504 0.741283 0 0.1621286 0.7645448 0 0.1122634 0.7711055 0 0.1195416 0.7782208 0 0.1386705 0.7780113 0 0.148467</float_array>
+          <technique_common>
+            <accessor source="#polySurfaceShape32-positions-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="polySurfaceShape32-vertices" name="polySurfaceShape32-vertices">
+          <input semantic="POSITION" source="#polySurfaceShape32-positions"/>
+        </vertices>
+        <polylist material="initialShadingGroup" count="1">
+          <input semantic="VERTEX" source="#polySurfaceShape32-vertices" offset="0"/>
+          <vcount>8</vcount>
+          <p>6 5 4 0 1 2 3 7</p>
+        </polylist>
+      </mesh>
+      <extra>
+        <technique profile="OpenCOLLADAMaya">
+          <originalMayaNodeId>polySurfaceShape32</originalMayaNodeId>
+          <double_sided>1</double_sided>
+        </technique>
+      </extra>
+    </geometry>
+    <geometry id="polySurfaceShape33" name="polySurfaceShape33">
+      <mesh>
+        <source id="polySurfaceShape33-positions" name="polySurfaceShape33-positions">
+          <float_array id="polySurfaceShape33-positions-array" count="24">0.9283199 0 0.1433265 0.9338961 0 0.1513839 0.9508786 0 0.1627037 0.9604612 0 0.1647505 0.9500543 0 0.1107194 0.959637 0 0.1127663 0.9766194 0 0.124086 0.9821956 0 0.1321434</float_array>
+          <technique_common>
+            <accessor source="#polySurfaceShape33-positions-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="polySurfaceShape33-vertices" name="polySurfaceShape33-vertices">
+          <input semantic="POSITION" source="#polySurfaceShape33-positions"/>
+        </vertices>
+        <polylist material="initialShadingGroup" count="1">
+          <input semantic="VERTEX" source="#polySurfaceShape33-vertices" offset="0"/>
+          <vcount>8</vcount>
+          <p>6 5 4 0 1 2 3 7</p>
+        </polylist>
+      </mesh>
+      <extra>
+        <technique profile="OpenCOLLADAMaya">
+          <originalMayaNodeId>polySurfaceShape33</originalMayaNodeId>
+          <double_sided>1</double_sided>
+        </technique>
+      </extra>
+    </geometry>
+    <geometry id="polySurfaceShape34" name="polySurfaceShape34">
+      <mesh>
+        <source id="polySurfaceShape34-positions" name="polySurfaceShape34-positions">
+          <float_array id="polySurfaceShape34-positions-array" count="36">0.8707016 0 0.2712126 0.8641488 0 0.2646599 0.8551975 0 0.2622614 0.8462462 0 0.2646599 0.8396934 0 0.2712126 0.8372949 0 0.2801639 0.8396934 0 0.2891152 0.8462462 0 0.295668 0.8551975 0 0.2980665 0.8641488 0 0.295668 0.8707016 0 0.2891152 0.8731 0 0.2801639</float_array>
+          <technique_common>
+            <accessor source="#polySurfaceShape34-positions-array" count="12" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="polySurfaceShape34-vertices" name="polySurfaceShape34-vertices">
+          <input semantic="POSITION" source="#polySurfaceShape34-positions"/>
+        </vertices>
+        <polylist material="initialShadingGroup" count="1">
+          <input semantic="VERTEX" source="#polySurfaceShape34-vertices" offset="0"/>
+          <vcount>12</vcount>
+          <p>10 9 8 7 6 5 4 3 2 1 0 11</p>
+        </polylist>
+      </mesh>
+      <extra>
+        <technique profile="OpenCOLLADAMaya">
+          <originalMayaNodeId>polySurfaceShape34</originalMayaNodeId>
+          <double_sided>1</double_sided>
+        </technique>
+      </extra>
+    </geometry>
+    <geometry id="polySurfaceShape35" name="polySurfaceShape35">
+      <mesh>
+        <source id="polySurfaceShape35-positions" name="polySurfaceShape35-positions">
+          <float_array id="polySurfaceShape35-positions-array" count="12">0.8463058 0 0.4446627 0.8643378 0 0.4446627 0.8488298 0 0.2980665 0.8617605 0 0.2980665</float_array>
+          <technique_common>
+            <accessor source="#polySurfaceShape35-positions-array" count="4" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="polySurfaceShape35-vertices" name="polySurfaceShape35-vertices">
+          <input semantic="POSITION" source="#polySurfaceShape35-positions"/>
+        </vertices>
+        <polylist material="initialShadingGroup" count="1">
+          <input semantic="VERTEX" source="#polySurfaceShape35-vertices" offset="0"/>
+          <vcount>4</vcount>
+          <p>0 1 3 2</p>
+        </polylist>
+      </mesh>
+      <extra>
+        <technique profile="OpenCOLLADAMaya">
+          <originalMayaNodeId>polySurfaceShape35</originalMayaNodeId>
+          <double_sided>1</double_sided>
+        </technique>
+      </extra>
+    </geometry>
+    <geometry id="polySurfaceShape36" name="polySurfaceShape36">
+      <mesh>
+        <source id="polySurfaceShape36-positions" name="polySurfaceShape36-positions">
+          <float_array id="polySurfaceShape36-positions-array" count="12">1.01249 0 0.3368254 1.018062 0 0.3196769 0.8702561 0 0.2917522 0.874252 0 0.2794544</float_array>
+          <technique_common>
+            <accessor source="#polySurfaceShape36-positions-array" count="4" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="polySurfaceShape36-vertices" name="polySurfaceShape36-vertices">
+          <input semantic="POSITION" source="#polySurfaceShape36-positions"/>
+        </vertices>
+        <polylist material="initialShadingGroup" count="1">
+          <input semantic="VERTEX" source="#polySurfaceShape36-vertices" offset="0"/>
+          <vcount>4</vcount>
+          <p>0 1 3 2</p>
+        </polylist>
+      </mesh>
+      <extra>
+        <technique profile="OpenCOLLADAMaya">
+          <originalMayaNodeId>polySurfaceShape36</originalMayaNodeId>
+          <double_sided>1</double_sided>
+        </technique>
+      </extra>
+    </geometry>
+    <geometry id="polySurfaceShape37" name="polySurfaceShape37">
+      <mesh>
+        <source id="polySurfaceShape37-positions" name="polySurfaceShape37-positions">
+          <float_array id="polySurfaceShape37-positions-array" count="12">0.9612844 0 0.145452 0.946697 0 0.1348536 0.8708719 0 0.2694233 0.8604108 0 0.2618228</float_array>
+          <technique_common>
+            <accessor source="#polySurfaceShape37-positions-array" count="4" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="polySurfaceShape37-vertices" name="polySurfaceShape37-vertices">
+          <input semantic="POSITION" source="#polySurfaceShape37-positions"/>
+        </vertices>
+        <polylist material="initialShadingGroup" count="1">
+          <input semantic="VERTEX" source="#polySurfaceShape37-vertices" offset="0"/>
+          <vcount>4</vcount>
+          <p>0 1 3 2</p>
+        </polylist>
+      </mesh>
+      <extra>
+        <technique profile="OpenCOLLADAMaya">
+          <originalMayaNodeId>polySurfaceShape37</originalMayaNodeId>
+          <double_sided>1</double_sided>
+        </technique>
+      </extra>
+    </geometry>
+    <geometry id="polySurfaceShape38" name="polySurfaceShape38">
+      <mesh>
+        <source id="polySurfaceShape38-positions" name="polySurfaceShape38-positions">
+          <float_array id="polySurfaceShape38-positions-array" count="12">0.7634555 0 0.1350126 0.7488647 0 0.1456135 0.8498262 0 0.2619376 0.839365 0 0.2695381</float_array>
+          <technique_common>
+            <accessor source="#polySurfaceShape38-positions-array" count="4" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="polySurfaceShape38-vertices" name="polySurfaceShape38-vertices">
+          <input semantic="POSITION" source="#polySurfaceShape38-positions"/>
+        </vertices>
+        <polylist material="initialShadingGroup" count="1">
+          <input semantic="VERTEX" source="#polySurfaceShape38-vertices" offset="0"/>
+          <vcount>4</vcount>
+          <p>0 1 3 2</p>
+        </polylist>
+      </mesh>
+      <extra>
+        <technique profile="OpenCOLLADAMaya">
+          <originalMayaNodeId>polySurfaceShape38</originalMayaNodeId>
+          <double_sided>1</double_sided>
+        </technique>
+      </extra>
+    </geometry>
+    <geometry id="polySurfaceShape39" name="polySurfaceShape39">
+      <mesh>
+        <source id="polySurfaceShape39-positions" name="polySurfaceShape39-positions">
+          <float_array id="polySurfaceShape39-positions-array" count="12">0.6923925 0 0.3199333 0.6979662 0 0.3370869 0.8362035 0 0.2796401 0.8401993 0 0.2919379</float_array>
+          <technique_common>
+            <accessor source="#polySurfaceShape39-positions-array" count="4" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="polySurfaceShape39-vertices" name="polySurfaceShape39-vertices">
+          <input semantic="POSITION" source="#polySurfaceShape39-positions"/>
+        </vertices>
+        <polylist material="initialShadingGroup" count="1">
+          <input semantic="VERTEX" source="#polySurfaceShape39-vertices" offset="0"/>
+          <vcount>4</vcount>
+          <p>0 1 3 2</p>
+        </polylist>
+      </mesh>
+      <extra>
+        <technique profile="OpenCOLLADAMaya">
+          <originalMayaNodeId>polySurfaceShape39</originalMayaNodeId>
+          <double_sided>1</double_sided>
+        </technique>
+      </extra>
+    </geometry>
+    <geometry id="polySurfaceShape40" name="polySurfaceShape40">
+      <mesh>
+        <source id="polySurfaceShape40-positions" name="polySurfaceShape40-positions">
+          <float_array id="polySurfaceShape40-positions-array" count="12">1.104929 0 0.4107292 1.141664 0 0.4058538 1.070392 0 0.1505007 1.107127 0 0.1456253</float_array>
+          <technique_common>
+            <accessor source="#polySurfaceShape40-positions-array" count="4" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="polySurfaceShape40-vertices" name="polySurfaceShape40-vertices">
+          <input semantic="POSITION" source="#polySurfaceShape40-positions"/>
+        </vertices>
+        <polylist material="initialShadingGroup" count="1">
+          <input semantic="VERTEX" source="#polySurfaceShape40-vertices" offset="0"/>
+          <vcount>4</vcount>
+          <p>0 1 3 2</p>
+        </polylist>
+      </mesh>
+      <extra>
+        <technique profile="OpenCOLLADAMaya">
+          <originalMayaNodeId>polySurfaceShape40</originalMayaNodeId>
+          <double_sided>1</double_sided>
+        </technique>
+      </extra>
+    </geometry>
+    <geometry id="polySurfaceShape41" name="polySurfaceShape41">
+      <mesh>
+        <source id="polySurfaceShape41-positions" name="polySurfaceShape41-positions">
+          <float_array id="polySurfaceShape41-positions-array" count="12">0.6000247 0 0.4107292 0.56329 0 0.4058538 0.6345616 0 0.1505007 0.5978268 0 0.1456253</float_array>
+          <technique_common>
+            <accessor source="#polySurfaceShape41-positions-array" count="4" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="polySurfaceShape41-vertices" name="polySurfaceShape41-vertices">
+          <input semantic="POSITION" source="#polySurfaceShape41-positions"/>
+        </vertices>
+        <polylist material="initialShadingGroup" count="1">
+          <input semantic="VERTEX" source="#polySurfaceShape41-vertices" offset="0"/>
+          <vcount>4</vcount>
+          <p>0 1 3 2</p>
+        </polylist>
+      </mesh>
+      <extra>
+        <technique profile="OpenCOLLADAMaya">
+          <originalMayaNodeId>polySurfaceShape41</originalMayaNodeId>
+          <double_sided>1</double_sided>
+        </technique>
+      </extra>
+    </geometry>
+  </library_geometries>
+  <library_visual_scenes>
+    <visual_scene id="VisualSceneNode" name="untitled">
+      <node id="polySurface1054" name="polySurface1054" type="NODE">
+        <translate sid="translate">0 0 0</translate>
+        <rotate sid="rotateZ">0 0 1 0</rotate>
+        <rotate sid="rotateY">0 1 0 0</rotate>
+        <rotate sid="rotateX">1 0 0 0</rotate>
+        <scale sid="scale">1 1 1</scale>
+        <instance_geometry url="#polySurfaceShape21">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="initialShadingGroup" target="#lambert1"/>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+        <extra>
+          <technique profile="OpenCOLLADAMaya">
+            <originalMayaNodeId>polySurface1054</originalMayaNodeId>
+          </technique>
+        </extra>
+      </node>
+      <node id="polySurface1055" name="polySurface1055" type="NODE">
+        <translate sid="translate">0 0 0</translate>
+        <scale sid="scale">1 1 1</scale>
+        <instance_geometry url="#polySurfaceShape22">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="initialShadingGroup" target="#lambert1"/>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+        <extra>
+          <technique profile="OpenCOLLADAMaya">
+            <originalMayaNodeId>polySurface1055</originalMayaNodeId>
+          </technique>
+        </extra>
+      </node>
+      <node id="polySurface1056" name="polySurface1056" type="NODE">
+        <translate sid="translate">0 0 0</translate>
+        <scale sid="scale">1 1 1</scale>
+        <instance_geometry url="#polySurfaceShape23">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="initialShadingGroup" target="#lambert1"/>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+        <extra>
+          <technique profile="OpenCOLLADAMaya">
+            <originalMayaNodeId>polySurface1056</originalMayaNodeId>
+          </technique>
+        </extra>
+      </node>
+      <node id="polySurface1057" name="polySurface1057" type="NODE">
+        <translate sid="translate">0 0 0</translate>
+        <scale sid="scale">1 1 1</scale>
+        <instance_geometry url="#polySurfaceShape24">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="initialShadingGroup" target="#lambert1"/>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+        <extra>
+          <technique profile="OpenCOLLADAMaya">
+            <originalMayaNodeId>polySurface1057</originalMayaNodeId>
+          </technique>
+        </extra>
+      </node>
+      <node id="polySurface1058" name="polySurface1058" type="NODE">
+        <translate sid="translate">0 0 0</translate>
+        <scale sid="scale">1 1 1</scale>
+        <instance_geometry url="#polySurfaceShape25">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="initialShadingGroup" target="#lambert1"/>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+        <extra>
+          <technique profile="OpenCOLLADAMaya">
+            <originalMayaNodeId>polySurface1058</originalMayaNodeId>
+          </technique>
+        </extra>
+      </node>
+      <node id="polySurface1059" name="polySurface1059" type="NODE">
+        <translate sid="translate">0 0 0</translate>
+        <scale sid="scale">1 1 1</scale>
+        <instance_geometry url="#polySurfaceShape26">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="initialShadingGroup" target="#lambert1"/>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+        <extra>
+          <technique profile="OpenCOLLADAMaya">
+            <originalMayaNodeId>polySurface1059</originalMayaNodeId>
+          </technique>
+        </extra>
+      </node>
+      <node id="polySurface1060" name="polySurface1060" type="NODE">
+        <translate sid="translate">0 0 0</translate>
+        <scale sid="scale">1 1 1</scale>
+        <instance_geometry url="#polySurfaceShape27">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="initialShadingGroup" target="#lambert1"/>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+        <extra>
+          <technique profile="OpenCOLLADAMaya">
+            <originalMayaNodeId>polySurface1060</originalMayaNodeId>
+          </technique>
+        </extra>
+      </node>
+      <node id="polySurface1061" name="polySurface1061" type="NODE">
+        <translate sid="translate">0 0 0</translate>
+        <scale sid="scale">1 1 1</scale>
+        <instance_geometry url="#polySurfaceShape28">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="initialShadingGroup" target="#lambert1"/>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+        <extra>
+          <technique profile="OpenCOLLADAMaya">
+            <originalMayaNodeId>polySurface1061</originalMayaNodeId>
+          </technique>
+        </extra>
+      </node>
+      <node id="polySurface1062" name="polySurface1062" type="NODE">
+        <translate sid="translate">0 0 0</translate>
+        <scale sid="scale">1 1 1</scale>
+        <instance_geometry url="#polySurfaceShape29">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="initialShadingGroup" target="#lambert1"/>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+        <extra>
+          <technique profile="OpenCOLLADAMaya">
+            <originalMayaNodeId>polySurface1062</originalMayaNodeId>
+          </technique>
+        </extra>
+      </node>
+      <node id="polySurface1063" name="polySurface1063" type="NODE">
+        <translate sid="translate">0 0 0</translate>
+        <scale sid="scale">1 1 1</scale>
+        <instance_geometry url="#polySurfaceShape30">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="initialShadingGroup" target="#lambert1"/>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+        <extra>
+          <technique profile="OpenCOLLADAMaya">
+            <originalMayaNodeId>polySurface1063</originalMayaNodeId>
+          </technique>
+        </extra>
+      </node>
+      <node id="polySurface1064" name="polySurface1064" type="NODE">
+        <translate sid="translate">0 0 0</translate>
+        <scale sid="scale">1 1 1</scale>
+        <instance_geometry url="#polySurfaceShape31">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="initialShadingGroup" target="#lambert1"/>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+        <extra>
+          <technique profile="OpenCOLLADAMaya">
+            <originalMayaNodeId>polySurface1064</originalMayaNodeId>
+          </technique>
+        </extra>
+      </node>
+      <node id="polySurface1065" name="polySurface1065" type="NODE">
+        <translate sid="translate">0 0 0</translate>
+        <scale sid="scale">1 1 1</scale>
+        <instance_geometry url="#polySurfaceShape32">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="initialShadingGroup" target="#lambert1"/>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+        <extra>
+          <technique profile="OpenCOLLADAMaya">
+            <originalMayaNodeId>polySurface1065</originalMayaNodeId>
+          </technique>
+        </extra>
+      </node>
+      <node id="polySurface1066" name="polySurface1066" type="NODE">
+        <translate sid="translate">0 0 0</translate>
+        <scale sid="scale">1 1 1</scale>
+        <instance_geometry url="#polySurfaceShape33">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="initialShadingGroup" target="#lambert1"/>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+        <extra>
+          <technique profile="OpenCOLLADAMaya">
+            <originalMayaNodeId>polySurface1066</originalMayaNodeId>
+          </technique>
+        </extra>
+      </node>
+      <node id="polySurface1067" name="polySurface1067" type="NODE">
+        <translate sid="translate">0 0 0</translate>
+        <scale sid="scale">1 1 1</scale>
+        <instance_geometry url="#polySurfaceShape34">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="initialShadingGroup" target="#lambert1"/>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+        <extra>
+          <technique profile="OpenCOLLADAMaya">
+            <originalMayaNodeId>polySurface1067</originalMayaNodeId>
+          </technique>
+        </extra>
+      </node>
+      <node id="polySurface1068" name="polySurface1068" type="NODE">
+        <translate sid="translate">0 0 0</translate>
+        <scale sid="scale">1 1 1</scale>
+        <instance_geometry url="#polySurfaceShape35">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="initialShadingGroup" target="#lambert1"/>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+        <extra>
+          <technique profile="OpenCOLLADAMaya">
+            <originalMayaNodeId>polySurface1068</originalMayaNodeId>
+          </technique>
+        </extra>
+      </node>
+      <node id="polySurface1069" name="polySurface1069" type="NODE">
+        <translate sid="translate">0 0 0</translate>
+        <scale sid="scale">1 1 1</scale>
+        <instance_geometry url="#polySurfaceShape36">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="initialShadingGroup" target="#lambert1"/>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+        <extra>
+          <technique profile="OpenCOLLADAMaya">
+            <originalMayaNodeId>polySurface1069</originalMayaNodeId>
+          </technique>
+        </extra>
+      </node>
+      <node id="polySurface1070" name="polySurface1070" type="NODE">
+        <translate sid="translate">0 0 0</translate>
+        <scale sid="scale">1 1 1</scale>
+        <instance_geometry url="#polySurfaceShape37">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="initialShadingGroup" target="#lambert1"/>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+        <extra>
+          <technique profile="OpenCOLLADAMaya">
+            <originalMayaNodeId>polySurface1070</originalMayaNodeId>
+          </technique>
+        </extra>
+      </node>
+      <node id="polySurface1071" name="polySurface1071" type="NODE">
+        <translate sid="translate">0 0 0</translate>
+        <scale sid="scale">1 1 1</scale>
+        <instance_geometry url="#polySurfaceShape38">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="initialShadingGroup" target="#lambert1"/>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+        <extra>
+          <technique profile="OpenCOLLADAMaya">
+            <originalMayaNodeId>polySurface1071</originalMayaNodeId>
+          </technique>
+        </extra>
+      </node>
+      <node id="polySurface1072" name="polySurface1072" type="NODE">
+        <translate sid="translate">0 0 0</translate>
+        <scale sid="scale">1 1 1</scale>
+        <instance_geometry url="#polySurfaceShape39">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="initialShadingGroup" target="#lambert1"/>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+        <extra>
+          <technique profile="OpenCOLLADAMaya">
+            <originalMayaNodeId>polySurface1072</originalMayaNodeId>
+          </technique>
+        </extra>
+      </node>
+      <node id="polySurface1073" name="polySurface1073" type="NODE">
+        <translate sid="translate">0 0 0</translate>
+        <scale sid="scale">1 1 1</scale>
+        <instance_geometry url="#polySurfaceShape40">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="initialShadingGroup" target="#lambert1"/>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+        <extra>
+          <technique profile="OpenCOLLADAMaya">
+            <originalMayaNodeId>polySurface1073</originalMayaNodeId>
+          </technique>
+        </extra>
+      </node>
+      <node id="polySurface1074" name="polySurface1074" type="NODE">
+        <translate sid="translate">0 0 0</translate>
+        <scale sid="scale">1 1 1</scale>
+        <instance_geometry url="#polySurfaceShape41">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="initialShadingGroup" target="#lambert1"/>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+        <extra>
+          <technique profile="OpenCOLLADAMaya">
+            <originalMayaNodeId>polySurface1074</originalMayaNodeId>
+          </technique>
+        </extra>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#VisualSceneNode"/>
+  </scene>
+</COLLADA>

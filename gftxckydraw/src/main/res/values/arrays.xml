@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="modType">
+        <item>按房间类型</item>
+        <item>按模型类型</item>
+    </string-array>
+</resources>
