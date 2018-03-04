@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="pen-v4.1.1_light:@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/pen-v4.1.1_light.aar/55ffd9e64e53427bcb39836e6426e495/jars/libs/vip_sdk_recognition.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/pen-v4.1.1_light.aar/55ffd9e64e53427bcb39836e6426e495/jars/libs/spenshape.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/pen-v4.1.1_light.aar/55ffd9e64e53427bcb39836e6426e495/jars/classes.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/pen-v4.1.1_light.aar/55ffd9e64e53427bcb39836e6426e495/jars/libs/sprengine.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/pen-v4.1.1_light.aar/55ffd9e64e53427bcb39836e6426e495/jars/libs/recognitionengine.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/pen-v4.1.1_light.aar/55ffd9e64e53427bcb39836e6426e495/jars/libs/com.c2ddrawbitmap.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/pen-v4.1.1_light.aar/55ffd9e64e53427bcb39836e6426e495/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="com.huxq17.xrefreshview:xrefreshview-3.5.1">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/xrefreshview-3.5.1.aar/9592a5df99d8babf6dc2a7f4351ec7fb/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/xrefreshview-3.5.1.aar/9592a5df99d8babf6dc2a7f4351ec7fb/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.huxq17.xrefreshview/xrefreshview/3.5.1/8f896f7f0ee286243b56b3e8e2d7ec76e193db29/xrefreshview-3.5.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
