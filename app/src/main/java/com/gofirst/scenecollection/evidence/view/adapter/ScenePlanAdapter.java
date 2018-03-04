@@ -13,6 +13,7 @@ import android.widget.BaseAdapter;
 import android.widget.CheckBox;
 import android.widget.ImageView;
 
+import com.gftxcky.draw.ExperModeActivity;
 import com.gftxcky.draw.SelModeActivity;
 import com.gofirst.scenecollection.evidence.Application.EvidenceApplication;
 import com.gofirst.scenecollection.evidence.R;
@@ -116,6 +117,7 @@ public class ScenePlanAdapter extends BaseAdapter {
                         intent.putExtra("caseId", caseId);
                         intent.putExtra("father", father);
                         intent.putExtra("mode", mode);
+                        intent.putExtra("filepath",list.get(position).getScene_photo());
                         v.getContext().startActivity(intent);
                     }
                 });
@@ -135,6 +137,7 @@ public class ScenePlanAdapter extends BaseAdapter {
                         intent.putExtra("caseId", caseId);
                         intent.putExtra("father", father);
                         intent.putExtra("mode", mode);
+//                        intent.putExtra("filepath",list.get(position -1).getImgPath());
                   /* Log.d("test123", "" + Uri.parse(list.get(position).getAbsolutePath()));
                     Log.d("test456", "" + Uri.parse(list.get(position).getParentFile().getAbsolutePath()));
                     Log.d("position", "" + position);
@@ -149,6 +152,19 @@ public class ScenePlanAdapter extends BaseAdapter {
                    /* Intent intent = new Intent(Intent.ACTION_VIEW);
                     intent.setDataAndType(Uri.parse(sceneFiles.get(position).getAbsolutePath()), "Pictures/MyPictures/jpg");
                     v.getContext().startActivity(intent);*/
+                    }
+                });
+                viewHolder.scene_photo.setOnLongClickListener(new View.OnLongClickListener() {
+                    @Override
+                    public boolean onLongClick(View v) {
+                        Intent intent = new Intent(v.getContext(), ShowPlanActivity.class);
+                        intent.putExtra("position", position - 1);
+                        intent.putExtra("caseId", caseId);
+                        intent.putExtra("father", father);
+                        intent.putExtra("mode", mode);
+                        intent.putExtra("filepath",list.get(position -1).getImgPath());
+                        v.getContext().startActivity(intent);
+                        return true;
                     }
                 });
 
@@ -167,7 +183,7 @@ public class ScenePlanAdapter extends BaseAdapter {
                         if (mode != null && mode.equals(BaseView.VIEW)) {
 
                         } else {
-                            v.getContext().startActivity(new Intent(v.getContext(), SelModeActivity.class)
+                            v.getContext().startActivity(new Intent(v.getContext(), ExperModeActivity.class)
                                     .putExtra("caseId", caseId)
                                     .putExtra("father", father)
                                     .putExtra("info", "," + occurDate + "," + alarmAddress + "," + sceneArea + "," + receivePeople + "," + caseType));
@@ -196,6 +212,7 @@ public class ScenePlanAdapter extends BaseAdapter {
 
     public static class ScenePlanImageData {
         public Bitmap scene_photo;
+        public String imgpath;
        /* public String allCount;
         public String generalCount;
         public String keyCount;
@@ -210,6 +227,13 @@ public class ScenePlanAdapter extends BaseAdapter {
             this.scene_photo = scene_photo;
         }
 
+        public String getImgPath(){
+            return imgpath;
+        }
+
+        public void setImgpath(String path){
+            imgpath = path;
+        }
        /* public String getAllCount() {return allCount;}
         public void setAllCount(String allCount) {this.allCount = allCount;}
 

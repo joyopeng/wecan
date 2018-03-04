@@ -289,6 +289,7 @@ public class ScenePlan extends Fragment implements View.OnClickListener {
                 //               bitmaps.add(getPhotoBitmap(files[i]));
                 //scenePlanImageData.setScene_photo(convertToBitmap(files[i].getPath(), 55, 55));
                 scenePlanImageData.setScene_photo(getSmallBitmap(files[i].getPath().toString()));
+                scenePlanImageData.setImgpath(files[i].getPath().toString());
                 //            photoFiles.add(files[i]);
                 listPhoto.add(scenePlanImageData);
             }

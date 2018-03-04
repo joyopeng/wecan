@@ -117,7 +117,7 @@ dependencies {
     compile 'com.android.support:support-v4:23.0.1'
     compile 'com.jpardogo.materialtabstrip:library:1.1.0'
     compile group: 'com.google.zxing', name: 'core', version: '3.3.0'
-    compile 'com.android.support:multidex:1.0.1'
+//    compile 'com.android.support:multidex:1.0.1'
     compile project(':gftxckydraw')
     /*compile project(path: ':gftxckydraw')*/
     compile files('libs/afinal.jar')

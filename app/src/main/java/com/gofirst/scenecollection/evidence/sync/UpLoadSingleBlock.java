@@ -48,7 +48,6 @@ public class UpLoadSingleBlock {
 
     public void startUpLoadSingleBlock(final UnUpLoadBlock unUpLoadBlock, RequestQueue requestQueue,String userId) {
         Map<String, String> params = new HashMap<>();
-        ExifInterface.TAG_APERTURE
         final File parentFile = new File(unUpLoadBlock.getParentPath());
         params.put("userId", userId);
         params.put("uuid", unUpLoadBlock.getId());
