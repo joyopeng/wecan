@@ -1136,11 +1136,11 @@ public class ExperModeCanvas extends View {
 //                    return;
 //                }
 
-                if (isHitPoint(new XCKYPoint(mouldpathbean.getRectobj().right, mouldpathbean.getRectobj().bottom), x, y, _hitPointCoolEye)) {
+                if (_main.scalebox.isChecked() && getRect(mouldpathbean.getRectobj()).contains((int) x, (int) y)) {
                     _moveOperType = MoveOperType.MouldPostScale;
                     return;
                 }
-                if (getRect(mouldpathbean.getRectobj()).contains((int) x, (int) y)) {
+                if (_main.dragbox.isChecked() && getRect(mouldpathbean.getRectobj()).contains((int) x, (int) y)) {
                     _moveOperType = MoveOperType.MouldTranslate;
                     return;
                 }
@@ -1152,15 +1152,15 @@ public class ExperModeCanvas extends View {
             MouldBean mouldbean = (MouldBean) this._mouldMap.get(key);
             this._mouldBean = mouldbean;
             if (mouldbean.isSelect()) {
-                if (isHitPoint(mouldbean.getRotatePoint(), x, y, _hitPointCoolEye)) {
+                if (_main.rotationbox.isChecked() && getRect(mouldbean.getRectobj()).contains((int) x, (int) y)) {
+                    _moveOperType = MoveOperType.MouldRotate;
+                    return;
+                }
+                if (_main.scalebox.isChecked() && getRect(mouldbean.getRectobj()).contains((int) x, (int) y)) {
                     _moveOperType = MoveOperType.MouldPostScale;
                     return;
                 }
-                if (isHitPoint(new XCKYPoint(mouldbean.getRectobj().right, mouldbean.getRectobj().bottom), x, y, _hitPointCoolEye)) {
-                    _moveOperType = MoveOperType.MouldPostScale;
-                    return;
-                }
-                if (getRect(mouldbean.getRectobj()).contains((int) x, (int) y)) {
+                if (_main.dragbox.isChecked() && getRect(mouldbean.getRectobj()).contains((int) x, (int) y)) {
                     _moveOperType = MoveOperType.MouldTranslate;
                     return;
                 }

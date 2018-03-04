@@ -5,21 +5,22 @@
     android:layout_height="match_parent"
     android:background="@android:color/darker_gray"
     android:gravity="center"
-    android:orientation="vertical" >
+    android:orientation="vertical">
 
 
-          <LinearLayout
-              android:layout_width="match_parent"
-              android:layout_height="30dp"
-              android:layout_gravity="center_horizontal" android:background="@drawable/list_pagetitle"
-              android:visibility="gone"
-              >
- <TextView
-              android:id="@+id/textView1"
-              android:layout_width="0dp"
-              android:layout_weight="1"
-              android:layout_height="wrap_content"
-              android:text="" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/list_pagetitle"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="" />
 
         <Button
             android:layout_width="80dp"
@@ -36,22 +37,21 @@
             android:text="@string/main_btn_down_txt"
 
             android:textSize="13sp" />
- <TextView
-              android:id="@+id/textView2"
-               android:layout_width="0dp"
-              android:layout_weight="1"
-              android:layout_height="wrap_content"
-              android:text="" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="" />
     </LinearLayout>
-
-
 
 
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:orientation="horizontal" >
+        android:orientation="horizontal">
 
         <LinearLayout
             android:layout_width="8dp"
@@ -68,7 +68,7 @@
 
         <LinearLayout
             android:layout_width="8dp"
-              android:layout_height="fill_parent"
+            android:layout_height="fill_parent"
 
             android:background="@drawable/visualdesign07" />
     </LinearLayout>
@@ -77,14 +77,15 @@
         android:layout_width="fill_parent"
         android:layout_height="35dp"
         android:background="@drawable/list_pagetitle"
-        android:gravity="center_vertical" >
+        android:gravity="center_vertical">
 
         <ImageButton
             android:id="@id/straight_line"
             android:layout_width="60.0px"
             android:layout_height="60.0px"
             android:background="@drawable/button_selector2"
-            android:src="@drawable/straight_line" />
+            android:src="@drawable/straight_line"
+            android:visibility="gone" />
 
         <ImageButton
             android:id="@id/oblique_line"
@@ -197,6 +198,33 @@
             android:layout_marginLeft="5dp"
             android:background="@drawable/button_selector2"
             android:src="@drawable/zb" />
+
+        <CheckBox
+            android:id="@+id/dragbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="拖"
+            android:background="@android:color/white"
+            android:textColor="@android:color/background_dark" />
+
+        <CheckBox
+            android:id="@+id/scalebox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:text="缩"
+            android:background="@android:color/white"
+            android:textColor="@android:color/background_dark" />
+
+        <CheckBox
+            android:id="@+id/rotationbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:text="旋"
+            android:background="@android:color/white"
+            android:textColor="@android:color/background_dark" />
     </LinearLayout>
 
 </LinearLayout>

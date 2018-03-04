@@ -47,7 +47,7 @@
     </LinearLayout>
 
 
-    <FrameLayout
+    <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
@@ -60,16 +60,18 @@
 
         <LinearLayout
             android:id="@id/CanvesCon"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="fill_parent"
+            android:layout_weight="1"
             android:background="@android:color/black"
             tools:ignore="Orientation" />
 
         <LinearLayout
             android:layout_width="8dp"
             android:layout_height="fill_parent"
+
             android:background="@drawable/visualdesign07" />
-    </FrameLayout>
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="fill_parent"
@@ -82,7 +84,8 @@
             android:layout_width="60.0px"
             android:layout_height="60.0px"
             android:background="@drawable/button_selector2"
-            android:src="@drawable/straight_line" />
+            android:src="@drawable/straight_line"
+            android:visibility="gone" />
 
         <ImageButton
             android:id="@id/oblique_line"
@@ -195,6 +198,33 @@
             android:layout_marginLeft="5dp"
             android:background="@drawable/button_selector2"
             android:src="@drawable/zb" />
+
+        <CheckBox
+            android:id="@+id/dragbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="拖"
+            android:background="@android:color/white"
+            android:textColor="@android:color/background_dark" />
+
+        <CheckBox
+            android:id="@+id/scalebox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:text="缩"
+            android:background="@android:color/white"
+            android:textColor="@android:color/background_dark" />
+
+        <CheckBox
+            android:id="@+id/rotationbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:text="旋"
+            android:background="@android:color/white"
+            android:textColor="@android:color/background_dark" />
     </LinearLayout>
 
 </LinearLayout>
