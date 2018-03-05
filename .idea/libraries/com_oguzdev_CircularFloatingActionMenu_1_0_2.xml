@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="com.oguzdev:CircularFloatingActionMenu-1.0.2">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/CircularFloatingActionMenu-1.0.2.aar/975a580451eb213a6a22dba95d23e043/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/CircularFloatingActionMenu-1.0.2.aar/975a580451eb213a6a22dba95d23e043/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/CircularFloatingActionMenu-1.0.2.aar/cfe567748404e9a9d14e5e33914b3cbb/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/CircularFloatingActionMenu-1.0.2.aar/cfe567748404e9a9d14e5e33914b3cbb/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

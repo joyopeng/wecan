@@ -176,10 +176,11 @@ public class FloatWindowService extends Service {
             if (c.moveToFirst()) {
                 String filepath = c.getString(c.getColumnIndex("_data"));
                 File imageifle = new File(filepath);
+                if(filepath.contains("Pre-loaded"))
+                    return;
                 if (imageifle.exists() && imageifle.length() > 0) {
                     String timeStamp = new SimpleDateFormat("yyyyMMdd")
                             .format(new Date());
-                    Log.d("tftest", filepath + "");
                     if (!imagecache.contains(filepath)) {
                         imagecache.add(filepath);
                         bitmaptemp = BitmapFactory.decodeFile(imageifle.getAbsolutePath());

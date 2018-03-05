@@ -201,6 +201,7 @@ public class ExperModeCanvas extends View {
         drawtextbean.setSelect(false);
         drawtextbean.setPoint(point);
         _drawTextMap.put(drawtextbean.toString(), drawtextbean);
+        saveData();
         invalidate();
     }
 
@@ -888,6 +889,7 @@ public class ExperModeCanvas extends View {
             List<LineBean> list = pathbean.getLineBeans();
             for (LineBean linebean : list) {
                 if (isHitLine(linebean, clickPoint, _hitLineCoolEye)) {
+                    Log.v(TAG,"linebean _contains ");
                     pathbean.setSelect(true);
                     this._pathBean = pathbean;
                     linebean.setSelect(true);
@@ -1123,14 +1125,6 @@ public class ExperModeCanvas extends View {
             MouldPathBean mouldpathbean = (MouldPathBean) this._mouldPathMap.get(key);
             this._mouldPathBean = mouldpathbean;
             if (mouldpathbean.isSelect()) {
-
-                Log.v(TAG,"mouldpathbean.getRectobj().right = "+mouldpathbean.getRectobj().right);
-                Log.v(TAG,"mouldpathbean.getRectobj().bottom = "+mouldpathbean.getRectobj().bottom);
-                Log.v(TAG,"x = "+x);
-                Log.v(TAG,"y = "+y);
-                Log.v(TAG,"y = "+y);
-                Log.v(TAG,"_hitPointCoolEye = "+_hitPointCoolEye);
-
 //                if (isHitPoint(mouldpathbean.getRotatePoint(), x, y, _hitPointCoolEye)) {
 //                    _moveOperType = MoveOperType.MouldRotate;
 //                    return;
@@ -1455,8 +1449,10 @@ public class ExperModeCanvas extends View {
             rect = new Rect(_startPoint.x, _startPoint.y, _endPoint.x, _endPoint.y);
         //LineBean
         for (String key : _lineMap.keySet()) {
+            Log.v(TAG,"line key = "+key);
             LineBean linebean = _lineMap.get(key);
             if (rect.contains(linebean.getStartPoint().x, linebean.getStartPoint().y) && rect.contains(linebean.getEndPoint().x, linebean.getEndPoint().y)) {
+                Log.v(TAG,"contains");
                 if (linebean.isSelect())
                     linebean.setSelect(false);
                 else
@@ -1466,8 +1462,11 @@ public class ExperModeCanvas extends View {
         //PathBean
         for (String key : _pathMap.keySet()) {
             PathBean pathbean = _pathMap.get(key);
+            Log.v(TAG,"_pathMap key = "+key);
             for (LineBean line : pathbean.getLineBeans()) {
                 if (rect.contains(line.getStartPoint().x, line.getStartPoint().y) && rect.contains(line.getEndPoint().x, line.getEndPoint().y)) {
+                    Log.v(TAG,"_pathMap _contains ");
+                    Log.v(TAG,"_pathMap pathbean is selected =  "+pathbean.isSelect());
                     if (pathbean.isSelect())
                         pathbean.setSelect(false);
                     else
@@ -1666,7 +1665,7 @@ public class ExperModeCanvas extends View {
     public Bitmap getBitMap(int w, int h) {
 
         Canvas canva = new Canvas();
-        Bitmap bitmap = Bitmap.createBitmap(w, h, Bitmap.Config.ARGB_8888);
+        Bitmap bitmap = Bitmap.createBitmap(w, h, Bitmap.Config.RGB_565);
         canva.setBitmap(bitmap);
         canva.drawColor(Color.WHITE);
         canva.drawBitmap(Bitmap.createScaledBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.north_arrow), 38, 63, false), w - 38 - 50, 5F, null);
@@ -2052,6 +2051,7 @@ public class ExperModeCanvas extends View {
             }
             this._x = motionEvent.getX();
             this._y = motionEvent.getY();
+            Log.v(TAG,"ACTION_DOWN sele = "+_status);
             switch (this._status) {
                 case ExperModeStatus.Sel:
                 case ExperModeStatus.Move:
@@ -2174,9 +2174,8 @@ public class ExperModeCanvas extends View {
                     }
             }
         } else if (motionEvent.getAction() == MotionEvent.ACTION_MOVE) {
-            Log.v(TAG, "_status = " + _status);
-            Log.v(TAG, "_moveOperType = " + _moveOperType);
             this._status_move = false;
+            Log.v(TAG,"move sele = "+_status);
             switch (this._status) {
                 case ExperModeStatus.Sel:
                     this._endPoint.set((int) motionEvent.getX(), (int) motionEvent.getY());
@@ -2606,6 +2605,7 @@ public class ExperModeCanvas extends View {
             }
             invalidate();
         } else if (motionEvent.getAction() == MotionEvent.ACTION_UP) {
+            Log.v(TAG,"ACTION_UP sele = "+_status);
             switch (this._status) {
                 case ExperModeStatus.Sel:
                     this._status_sel = false;

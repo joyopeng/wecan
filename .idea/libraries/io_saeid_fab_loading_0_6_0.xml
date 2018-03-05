@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="io.saeid:fab-loading-0.6.0">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/fab-loading-0.6.0.aar/fd20914632b25b3b6616c2a5d7e63d77/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/fab-loading-0.6.0.aar/fd20914632b25b3b6616c2a5d7e63d77/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/fab-loading-0.6.0.aar/f934f587690b45c3a7e574d59ff792b8/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/fab-loading-0.6.0.aar/f934f587690b45c3a7e574d59ff792b8/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

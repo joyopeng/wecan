@@ -184,7 +184,7 @@ public class ShowPlanActivity extends Activity implements View.OnClickListener {
         File[] files = file.listFiles();
         if (files != null) {
             for (int i = 0; i < files.length; i++) {
-                if (files[i].getName().contains(".png")) {
+                if (files[i].getName().endsWith(".png")) {
                     mapFiles.add(files[i]);
                 }
             }
@@ -199,7 +199,7 @@ public class ShowPlanActivity extends Activity implements View.OnClickListener {
         File[] files = file.listFiles();
 
         for (int i = 0; i < files.length; i++) {
-            if (files[i].getName().contains(".png")) {
+            if (files[i].getName().endsWith(".png")) {
                 if (position == i) {
                     Bitmap bit = BitmapFactory.decodeFile(files[position].getPath());
                     h = bit.getHeight();

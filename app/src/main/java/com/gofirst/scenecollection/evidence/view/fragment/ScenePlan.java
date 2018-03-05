@@ -284,7 +284,7 @@ public class ScenePlan extends Fragment implements View.OnClickListener {
         Log.d("files.length", "" + files.length);
         for (int i = 0; i < files.length; i++){
             scenePlanImageData=new ScenePlanImageData();
-            if (files[i].getName().contains(".png")){
+            if (files[i].getName().endsWith(".png")){
                 Log.d("files[i]", "" + files[i]);
                 //               bitmaps.add(getPhotoBitmap(files[i]));
                 //scenePlanImageData.setScene_photo(convertToBitmap(files[i].getPath(), 55, 55));

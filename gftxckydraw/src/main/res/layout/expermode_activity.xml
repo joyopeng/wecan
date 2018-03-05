@@ -212,7 +212,7 @@
             android:id="@+id/scalebox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:checked="false"
+            android:checked="true"
             android:text="缩"
             android:background="@android:color/white"
             android:textColor="@android:color/background_dark" />
@@ -221,7 +221,7 @@
             android:id="@+id/rotationbox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:checked="false"
+            android:checked="true"
             android:text="旋"
             android:background="@android:color/white"
             android:textColor="@android:color/background_dark" />

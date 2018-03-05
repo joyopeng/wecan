@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="com.cjj.materialrefeshlayout:library-1.3.0">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/library-1.3.0.aar/3ffea5414cd5f7b44d19c8e166f0dae5/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/library-1.3.0.aar/3ffea5414cd5f7b44d19c8e166f0dae5/jars/classes.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/library-1.3.0.aar/fdcec804e19ffedef00b6a33cfbb9c99/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/library-1.3.0.aar/fdcec804e19ffedef00b6a33cfbb9c99/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
