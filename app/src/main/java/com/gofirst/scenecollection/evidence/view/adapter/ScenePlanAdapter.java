@@ -117,7 +117,7 @@ public class ScenePlanAdapter extends BaseAdapter {
                         intent.putExtra("caseId", caseId);
                         intent.putExtra("father", father);
                         intent.putExtra("mode", mode);
-                        intent.putExtra("filepath",list.get(position).getScene_photo());
+//                        intent.putExtra("filepath",list.get(position).getImgPath());
                         v.getContext().startActivity(intent);
                     }
                 });

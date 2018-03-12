@@ -802,6 +802,7 @@ public class SpinnerPopPerson implements View.OnClickListener {
                         int userId = Integer.parseInt(sharePre.getString("userId", "0"));
                         if ("现场勘验人员".equals(name) && employees.getEmployeeId() == userId) {
                             Toast.makeText(context, "主勘人员,不能删除", Toast.LENGTH_SHORT).show();
+                            ((CheckBox) v).setChecked(true);
                             return;
                         }
                         if ("现场指挥人员".equals(name) && listName.size() == 1) {
