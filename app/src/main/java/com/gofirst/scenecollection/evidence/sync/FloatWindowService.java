@@ -13,6 +13,7 @@ import android.graphics.Paint;
 import android.graphics.PixelFormat;
 import android.graphics.Rect;
 import android.graphics.Typeface;
+import android.media.ExifInterface;
 import android.net.Uri;
 import android.os.Environment;
 import android.os.IBinder;
@@ -176,7 +177,7 @@ public class FloatWindowService extends Service {
             if (c.moveToFirst()) {
                 String filepath = c.getString(c.getColumnIndex("_data"));
                 File imageifle = new File(filepath);
-                if(filepath.contains("Pre-loaded"))
+                if (filepath.contains("Pre-loaded"))
                     return;
                 if (imageifle.exists() && imageifle.length() > 0) {
                     String timeStamp = new SimpleDateFormat("yyyyMMdd")
@@ -184,7 +185,7 @@ public class FloatWindowService extends Service {
                     if (!imagecache.contains(filepath)) {
                         imagecache.add(filepath);
                         bitmaptemp = BitmapFactory.decodeFile(imageifle.getAbsolutePath());
-                        saveImage(timeStamp + "/" + caseId + "/originalPictures/", timeStamp + "/" + caseId + "/twoHundredPictures/", timeStamp + "/" + caseId + "/contractionPictures/");
+                        saveImage(filepath, timeStamp + "/" + caseId + "/originalPictures/", timeStamp + "/" + caseId + "/twoHundredPictures/", timeStamp + "/" + caseId + "/contractionPictures/");
                     }
                 }
             }
@@ -207,7 +208,7 @@ public class FloatWindowService extends Service {
         }
     }
 
-    private void saveImage(String path, String path2, String path3) {
+    private void saveImage(String originpath, String path, String path2, String path3) {
 
         Date startDate = new Date(System.currentTimeMillis());
         String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss")
@@ -270,9 +271,16 @@ public class FloatWindowService extends Service {
                 Log.i("MyPicture", "自定义相机Buffer: null");
             } else {
                 try {
-                    FileOutputStream fos = new FileOutputStream(file3);
-                    fos.write(buffer3);
-                    fos.close();
+                    ExifInterface exif = new ExifInterface(originpath);
+                    if (exif.hasThumbnail()) {
+                        FileOutputStream fos = new FileOutputStream(file3);
+                        fos.write(exif.getThumbnail());
+                        fos.close();
+                    } else {
+                        FileOutputStream fos = new FileOutputStream(file3);
+                        fos.write(buffer3);
+                        fos.close();
+                    }
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
@@ -344,9 +352,16 @@ public class FloatWindowService extends Service {
                 Log.i("MyPicture", "自定义相机Buffer: null");
             } else {
                 try {
-                    FileOutputStream fos = new FileOutputStream(file3);
-                    fos.write(buffer3);
-                    fos.close();
+                    ExifInterface exif = new ExifInterface(originpath);
+                    if (exif.hasThumbnail()) {
+                        FileOutputStream fos = new FileOutputStream(file3);
+                        fos.write(exif.getThumbnail());
+                        fos.close();
+                    } else {
+                        FileOutputStream fos = new FileOutputStream(file3);
+                        fos.write(buffer3);
+                        fos.close();
+                    }
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
@@ -418,9 +433,16 @@ public class FloatWindowService extends Service {
                 Log.i("MyPicture", "自定义相机Buffer: null");
             } else {
                 try {
-                    FileOutputStream fos = new FileOutputStream(file3);
-                    fos.write(buffer3);
-                    fos.close();
+                    ExifInterface exif = new ExifInterface(originpath);
+                    if (exif.hasThumbnail()) {
+                        FileOutputStream fos = new FileOutputStream(file3);
+                        fos.write(exif.getThumbnail());
+                        fos.close();
+                    } else {
+                        FileOutputStream fos = new FileOutputStream(file3);
+                        fos.write(buffer3);
+                        fos.close();
+                    }
                 } catch (IOException e) {
                     e.printStackTrace();
                 }

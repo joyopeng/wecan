@@ -1204,10 +1204,10 @@ public class ExperModeCanvas extends View {
                 MouldPathBean mouldpathbean = (MouldPathBean) this._mouldPathMap.get(key);
                 this._mouldPathBean = mouldpathbean;
                 if (mouldpathbean.isSelect()) {
-//                if (isHitPoint(mouldpathbean.getRotatePoint(), x, y, _hitPointCoolEye)) {
-//                    _moveOperType = MoveOperType.MouldRotate;
-//                    return;
-//                }
+                if (_main.rotationbox.isChecked() && getRect(mouldpathbean.getRectobj()).contains((int) x, (int) y)) {
+                    _moveOperType = MoveOperType.MouldRotate;
+                    return;
+                }
 
                     if (_main.scalebox.isChecked() && getRect(mouldpathbean.getRectobj()).contains((int) x, (int) y)) {
                         _moveOperType = MoveOperType.MouldPostScale;

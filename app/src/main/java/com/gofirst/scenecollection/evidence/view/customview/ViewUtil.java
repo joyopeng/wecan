@@ -107,25 +107,25 @@ public class ViewUtil {
             PopListYesNo popListYesNo = new PopListYesNo(context);
             container.addView(popListYesNo, params);
             return popListYesNo;
-        }else if (viewKey.equals("EMPLOYEE")) {
+        } else if (viewKey.equals("EMPLOYEE")) {
             SingleSelectionPeopleDialog singleSelectionPeopleDialog = new SingleSelectionPeopleDialog(context);
             container.addView(singleSelectionPeopleDialog, params);
             return singleSelectionPeopleDialog;
-        }else if (viewKey.equals("CAPTURE_IC")) {
+        } else if (viewKey.equals("CAPTURE_IC")) {
             PhotoDialog photoDialog = new PhotoDialog(context);
             container.addView(photoDialog, params);
             return photoDialog;
-        }else if (viewKey.equals("QR_SCAN") || viewKey.equals("BAR_SCAN")) {
+        } else if (viewKey.equals("QR_SCAN") || viewKey.equals("BAR_SCAN")) {
             QrCode qrCode = new QrCode(context);
             container.addView(qrCode, params);
             return qrCode;
-        }else if (viewKey.equals("POP_LIST_MULTI_PLAIN")) {
+        } else if (viewKey.equals("POP_LIST_MULTI_PLAIN")) {
             MultipleChoicesLightDialog multipleChoicesLightDialog = new MultipleChoicesLightDialog(context);
             container.addView(multipleChoicesLightDialog, params);
             return multipleChoicesLightDialog;
         } else if (viewKey.equals("RFID_SCAN")) {
             RFID rfid = new RFID(context);
-            container.addView(rfid,params);
+            container.addView(rfid, params);
             return rfid;
         }
         return null;
@@ -174,7 +174,7 @@ public class ViewUtil {
     }
 
 
-    public static DataTemp getDataTemp(String caseId, String father ) {
+    public static DataTemp getDataTemp(String caseId, String father) {
         List<DataTemp> list = EvidenceApplication.db.findAllByWhere(DataTemp.class, "caseId = '" + caseId + "'" + " and father = '" + father + "'");
         if (list == null || list.size() == 0) {
             DataTemp dataTemp = new DataTemp();
@@ -215,7 +215,7 @@ public class ViewUtil {
     public static List<BaseView> getLayoutBaseViewLists(String mode, Activity context, LinearLayout containerLayout, String json, String... args) {
         if (args == null || args.length < 3)
             return null;
-        List<CommonExtField> commonExtFieldList = CaseInfoFragment.getLayoutInfo(mode,args[2], args[1]);
+        List<CommonExtField> commonExtFieldList = CaseInfoFragment.getLayoutInfo(mode, args[2], args[1]);
         final List<BaseView> viewLists = new ArrayList<>();
         for (CommonExtField commonExtField : commonExtFieldList) {
             BaseView baseView = getView(context, commonExtField.getViewId(), containerLayout);
@@ -250,7 +250,7 @@ public class ViewUtil {
                 } else if (baseView instanceof Text) {
                     Text text = (Text) baseView;
                     text.setReg(commonExtField.getViewFormat());
-                }else if (baseView instanceof PhotoDialog) {
+                } else if (baseView instanceof PhotoDialog) {
                     PhotoDialog photoDialog = (PhotoDialog) baseView;
                     photoDialog.setArgs(context, args[0], args[1], commonExtField.getName());
                     if (args.length == 4)
@@ -262,29 +262,38 @@ public class ViewUtil {
                 String[] defValues = getViewDefault(context, args[0], commonExtField.getDefaultValue(), commonExtField.getDictType(), commonExtField.getField()).split(";");
                 StringBuilder defId = new StringBuilder();
                 StringBuilder defName = new StringBuilder();
-                for (int i = 0; i < defValues.length; i++){
+                for (int i = 0; i < defValues.length; i++) {
                     String[] values = defValues[i].split(",");
-                    if (values.length > 1){
+                    if (values.length > 1) {
                         defId.append(values[0]);
                         defName.append(values[1]);
-                    }else  if (values.length > 0) {
+                    } else if (values.length > 0) {
                         defName.append(values[0]);
                     }
-                    if (i != defValues.length - 1){
+                    if (i != defValues.length - 1) {
                         defId.append(",");
                         defName.append(",");
                     }
                 }
                 String text = TextUtils.isEmpty(displayValue) ? defName.toString() : displayValue;
+                if ("PROTECTOR_ORG".equals(saveKey)) {
+                    try {
+                        JSONObject jsonObject = new JSONObject(json);
+                        if (!jsonObject.has("PROTECTOR")) {
+                            text = "";
+                        }
+                    } catch (JSONException e) {
+                    }
+                }
                 baseView.initView(mode,
                         commonExtField.getName(),
-                        isRootId(args[1],saveKey) ? args[0] : text,
+                        isRootId(args[1], saveKey) ? args[0] : text,
                         saveKey,
                         commonExtField.getViewMinor(),
                         commonExtField.getDataType(),
                         commonExtField.getViewRequiredFlag());
-                if (baseView.isID()){
-                    String saveId = safeGetJsonValue(saveKey,json);
+                if (baseView.isID()) {
+                    String saveId = safeGetJsonValue(saveKey, json);
                     baseView.setID(TextUtils.isEmpty(saveId) ? defId.toString() : saveId);
                 }
                 viewLists.add(baseView);
@@ -299,7 +308,7 @@ public class ViewUtil {
         if (args == null || args.length < 3)
             return null;
         List<BaseTempField> commonExtFieldList = EvidenceApplication.db.findAllByWhere(BaseTempField.class, "sceneType = '" + args[1]
-                + "' and deleteFlag = '0'",(BaseView.EDIT.equals(mode) ? "positionSort" : "viewPositionSort") + " asc");
+                + "' and deleteFlag = '0'", (BaseView.EDIT.equals(mode) ? "positionSort" : "viewPositionSort") + " asc");
         final List<BaseView> viewLists = new ArrayList<>();
         for (BaseTempField commonExtField : commonExtFieldList) {
             BaseView baseView = getView(context, commonExtField.getViewid(), containerLayout);
@@ -332,7 +341,7 @@ public class ViewUtil {
                 } else if (baseView instanceof Text) {
                     Text text = (Text) baseView;
                     text.setReg(commonExtField.getViewFormat());
-                }else if (baseView instanceof PhotoDialog) {
+                } else if (baseView instanceof PhotoDialog) {
                     PhotoDialog photoDialog = (PhotoDialog) baseView;
                     photoDialog.setArgs(context, args[0], args[1], commonExtField.getName());
                     if (args.length == 4)
@@ -343,15 +352,15 @@ public class ViewUtil {
                 String[] defValues = getViewDefault(context, args[0], commonExtField.getDefaultValue(), commonExtField.getDictType(), commonExtField.getField()).split(";");
                 StringBuilder defId = new StringBuilder();
                 StringBuilder defName = new StringBuilder();
-                for (int i = 0; i < defValues.length; i++){
+                for (int i = 0; i < defValues.length; i++) {
                     String[] values = defValues[i].split(",");
-                    if (values.length > 1){
+                    if (values.length > 1) {
                         defId.append(values[0]);
                         defName.append(values[1]);
-                    }else if (values.length > 0) {
+                    } else if (values.length > 0) {
                         defName.append(values[0]);
                     }
-                    if (i != defValues.length - 1){
+                    if (i != defValues.length - 1) {
                         defId.append(",");
                         defName.append(",");
                     }
@@ -359,13 +368,13 @@ public class ViewUtil {
                 String text = TextUtils.isEmpty(displayValue) ? defName.toString() : displayValue;
                 baseView.initView(mode,
                         commonExtField.getName(),
-                        isRootId(args[1],saveKey) ? args[0] : text,
+                        isRootId(args[1], saveKey) ? args[0] : text,
                         saveKey,
                         commonExtField.getViewMinor(),
                         commonExtField.getDataType(),
                         commonExtField.getViewRequiredFlag());
-                if (baseView.isID()){
-                    String saveId = safeGetJsonValue(saveKey,json);
+                if (baseView.isID()) {
+                    String saveId = safeGetJsonValue(saveKey, json);
                     baseView.setID(TextUtils.isEmpty(saveId) ? defId.toString() : saveId);
                 }
                 viewLists.add(baseView);
@@ -375,11 +384,11 @@ public class ViewUtil {
         return viewLists;
     }
 
-    private static boolean isRootId(String father,String saveKey){
+    private static boolean isRootId(String father, String saveKey) {
         return "SCENE_INVESTIGATION_EXT".equals(father) && "ID".equals(saveKey);
     }
 
-    public static void getSecLayoutBaseViewLists(String mode, Activity context, LinearLayout containerLayout, String caseId, String father, String templateId,String addRec) {
+    public static void getSecLayoutBaseViewLists(String mode, Activity context, LinearLayout containerLayout, String caseId, String father, String templateId, String addRec) {
         List<CommonTemplateDetail> commonTemplateDetails = EvidenceApplication.db.findAllByWhere(CommonTemplateDetail.class,
                 "templateLevel = '2' and templateUpName = '" + father + "' and templateId = '" + templateId + "'", "positionSort asc");
         FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT,
@@ -388,7 +397,7 @@ public class ViewUtil {
             SecondaryView secondaryView = new SecondaryView(context);
             containerLayout.addView(secondaryView, params);
             secondaryView.initView(mode, commonTemplateDetail.getSceneName(), safeGetSecondViewValue(caseId, commonTemplateDetail.getTableName()), commonTemplateDetail.getTableName(),
-                    caseId, commonTemplateDetail.getTableName(), templateId,addRec);
+                    caseId, commonTemplateDetail.getTableName(), templateId, addRec);
         }
     }
 
@@ -407,15 +416,15 @@ public class ViewUtil {
             for (BaseView baseView : viewLists) {
                 // 如果是必填字段且没填值则不通过
                 if (isRequireField(baseView.getIsRequireField())) {
-                    if (!baseView.validate()){
+                    if (!baseView.validate()) {
                         Toast.makeText(context, baseView.getViewName() + "是必填项 ！", Toast.LENGTH_SHORT).show();
                         return null;
                     }
                 }
                 // 非必填字段只有填值后才保存
-                if (baseView.validate()){
-                        jsonObject.put(baseView.getSaveKey(), baseView.getText());
-                        baseView.saveName(jsonObject);
+                if (baseView.validate()) {
+                    jsonObject.put(baseView.getSaveKey(), baseView.getText());
+                    baseView.saveName(jsonObject);
                 }
 
             }
@@ -433,7 +442,7 @@ public class ViewUtil {
 //                String saveKey = baseView.getSaveKey();
 //                if("INVESTIGATOR_IDS".equals(saveKey)){
 //                }
-                if (baseView.validate()){
+                if (baseView.validate()) {
                     jsonObject.put(baseView.getSaveKey(), baseView.getText());
                     baseView.saveName(jsonObject);
                 }
@@ -543,7 +552,7 @@ public class ViewUtil {
 
     public static void saveTemplateSort(String caseId, String fatherKey) {
         List<TemplateSort> list = EvidenceApplication.db.findAllByWhere(TemplateSort.class, "caseId = '" + caseId + "' and fatherKey = '" + fatherKey + "'");
-        if(list == null || list.size() == 0) {
+        if (list == null || list.size() == 0) {
             List<BaseTemp> baseTempList = EvidenceApplication.db.findAllByWhere(BaseTemp.class, "tableName = '" + fatherKey + "' and templateLevel = '1'");
             if (baseTempList != null && baseTempList.size() > 0) {
                 TemplateSort templateSort = new TemplateSort();
@@ -560,14 +569,15 @@ public class ViewUtil {
         }
     }
 
-    public static String getDictKey(String rootKey,String value){
+    public static String getDictKey(String rootKey, String value) {
         List<CsDicts> list = EvidenceApplication.db.findAllByWhere(CsDicts.class,
                 "rootKey = '" + rootKey + "' and dictValue1 = '" + value + "'");
-        if (list == null || list.size() == 0){
+        if (list == null || list.size() == 0) {
             return "";
         }
         return list.get(0).getDictKey();
     }
+
     public static void saveAttchment(RecordFileInfo recordFileInfo, String refKeyId) throws JSONException {
         //产生附件所需data
         DataTemp dataTemp = SceneInfoFragment.getDataTemp(recordFileInfo.getCaseId(), recordFileInfo.getFather() + recordFileInfo.getId());
@@ -606,7 +616,7 @@ public class ViewUtil {
     final static double a = 6378245.0;
     final static double ee = 0.00669342162296594323;
 
-    public static void expandViewTouchDelegate(final View view,final View delegateView, final int top,
+    public static void expandViewTouchDelegate(final View view, final View delegateView, final int top,
                                                final int bottom, final int left, final int right) {
 
         ((View) view.getParent()).post(new Runnable() {
@@ -626,6 +636,7 @@ public class ViewUtil {
             }
         });
     }
+
     public static void transform(double wgLat, double wgLon, double[] latlng) {
         if (outOfChina(wgLat, wgLon)) {
             latlng[0] = wgLat;
@@ -737,27 +748,28 @@ public class ViewUtil {
     }
 
 
-    private static double[] getAxis(){
+    private static double[] getAxis() {
         double[] axis = new double[2];
         axis[0] = 0;
         axis[1] = 0;
         List<SysAppParamSetting> paramSettings =
-                EvidenceApplication.db.findAllByWhere(SysAppParamSetting.class,"key = 'default_location_coordinate'");
-        if(paramSettings.size() > 0){
+                EvidenceApplication.db.findAllByWhere(SysAppParamSetting.class, "key = 'default_location_coordinate'");
+        if (paramSettings.size() > 0) {
             SysAppParamSetting paramSetting = paramSettings.get(0);
             String value = paramSettings.get(0).getValue();
-            if(value != null && !"".equals(value)){
+            if (value != null && !"".equals(value)) {
                 try {
                     JSONObject object = new JSONObject(paramSetting.getValue());
                     axis[0] = Double.valueOf(object.getString("long"));
                     axis[1] = Double.valueOf(object.getString("lat"));
-                }catch (JSONException e){
+                } catch (JSONException e) {
                     e.printStackTrace();
                 }
-                }
             }
-            return axis;
+        }
+        return axis;
     }
+
     public static String getCurrentTime(String formatString) {
         SimpleDateFormat format = new SimpleDateFormat(formatString);
         java.util.Date date = new java.util.Date();
@@ -786,12 +798,12 @@ public class ViewUtil {
 
     private static String getCurrentAddress(Context context) {
         SharePre sharePre = new SharePre(context, "user_info", Context.MODE_PRIVATE);
-        return sharePre.getString("address","");
+        return sharePre.getString("address", "");
     }
 
     private static String getCurrentArea(Context context) {
         SharePre sharePre = new SharePre(context, "user_info", Context.MODE_PRIVATE);
-        return sharePre.getString("compartmentNo","") + "," + sharePre.getString("compartmentName", "");
+        return sharePre.getString("compartmentNo", "") + "," + sharePre.getString("compartmentName", "");
     }
 
     private static String getFatherValue(String caseId, String father, String field) {
@@ -834,14 +846,14 @@ public class ViewUtil {
     }
 
 
-    public static String getFragementName(String tableName){
-       DbModel dbModel =  EvidenceApplication.db.findDbModelBySQL("select sceneName from BaseTemp where tableName = '"  + tableName +"'");
+    public static String getFragementName(String tableName) {
+        DbModel dbModel = EvidenceApplication.db.findDbModelBySQL("select sceneName from BaseTemp where tableName = '" + tableName + "'");
         return dbModel != null ? dbModel.getString("sceneName") : "";
     }
 
-    public static boolean isRequireField(String isRequireField){
-       if (TextUtils.isEmpty(isRequireField))
-           return false;
+    public static boolean isRequireField(String isRequireField) {
+        if (TextUtils.isEmpty(isRequireField))
+            return false;
         if ("0".equals(isRequireField))
             return false;
         if ("1".equals(isRequireField))
