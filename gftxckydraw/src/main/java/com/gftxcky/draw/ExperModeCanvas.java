@@ -60,7 +60,8 @@ public class ExperModeCanvas extends View {
     private XCKYPaint _selPointPaint;
     //文字画笔
     private XCKYPaint _textPaint;
-
+    //文字标注画笔
+    private XCKYPaint _notetextPaint;
     //==以下为状态控制
     //鼠标点击开始点
     private XCKYPoint _startPoint;
@@ -145,6 +146,11 @@ public class ExperModeCanvas extends View {
         this._textPaint.setAntiAlias(true);
         this._textPaint.setColor(Color.BLACK);
         this._textPaint.setTextSize(20.0F);
+
+        this._notetextPaint = new XCKYPaint();
+        this._notetextPaint.setAntiAlias(true);
+        this._notetextPaint.setColor(Color.BLACK);
+        this._notetextPaint.setTextSize(60.0F);
         setPaint(PaintType.None);
     }
 
@@ -169,6 +175,33 @@ public class ExperModeCanvas extends View {
             resetBtnFocus();
             setBtnFocus();
         }
+    }
+
+
+    public void zoomInTextSize() {
+        for (String key : _drawTextMap.keySet()) {
+            DrawTextBean drawtextbean = _drawTextMap.get(key);
+            if (drawtextbean.isSelect()) {
+                drawtextbean.setTextsize(drawtextbean.getTextsize() - 10);
+                _drawTextMap.put(key,drawtextbean);
+                break;
+            }
+        }
+        saveData();
+        invalidate();
+    }
+
+    public void zoomOutSize() {
+        for (String key : _drawTextMap.keySet()) {
+            DrawTextBean drawtextbean = _drawTextMap.get(key);
+            if (drawtextbean.isSelect()) {
+                drawtextbean.setTextsize(drawtextbean.getTextsize() + 10);
+                _drawTextMap.put(key,drawtextbean);
+                break;
+            }
+        }
+        saveData();
+        invalidate();
     }
 
     /**
@@ -889,7 +922,7 @@ public class ExperModeCanvas extends View {
             List<LineBean> list = pathbean.getLineBeans();
             for (LineBean linebean : list) {
                 if (isHitLine(linebean, clickPoint, _hitLineCoolEye)) {
-                    Log.v(TAG,"linebean _contains ");
+                    Log.v(TAG, "linebean _contains ");
                     pathbean.setSelect(true);
                     this._pathBean = pathbean;
                     linebean.setSelect(true);
@@ -911,10 +944,12 @@ public class ExperModeCanvas extends View {
             MouldPathBean mouldpathbean = (MouldPathBean) this._mouldPathMap.get(key);
             if (getRect(mouldpathbean.getRectobj()).contains((int) x, (int) y)) {
                 mouldpathbean.setSelect(true);
+                _main.checkboxlayout.setVisibility(View.VISIBLE);
                 return true;
             }
             if (isHitPoint(mouldpathbean.getRotatePoint(), x, y, _hitPointCoolEye)) {
                 mouldpathbean.setSelect(true);
+                _main.checkboxlayout.setVisibility(View.VISIBLE);
                 return true;
             }
         }
@@ -923,10 +958,12 @@ public class ExperModeCanvas extends View {
             MouldBean mouldbean = (MouldBean) this._mouldMap.get(key);
             if (getRect(mouldbean.getRectobj()).contains((int) x, (int) y)) {
                 mouldbean.setSelect(true);
+                _main.checkboxlayout.setVisibility(View.VISIBLE);
                 return true;
             }
             if (isHitPoint(mouldbean.getRotatePoint(), x, y, _hitPointCoolEye)) {
                 mouldbean.setSelect(true);
+                _main.checkboxlayout.setVisibility(View.VISIBLE);
                 return true;
             }
         }
@@ -1121,45 +1158,90 @@ public class ExperModeCanvas extends View {
         }
 
         //模型
-        for (String key : this._mouldPathMap.keySet()) {
-            MouldPathBean mouldpathbean = (MouldPathBean) this._mouldPathMap.get(key);
-            this._mouldPathBean = mouldpathbean;
-            if (mouldpathbean.isSelect()) {
+        if(!_main.scalebox.isChecked() && !_main.dragbox.isChecked() && !_main.rotationbox.isChecked()) {
+            for (String key : this._mouldPathMap.keySet()) {
+                MouldPathBean mouldpathbean = (MouldPathBean) this._mouldPathMap.get(key);
+                this._mouldPathBean = mouldpathbean;
+                if (mouldpathbean.isSelect()) {
+                    if (isHitPoint(mouldpathbean.getRotatePoint(), x, y, _hitPointCoolEye)) {
+                        _moveOperType = MoveOperType.MouldRotate;
+                        return;
+                    }
+
+                    if (isHitPoint(new XCKYPoint(mouldpathbean.getRectobj().right, mouldpathbean.getRectobj().bottom), x, y, _hitPointCoolEye)) {
+                        _moveOperType = MoveOperType.MouldPostScale;
+                        return;
+                    }
+                    if (getRect(mouldpathbean.getRectobj()).contains((int) x, (int) y)) {
+                        _moveOperType = MoveOperType.MouldTranslate;
+                        return;
+                    }
+                }
+            }
+            this._mouldPathBean = null;
+            //模型
+            for (String key : this._mouldMap.keySet()) {
+                MouldBean mouldbean = (MouldBean) this._mouldMap.get(key);
+                this._mouldBean = mouldbean;
+                if (mouldbean.isSelect()) {
+                    if (isHitPoint(mouldbean.getRotatePoint(), x, y, _hitPointCoolEye)) {
+                        _moveOperType = MoveOperType.MouldRotate;
+                        return;
+                    }
+                    if (isHitPoint(new XCKYPoint(mouldbean.getRectobj().right, mouldbean.getRectobj().bottom), x, y, _hitPointCoolEye)) {
+                        _moveOperType = MoveOperType.MouldPostScale;
+                        return;
+                    }
+                    if (getRect(mouldbean.getRectobj()).contains((int) x, (int) y)) {
+                        _moveOperType = MoveOperType.MouldTranslate;
+                        return;
+                    }
+                }
+            }
+        }else {
+            //模型
+            for (String key : this._mouldPathMap.keySet()) {
+                MouldPathBean mouldpathbean = (MouldPathBean) this._mouldPathMap.get(key);
+                this._mouldPathBean = mouldpathbean;
+                if (mouldpathbean.isSelect()) {
 //                if (isHitPoint(mouldpathbean.getRotatePoint(), x, y, _hitPointCoolEye)) {
 //                    _moveOperType = MoveOperType.MouldRotate;
 //                    return;
 //                }
 
-                if (_main.scalebox.isChecked() && getRect(mouldpathbean.getRectobj()).contains((int) x, (int) y)) {
-                    _moveOperType = MoveOperType.MouldPostScale;
-                    return;
+                    if (_main.scalebox.isChecked() && getRect(mouldpathbean.getRectobj()).contains((int) x, (int) y)) {
+                        _moveOperType = MoveOperType.MouldPostScale;
+                        return;
+                    }
+                    if (_main.dragbox.isChecked() && getRect(mouldpathbean.getRectobj()).contains((int) x, (int) y)) {
+                        _moveOperType = MoveOperType.MouldTranslate;
+                        return;
+                    }
                 }
-                if (_main.dragbox.isChecked() && getRect(mouldpathbean.getRectobj()).contains((int) x, (int) y)) {
-                    _moveOperType = MoveOperType.MouldTranslate;
-                    return;
+            }
+            this._mouldPathBean = null;
+            //模型
+            for (String key : this._mouldMap.keySet()) {
+                MouldBean mouldbean = (MouldBean) this._mouldMap.get(key);
+                this._mouldBean = mouldbean;
+                if (mouldbean.isSelect()) {
+                    if (_main.dragbox.isChecked() && getRect(mouldbean.getRectobj()).contains((int) x, (int) y)) {
+                        _moveOperType = MoveOperType.MouldTranslate;
+                        return;
+                    }
+                    if (_main.rotationbox.isChecked() && getRect(mouldbean.getRectobj()).contains((int) x, (int) y)) {
+                        _moveOperType = MoveOperType.MouldRotate;
+                        return;
+                    }
+                    if (_main.scalebox.isChecked() && getRect(mouldbean.getRectobj()).contains((int) x, (int) y)) {
+                        _moveOperType = MoveOperType.MouldPostScale;
+                        return;
+                    }
+
                 }
             }
         }
-        this._mouldPathBean = null;
-        //模型
-        for (String key : this._mouldMap.keySet()) {
-            MouldBean mouldbean = (MouldBean) this._mouldMap.get(key);
-            this._mouldBean = mouldbean;
-            if (mouldbean.isSelect()) {
-                if (_main.rotationbox.isChecked() && getRect(mouldbean.getRectobj()).contains((int) x, (int) y)) {
-                    _moveOperType = MoveOperType.MouldRotate;
-                    return;
-                }
-                if (_main.scalebox.isChecked() && getRect(mouldbean.getRectobj()).contains((int) x, (int) y)) {
-                    _moveOperType = MoveOperType.MouldPostScale;
-                    return;
-                }
-                if (_main.dragbox.isChecked() && getRect(mouldbean.getRectobj()).contains((int) x, (int) y)) {
-                    _moveOperType = MoveOperType.MouldTranslate;
-                    return;
-                }
-            }
-        }
+
         this._mouldBean = null;
 
     }
@@ -1430,6 +1512,8 @@ public class ExperModeCanvas extends View {
             MouldBean mouldbean = (MouldBean) this._mouldMap.get(key);
             mouldbean.setSelect(false);
         }
+        _main.textscalelayout.setVisibility(View.GONE);
+        _main.checkboxlayout.setVisibility(View.GONE);
     }
 
     /**
@@ -1449,10 +1533,10 @@ public class ExperModeCanvas extends View {
             rect = new Rect(_startPoint.x, _startPoint.y, _endPoint.x, _endPoint.y);
         //LineBean
         for (String key : _lineMap.keySet()) {
-            Log.v(TAG,"line key = "+key);
+            Log.v(TAG, "line key = " + key);
             LineBean linebean = _lineMap.get(key);
             if (rect.contains(linebean.getStartPoint().x, linebean.getStartPoint().y) && rect.contains(linebean.getEndPoint().x, linebean.getEndPoint().y)) {
-                Log.v(TAG,"contains");
+                Log.v(TAG, "contains");
                 if (linebean.isSelect())
                     linebean.setSelect(false);
                 else
@@ -1462,11 +1546,11 @@ public class ExperModeCanvas extends View {
         //PathBean
         for (String key : _pathMap.keySet()) {
             PathBean pathbean = _pathMap.get(key);
-            Log.v(TAG,"_pathMap key = "+key);
+            Log.v(TAG, "_pathMap key = " + key);
             for (LineBean line : pathbean.getLineBeans()) {
                 if (rect.contains(line.getStartPoint().x, line.getStartPoint().y) && rect.contains(line.getEndPoint().x, line.getEndPoint().y)) {
-                    Log.v(TAG,"_pathMap _contains ");
-                    Log.v(TAG,"_pathMap pathbean is selected =  "+pathbean.isSelect());
+                    Log.v(TAG, "_pathMap _contains ");
+                    Log.v(TAG, "_pathMap pathbean is selected =  " + pathbean.isSelect());
                     if (pathbean.isSelect())
                         pathbean.setSelect(false);
                     else
@@ -1478,10 +1562,12 @@ public class ExperModeCanvas extends View {
         for (String key : _drawTextMap.keySet()) {
             DrawTextBean drawtextbean = (DrawTextBean) _drawTextMap.get(key);
             if (rect.contains(drawtextbean.getPoint().x, drawtextbean.getPoint().y)) {
-                if (drawtextbean.isSelect())
+                if (drawtextbean.isSelect()) {
                     drawtextbean.setSelect(false);
-                else
+                }else{
+                    _main.textscalelayout.setVisibility(View.VISIBLE);
                     drawtextbean.setSelect(true);
+                }
             }
         }
         //MouldPathBean
@@ -1498,10 +1584,12 @@ public class ExperModeCanvas extends View {
         for (String key : _mouldMap.keySet()) {
             MouldBean mouldbean = _mouldMap.get(key);
             if (rect.contains((int) mouldbean.getRectobj().left, (int) mouldbean.getRectobj().top) && rect.contains((int) mouldbean.getRectobj().right, (int) mouldbean.getRectobj().bottom)) {
-                if (mouldbean.isSelect())
+                if (mouldbean.isSelect()) {
                     mouldbean.setSelect(false);
-                else
+                }else {
                     mouldbean.setSelect(true);
+                    _main.checkboxlayout.setVisibility(View.VISIBLE);
+                }
             }
         }
         //WindowBean
@@ -1668,7 +1756,7 @@ public class ExperModeCanvas extends View {
         Bitmap bitmap = Bitmap.createBitmap(w, h, Bitmap.Config.RGB_565);
         canva.setBitmap(bitmap);
         canva.drawColor(Color.WHITE);
-        canva.drawBitmap(Bitmap.createScaledBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.north_arrow), 38, 63, false), w - 38 - 50, 5F, null);
+        canva.drawBitmap(Bitmap.createScaledBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.north_arrow), 76, 126, false), w - 38 - 150, 80F, null);
         //tableBean
         if (_tableBean != null) {
 
@@ -1707,7 +1795,7 @@ public class ExperModeCanvas extends View {
         for (String key : _drawTextMap.keySet()) {
             DrawTextBean drawtextbean = _drawTextMap.get(key);
             if (drawtextbean.getText() != null) {
-                canva.drawText(drawtextbean.getText(), drawtextbean.getPoint().x, 20 + drawtextbean.getPoint().y, _textPaint);
+                canva.drawText(drawtextbean.getText(), drawtextbean.getPoint().x, 20 + drawtextbean.getPoint().y, drawtextbean.getTextPaint());
             }
         }
         //MouldPathBean
@@ -1854,8 +1942,8 @@ public class ExperModeCanvas extends View {
         int w = dm.widthPixels;
 
         canvas.drawText("比例 :1.0m==100px", 20.0F, 40.0F, this._textPaint);
-        canvas.drawBitmap(Bitmap.createScaledBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.north_arrow), 38,
-                63, false), w - 38 - 50, 5.0F, null);
+        canvas.drawBitmap(Bitmap.createScaledBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.north_arrow), 76,
+                126, false), w - 38 - 150, 80.0F, null);
         if (this._tableBean != null) {
             canvas.drawText(this._tableBean.getTitleText(), (w - this._tableBean.getPaintTitle().measureText(this._tableBean.getTitleText())) / 2, 45.0F, this._tableBean.getPaintTitle());
         }
@@ -1865,10 +1953,16 @@ public class ExperModeCanvas extends View {
         //文字
         for (String key : _drawTextMap.keySet()) {
             DrawTextBean drawtextbean = _drawTextMap.get(key);
-            if (drawtextbean.isSelect())
-                canvas.drawRect(new Rect(drawtextbean.getPoint().x, drawtextbean.getPoint().y, drawtextbean.getPoint().x + 2 * (int) drawtextbean.getTextPaint().measureText(drawtextbean.getText()), 30 + drawtextbean.getPoint().y), drawtextbean.getTextPaint());
-            if (drawtextbean.getText() != null)
-                canvas.drawText(drawtextbean.getText(), drawtextbean.getPoint().x, 20 + drawtextbean.getPoint().y, _textPaint);
+            XCKYPaint textpaint = drawtextbean.getTextPaint();
+            if (drawtextbean.isSelect()) {
+                textpaint.setStyle(Paint.Style.STROKE);
+                canvas.drawRect(new Rect(drawtextbean.getPoint().x, drawtextbean.getPoint().y -((int) ((textpaint.descent()-textpaint.ascent())/2)), drawtextbean.getPoint().x + (int) textpaint.measureText(drawtextbean.getText()), 30 + drawtextbean.getPoint().y), textpaint);
+            }
+            if (drawtextbean.getText() != null) {
+                textpaint.setColor(Color.BLACK);
+                textpaint.setStyle(Paint.Style.FILL);
+                canvas.drawText(drawtextbean.getText(), drawtextbean.getPoint().x, 20 + drawtextbean.getPoint().y, textpaint);
+            }
         }
 
         //线
@@ -2051,7 +2145,7 @@ public class ExperModeCanvas extends View {
             }
             this._x = motionEvent.getX();
             this._y = motionEvent.getY();
-            Log.v(TAG,"ACTION_DOWN sele = "+_status);
+            Log.v(TAG, "ACTION_DOWN sele = " + _status);
             switch (this._status) {
                 case ExperModeStatus.Sel:
                 case ExperModeStatus.Move:
@@ -2175,7 +2269,7 @@ public class ExperModeCanvas extends View {
             }
         } else if (motionEvent.getAction() == MotionEvent.ACTION_MOVE) {
             this._status_move = false;
-            Log.v(TAG,"move sele = "+_status);
+            Log.v(TAG, "move sele = " + _status);
             switch (this._status) {
                 case ExperModeStatus.Sel:
                     this._endPoint.set((int) motionEvent.getX(), (int) motionEvent.getY());
@@ -2605,7 +2699,13 @@ public class ExperModeCanvas extends View {
             }
             invalidate();
         } else if (motionEvent.getAction() == MotionEvent.ACTION_UP) {
-            Log.v(TAG,"ACTION_UP sele = "+_status);
+            Log.v(TAG, "ACTION_UP sele = " + _status);
+            _main.decorView.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+                    | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+                    | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+                    | View.SYSTEM_UI_FLAG_FULLSCREEN
+                    | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
+                    | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION);
             switch (this._status) {
                 case ExperModeStatus.Sel:
                     this._status_sel = false;
@@ -2635,7 +2735,7 @@ public class ExperModeCanvas extends View {
                                 _doorBean.setSelect(false);
                                 _doorBean = null;
                             } else if (_pathBean != null) {
-                                setNoSelectPath();
+//                                setNoSelectPath();
                                 _pathBean = null;
                             }
                             break;

@@ -58,13 +58,86 @@
             android:layout_height="fill_parent"
             android:background="@drawable/visualdesign07" />
 
-        <LinearLayout
-            android:id="@id/CanvesCon"
-            android:layout_width="0dp"
-            android:layout_height="fill_parent"
-            android:layout_weight="1"
-            android:background="@android:color/black"
-            tools:ignore="Orientation" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@id/CanvesCon"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@android:color/black"
+                tools:ignore="Orientation" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:background="@android:color/transparent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/checkboxlayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:orientation="vertical"
+                    >
+
+                    <CheckBox
+                        android:id="@+id/dragbox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:checked="false"
+                        android:text="拖动"
+                        android:textColor="@android:color/background_dark" />
+
+                    <CheckBox
+                        android:id="@+id/scalebox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:checked="false"
+                        android:text="缩放"
+                        android:textColor="@android:color/background_dark" />
+
+                    <CheckBox
+                        android:id="@+id/rotationbox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:checked="false"
+                        android:text="旋装"
+                        android:textColor="@android:color/background_dark" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/textscalelayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <ImageButton
+                        android:id="@+id/textzoomin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:background="@drawable/button_selector2"
+                        android:src="@drawable/brushreduce" />
+
+                    <ImageButton
+                        android:id="@+id/textzoomout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:background="@drawable/button_selector2"
+                        android:src="@drawable/brushplus" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
 
         <LinearLayout
             android:layout_width="8dp"
@@ -198,33 +271,6 @@
             android:layout_marginLeft="5dp"
             android:background="@drawable/button_selector2"
             android:src="@drawable/zb" />
-
-        <CheckBox
-            android:id="@+id/dragbox"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:checked="true"
-            android:text="拖"
-            android:background="@android:color/white"
-            android:textColor="@android:color/background_dark" />
-
-        <CheckBox
-            android:id="@+id/scalebox"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:checked="true"
-            android:text="缩"
-            android:background="@android:color/white"
-            android:textColor="@android:color/background_dark" />
-
-        <CheckBox
-            android:id="@+id/rotationbox"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:checked="true"
-            android:text="旋"
-            android:background="@android:color/white"
-            android:textColor="@android:color/background_dark" />
     </LinearLayout>
 
 </LinearLayout>

@@ -1,5 +1,7 @@
 package com.gftxcky.draw.primitive;
 
+import android.graphics.Color;
+
 import java.io.Serializable;
 import java.util.List;
 
@@ -14,11 +16,10 @@ public class DrawTextBean implements Serializable {
 	  private String text;
 	  private XCKYPaint textPaint;
 	  private RectBean textRect;
-
+	  private float textsize = 60;
 	  public DrawTextBean()
-	  {
-	  }
-	  
+	  {}
+
 
 
 	public DrawTextBean(DrawTextBean paramDrawTextBean)
@@ -27,6 +28,7 @@ public class DrawTextBean implements Serializable {
 	    this.isMove = paramDrawTextBean.isMove();
 	    this.isSelect = paramDrawTextBean.isSelect();
 	    this.point = new XCKYPoint(paramDrawTextBean.getPoint());
+	    this.textsize = paramDrawTextBean.getTextsize();
 	  }
 
 	  public  List<XCKYPoint> getLines()
@@ -52,8 +54,8 @@ public class DrawTextBean implements Serializable {
 	    else if (this.isInput)
 	      this.textPaint.setColor(-16711936);
 	    else if (this.isSelect)
-	      this.textPaint.setColor(-16711936);
-
+	      this.textPaint.setColor(Color.RED);
+		  this.textPaint.setTextSize(textsize);
 	    return this.textPaint;
 	  }
 
@@ -101,7 +103,7 @@ public class DrawTextBean implements Serializable {
 		public void setPoint(XCKYPoint point) {
 			this.point = point;
 		}
-		
+
 	  public void setSelect(boolean paramBoolean)
 	  {
 	    this.isSelect = paramBoolean;
@@ -122,5 +124,13 @@ public class DrawTextBean implements Serializable {
 	  public void setTextRect(RectBean paramRectBean)
 	  {
 	    this.textRect = paramRectBean;
+	  }
+
+	  public void setTextsize(float size){
+		  textsize = size;
+	  }
+
+	  public float getTextsize(){
+	  	return textsize;
 	  }
 }

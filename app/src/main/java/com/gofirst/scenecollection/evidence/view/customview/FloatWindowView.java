@@ -63,7 +63,7 @@ public class FloatWindowView extends LinearLayout implements SensorEventListener
         View rootview = LayoutInflater.from(context).inflate(R.layout.floatwindow_layout, this);
         show = (TextView) rootview.findViewById(R.id.percent);
         viewWidth = 600;
-        viewHeight = 100;
+        viewHeight = 70;
         this.context = context;
     }
 

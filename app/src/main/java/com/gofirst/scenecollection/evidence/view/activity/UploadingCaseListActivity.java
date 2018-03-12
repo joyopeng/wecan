@@ -125,6 +125,10 @@ public class UploadingCaseListActivity extends Activity implements View.OnClickL
             if (uploadfilerec != null) {
                 long currentSize = uploadfilerec.getLong(cs.getCaseNo() + "_u", 0);
                 long totalSize = uploadfilerec.getLong(cs.getCaseNo(), 0);
+                if(totalSize == 0){
+                    cs.setUploadTime("上传进度 " + String.valueOf(100) + "%");
+                    return;
+                }
                 long percent = (currentSize * 100 / totalSize);
                 cs.setUploadTime("上传进度 " + String.valueOf(percent) + "%");
             }

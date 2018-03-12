@@ -66,6 +66,8 @@ public class BitmapUtils {
         //File f = new File(context.getObbDir() + "/note");
         String timeStamp = new SimpleDateFormat("yyyyMMdd")
                 .format(new Date());
+        String fileformate = new SimpleDateFormat("yyyyMMdd_HHmmss")
+                .format(new Date());
         String pathTemp = "";
         File dir = new File(AppPathUtil.getDataPath() + "/" + timeStamp + "/" + caseId);
         if (!dir.exists()) {
@@ -81,8 +83,8 @@ public class BitmapUtils {
             int mergepicture_w = bm[1].getWidth();
             int mergepicture_h = bm[1].getHeight();
 
-            FileOutputStream out = new FileOutputStream(filepath = new File(f, name + ".png"));
-            bm[0].compress(Bitmap.CompressFormat.PNG, 100, out);
+            FileOutputStream out = new FileOutputStream(filepath = new File(f, "IMG_"+fileformate + ".jpg"));
+            bm[0].compress(Bitmap.CompressFormat.JPEG, 100, out);
             out.flush();
             out.close();
             bm[1].setConfig(Bitmap.Config.RGB_565);
@@ -90,14 +92,14 @@ public class BitmapUtils {
             //
 //            Matrix matrixtwohan = new Matrix();
 //            matrixtwohan.setScale(0.74f, 0.74f);
-            FileOutputStream twoHundredout = new FileOutputStream(filepath = new File(f, name + "_twoHundredPictures" + ".png"));
+            FileOutputStream twoHundredout = new FileOutputStream(filepath = new File(f, "IMG_"+fileformate + "&_midpic_&" + ".jpg"));
             //Bitmap.createBitmap(bm[1], 0, 0, mergepicture_w, mergepicture_h, matrixtwohan, true).compress(Bitmap.CompressFormat.JPEG, 40, twoHundredout);
             bm[1].compress(Bitmap.CompressFormat.JPEG, 88, twoHundredout);
             twoHundredout.flush();
             twoHundredout.close();
             //
             //
-            FileOutputStream contractionout = new FileOutputStream(filepath = new File(f, name + "_contractionPictures" + ".png"));
+            FileOutputStream contractionout = new FileOutputStream(filepath = new File(f, "IMG_"+fileformate +  "&_thum_&" + ".jpg"));
             Matrix matrix = new Matrix();
             matrix.setScale(0.25f, 0.25f);
             Bitmap.createBitmap(bm[1], 0, 0, mergepicture_w, mergepicture_h, matrix, true).compress(Bitmap.CompressFormat.JPEG, 20, contractionout);
@@ -108,13 +110,13 @@ public class BitmapUtils {
             saveNote.setFather(father);
             saveNote.setPictureType("map");
             saveNote.setPhotoType(belong);
-            saveNote.setFilePath(pathTemp + name + ".png");
-            saveNote.setTwoHundredFilePath(pathTemp + name + "_twoHundredPictures" + ".png");
-            saveNote.setContractionsFilePath(pathTemp + name + "_contractionPictures" + ".png");
-            saveNote.setFileType("png");
+            saveNote.setFilePath(pathTemp + "IMG_"+fileformate + ".jpg");
+            saveNote.setTwoHundredFilePath(pathTemp + "IMG_"+fileformate  + "&_midpic_&" + ".jpg");
+            saveNote.setContractionsFilePath(pathTemp + "IMG_"+fileformate  + "&_thum_&" + ".jpg");
+            saveNote.setFileType("jpg");
             saveNote.setFileDate(new Date());
             saveNote.setType("0");
-            saveNote.setPhotoName(name + ".png");
+            saveNote.setPhotoName("IMG_"+fileformate  + ".jpg");
             saveNote.setSceneType(father);
             String photoId = "";
             photoId = ViewUtil.getUUid();

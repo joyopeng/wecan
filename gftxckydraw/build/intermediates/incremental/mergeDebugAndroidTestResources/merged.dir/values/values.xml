@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="modType">
+        <item>按房间类型</item>
+        <item>按模型类型</item>
+    </string-array>
+    <color name="btn_sel_model_normal">#56000000</color>
+    <color name="btn_sel_model_pressed">#FF0000AA</color>
+    <color name="dialog_background_trans">#56000000</color>
+    <color name="sel_model_dialog_background">#FFFFFFFF</color>
+    <color name="sel_model_dialog_theme_btn">#55000000</color>
+    <color name="sel_model_dialog_theme_title">#56000000</color>
+    <color name="sel_model_split_line">#FFFFFFFF</color>
+    <color name="sel_model_text_color">#FFFFFFFF</color>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <item name="CanvesCon" type="id">false</item>
+    <item name="DrawEditText" type="id">false</item>
+    <item name="SaveTextBtn" type="id">false</item>
+    <item name="SelMould" type="id">false</item>
+    <item name="SelMouldcancel" type="id">false</item>
+    <item name="Tab" type="id">false</item>
+    <item name="action_settings" type="id">false</item>
+    <item name="addCanvas" type="id">false</item>
+    <item name="black" type="id">false</item>
+    <item name="blue" type="id">false</item>
+    <item name="brush" type="id">false</item>
+    <item name="brushplus" type="id">false</item>
+    <item name="brushreduce" type="id">false</item>
+    <item name="canvasLayout" type="id">false</item>
+    <item name="canvasname" type="id">false</item>
+    <item name="clearpaintzise_1" type="id">false</item>
+    <item name="clearpaintzise_2" type="id">false</item>
+    <item name="clearpaintzise_3" type="id">false</item>
+    <item name="clearpaintzise_4" type="id">false</item>
+    <item name="currentCount" type="id">false</item>
+    <item name="cx" type="id">false</item>
+    <item name="dbxq" type="id">false</item>
+    <item name="dbxx" type="id">false</item>
+    <item name="del" type="id">false</item>
+    <item name="delBitmap" type="id">false</item>
+    <item name="door" type="id">false</item>
+    <item name="drawDoor" type="id">false</item>
+    <item name="drawWindow" type="id">false</item>
+    <item name="drmx" type="id">false</item>
+    <item name="editBitmap" type="id">false</item>
+    <item name="expandableListView" type="id">false</item>
+    <item name="expertMode" type="id">false</item>
+    <item name="fadz" type="id">false</item>
+    <item name="fasj" type="id">false</item>
+    <item name="green" type="id">false</item>
+    <item name="hf" type="id">false</item>
+    <item name="imp_model" type="id">false</item>
+    <item name="insertMouldBtn" type="id">false</item>
+    <item name="jxq" type="id">false</item>
+    <item name="mouldSel" type="id">false</item>
+    <item name="newBm" type="id">false</item>
+    <item name="normalMode" type="id">false</item>
+    <item name="normalmodeContent" type="id">false</item>
+    <item name="oblique_line" type="id">false</item>
+    <item name="oblique_wall" type="id">false</item>
+    <item name="paintcolor" type="id">false</item>
+    <item name="paintsize_1" type="id">false</item>
+    <item name="paintsize_2" type="id">false</item>
+    <item name="paintsize_3" type="id">false</item>
+    <item name="paintsize_4" type="id">false</item>
+    <item name="polygon_line" type="id">false</item>
+    <item name="polygon_wall" type="id">false</item>
+    <item name="rect_wall" type="id">false</item>
+    <item name="red" type="id">false</item>
+    <item name="restore" type="id">false</item>
+    <item name="returnxcky" type="id">false</item>
+    <item name="revocation" type="id">false</item>
+    <item name="rubber" type="id">false</item>
+    <item name="savecanvas" type="id">false</item>
+    <item name="showbitMapBar" type="id">false</item>
+    <item name="showbitmapLayout" type="id">false</item>
+    <item name="showimagelayout" type="id">false</item>
+    <item name="spinner" type="id">false</item>
+    <item name="straight_line" type="id">false</item>
+    <item name="straight_wall" type="id">false</item>
+    <item name="tabaffirm" type="id">false</item>
+    <item name="tabcancel" type="id">false</item>
+    <item name="text" type="id">false</item>
+    <item name="thumbnail" type="id">false</item>
+    <item name="window" type="id">false</item>
+    <item name="xq" type="id">false</item>
+    <item name="xx" type="id">false</item>
+    <item name="xz" type="id">false</item>
+    <item name="zq" type="id">false</item>
+    <item name="ztdw" type="id">false</item>
+    <item name="ztr" type="id">false</item>
+    <item name="ztsj" type="id">false</item>
+    <string name="action_settings">Settings</string>
+    <string name="app_name">gfxcky.draw</string>
+    <string name="main_btn_down_txt">专家模式</string>
+    <string name="main_btn_normal_txt">普通模式</string>
+    <style name="AppBaseTheme" parent="@*android:style/Theme.Light"/>
+    <style name="AppTheme" parent="@style/AppBaseTheme"/>
+    <style name="SelectModelDialogTheme" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item><!--边框-->
+        <item name="android:windowIsFloating">true</item><!--是否浮现在activity之上-->
+        <item name="android:windowIsTranslucent">false</item><!--半透明-->
+        <item name="android:windowNoTitle">true</item><!--无标题-->
+        <item name="android:windowBackground">@drawable/__button_normal</item><!--背景透明-->
+        <item name="android:backgroundDimEnabled">false</item><!--模糊-->
+    </style>
+    <style name="SelectModelDialogTheme2" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item><!--边框-->
+        <item name="android:windowIsFloating">true</item><!--是否浮现在activity之上-->
+        <item name="android:windowIsTranslucent">false</item><!--半透明-->
+        <item name="android:windowNoTitle">true</item><!--无标题-->
+        <item name="android:windowBackground">@color/dialog_background_trans</item><!--背景透明-->
+        <item name="android:backgroundDimEnabled">false</item><!--模糊-->
+    </style>
+    <style name="TextView">
+        <item name="android:textSize">30.0px</item>
+        <item name="android:textColor">@*android:color/white</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_width">200.0px</item>
+        <item name="android:layout_height">60.0px</item>
+    </style>
+</resources>

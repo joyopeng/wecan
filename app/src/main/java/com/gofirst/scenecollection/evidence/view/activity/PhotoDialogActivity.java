@@ -57,7 +57,7 @@ public class PhotoDialogActivity extends Activity  {
                 .format(new Date());
         new DateFormat();
         path=timeStamp+"/"+caseId+"/identityCard";
-        Intent getPhoto = new Intent("android.media.action.STILL_IMAGE_CAMERA");
+        Intent getPhoto = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         strImgPath = AppPathUtil.getDataPath() +"/"+ path+"/";
          fileName = section + ".jpg";// 照片以格式化日期方式命名
         File out = new File(strImgPath);

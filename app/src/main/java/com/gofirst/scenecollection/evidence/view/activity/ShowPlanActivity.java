@@ -249,6 +249,10 @@ public class ShowPlanActivity extends Activity implements View.OnClickListener {
             EvidenceApplication.db.deleteByWhere(RecordFileInfo.class, "caseId = \"" + caseId + "\" and filePath = \"" +
                     f.getPath().substring(20) + "\"");
             f.delete();
+            File gatherfile = new File(f.getAbsolutePath()+".plan");
+            if(gatherfile.exists()){
+                gatherfile.delete();
+            }
             if (size == 1) {
                 finish();
             }

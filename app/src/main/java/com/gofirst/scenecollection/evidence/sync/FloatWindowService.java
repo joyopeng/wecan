@@ -152,10 +152,10 @@ public class FloatWindowService extends Service {
         wmParams.type = WindowManager.LayoutParams.TYPE_TOAST;
         wmParams.format = PixelFormat.TRANSLUCENT;
         wmParams.flags = WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE | WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS;
-        wmParams.gravity = Gravity.LEFT | Gravity.TOP;
+        wmParams.gravity = Gravity.RIGHT | Gravity.TOP;
         wmParams.width = WindowManager.LayoutParams.WRAP_CONTENT;
         wmParams.height = WindowManager.LayoutParams.WRAP_CONTENT;
-        wmParams.y = -150;
+//        wmParams.y = -150;
     }
 
     @Override

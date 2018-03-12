@@ -5,6 +5,8 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
@@ -23,6 +25,7 @@ import com.gofirst.scenecollection.evidence.model.DataTemp;
 import com.gofirst.scenecollection.evidence.model.EvidenceExtra;
 import com.gofirst.scenecollection.evidence.model.RecordFileInfo;
 import com.gofirst.scenecollection.evidence.utils.AppPathUtil;
+import com.gofirst.scenecollection.evidence.utils.QRHelper;
 import com.gofirst.scenecollection.evidence.utils.ToastUtil;
 import com.gofirst.scenecollection.evidence.view.adapter.AddEvidenceViewAdapter;
 import com.gofirst.scenecollection.evidence.view.customview.BaseView;
@@ -32,6 +35,7 @@ import com.gofirst.scenecollection.evidence.view.fragment.SceneInfoFragment;
 import com.gofirst.scenecollection.evidence.view.fragment.ScenePhotos;
 import com.google.zxing.BinaryBitmap;
 import com.google.zxing.ChecksumException;
+import com.google.zxing.DecodeHintType;
 import com.google.zxing.FormatException;
 import com.google.zxing.NotFoundException;
 import com.google.zxing.RGBLuminanceSource;
@@ -45,6 +49,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.Hashtable;
 import java.util.List;
 
 /**
@@ -58,8 +63,7 @@ public class AddEvidence extends Activity implements View.OnClickListener {
     private String father;
     private String caseId;
     private List<BaseView> viewLists;
-    private boolean isShow,addRec;
-
+    private boolean isShow, addRec;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,7 +77,7 @@ public class AddEvidence extends Activity implements View.OnClickListener {
         String templateId = getIntent().getStringExtra("templateId");
         evidenceExtra = getEvidenceExtra(isShow);
         String mode = getIntent().getStringExtra("mode");
-        addRec = getIntent().getBooleanExtra(BaseView.ADDREC,false);
+        addRec = getIntent().getBooleanExtra(BaseView.ADDREC, false);
         findViewById(R.id.take_picture).setOnClickListener(this);
         if (BaseView.VIEW.equals(mode) && !addRec)
             findViewById(R.id.camera_qr_layout).setVisibility(View.GONE);
@@ -99,7 +103,7 @@ public class AddEvidence extends Activity implements View.OnClickListener {
         String typeName = isHasQrCode();
         if (typeName == null) {
             qrRelative.setVisibility(View.GONE);
-        } else{
+        } else {
             codeType.setText(typeName);
         }
     }
@@ -110,7 +114,7 @@ public class AddEvidence extends Activity implements View.OnClickListener {
         ((AddEvidenceViewAdapter) adapter).getData();
         adapter.notifyDataSetChanged();
         //如果拍完照就自动保存
-        if (isHasPhoto()){
+        if (isHasPhoto()) {
             if (save()) {
                 if (!isExtraHasSave())
                     EvidenceApplication.db.save(evidenceExtra);
@@ -177,7 +181,7 @@ public class AddEvidence extends Activity implements View.OnClickListener {
                 intent1.putExtra("father", evidenceExtra.getFather());
                 intent1.putExtra("id", evidenceExtra.getId());
                 intent1.putExtra("caseId", caseId);
-                intent1.putExtra(BaseView.ADDREC,addRec);
+                intent1.putExtra(BaseView.ADDREC, addRec);
                 startActivityForResult(intent1, REQUEST_TAKE_PHOTO);
 
                 break;
@@ -206,34 +210,14 @@ public class AddEvidence extends Activity implements View.OnClickListener {
                 new Thread(new Runnable() {
                     @Override
                     public void run() {
-                        Bitmap obmp = BitmapFactory.decodeFile(AppPathUtil.getDataPath() + "/" + filePath + fileName);
-                        if(obmp == null)
-                            return;
-                        int width = obmp.getWidth();
-                        int height = obmp.getHeight();
-                        int[] data = new int[width * height];
-                        obmp.getPixels(data, 0, width, 0, 0, width, height);
-                        RGBLuminanceSource source = new RGBLuminanceSource(width, height, data);
-                        BinaryBitmap bitmap1 = new BinaryBitmap(new HybridBinarizer(source));
-                        QRCodeReader reader = new QRCodeReader();
-
-                        Result result = null;
-                        try {
-                            result = reader.decode(bitmap1);
-                        } catch (NotFoundException e) {
-                            e.printStackTrace();
-                        } catch (ChecksumException e) {
-                            e.printStackTrace();
-                        } catch (FormatException e) {
-                            e.printStackTrace();
-                        }
-                        obmp.recycle();
-                        if (result != null) {
-                            Intent intent = new Intent();
-                            intent.setAction("QR_CODE");
-                            intent.putExtra("result", result.toString());
-                            sendBroadcast(intent);
-                        }
+                        Bitmap scanBitmap = BitmapFactory.decodeFile(AppPathUtil.getDataPath() + "/" + filePath + fileName);
+                        String result = QRHelper.getReult(scanBitmap);
+                        Intent resultIntent = new Intent();
+                        Bundle bundle = new Bundle();
+                        bundle.putString("result", result);
+                        resultIntent.putExtras(bundle);
+                        resultIntent.setAction(getSaveKey());
+                        sendBroadcast(resultIntent);
                     }
                 }).start();
                 break;
@@ -246,8 +230,8 @@ public class AddEvidence extends Activity implements View.OnClickListener {
         String json = ViewUtil.viewSave2Json(this, viewLists, evidenceExtra.getJson());
         if (json == null)
             return false;
-        if (!isHasPhoto()){
-            ToastUtil.show(this,"物证必须拍摄照片", Toast.LENGTH_SHORT);
+        if (!isHasPhoto()) {
+            ToastUtil.show(this, "物证必须拍摄照片", Toast.LENGTH_SHORT);
             return false;
         }
         //移除不需要的字段
@@ -257,8 +241,8 @@ public class AddEvidence extends Activity implements View.OnClickListener {
         allCodes.add("QR_CODE");
         allCodes.add("RFID_CODE");
         for (BaseView view : viewLists) {
-           String saveCode = view.getSaveKey();
-            if (TextUtils.equals(allCodes.get(0),saveCode) ||TextUtils.equals(allCodes.get(1),saveCode) ||TextUtils.equals(allCodes.get(2),saveCode)){
+            String saveCode = view.getSaveKey();
+            if (TextUtils.equals(allCodes.get(0), saveCode) || TextUtils.equals(allCodes.get(1), saveCode) || TextUtils.equals(allCodes.get(2), saveCode)) {
                 saveCodes.add(saveCode);
             }
         }
@@ -324,29 +308,29 @@ public class AddEvidence extends Activity implements View.OnClickListener {
             return;
         String refKey = jsonObject.getString("ID");
         for (RecordFileInfo recordFileInfo : list) {
-                String lastId = null;
+            String lastId = null;
+            try {
+                lastId = jsonObject.getString("ATTACHMENT_ID");
+                jsonObject.put("ATTACHMENT_ID", lastId != null ? lastId + "," + recordFileInfo.getId() : recordFileInfo.getId());
+            } catch (JSONException e) {
+                e.printStackTrace();
                 try {
-                    lastId = jsonObject.getString("ATTACHMENT_ID");
                     jsonObject.put("ATTACHMENT_ID", lastId != null ? lastId + "," + recordFileInfo.getId() : recordFileInfo.getId());
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                    try {
-                        jsonObject.put("ATTACHMENT_ID", lastId != null ? lastId + "," + recordFileInfo.getId() : recordFileInfo.getId());
-                    } catch (JSONException e1) {
-                        e1.printStackTrace();
-                    }
+                } catch (JSONException e1) {
+                    e1.printStackTrace();
                 }
+            }
 
             try {
                 DataTemp recDataTemp = recordFileInfo.isAddRec() ? SceneInfoFragment.getAddRecDataTemp(recordFileInfo.getCaseId(), recordFileInfo.getFather() + recordFileInfo.getId() + "recData")
-                        :SceneInfoFragment.getDataTemp(recordFileInfo.getCaseId(), recordFileInfo.getFather() + recordFileInfo.getId() + "recData");
+                        : SceneInfoFragment.getDataTemp(recordFileInfo.getCaseId(), recordFileInfo.getFather() + recordFileInfo.getId() + "recData");
                 JSONObject recObject = new JSONObject(JSON.toJSONString(recordFileInfo));
                 recObject.put("refKeyId", !TextUtils.isEmpty(refKey) ? refKey : "");
                 recObject.put("type", ViewUtil.getType(recordFileInfo));
                 recObject.put("sceneType", recordFileInfo.getFather());
                 recDataTemp.setDataType("common_attachment");
                 recDataTemp.setData(recObject.toString());
-                jsonObject.put("EVIDENCE_PHOTO_ID",jsonObject.get("ATTACHMENT_ID"));
+                jsonObject.put("EVIDENCE_PHOTO_ID", jsonObject.get("ATTACHMENT_ID"));
                 EvidenceApplication.db.update(recDataTemp);
             } catch (JSONException e) {
                 e.printStackTrace();
@@ -356,13 +340,13 @@ public class AddEvidence extends Activity implements View.OnClickListener {
 
 
     private List<RecordFileInfo> getRecFiles() {
-        return EvidenceApplication.db.findAllByWhere(RecordFileInfo.class, "section = '" + evidenceExtra.getSection()+ "'");
+        return EvidenceApplication.db.findAllByWhere(RecordFileInfo.class, "section = '" + evidenceExtra.getSection() + "'");
     }
 
-    private boolean isHasPhoto(){
+    private boolean isHasPhoto() {
 //        List<RecordFileInfo> list = EvidenceApplication.db.findAllByWhere(RecordFileInfo.class,"fileType = 'png' and caseId = '" + caseId +
 //                "' and father = '" + father + "'");
         List<RecordFileInfo> list = EvidenceApplication.db.findAllByWhere(RecordFileInfo.class, "section = '" + evidenceExtra.getSection() + "' and fileType = 'png'");
-        return list != null && list.size() > 0 ;
+        return list != null && list.size() > 0;
     }
 }

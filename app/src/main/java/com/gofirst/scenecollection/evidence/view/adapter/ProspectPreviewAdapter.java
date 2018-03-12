@@ -191,7 +191,7 @@ public class ProspectPreviewAdapter extends BaseAdapter {
             }
 
         } else if (data.getField().equals("SCENE_PHOTO") || data.getField().equals("SCENE_BLIND_SHOOT") || data.getField().equals("SCENE_PICTURE$1082")) {
-            RecordFileInfo path = getPreviewPath(data.getField(), "png");
+            RecordFileInfo path = getPreviewPath(data.getField(), "jpg");
             if (path != null && path.getFilePath() != null && !path.getFilePath().equals("")) {
                 Bitmap bitmap = BitmapUtils.revitionImageSize(AppPathUtil.getDataPath() + "/" + path.getFilePath());
                 displayBackground(holder);
@@ -201,7 +201,7 @@ public class ProspectPreviewAdapter extends BaseAdapter {
 
         if (data.getField().equals("SCENE_PICTURE$1010")) {
             RecordFileInfo path = getPreviewPath(data.getField(), "png");
-            if (path != null && path.getFilePath() != null && !path.getFilePath().equals("")) {
+            if (path != null && path.getFilePath() != null && !path.getFilePath().equals("") && !path.getFilePath().endsWith(".plan")) {
                 //Bitmap bitmap = BitmapFactory.decodeFile(AppPathUtil.getDataPath() + "/" + path.getFilePath());
                 Bitmap bitmap = BitmapFactory.decodeFile(Environment.getExternalStorageDirectory().getPath() + "/" + path.getFilePath());
                 displayBackground(holder);
@@ -224,6 +224,10 @@ public class ProspectPreviewAdapter extends BaseAdapter {
         List<RecordFileInfo> list = EvidenceApplication.db.findAllByWhere(RecordFileInfo.class,
                 "caseId = '" + activity.caseId + "' and father = '" + father + "' and fileType = '" + fileType + "'");
         if (list != null && list.size() != 0) {
+            for(RecordFileInfo info : list){
+                if(info.getFilePath() != null && !info.getFilePath().endsWith(".plan"))
+                    return info;
+            }
             return list.get(0);
         }
         return null;

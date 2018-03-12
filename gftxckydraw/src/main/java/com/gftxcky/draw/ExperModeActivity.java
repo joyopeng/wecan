@@ -57,6 +57,7 @@ import java.util.List;
 
 public class ExperModeActivity extends Activity {
 
+    private final static String TAG = ExperModeActivity.class.getSimpleName();
     private Toast _mToast;
     private List<String> _modList;
     private List<ArrayList<String>> _modListChilds;
@@ -74,9 +75,12 @@ public class ExperModeActivity extends Activity {
     private int _picID;
     private String caseId, father;
 
+    public View decorView;
     public CheckBox dragbox;
     public CheckBox scalebox;
     public CheckBox rotationbox;
+    public LinearLayout textscalelayout;
+    public LinearLayout checkboxlayout;
     private String storedGatherpath;
 
     @Override
@@ -87,13 +91,15 @@ public class ExperModeActivity extends Activity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         //
-        View decorView = getWindow().getDecorView();
-        int uiOptions = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
-                | View.SYSTEM_UI_FLAG_FULLSCREEN;
-        decorView.setSystemUiVisibility(uiOptions);
+        decorView = getWindow().getDecorView();
+        decorView.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+                | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+                | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+                | View.SYSTEM_UI_FLAG_FULLSCREEN
+                | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
+                | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION);
         //
         setContentView(R.layout.expermode_activity);
-//		getActionBar().hide();
         experModeCanvas = new ExperModeCanvas(this);
         Intent intent = getIntent();
 
@@ -115,12 +121,14 @@ public class ExperModeActivity extends Activity {
             if (gatherbean != null) {
                 this.experModeCanvas.setData(gatherbean);
                 List<String[]> tablInfos = gatherbean.getTableBean().getTxts();
+                Calendar calendar = Calendar.getInstance();
                 this.setInfo(tablInfos.get(4)[1] + "," +
-                        tablInfos.get(3)[1] + "," +
-                        tablInfos.get(2)[1] + "," +
                         tablInfos.get(1)[1] + "," +
-                        tablInfos.get(0)[1]);
-                Log.d("d", this._info);
+                        tablInfos.get(2)[1] + "," +
+                        tablInfos.get(3)[1] + "," +
+                        tablInfos.get(0)[1] + "," +
+                        calendar.get(1) + "年" + (calendar.get(2) + 1) + "月" + calendar.get(5) + "日");
+                Log.d(TAG, this._info);
                 this._title = gatherbean.getTableBean().getTitleText();
             }
             this._picID = intent.getIntExtra("CID", -1);
@@ -353,6 +361,8 @@ public class ExperModeActivity extends Activity {
                         dialog.cancel();
                     }
                 });
+
+                //
                 ((Button) dialog.findViewById(R.id.tabcancel)).setOnClickListener(new OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -363,6 +373,17 @@ public class ExperModeActivity extends Activity {
             }
         });
 
+        //
+        ((ImageButton) findViewById(R.id.textzoomin)).setOnClickListener(new OnClickListener() {
+            public void onClick(View view) {
+                experModeCanvas.zoomInTextSize();
+            }
+        });
+        ((ImageButton) findViewById(R.id.textzoomout)).setOnClickListener(new OnClickListener() {
+            public void onClick(View view) {
+                experModeCanvas.zoomOutSize();
+            }
+        });
 
         CopyAssets("mod", Environment.getExternalStorageDirectory().getPath() + "/xckydb/mod");
         CopyAssets("db", Environment.getExternalStorageDirectory().getPath() + "/xckydb");
@@ -370,7 +391,8 @@ public class ExperModeActivity extends Activity {
         dragbox = (CheckBox) findViewById(R.id.dragbox);
         scalebox = (CheckBox) findViewById(R.id.scalebox);
         rotationbox = (CheckBox) findViewById(R.id.rotationbox);
-
+        textscalelayout = (LinearLayout) findViewById(R.id.textscalelayout);
+        checkboxlayout = (LinearLayout) findViewById(R.id.checkboxlayout);
     }
 
 
