@@ -77,20 +77,20 @@ public class BitmapUtils {
             f.mkdirs();
         }
         try {
-            FileOutputStream out = new FileOutputStream(filepath = new File(f, name + ".png"));
-            bm.compress(Bitmap.CompressFormat.PNG, 100, out);
+            FileOutputStream out = new FileOutputStream(filepath = new File(f, name + ".jpg"));
+            bm.compress(Bitmap.CompressFormat.JPEG, 100, out);
             out.flush();
             out.close();
             RecordFileInfo saveNote = getRecordFileInfo(caseId,child);
             saveNote.setFather(father);
             saveNote.setPictureType("map");
             saveNote.setPhotoType(belong);
-            saveNote.setFilePath(pathTemp + name + ".png");
-            saveNote.setTwoHundredFilePath(pathTemp+name+".png");
-            saveNote.setFileType("png");
+            saveNote.setFilePath(pathTemp + name + ".jpg");
+            saveNote.setTwoHundredFilePath(pathTemp+name+".jpg");
+            saveNote.setFileType("jpg");
             saveNote.setFileDate(new Date());
             saveNote.setType("0");
-            saveNote.setPhotoName(name+".png");
+            saveNote.setPhotoName(name+".jpg");
             saveNote.setSceneType(father);
             String photoId="";
             photoId=ViewUtil.getUUid();
