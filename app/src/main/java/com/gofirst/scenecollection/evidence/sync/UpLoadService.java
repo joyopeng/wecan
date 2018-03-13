@@ -373,6 +373,10 @@ public class UpLoadService extends Service {
         for (CsSceneCases csSceneCases : caseList) {
             List<RecordFileInfo> list = EvidenceApplication.db.findAllByWhere(RecordFileInfo.class, "caseId = '" + csSceneCases.getCaseNo() + "' and (hasBlock = '0' or hasBlock is null) limit 0,1");
             for (RecordFileInfo recordFileInfo : list) {
+                if(recordFileInfo.getFilePath() != null && recordFileInfo.getFilePath().endsWith(".plan")) {
+                    EvidenceApplication.db.delete(recordFileInfo);
+                    continue;
+                }
                 if (!checkRecAlreadyHasUploadFile(recordFileInfo.getId())) {
                     if (!TextUtils.isEmpty(recordFileInfo.getFilePath()) && recordFileInfo.getFilePath().contains("xckydb")) {
                         fileInfoList.add(createUploadFile(recordFileInfo.getId(), Environment.getExternalStorageDirectory().getPath() + "/" + recordFileInfo.getFilePath(), recordFileInfo.getCaseId()));
@@ -438,6 +442,8 @@ public class UpLoadService extends Service {
         List<RecordFileInfo> list = EvidenceApplication.db.findAllByWhere(RecordFileInfo.class, "caseId = '" + caseId + "'");
         for (RecordFileInfo recordFileInfo : list) {
             //未产生分块
+            if(recordFileInfo.getFilePath()!= null && recordFileInfo.getFilePath().endsWith(".plan"))
+                continue;
             if (!recordFileInfo.isHasBlock()) {
                 Log.d("onRun", "noBlock");
                 return false;

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="600dp"
+    android:layout_height="300dp"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="制表信息"
+        android:textColor="#FF000000"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="8dp"
+        android:background="#FF444444" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+        <ScrollView
+            android:layout_width="350dp"
+            android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TableLayout
+                android:layout_width="350dp"
+                android:layout_height="wrap_content">
+
+                <TableRow android:paddingLeft="10dp">
+
+                    <TextView
+                        android:layout_width="75dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="平面图名称:"
+                        android:textSize="12sp" />
+
+                    <EditText
+                        android:id="@id/canvasname"
+                        android:layout_width="255dp"
+                        android:layout_height="wrap_content" />
+                </TableRow>
+
+                <TableRow android:paddingLeft="10dp">
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="发案时间:"
+                        android:textSize="12sp" />
+
+                    <EditText
+                        android:id="@id/fasj"
+                        android:layout_width="255dp"
+                        android:layout_height="wrap_content" />
+                </TableRow>
+
+                <TableRow android:paddingLeft="10dp">
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="发案地址:"
+                        android:textSize="12sp" />
+
+                    <EditText
+                        android:id="@id/fadz"
+                        android:layout_width="255dp"
+                        android:layout_height="wrap_content" />
+                </TableRow>
+
+                <TableRow android:paddingLeft="10dp">
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="制图单位:"
+                        android:textSize="12sp" />
+
+                    <EditText
+                        android:id="@id/ztdw"
+                        android:layout_width="255dp"
+                        android:layout_height="wrap_content" />
+                </TableRow>
+
+                <TableRow android:paddingLeft="10dp">
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="制图人:"
+                        android:textSize="12sp" />
+
+                    <EditText
+                        android:id="@id/ztr"
+                        android:layout_width="255dp"
+                        android:layout_height="wrap_content" />
+                </TableRow>
+
+                <TableRow android:paddingLeft="10dp">
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="制图时间:"
+                        android:textSize="12sp" />
+
+                    <EditText
+                        android:id="@id/ztsj"
+                        android:layout_width="255dp"
+                        android:layout_height="wrap_content" />
+                </TableRow>
+            </TableLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@id/tabaffirm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_click_drawable"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:text="确认" />
+
+                <Button
+                    android:id="@id/tabcancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:background="@drawable/btn_click_drawable"
+                    android:text="取消" />
+            </LinearLayout>
+        </LinearLayout>
+        </ScrollView>
+        <LinearLayout
+            android:id="@id/canvasLayout"
+            android:layout_width="250dp"
+            android:layout_height="200dp"
+            android:background="@android:color/white"
+            android:orientation="horizontal" />
+    </LinearLayout>
+</LinearLayout>

@@ -308,7 +308,8 @@ public class ScenePlan extends Fragment implements View.OnClickListener {
 
         File[] files = file.listFiles();
         for (int i = 0; i < files.length; i++) {
-
+            if(files[i].getName().endsWith(".plan"))
+                continue;
             String timeStamp = new SimpleDateFormat("yyyy-MM-dd/HH:mm:ss")
                     .format(new Date());
             String uuid = ViewUtil.getUUid();

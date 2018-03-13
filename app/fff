@@ -1,0 +1,161 @@
+commit 3579e61631530f5470dc5f7ee548348bd407caf8
+Author: joyopeng <joyopeng@gmail.com>
+Date:   Mon Mar 12 16:40:18 2018 +0800
+
+    修改crash.
+
+commit 6f30af4f3dc6d082d82749c222734fc1faf1d40c
+Author: joyopeng <joyopeng@gmail.com>
+Date:   Mon Mar 12 15:04:09 2018 +0800
+
+    修改现场缩略图.
+
+commit 8e5c9b21c69b3a544a1c02eb6e1b9c0d87737cb4
+Author: joyopeng <joyopeng@gmail.com>
+Date:   Mon Mar 12 09:47:24 2018 +0800
+
+    code 03.12.
+
+commit 4b85b9ed943c7b887e03b23d8a85e3e72d5d59f4
+Author: joyopeng <joyopeng@gmail.com>
+Date:   Thu Jan 25 17:13:29 2018 +0800
+
+    修改方位图大小,分辨率.
+
+commit b41f41cd94d9c3547d4aacb0099b06daa93f5f12
+Author: joyopeng <joyopeng@gmail.com>
+Date:   Wed Jan 24 17:44:08 2018 +0800
+
+    添加方位图制表信息.
+
+commit 564d1d6bbe8119ab6770a5dfdbe708df95939b90
+Author: joyopeng <joyopeng@gmail.com>
+Date:   Mon Mar 5 15:34:15 2018 +0800
+
+    code 03.05.
+
+commit 5233a75ff0003e2dceeed0e5df720828739bdf80
+Author: joyopeng <joyopeng@gmail.com>
+Date:   Sun Mar 4 13:17:39 2018 +0800
+
+    test2.
+
+commit 781461599eddd163f85f34ae0e9aef2fd51ebdf5
+Author: joyopeng <joyopeng@gmail.com>
+Date:   Sun Mar 4 13:17:27 2018 +0800
+
+    test.
+
+commit 9b24a6b0603f9089d08ba9552cd75bcf3606ce5c
+Author: joyopeng <joyopeng@gmail.com>
+Date:   Sun Mar 4 13:14:43 2018 +0800
+
+    添加平面图保存修改功能.
+
+commit fbaa3a0390b341ebf096cc0b7e662deb3fac36b4
+Author: joyopeng <joyopeng@gmail.com>
+Date:   Fri Mar 2 10:51:58 2018 +0800
+
+    添加平面图.
+
+commit 0da58b8b5b725579c0526cf1c0376fda034390c5
+Author: joyopeng <joyopeng@gmail.com>
+Date:   Wed Feb 28 16:11:32 2018 +0800
+
+    code 02.28
+
+commit 8c31190a7f7f5a9be145b6f87966f321a61f02b2
+Author: joyopeng <joyopeng@gmail.com>
+Date:   Mon Feb 26 10:51:36 2018 +0800
+
+    modify camera.
+
+commit dd1a4b96ee372a5a81be742182dd116a54f498e7
+Author: joyopeng <joyopeng@gmail.com>
+Date:   Fri Feb 23 09:46:48 2018 +0800
+
+    commit code 94..
+
+commit 09e9fbdb3216601343a4c67ea98a808b83d4c8fe
+Author: joyopeng <joyopeng@gmail.com>
+Date:   Fri Feb 2 10:23:08 2018 +0800
+
+    修改勘测人员选择bug.
+
+commit e6e91a5f274c9998a87f8f152d4573700df0634d
+Author: joyopeng <joyopeng@gmail.com>
+Date:   Thu Feb 1 17:33:40 2018 +0800
+
+    修改一下零散bug.
+
+commit d794fa1bc6283fc457896861145703f91175db1c
+Author: joyopeng <joyopeng@gmail.com>
+Date:   Wed Jan 31 14:11:42 2018 +0800
+
+    修改现勘bug.
+
+commit 6dde7b8596ae1de85bea3489d0a0893e649d4562
+Author: joyopeng <joyopeng@gmail.com>
+Date:   Wed Jan 31 11:44:21 2018 +0800
+
+    修改勘测人员信息bug.
+
+commit 9241b9be837e91a9d0eab08d13258f18688bad8b
+Author: joyopeng <joyopeng@gmail.com>
+Date:   Thu Jan 25 11:06:12 2018 +0800
+
+    update release version.
+
+commit 0212c2695732657ba1d3b12a50167f3704dc54be
+Author: joyopeng <joyopeng@gmail.com>
+Date:   Tue Jan 23 16:48:13 2018 +0800
+
+    添加基站数据上报字段.
+
+commit b1bc8f6e6d2a9101443d7cfb66dc4f73d0c13867
+Author: joyopeng <joyopeng@gmail.com>
+Date:   Tue Jan 23 10:47:18 2018 +0800
+
+    添加基站信息采集功能.
+
+commit f5b3e536984bc56ef7232b7970d6df511ef6b4ee
+Author: joyopeng <joyopeng@gmail.com>
+Date:   Fri Jan 19 13:09:54 2018 +0800
+
+    修改物证拍照返回导致的crash.
+
+commit bf0e216dede0c28f80c41317878bcde7e17dbf58
+Author: joyopeng <joyopeng@gmail.com>
+Date:   Thu Jan 18 14:05:18 2018 +0800
+
+    fix crash bug.
+
+commit b3fdc687d07a91bbc5f0165ebe8cbfdd9ac674c6
+Author: joyopeng <joyopeng@gmail.com>
+Date:   Thu Jan 18 10:00:41 2018 +0800
+
+    修改离线地图bug.
+
+commit b50834be5292fec35cd6085b6ec1a8040c0c062e
+Author: joyopeng <joyopeng@gmail.com>
+Date:   Thu Jan 18 09:55:47 2018 +0800
+
+    修改地图离线下载,更新提示.
+
+commit b1a6ae1a414725c90fd7192fdb55778463bef693
+Author: joyopeng <joyopeng@gmail.com>
+Date:   Wed Jan 17 15:41:42 2018 +0800
+
+    submit alpha version.
+
+commit c45374203588613a322ac882a42a8a6241b0a12b
+Author: joyopeng <joyopeng@gmail.com>
+Date:   Tue Jan 16 15:40:08 2018 +0800
+
+    预加载数据.
+
+commit ccbb0f1badc31694f5cc4cfeedab67c3e4648191
+Author: joyopeng <joyopeng@gmail.com>
+Date:   Mon Jan 15 16:23:34 2018 +0800
+
+    init code.

@@ -109,7 +109,7 @@
                         android:layout_height="wrap_content"
                         android:background="@android:color/transparent"
                         android:checked="false"
-                        android:text="旋装"
+                        android:text="旋转"
                         android:textColor="@android:color/background_dark" />
                 </LinearLayout>
 

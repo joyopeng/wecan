@@ -158,9 +158,9 @@ public class ProspectInterface extends FragmentActivity implements ArrowTabView.
         dragViewTiltle = (TextView) findViewById(R.id.drag_title);
         pagerSlidingTabStrip = (PagerSlidingTabStrip) findViewById(R.id.tabs);
         arrowTabView = (ArrowTabView) findViewById(R.id.arrow);
-        if (getIntent().getBooleanExtra("isSimpleCase",false)){
-            arrowTabView.setVisibility(View.INVISIBLE);
-        }
+//        if (getIntent().getBooleanExtra("isSimpleCase",false)){
+//            arrowTabView.setVisibility(View.INVISIBLE);
+//        }
         proData2Tip(list);
         noteFragmentDataChange();
         arrowTabView.setListener(this);

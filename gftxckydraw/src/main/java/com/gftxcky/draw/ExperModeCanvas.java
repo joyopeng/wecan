@@ -2872,6 +2872,11 @@ public class ExperModeCanvas extends View {
                     } else if (this._status_lineWindow) {
                         if (_windowBean != null) {
                             _windowBean.setSelect(false);
+                            if(_windowBean.getEndPoint() == null)
+                                return false;
+//                            if (_windowBean != null) {
+//                                _windowBean.setEndPoint(getCrossPoint(_windowBean.getLineStartPoint(), _windowBean.getLineEndPoint(), new XCKYPoint(motionEvent.getX(), motionEvent.getY())));
+//                            }
                             WindowBean windowbean = new WindowBean(_windowBean);
                             _windowMap.put(windowbean.toString(), windowbean);
                             _windowBean = null;
@@ -2881,6 +2886,8 @@ public class ExperModeCanvas extends View {
                     } else if (this._status_lineDoor) {
                         if (_doorBean != null) {
                             _doorBean.setSelect(false);
+                            if(_doorBean.getEndPoint() == null)
+                                return false;
                             DoorBean doorbean = new DoorBean(_doorBean);
                             _doorMap.put(doorbean.toString(), doorbean);
                             _doorBean = null;

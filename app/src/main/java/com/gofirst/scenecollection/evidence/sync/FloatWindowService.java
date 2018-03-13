@@ -176,6 +176,7 @@ public class FloatWindowService extends Service {
             Cursor c = getContentResolver().query(uri, null, null, null, null);
             if (c.moveToFirst()) {
                 String filepath = c.getString(c.getColumnIndex("_data"));
+                Log.v(TAG,"filepath = "+filepath);
                 File imageifle = new File(filepath);
                 if (filepath.contains("Pre-loaded"))
                     return;

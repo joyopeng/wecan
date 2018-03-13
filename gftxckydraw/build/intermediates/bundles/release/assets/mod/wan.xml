@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+  <asset>
+    <contributor>
+      <author>Administrator</author>
+      <authoring_tool>OpenCOLLADA2011</authoring_tool>
+      <comments>
+			ColladaMaya export options: 
+			bakeTransforms=0;relativePaths=0;copyTextures=0;exportTriangles=0;exportCgfxFileReferences=0;
+			isSampling=0;curveConstrainSampling=0;removeStaticCurves=0;exportPolygonMeshes=1;exportLights=0;
+			exportCameras=0;exportJointsAndSkin=0;exportAnimations=0;exportInvisibleNodes=0;exportDefaultCameras=0;
+			exportTexCoords=0;exportNormals=0;exportNormalsPerVertex=0;exportVertexColors=0;exportVertexColorsPerVertex=0;
+			exportTexTangents=0;exportTangents=0;exportReferencedMaterials=0;exportMaterialsOnly=0;
+			exportXRefs=0;dereferenceXRefs=0;exportCameraAsLookat=0;cameraXFov=0;cameraYFov=0;doublePrecision=0
+		</comments>
+      <source_data>file:///D:/Backup/%CE%D2%B5%C4%CE%C4%B5%B5/maya/projects/default/untitled</source_data>
+    </contributor>
+    <created>2012-10-30T14:06:53</created>
+    <modified>2012-10-30T14:06:53</modified>
+    <unit name="centimeter" meter="0.01"/>
+    <up_axis>Y_UP</up_axis>
+  </asset>
+  <library_materials>
+    <material id="lambert5" name="lambert5">
+      <instance_effect url="#lambert5-fx"/>
+    </material>
+  </library_materials>
+  <library_effects>
+    <effect id="lambert5-fx">
+      <profile_COMMON>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color>0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color>0 0 0 1</color>
+            </ambient>
+            <diffuse>
+              <color>0 0 0 1</color>
+            </diffuse>
+            <transparent opaque="RGB_ZERO">
+              <color>0 0 0 1</color>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_geometries>
+    <geometry id="pCylinderShape7" name="pCylinderShape7">
+      <mesh>
+        <source id="pCylinderShape7-positions" name="pCylinderShape7-positions">
+          <float_array id="pCylinderShape7-positions-array" count="60">0.2042574 0 0.0768445 0.1896355 0 0.04814713 0.1668611 0 0.02537279 0.1381637 0 0.01075078 0.1063525 0 0.005712376 0.07454122 0 0.01075078 0.04584388 0 0.02537281 0.02306956 0 0.04814715 0.008447541 0 0.0768445 0.003409139 0 0.1086557 0.008447541 0 0.140467 0.02306956 0 0.1691643 0.04584391 0 0.1919386 0.07454124 0 0.2065607 0.1063525 0 0.2115991 0.1381637 0 0.2065607 0.1668611 0 0.1919386 0.1896354 0 0.1691643 0.2042574 0 0.140467 0.2092958 0 0.1086557</float_array>
+          <technique_common>
+            <accessor source="#pCylinderShape7-positions-array" count="20" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="pCylinderShape7-vertices" name="pCylinderShape7-vertices">
+          <input semantic="POSITION" source="#pCylinderShape7-positions"/>
+        </vertices>
+        <polylist material="lambert5SG" count="1">
+          <input semantic="VERTEX" source="#pCylinderShape7-vertices" offset="0"/>
+          <vcount>20</vcount>
+          <p>19 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18</p>
+        </polylist>
+      </mesh>
+      <extra>
+        <technique profile="OpenCOLLADAMaya">
+          <originalMayaNodeId>pCylinderShape7</originalMayaNodeId>
+          <double_sided>1</double_sided>
+        </technique>
+      </extra>
+    </geometry>
+    <geometry id="pCylinderShape11" name="pCylinderShape11">
+      <mesh>
+        <source id="pCylinderShape11-positions" name="pCylinderShape11-positions">
+          <float_array id="pCylinderShape11-positions-array" count="60">0.1991621 0 0.07850009 0.1853011 0 0.05129625 0.163712 0 0.02970718 0.1365081 0 0.01584616 0.1063525 0 0.01106997 0.07619681 0 0.01584616 0.04899301 0 0.0297072 0.02740395 0 0.05129626 0.01354292 0 0.07850009 0.008766736 0 0.1086557 0.01354292 0 0.1388114 0.02740395 0 0.1660152 0.04899302 0 0.1876042 0.07619683 0 0.2014653 0.1063525 0 0.2062415 0.1365081 0 0.2014653 0.1637119 0 0.1876042 0.185301 0 0.1660152 0.199162 0 0.1388114 0.2039382 0 0.1086557</float_array>
+          <technique_common>
+            <accessor source="#pCylinderShape11-positions-array" count="20" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="pCylinderShape11-vertices" name="pCylinderShape11-vertices">
+          <input semantic="POSITION" source="#pCylinderShape11-positions"/>
+        </vertices>
+        <polylist material="lambert5SG" count="1">
+          <input semantic="VERTEX" source="#pCylinderShape11-vertices" offset="0"/>
+          <vcount>20</vcount>
+          <p>19 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18</p>
+        </polylist>
+      </mesh>
+      <extra>
+        <technique profile="OpenCOLLADAMaya">
+          <originalMayaNodeId>pCylinderShape11</originalMayaNodeId>
+          <double_sided>1</double_sided>
+        </technique>
+      </extra>
+    </geometry>
+    <geometry id="pCylinderShape12" name="pCylinderShape12">
+      <mesh>
+        <source id="pCylinderShape12-positions" name="pCylinderShape12-positions">
+          <float_array id="pCylinderShape12-positions-array" count="60">0.160402 0 0.09109399 0.1523297 0 0.07525128 0.1397569 0 0.06267846 0.1239142 0 0.05460621 0.1063525 0 0.0518247 0.0887907 0 0.05460621 0.07294802 0 0.06267847 0.06037521 0 0.07525129 0.05230296 0 0.09109399 0.04952145 0 0.1086557 0.05230296 0 0.1262175 0.06037521 0 0.1420602 0.07294804 0 0.154633 0.08879072 0 0.1627052 0.1063525 0 0.1654868 0.1239142 0 0.1627052 0.1397569 0 0.154633 0.1523297 0 0.1420602 0.1604019 0 0.1262175 0.1631835 0 0.1086557</float_array>
+          <technique_common>
+            <accessor source="#pCylinderShape12-positions-array" count="20" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="pCylinderShape12-vertices" name="pCylinderShape12-vertices">
+          <input semantic="POSITION" source="#pCylinderShape12-positions"/>
+        </vertices>
+        <polylist material="lambert5SG" count="1">
+          <input semantic="VERTEX" source="#pCylinderShape12-vertices" offset="0"/>
+          <vcount>20</vcount>
+          <p>19 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18</p>
+        </polylist>
+      </mesh>
+      <extra>
+        <technique profile="OpenCOLLADAMaya">
+          <originalMayaNodeId>pCylinderShape12</originalMayaNodeId>
+          <double_sided>1</double_sided>
+        </technique>
+      </extra>
+    </geometry>
+    <geometry id="pCylinderShape13" name="pCylinderShape13">
+      <mesh>
+        <source id="pCylinderShape13-positions" name="pCylinderShape13-positions">
+          <float_array id="pCylinderShape13-positions-array" count="60">0.157589 0 0.09200798 0.1499369 0 0.07698978 0.1380184 0 0.0650713 0.1230002 0 0.05741917 0.1063525 0 0.05478242 0.08970469 0 0.05741917 0.07468653 0 0.06507131 0.06276806 0 0.0769898 0.05511592 0 0.09200798 0.05247917 0 0.1086557 0.05511592 0 0.1253035 0.06276806 0 0.1403216 0.07468654 0 0.1522402 0.08970471 0 0.1598923 0.1063525 0 0.1625291 0.1230002 0 0.1598923 0.1380184 0 0.1522402 0.1499369 0 0.1403216 0.157589 0 0.1253035 0.1602257 0 0.1086557</float_array>
+          <technique_common>
+            <accessor source="#pCylinderShape13-positions-array" count="20" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="pCylinderShape13-vertices" name="pCylinderShape13-vertices">
+          <input semantic="POSITION" source="#pCylinderShape13-positions"/>
+        </vertices>
+        <polylist material="lambert5SG" count="1">
+          <input semantic="VERTEX" source="#pCylinderShape13-vertices" offset="0"/>
+          <vcount>20</vcount>
+          <p>19 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18</p>
+        </polylist>
+      </mesh>
+      <extra>
+        <technique profile="OpenCOLLADAMaya">
+          <originalMayaNodeId>pCylinderShape13</originalMayaNodeId>
+          <double_sided>1</double_sided>
+        </technique>
+      </extra>
+    </geometry>
+  </library_geometries>
+  <library_visual_scenes>
+    <visual_scene id="VisualSceneNode" name="untitled">
+      <node id="pCylinder7" name="pCylinder7" type="NODE">
+        <translate sid="translate">0 0 0</translate>
+        <rotate sid="rotateZ">0 0 1 0</rotate>
+        <rotate sid="rotateY">0 1 0 0</rotate>
+        <rotate sid="rotateX">1 0 0 0</rotate>
+        <scale sid="scale">1 1 1</scale>
+        <instance_geometry url="#pCylinderShape7">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="lambert5SG" target="#lambert5"/>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+        <extra>
+          <technique profile="OpenCOLLADAMaya">
+            <originalMayaNodeId>pCylinder7</originalMayaNodeId>
+          </technique>
+        </extra>
+      </node>
+      <node id="pCylinder11" name="pCylinder11" type="NODE">
+        <translate sid="translate">0 0 0</translate>
+        <scale sid="scale">1 1 1</scale>
+        <instance_geometry url="#pCylinderShape11">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="lambert5SG" target="#lambert5"/>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+        <extra>
+          <technique profile="OpenCOLLADAMaya">
+            <originalMayaNodeId>pCylinder11</originalMayaNodeId>
+          </technique>
+        </extra>
+      </node>
+      <node id="pCylinder12" name="pCylinder12" type="NODE">
+        <translate sid="translate">0 0 0</translate>
+        <scale sid="scale">1 1 1</scale>
+        <instance_geometry url="#pCylinderShape12">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="lambert5SG" target="#lambert5"/>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+        <extra>
+          <technique profile="OpenCOLLADAMaya">
+            <originalMayaNodeId>pCylinder12</originalMayaNodeId>
+          </technique>
+        </extra>
+      </node>
+      <node id="pCylinder13" name="pCylinder13" type="NODE">
+        <translate sid="translate">0 0 0</translate>
+        <scale sid="scale">1 1 1</scale>
+        <instance_geometry url="#pCylinderShape13">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="lambert5SG" target="#lambert5"/>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+        <extra>
+          <technique profile="OpenCOLLADAMaya">
+            <originalMayaNodeId>pCylinder13</originalMayaNodeId>
+          </technique>
+        </extra>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#VisualSceneNode"/>
+  </scene>
+</COLLADA>
