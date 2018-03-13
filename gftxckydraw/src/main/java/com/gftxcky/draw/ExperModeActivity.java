@@ -353,6 +353,7 @@ public class ExperModeActivity extends Activity {
                                 .append(fadz.getText().toString()).append(",")
                                 .append(ztdw.getText().toString()).append(",")
                                 .append(ztr.getText().toString()).append(",")
+                                .append(experModeCanvas.getTableBean().getCaseType()).append(",")
                                 .append(ztsj.getText().toString()).toString());
                         _this.getExperModeCanvas().setTabInfo(_this.getInfo());
                         _this.getExperModeCanvas().setTitle(name.getText().toString());

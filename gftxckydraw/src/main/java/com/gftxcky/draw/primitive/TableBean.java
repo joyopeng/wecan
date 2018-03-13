@@ -255,4 +255,8 @@ public class TableBean implements Serializable {
 	public void setCaseType(String caseType) {
 		this.caseType = caseType;
 	}
+
+	public String getCaseType(){
+	  	return caseType;
+	}
 }
