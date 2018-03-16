@@ -374,7 +374,7 @@ public class UpLoadService extends Service {
             List<RecordFileInfo> list = EvidenceApplication.db.findAllByWhere(RecordFileInfo.class, "caseId = '" + csSceneCases.getCaseNo() + "' and (hasBlock = '0' or hasBlock is null) limit 0,1");
             for (RecordFileInfo recordFileInfo : list) {
                 if(recordFileInfo.getFilePath() != null && recordFileInfo.getFilePath().endsWith(".plan")) {
-                    EvidenceApplication.db.delete(recordFileInfo);
+                    EvidenceApplication.db.deleteByWhere(RecordFileInfo.class,"caseId = '" + csSceneCases.getCaseNo()+"'");
                     continue;
                 }
                 if (!checkRecAlreadyHasUploadFile(recordFileInfo.getId())) {

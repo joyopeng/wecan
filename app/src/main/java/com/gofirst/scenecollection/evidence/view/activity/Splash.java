@@ -81,7 +81,6 @@ public class Splash extends Activity {
         sharePre = new SharePre(Splash.this, "user_info", Context.MODE_WORLD_READABLE | MODE_MULTI_PROCESS);
         ImageView imageView = (ImageView) findViewById(R.id.welcome);
         llloading = (LinearLayout) findViewById(R.id.llloading);
-
         //清空缓存文件夹
         AppPathUtil.deleteAllFiles(new File(AppPathUtil.getCachePath()));
 //        if (StringUtil.isNullorEmpty(sharePre.getString("token", ""))) {
