@@ -103,6 +103,7 @@ dependencies {
     compile 'info.hoang8f:android-segmented:1.0.6'
     compile files('libs/asmack.jar')
     compile(name: 'pen-v4.1.1_light', ext: 'aar')
+    compile(name: 'app-release', ext: 'aar')
     compile files('libs/sdk-v1.0.0.jar')
     compile 'com.github.fangx:haorefresh:1.0'
     compile 'com.cjj.materialrefeshlayout:library:1.3.0'
@@ -130,6 +131,8 @@ dependencies {
     compile files('libs/AraBMApiFp.jar')
     compile files('libs/AraBTIdCardInfo.jar')
     compile files('libs/ArateIDCardBT.jar')
-    compile files('libs/idcardreaderya.jar')
+//    compile files('libs/idcardreaderya.jar')
     compile files('libs/smartshellUsb.jar')
+    compile files('libs/ksxy.jar')
+    compile files('libs/sun.misc.BASE64Decoder.jar')
 }

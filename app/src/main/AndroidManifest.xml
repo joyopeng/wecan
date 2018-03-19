@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.gofirst.scenecollection.evidence">
 
     <uses-permission android:name="com.samsung.android.providers.context.permission.WRITE_USE_APP_FEATURE_SURVEY" />
@@ -56,7 +57,7 @@
     <uses-permission android:name="android.permission.GET_TASKS" />
     //base station
     <uses-permission android:name="ACCESS_COARSE_UPDATES" />
-
+    <uses-permission android:name="android.permission.NFC" />
     <!-- add for push off -->
     <application
         android:name=".Application.EvidenceApplication"
@@ -64,6 +65,7 @@
         android:icon="@mipmap/app_icon"
         android:label="@string/app_name"
         android:supportsRtl="true"
+        tools:replace="android:icon"
         android:theme="@style/AppTheme">
         <meta-data
             android:name="isdebug"
@@ -347,7 +349,32 @@
             android:name=".view.activity.LostGoodDetail"
             android:configChanges="orientation|screenSize"
             android:screenOrientation="portrait"
-            android:theme="@style/TranslucentTheme" />
+            android:theme="@style/TranslucentTheme">
+            <!-- Handle notes detected from outside our application -->
+            <intent-filter>
+                <action android:name="android.nfc.action.NDEF_DISCOVERED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="text/plain" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.nfc.action.NDEF_DISCOVERED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="developer.android.com"
+                    android:pathPrefix="/index.html"
+                    android:scheme="http" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.nfc.action.TAG_DISCOVERED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.nfc.action.TECH_DISCOVERED" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".view.activity.SeconddaryView"
             android:configChanges="orientation|screenSize"
