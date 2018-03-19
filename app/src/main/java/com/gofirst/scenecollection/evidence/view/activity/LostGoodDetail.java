@@ -463,6 +463,15 @@ public class LostGoodDetail extends Activity {
                 SEX = userInfo.sex;
                 AGE = userInfo.exper + userInfo.exper2;
                 ADDRESS = userInfo.address;
+                Intent intent = new Intent();
+                intent.setAction("id_card_info");
+                intent.putExtra("name", NAME);
+                intent.putExtra("card_num", IC_NO);
+                intent.putExtra("gender", SEX);
+                intent.putExtra("address", ADDRESS);
+                intent.putExtra("birthday", AGE);
+                sendBroadcast(intent);
+
 //                tvname.setText(userInfo.name);
 //                tvsex.setText(userInfo.sex);
 //                tvnation.setText(userInfo.nation);

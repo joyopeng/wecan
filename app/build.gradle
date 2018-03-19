@@ -103,7 +103,7 @@ dependencies {
     compile 'info.hoang8f:android-segmented:1.0.6'
     compile files('libs/asmack.jar')
     compile(name: 'pen-v4.1.1_light', ext: 'aar')
-    compile(name: 'app-release', ext: 'aar')
+//    compile(name: 'app-release', ext: 'aar')
     compile files('libs/sdk-v1.0.0.jar')
     compile 'com.github.fangx:haorefresh:1.0'
     compile 'com.cjj.materialrefeshlayout:library:1.3.0'
@@ -119,6 +119,7 @@ dependencies {
     compile 'com.jpardogo.materialtabstrip:library:1.1.0'
     compile group: 'com.google.zxing', name: 'core', version: '3.3.0'
 //    compile 'com.android.support:multidex:1.0.1'
+    compile 'com.android.support:multidex:1.0.2'
     compile project(':gftxckydraw')
     /*compile project(path: ':gftxckydraw')*/
     compile files('libs/afinal.jar')
@@ -135,4 +136,5 @@ dependencies {
     compile files('libs/smartshellUsb.jar')
     compile files('libs/ksxy.jar')
     compile files('libs/sun.misc.BASE64Decoder.jar')
+    compile files('libs/idcardrec.jar')
 }

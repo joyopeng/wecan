@@ -101,13 +101,14 @@ public class Text extends LinearLayout implements BaseView {
                         }
                     } else if ("年龄".equals(name)) {
                         String birthday = intent.getStringExtra("birthday");
-                        if (!TextUtils.isEmpty(birthday) && birthday.length() >= 4) {
-                            String year = birthday.substring(0, 4);
-                            long time = System.currentTimeMillis();
-                            Calendar cal = Calendar.getInstance();
-                            cal.setTimeInMillis(time);
-                            click2Input.setText(String.valueOf(cal.get(Calendar.YEAR) - Integer.parseInt(year)));
-                        }
+//                        if (!TextUtils.isEmpty(birthday) && birthday.length() >= 4) {
+//                            String year = birthday.substring(0, 4);
+//                            long time = System.currentTimeMillis();
+//                            Calendar cal = Calendar.getInstance();
+//                            cal.setTimeInMillis(time);
+//                            click2Input.setText(String.valueOf(cal.get(Calendar.YEAR) - Integer.parseInt(year)));
+//                        }
+                        click2Input.setText(birthday);
                     }
                 } else if ("ic".equals(action)) {
                     if ("身份证号码".equals(name)) {

@@ -5,10 +5,12 @@ import android.content.Intent;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
 import android.os.Handler;
 import android.os.Message;
 import android.provider.MediaStore;
 import android.text.format.DateFormat;
+import android.util.Log;
 import android.view.Window;
 
 import com.gofirst.scenecollection.evidence.Application.EvidenceApplication;
@@ -16,6 +18,9 @@ import com.gofirst.scenecollection.evidence.model.RecordFileInfo;
 import com.gofirst.scenecollection.evidence.utils.AppPathUtil;
 import com.gofirst.scenecollection.evidence.view.customview.BaseView;
 import com.gofirst.scenecollection.evidence.view.customview.ViewUtil;
+import com.yunmai.android.engine.OcrEngine;
+import com.yunmai.android.util.Utils;
+import com.yunmai.android.vo.IDCard;
 
 import java.io.File;
 import java.text.SimpleDateFormat;
@@ -25,7 +30,8 @@ import java.util.List;
 /**
  * Created by Administrator on 2016/12/15.
  */
-public class PhotoDialogActivity extends Activity  {
+public class PhotoDialogActivity extends Activity {
+    private static final String TAG = PhotoDialogActivity.class.getSimpleName();
     public static final int CAMERA = 1;
     public static final int CROP_PHOTO = 2;
     private String caseId;
@@ -37,17 +43,18 @@ public class PhotoDialogActivity extends Activity  {
     private File imageFile = null;//照片文件
     private final int IMAGE_MAX_WIDTH = 720;
     private final int IMAGE_MAX_HEIGHT = 1280;
-    private String path="";
-    String fileName="";
+    private String path = "";
+    String fileName = "";
     public static final int UPDATE_TEXT = 1;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         super.onCreate(savedInstanceState);
-        caseId=getIntent().getStringExtra("caseId");
-        father=getIntent().getStringExtra("father");
-        saveKey=getIntent().getStringExtra("name");
-        section=getIntent().getStringExtra("section");
+        caseId = getIntent().getStringExtra("caseId");
+        father = getIntent().getStringExtra("father");
+        saveKey = getIntent().getStringExtra("name");
+        section = getIntent().getStringExtra("section");
         /*Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         startActivityForResult(intent, CAMERA);*/
         // 创建File对象，用于存储拍照后的图片
@@ -56,10 +63,10 @@ public class PhotoDialogActivity extends Activity  {
         String timeStamp = new SimpleDateFormat("yyyyMMdd")
                 .format(new Date());
         new DateFormat();
-        path=timeStamp+"/"+caseId+"/identityCard";
+        path = timeStamp + "/" + caseId + "/identityCard";
         Intent getPhoto = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-        strImgPath = AppPathUtil.getDataPath() +"/"+ path+"/";
-         fileName = section + ".jpg";// 照片以格式化日期方式命名
+        strImgPath = AppPathUtil.getDataPath() + "/" + path + "/";
+        fileName = section + ".jpg";// 照片以格式化日期方式命名
         File out = new File(strImgPath);
         if (!out.exists()) {
             out.mkdirs();
@@ -132,14 +139,13 @@ public class PhotoDialogActivity extends Activity  {
     }*/
 
 
-
     /**
      * 返回照片结果处理
      */
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if(requestCode == CAMERA && resultCode == Activity.RESULT_OK ) {
+        if (requestCode == CAMERA && resultCode == Activity.RESULT_OK) {
             imageFile = new File(strImgPath);
             int scale = 0;
             scale = getZoomScale(imageFile);//得到缩放倍数
@@ -147,11 +153,28 @@ public class PhotoDialogActivity extends Activity  {
             BitmapFactory.Options options = new BitmapFactory.Options();
             options.inSampleSize = scale;
 
+            new Thread() {
+                @Override
+                public void run() {
+                    byte[] picData = Utils.JPEG2Bytes(strImgPath);
+                    OcrEngine ocr = new OcrEngine();
+                    IDCard idCard = ocr.recognize(PhotoDialogActivity.this, picData, null, "", "");
+                    Log.v(TAG, idCard.toString());
+                    Intent intent = new Intent();
+                    intent.setAction("id_card_info");
+                    intent.putExtra("name", idCard.getName());
+                    intent.putExtra("card_num", idCard.getCardNo());
+                    intent.putExtra("gender", idCard.getSex());
+                    intent.putExtra("address", idCard.getAddress());
+                    intent.putExtra("birthday", idCard.getBirth());
+                    sendBroadcast(intent);
+                }
+            }.start();
             saveData(path, fileName);
 
-       //     finish();
-           // photoImageView.setImageBitmap(BitmapFactory.decodeFile(strImgPath,options));//按指定options显示图片防止OOM
-        }else {
+            //     finish();
+            // photoImageView.setImageBitmap(BitmapFactory.decodeFile(strImgPath,options));//按指定options显示图片防止OOM
+        } else {
             finish();
             //Toast.makeText(MainActivity.this, R.string.failed, Toast.LENGTH_LONG).show();
         }
@@ -163,9 +186,9 @@ public class PhotoDialogActivity extends Activity  {
             switch (msg.what) {
                 case UPDATE_TEXT:
                     // 在这里可以进行UI操作
-                     Intent intent = new Intent();
-                    intent.setAction("ic");
-                    sendBroadcast(intent);
+//                    Intent intent = new Intent();
+//                    intent.setAction("ic");
+//                    sendBroadcast(intent);
                     finish();
                     break;
                 default:
@@ -176,6 +199,7 @@ public class PhotoDialogActivity extends Activity  {
 
     /**
      * 图片缩放处理
+     *
      * @param imageFile 照片文件
      * @return 缩放的倍数
      */
@@ -191,7 +215,7 @@ public class PhotoDialogActivity extends Activity  {
         return scale;
     }
 
-    public void saveData(String path,String name) {
+    public void saveData(String path, String name) {
         String timeStamp = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss")
                 .format(new Date());
         String uuid = ViewUtil.getUUid();
@@ -200,8 +224,8 @@ public class PhotoDialogActivity extends Activity  {
         recordFileInfo.setId(uuid);
 
         recordFileInfo.setCaseId(caseId);
-        recordFileInfo.setFilePath(path +"/"+ name);
-        recordFileInfo.setTwoHundredFilePath(path+"/" + name);
+        recordFileInfo.setFilePath(path + "/" + name);
+        recordFileInfo.setTwoHundredFilePath(path + "/" + name);
         recordFileInfo.setSection(section);
 
         recordFileInfo.setSaveTime(timeStamp);
@@ -210,7 +234,7 @@ public class PhotoDialogActivity extends Activity  {
         recordFileInfo.setAttachmentId(uuid);
         recordFileInfo.setType("0");
         recordFileInfo.setSceneType(father);
-        recordFileInfo.setAddRec(getIntent().getBooleanExtra(BaseView.ADDREC,false));
+        recordFileInfo.setAddRec(getIntent().getBooleanExtra(BaseView.ADDREC, false));
         recordFileInfo.setFather(father);
         recordFileInfo.setInvestigationId("");
         recordFileInfo.setMainId("");
@@ -218,11 +242,11 @@ public class PhotoDialogActivity extends Activity  {
         recordFileInfo.setDeleteFlag("");
         recordFileInfo.setRefKeyId(ViewUtil.getUUid());
         List<RecordFileInfo> list = EvidenceApplication.db.findAllByWhere(RecordFileInfo.class, "caseId = '" + caseId
-                + "' and father = '" + father + "' and child = '" + saveKey + "' and section = '"+section+"'");
-        if(list.size()>0) {
+                + "' and father = '" + father + "' and child = '" + saveKey + "' and section = '" + section + "'");
+        if (list.size() > 0) {
 
-            EvidenceApplication.db.update(recordFileInfo,"id='"+list.get(0).getId()+"'");
-        }else{
+            EvidenceApplication.db.update(recordFileInfo, "id='" + list.get(0).getId() + "'");
+        } else {
             EvidenceApplication.db.save(recordFileInfo);
         }
 
@@ -231,7 +255,6 @@ public class PhotoDialogActivity extends Activity  {
         handler.sendMessage(message); // 将Message对象发送出去
 
     }
-
 
 
 }
