@@ -458,11 +458,11 @@ public class LostGoodDetail extends Activity {
 
             if (null != strCardInfo && strCardInfo.length() > 1600) {
                 UserInfo userInfo = mNFCReaderHelper.parsePersonInfo(strCardInfo);
-                IC_NO = userInfo.id;
-                NAME = userInfo.name;
-                SEX = userInfo.sex;
-                AGE = userInfo.exper + userInfo.exper2;
-                ADDRESS = userInfo.address;
+                IC_NO = userInfo.id.replace(" ","");
+                NAME = userInfo.name.replace(" ","");
+                SEX = userInfo.sex.replace(" ","");
+                AGE = userInfo.brithday.replace(" ","");
+                ADDRESS = userInfo.address.replace(" ","");
                 Intent intent = new Intent();
                 intent.setAction("id_card_info");
                 intent.putExtra("name", NAME);
