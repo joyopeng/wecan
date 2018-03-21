@@ -124,7 +124,7 @@ dependencies {
     /*compile project(path: ':gftxckydraw')*/
     compile files('libs/afinal.jar')
     compile files('libs/policesdks.jar')
-    compile files('libs/usc.jar')
+//    compile files('libs/usc.jar')
     compile files('libs/libs.jar')
     compile files('libs/PSTORE_ANDROID_SDK_V1.12.0.jar')
     compile files('libs/ModuleAPI_Android_Blue_2.4.4.1.jar')

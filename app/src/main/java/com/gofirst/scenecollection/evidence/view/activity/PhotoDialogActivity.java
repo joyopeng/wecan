@@ -160,14 +160,16 @@ public class PhotoDialogActivity extends Activity {
                     OcrEngine ocr = new OcrEngine();
                     IDCard idCard = ocr.recognize(PhotoDialogActivity.this, picData, null, "", "");
                     Log.v(TAG, idCard.toString());
+                    try {
                     Intent intent = new Intent();
                     intent.setAction("id_card_info");
                     intent.putExtra("name", idCard.getName());
                     intent.putExtra("card_num", idCard.getCardNo());
                     intent.putExtra("gender", idCard.getSex());
                     intent.putExtra("address", idCard.getAddress());
-                    intent.putExtra("birthday", idCard.getBirth().replace("年","-").replace("月","-").replace("日",""));
+                    intent.putExtra("birthday", idCard.getBirth().replace("年", "-").replace("月", "-").replace("日", ""));
                     sendBroadcast(intent);
+                    }catch (NullPointerException e){}
                 }
             }.start();
             saveData(path, fileName);
