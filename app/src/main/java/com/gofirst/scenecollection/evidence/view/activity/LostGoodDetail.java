@@ -12,6 +12,7 @@ import android.os.Message;
 import android.provider.Settings;
 import android.text.TextUtils;
 import android.view.View;
+import android.view.Window;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -146,8 +147,24 @@ public class LostGoodDetail extends Activity {
         }
 
 //        initIDDeviceConfig();
+        // 设备注册
+        mNfcAdapter = NfcAdapter.getDefaultAdapter(this);
+        // 判断设备是否可用
+        if (mNfcAdapter == null) {
+            toast("该设备不支持nfc!");
+            return;
+        }
+
+        if (!mNfcAdapter.isEnabled()) {
+            Toast.makeText(this, "请在系统设置中先启用NFC功能！", Toast.LENGTH_SHORT).show();
+            startActivity(new Intent(Settings.ACTION_NFC_SETTINGS));
+            finish();
+            return;
+        }
         mNfcPendingIntent = PendingIntent.getActivity(this, 0, new Intent(this,
                 getClass()).addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP), 0);
+        mNFCReaderHelper = new NFCReaderHelper(this, uiHandler, appKey, appSecret);
+        readIDCardInfo();
     }
 
     @Override
@@ -463,6 +480,7 @@ public class LostGoodDetail extends Activity {
                 SEX = userInfo.sex.replace(" ","");
                 AGE = userInfo.brithday.replace(" ","");
                 ADDRESS = userInfo.address.replace(" ","");
+                AGE = AGE.replace("年","-").replace("月","-").replace("日","");
                 Intent intent = new Intent();
                 intent.setAction("id_card_info");
                 intent.putExtra("name", NAME);

@@ -166,7 +166,7 @@ public class PhotoDialogActivity extends Activity {
                     intent.putExtra("card_num", idCard.getCardNo());
                     intent.putExtra("gender", idCard.getSex());
                     intent.putExtra("address", idCard.getAddress());
-                    intent.putExtra("birthday", idCard.getBirth());
+                    intent.putExtra("birthday", idCard.getBirth().replace("年","-").replace("月","-").replace("日",""));
                     sendBroadcast(intent);
                 }
             }.start();

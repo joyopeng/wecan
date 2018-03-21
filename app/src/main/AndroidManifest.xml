@@ -58,6 +58,8 @@
     //base station
     <uses-permission android:name="ACCESS_COARSE_UPDATES" />
     <uses-permission android:name="android.permission.NFC" />
+    <uses-permission android:name="com.android.nfc.NFC_STATE_CONTAINER_ACTION" />
+    <uses-permission android:name="android.net.wifi.SCAN_RESULTS" />
     <!-- add for push off -->
     <application
         android:name=".Application.EvidenceApplication"
@@ -374,6 +376,9 @@
             <intent-filter>
                 <action android:name="android.nfc.action.TECH_DISCOVERED" />
             </intent-filter>
+            <meta-data
+                android:name="android.nfc.action.TECH_DISCOVERED"
+                android:resource="@xml/nfc_tech_filter" />
         </activity>
         <activity
             android:name=".view.activity.SeconddaryView"

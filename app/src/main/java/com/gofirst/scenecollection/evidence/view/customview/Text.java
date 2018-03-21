@@ -108,6 +108,7 @@ public class Text extends LinearLayout implements BaseView {
 //                            cal.setTimeInMillis(time);
 //                            click2Input.setText(String.valueOf(cal.get(Calendar.YEAR) - Integer.parseInt(year)));
 //                        }
+                        birthday = birthday.replace("年","-").replace("月","-").replace("日","-");
                         click2Input.setText(birthday);
                     }
                 } else if ("ic".equals(action)) {
