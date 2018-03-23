@@ -1,0 +1,50 @@
+[
+    {
+        "merged": "/home/joyopeng/project/wecan/gftxckydraw/build/intermediates/res/merged/debug/layout/showbitmapbar.xml",
+        "source": "/home/joyopeng/project/wecan/gftxckydraw/src/main/res/layout/showbitmapbar.xml"
+    },
+    {
+        "merged": "/home/joyopeng/project/wecan/gftxckydraw/build/intermediates/res/merged/debug/layout/expermode_activity.xml",
+        "source": "/home/joyopeng/project/wecan/gftxckydraw/src/main/res/layout/expermode_activity.xml"
+    },
+    {
+        "merged": "/home/joyopeng/project/wecan/gftxckydraw/build/intermediates/res/merged/debug/layout/normalmode_activity.xml",
+        "source": "/home/joyopeng/project/wecan/gftxckydraw/src/main/res/layout/normalmode_activity.xml"
+    },
+    {
+        "merged": "/home/joyopeng/project/wecan/gftxckydraw/build/intermediates/res/merged/debug/layout/showtab_dialog.xml",
+        "source": "/home/joyopeng/project/wecan/gftxckydraw/src/main/res/layout/showtab_dialog.xml"
+    },
+    {
+        "merged": "/home/joyopeng/project/wecan/gftxckydraw/build/intermediates/res/merged/debug/layout/popuwindow_paintcolor.xml",
+        "source": "/home/joyopeng/project/wecan/gftxckydraw/src/main/res/layout/popuwindow_paintcolor.xml"
+    },
+    {
+        "merged": "/home/joyopeng/project/wecan/gftxckydraw/build/intermediates/res/merged/debug/layout/drawtext_dialog.xml",
+        "source": "/home/joyopeng/project/wecan/gftxckydraw/src/main/res/layout/drawtext_dialog.xml"
+    },
+    {
+        "merged": "/home/joyopeng/project/wecan/gftxckydraw/build/intermediates/res/merged/debug/layout/selmould_dialog.xml",
+        "source": "/home/joyopeng/project/wecan/gftxckydraw/src/main/res/layout/selmould_dialog.xml"
+    },
+    {
+        "merged": "/home/joyopeng/project/wecan/gftxckydraw/build/intermediates/res/merged/debug/layout/popuwindow_clearpaintsize.xml",
+        "source": "/home/joyopeng/project/wecan/gftxckydraw/src/main/res/layout/popuwindow_clearpaintsize.xml"
+    },
+    {
+        "merged": "/home/joyopeng/project/wecan/gftxckydraw/build/intermediates/res/merged/debug/layout/showbitmap_activity.xml",
+        "source": "/home/joyopeng/project/wecan/gftxckydraw/src/main/res/layout/showbitmap_activity.xml"
+    },
+    {
+        "merged": "/home/joyopeng/project/wecan/gftxckydraw/build/intermediates/res/merged/debug/layout/popuwindow_paintsize.xml",
+        "source": "/home/joyopeng/project/wecan/gftxckydraw/src/main/res/layout/popuwindow_paintsize.xml"
+    },
+    {
+        "merged": "/home/joyopeng/project/wecan/gftxckydraw/build/intermediates/res/merged/debug/layout/buttomtoolbar.xml",
+        "source": "/home/joyopeng/project/wecan/gftxckydraw/src/main/res/layout/buttomtoolbar.xml"
+    },
+    {
+        "merged": "/home/joyopeng/project/wecan/gftxckydraw/build/intermediates/res/merged/debug/layout/selmodeactivity_dialog.xml",
+        "source": "/home/joyopeng/project/wecan/gftxckydraw/src/main/res/layout/selmodeactivity_dialog.xml"
+    }
+]

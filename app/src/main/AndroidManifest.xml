@@ -77,14 +77,16 @@
             <intent-filter>
 
                 <!-- 苏州 -->
+              <!--
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="${categoryType}" />
+                -->
                 <!-- 德州 -->
-                <!--
+
                 <action android:name="pstore.intent.action.MAIN" />
                 <category android:name="pstore.intent.category.APP" />
-                -->
+
             </intent-filter>
         </activity>
 

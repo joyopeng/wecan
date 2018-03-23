@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.gftxcky.draw.test" >
+
+    <uses-sdk
+        android:minSdkVersion="19"
+        android:targetSdkVersion="22" />
+
+    <instrumentation
+        android:name="android.test.InstrumentationTestRunner"
+        android:functionalTest="false"
+        android:handleProfiling="false"
+        android:label="Tests for com.gftxcky.draw.test"
+        android:targetPackage="com.gftxcky.draw.test" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application android:allowBackup="true" >
+        <uses-library android:name="android.test.runner" />
+
+        <activity
+            android:name="com.gftxcky.draw.SelModeActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.gftxcky.draw.NormalModeActivity"
+            android:screenOrientation="landscape" >
+            <intent-filter>
+                <action android:name="com.gft.xcky.draw.normalmode" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.gftxcky.draw.ExperModeActivity"
+            android:screenOrientation="landscape" >
+            <intent-filter>
+                <action android:name="com.gft.xcky.draw.expermode" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.gftxcky.draw.ShowBitMapActivity"
+            android:screenOrientation="landscape" >
+            <intent-filter>
+                <action android:name="com.gft.xcky.draw.showbitmap" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

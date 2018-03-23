@@ -5,8 +5,6 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.pm.ApplicationInfo;
-import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
@@ -26,8 +24,6 @@ import com.gofirst.scenecollection.evidence.Application.EvidenceApplication;
 import com.gofirst.scenecollection.evidence.Application.PublicMsg;
 import com.gofirst.scenecollection.evidence.R;
 import com.gofirst.scenecollection.evidence.model.User;
-import com.gofirst.scenecollection.evidence.sync.ParseAssertService;
-import com.gofirst.scenecollection.evidence.sync.UpLoadService;
 import com.gofirst.scenecollection.evidence.utils.AppPathUtil;
 import com.gofirst.scenecollection.evidence.utils.DateTimeUtil;
 import com.gofirst.scenecollection.evidence.utils.DownLoadAsync;
@@ -38,7 +34,6 @@ import com.gofirst.scenecollection.evidence.utils.SharePre;
 import com.gofirst.scenecollection.evidence.utils.StringUtil;
 import com.gofirst.scenecollection.evidence.utils.ToastUtil;
 import com.gofirst.scenecollection.evidence.utils.UpLoadLog;
-import com.gofirst.scenecollection.evidence.utils.Utils;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -50,9 +45,20 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
+import cn.com.cybertech.pdk.LinkInfo;
+import cn.com.cybertech.pdk.api.IPstoreAPI;
+import cn.com.cybertech.pdk.api.IPstoreHandler;
+import cn.com.cybertech.pdk.api.PstoreAPIImpl;
+import cn.com.cybertech.pdk.api.UserObject;
+import cn.com.cybertech.pdk.auth.Oauth2AccessToken;
+import cn.com.cybertech.pdk.auth.PstoreAuth;
+import cn.com.cybertech.pdk.auth.PstoreAuthListener;
+import cn.com.cybertech.pdk.auth.sso.SsoHandler;
+import cn.com.cybertech.pdk.exception.PstoreException;
 import cn.com.cybertech.provider.PstoreContract;
 
 import static com.gofirst.scenecollection.evidence.Application.PublicMsg.isDebug;
@@ -71,7 +77,13 @@ public class Splash extends Activity {
     private BufferedWriter bw;
     FileWriter writer2;
     private String fileName;
+    //德州项目
+    private SsoHandler mSsoHandler;
+    private PstoreAuth auth;
+    private String ID = "95072C92DB8234477FED6C76292EA155";
+    private Oauth2AccessToken oauth2AccessToken;
 
+    //
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -86,6 +98,11 @@ public class Splash extends Activity {
 //        if (StringUtil.isNullorEmpty(sharePre.getString("token", ""))) {
 //            startService(new Intent(this, ParseAssertService.class));
 //        }
+        auth = new PstoreAuth(this, ID);
+        mSsoHandler = new SsoHandler(this, auth);
+        mSsoHandler.authorize(authListener);
+
+
         new Handler().postDelayed(new Runnable() {
 
             @Override
@@ -224,10 +241,49 @@ public class Splash extends Activity {
         }
         writerInfo("start get PoliceAccount");
         PoliceService ps = new PoliceService(this);
-        final String user = ps.getUserAccount();
-        writerInfo("start get PoliceAccount is " + user);
-        ToastUtil.show(this, "获取到用户信息为" + user, Toast.LENGTH_SHORT);
+//        final String user = ps.getUserAccount();
+        //德州项目
+        final String user;
+//        writerInfo("start get PoliceAccount is " + user);
+//        ToastUtil.show(this, "获取到用户信息为" + user, Toast.LENGTH_SHORT);
         writerInfo("request loginNoPassword ");
+        final Map<String, String> userInfo = cn.com.cybertech.pdk.UserInfo.getUserInfo(
+                this);
+        if(userInfo != null){
+            user = userInfo.get("idcard");
+            writerInfo("start get PoliceAccount is " + user);
+            ToastUtil.show(this, "获取到用户信息为" + user, Toast.LENGTH_SHORT);
+        }else {
+            user = "";
+        }
+
+//        if(userInfo != null){
+//           Iterator<String> keys = userInfo.keySet().iterator();
+//            while (keys.hasNext()){
+//                String key = keys.next();
+//                String value = userInfo.get(key);
+//                writerInfo("user info key-value key " + key);
+//                writerInfo("user info key-value value " + value);
+//            }
+//        }
+//        writerInfo("start userInfo size  " + userInfo.size());
+//        final Map<String, String> linkinfo = cn.com.cybertech.pdk.LinkInfo.getLinkInfo(this);
+//        if(linkinfo != null){
+//            Iterator<String> keys = linkinfo.keySet().iterator();
+//            while (keys.hasNext()){
+//                String key = keys.next();
+//                String value = userInfo.get(key);
+//                writerInfo("linkinfo  key-value key " + key);
+//                writerInfo("linkinfo  key-value value " + value);
+//            }
+//        }
+        String host = LinkInfo.getHost(this);
+        String ip = LinkInfo.getIP(this);
+        int port = LinkInfo.getPort(this);
+        writerInfo("host  is " + host);
+        writerInfo("ip is   " + ip);
+        writerInfo("port is " + port);
+        PublicMsg.BASEURL = "http://"+ip+":6253"+"/EvidenceService/app";
         Netroid.GetHttp("/loginNoPasswordByGet?account=" + user, new Netroid.OnLister<JSONObject>() {
             @Override
             public void onSuccess(JSONObject response) {
@@ -301,10 +357,10 @@ public class Splash extends Activity {
                         @Override
                         public void run() {
                             String domain;
-                            if(isDebug){
+                            if (isDebug) {
                                 domain = "192.168.191.1";
-                            }else {
-                                domain = "172.168.0.199";
+                            } else {
+                                domain = "10.54.50.216";
                             }
                             NetUtilPing.ping(domain, 4, fileName);
                         }
@@ -448,6 +504,38 @@ public class Splash extends Activity {
             startActivity(intent);
         }
     }
+
+    PstoreAuthListener authListener = new PstoreAuthListener() {
+        @Override
+        public void onComplete(Oauth2AccessToken oauth2AccessToken) {
+            oauth2AccessToken = oauth2AccessToken;
+            writerInfo("authListener onComplete token = " + oauth2AccessToken.getToken());
+            IPstoreAPI pstoreAPI = new PstoreAPIImpl();
+            pstoreAPI.requestUserInfo(Splash.this, mResponse, ID, oauth2AccessToken.getToken());
+        }
+
+        @Override
+        public void onPstoreException(PstoreException e) {
+            writerInfo("authListener onPstoreException = " + e.getLocalizedMessage());
+        }
+
+        @Override
+        public void onCancel() {
+
+        }
+    };
+
+    private IPstoreHandler.Response mResponse = new IPstoreHandler.Response() {
+        @Override
+        public void onResponse(Bundle response) {
+            UserObject user = UserObject.fromBundle(response);
+            writerInfo("IPstoreHandler getAccount account = " + user.getAccount());
+        }
+
+        public void onPstoreException(PstoreException exception) {
+
+        }
+    };
 
     private void initWriter() throws IOException {
         String path = AppPathUtil.getLogPath() + "/logs";

@@ -7,8 +7,8 @@ android {
         applicationId "com.gofirst.scenecollection.evidence"
         minSdkVersion 19
         targetSdkVersion 22
-        versionCode 98
-        versionName "1.0.98"
+        versionCode 100
+        versionName "1.0.100"
         multiDexEnabled true
     }
     signingConfigs {
@@ -25,7 +25,7 @@ android {
             signingConfig signingConfigs.release
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            manifestPlaceholders = [isdebug: false, categoryType: "android.intent.category.DEFAULT"]
+            manifestPlaceholders = [isdebug: false, categoryType: "pstore.intent.category.APP"]
 //            android.applicationVariants.all { variant ->
 //                variant.outputs.all {
 //                    //这里修改apk文件名
@@ -81,7 +81,7 @@ repositories {
     flatDir {
         dirs 'libs'
     }
-    google()
+//    google()
 }
 
 dependencies {
@@ -118,8 +118,8 @@ dependencies {
     compile 'com.android.support:support-v4:23.0.1'
     compile 'com.jpardogo.materialtabstrip:library:1.1.0'
     compile group: 'com.google.zxing', name: 'core', version: '3.3.0'
-//    compile 'com.android.support:multidex:1.0.1'
-    compile 'com.android.support:multidex:1.0.2'
+    compile 'com.android.support:multidex:1.0.1'
+//    compile 'com.android.support:multidex:1.0.2'
     compile project(':gftxckydraw')
     /*compile project(path: ':gftxckydraw')*/
     compile files('libs/afinal.jar')

@@ -1,0 +1,649 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+  <asset>
+    <contributor>
+      <author>Administrator</author>
+      <authoring_tool>OpenCOLLADA2011</authoring_tool>
+      <comments>
+			ColladaMaya export options: 
+			bakeTransforms=0;relativePaths=0;copyTextures=0;exportTriangles=0;exportCgfxFileReferences=0;
+			isSampling=0;curveConstrainSampling=0;removeStaticCurves=0;exportPolygonMeshes=1;exportLights=0;
+			exportCameras=0;exportJointsAndSkin=0;exportAnimations=0;exportInvisibleNodes=0;exportDefaultCameras=0;
+			exportTexCoords=0;exportNormals=0;exportNormalsPerVertex=0;exportVertexColors=0;exportVertexColorsPerVertex=0;
+			exportTexTangents=0;exportTangents=0;exportReferencedMaterials=0;exportMaterialsOnly=0;
+			exportXRefs=0;dereferenceXRefs=1;exportCameraAsLookat=0;cameraXFov=0;cameraYFov=0;doublePrecision=0
+		</comments>
+      <source_data>file:///F:/gongzuo/xiangkuang2012-5-11P.mb</source_data>
+    </contributor>
+    <created>2012-06-04T09:07:32</created>
+    <modified>2012-06-04T09:07:32</modified>
+    <unit name="centimeter" meter="0.01"/>
+    <up_axis>Y_UP</up_axis>
+  </asset>
+  <library_materials>
+    <material id="mfhhdjfrt" name="mfhhdjfrt">
+      <instance_effect url="#mfhhdjfrt-fx"/>
+    </material>
+    <material id="Material_yrshgawe" name="Material_yrshgawe">
+      <instance_effect url="#Material_yrshgawe-fx"/>
+    </material>
+    <material id="Material_4444444t" name="Material_4444444t">
+      <instance_effect url="#Material_4444444t-fx"/>
+    </material>
+    <material id="Material_ytdk" name="Material_ytdk">
+      <instance_effect url="#Material_ytdk-fx"/>
+    </material>
+    <material id="ftghr" name="ftghr">
+      <instance_effect url="#ftghr-fx"/>
+    </material>
+  </library_materials>
+  <library_effects>
+    <effect id="Material_4444444t-fx">
+      <profile_COMMON>
+        <newparam sid="Map__44-surface">
+          <surface type="2D">
+            <init_from>Map__44</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="Map__44-sampler">
+          <sampler2D>
+            <source>Map__44-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <phong>
+            <emission>
+              <color>0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color>0.21307 0.183005 0.064052 1</color>
+            </ambient>
+            <diffuse>
+              <texture texture="Map__44-sampler" texcoord="TEX0">
+                <extra>
+                  <technique profile="OpenCOLLADAMaya">
+                    <blend_mode>NONE</blend_mode>
+                    <coverageU>1</coverageU>
+                    <coverageV>1</coverageV>
+                    <fast>0</fast>
+                    <mirrorU>0</mirrorU>
+                    <mirrorV>0</mirrorV>
+                    <noiseU>0</noiseU>
+                    <noiseV>0</noiseV>
+                    <offsetU>0</offsetU>
+                    <offsetV>0</offsetV>
+                    <repeatU>1</repeatU>
+                    <repeatV>1</repeatV>
+                    <rotateFrame>0</rotateFrame>
+                    <rotateUV>0</rotateUV>
+                    <stagger>0</stagger>
+                    <translateFrameU>0</translateFrameU>
+                    <translateFrameV>0</translateFrameV>
+                    <wrapU>1</wrapU>
+                    <wrapV>1</wrapV>
+                  </technique>
+                </extra>
+              </texture>
+            </diffuse>
+            <specular>
+              <color>0.135 0.135 0.135 1</color>
+            </specular>
+            <shininess>
+              <float>22.62741</float>
+            </shininess>
+            <reflective>
+              <color>0 0 0 1</color>
+            </reflective>
+            <reflectivity>
+              <float>0.5</float>
+            </reflectivity>
+            <transparent opaque="RGB_ZERO">
+              <color>0 0 0 1</color>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="Material_yrshgawe-fx">
+      <profile_COMMON>
+        <newparam sid="Map__44-surface">
+          <surface type="2D">
+            <init_from>Map__44</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="Map__44-sampler">
+          <sampler2D>
+            <source>Map__44-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <phong>
+            <emission>
+              <color>0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color>0.088888 0.064052 0.181698 1</color>
+            </ambient>
+            <diffuse>
+              <texture texture="Map__44-sampler" texcoord="TEX0">
+                <extra>
+                  <technique profile="OpenCOLLADAMaya">
+                    <blend_mode>NONE</blend_mode>
+                    <coverageU>1</coverageU>
+                    <coverageV>1</coverageV>
+                    <fast>0</fast>
+                    <mirrorU>0</mirrorU>
+                    <mirrorV>0</mirrorV>
+                    <noiseU>0</noiseU>
+                    <noiseV>0</noiseV>
+                    <offsetU>0</offsetU>
+                    <offsetV>0</offsetV>
+                    <repeatU>1</repeatU>
+                    <repeatV>1</repeatV>
+                    <rotateFrame>0</rotateFrame>
+                    <rotateUV>0</rotateUV>
+                    <stagger>0</stagger>
+                    <translateFrameU>0</translateFrameU>
+                    <translateFrameV>0</translateFrameV>
+                    <wrapU>1</wrapU>
+                    <wrapV>1</wrapV>
+                  </technique>
+                </extra>
+              </texture>
+            </diffuse>
+            <specular>
+              <color>0.225 0.225 0.225 1</color>
+            </specular>
+            <shininess>
+              <float>22.62741</float>
+            </shininess>
+            <reflective>
+              <color>0 0 0 1</color>
+            </reflective>
+            <reflectivity>
+              <float>0.5</float>
+            </reflectivity>
+            <transparent opaque="RGB_ZERO">
+              <color>0 0 0 1</color>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="Material_ytdk-fx">
+      <profile_COMMON>
+        <newparam sid="Map__44-surface">
+          <surface type="2D">
+            <init_from>Map__44</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="Map__44-sampler">
+          <sampler2D>
+            <source>Map__44-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <phong>
+            <emission>
+              <color>0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color>0.218299 0.216991 0.06928 1</color>
+            </ambient>
+            <diffuse>
+              <texture texture="Map__44-sampler" texcoord="TEX0">
+                <extra>
+                  <technique profile="OpenCOLLADAMaya">
+                    <blend_mode>NONE</blend_mode>
+                    <coverageU>1</coverageU>
+                    <coverageV>1</coverageV>
+                    <fast>0</fast>
+                    <mirrorU>0</mirrorU>
+                    <mirrorV>0</mirrorV>
+                    <noiseU>0</noiseU>
+                    <noiseV>0</noiseV>
+                    <offsetU>0</offsetU>
+                    <offsetV>0</offsetV>
+                    <repeatU>1</repeatU>
+                    <repeatV>1</repeatV>
+                    <rotateFrame>0</rotateFrame>
+                    <rotateUV>0</rotateUV>
+                    <stagger>0</stagger>
+                    <translateFrameU>0</translateFrameU>
+                    <translateFrameV>0</translateFrameV>
+                    <wrapU>1</wrapU>
+                    <wrapV>1</wrapV>
+                  </technique>
+                </extra>
+              </texture>
+            </diffuse>
+            <specular>
+              <color>0.135 0.135 0.135 1</color>
+            </specular>
+            <shininess>
+              <float>22.62741</float>
+            </shininess>
+            <reflective>
+              <color>0 0 0 1</color>
+            </reflective>
+            <reflectivity>
+              <float>0.5</float>
+            </reflectivity>
+            <transparent opaque="RGB_ZERO">
+              <color>0 0 0 1</color>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="ftghr-fx">
+      <profile_COMMON>
+        <newparam sid="Map__44-surface">
+          <surface type="2D">
+            <init_from>Map__44</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="Map__44-sampler">
+          <sampler2D>
+            <source>Map__44-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <phong>
+            <emission>
+              <color>0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color>0.180392 0.168628 0.090196 1</color>
+            </ambient>
+            <diffuse>
+              <texture texture="Map__44-sampler" texcoord="TEX0">
+                <extra>
+                  <technique profile="OpenCOLLADAMaya">
+                    <blend_mode>NONE</blend_mode>
+                    <coverageU>1</coverageU>
+                    <coverageV>1</coverageV>
+                    <fast>0</fast>
+                    <mirrorU>0</mirrorU>
+                    <mirrorV>0</mirrorV>
+                    <noiseU>0</noiseU>
+                    <noiseV>0</noiseV>
+                    <offsetU>0</offsetU>
+                    <offsetV>0</offsetV>
+                    <repeatU>1</repeatU>
+                    <repeatV>1</repeatV>
+                    <rotateFrame>0</rotateFrame>
+                    <rotateUV>0</rotateUV>
+                    <stagger>0</stagger>
+                    <translateFrameU>0</translateFrameU>
+                    <translateFrameV>0</translateFrameV>
+                    <wrapU>1</wrapU>
+                    <wrapV>1</wrapV>
+                  </technique>
+                </extra>
+              </texture>
+            </diffuse>
+            <specular>
+              <color>0.124706 0.125882 0.127059 1</color>
+            </specular>
+            <shininess>
+              <float>22.62741</float>
+            </shininess>
+            <reflective>
+              <color>0 0 0 1</color>
+            </reflective>
+            <reflectivity>
+              <float>0.5</float>
+            </reflectivity>
+            <transparent opaque="RGB_ZERO">
+              <color>0 0 0 1</color>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="mfhhdjfrt-fx">
+      <profile_COMMON>
+        <technique sid="common">
+          <phong>
+            <emission>
+              <color>0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color>0.2915 0.064052 0.064052 1</color>
+            </ambient>
+            <diffuse>
+              <color>0.992157 0.913726 0.74902 1</color>
+            </diffuse>
+            <specular>
+              <color>0.049608 0.048235 0.045098 1</color>
+            </specular>
+            <shininess>
+              <float>5.656854</float>
+            </shininess>
+            <reflective>
+              <color>0 0 0 1</color>
+            </reflective>
+            <reflectivity>
+              <float>0.5</float>
+            </reflectivity>
+            <transparent opaque="RGB_ZERO">
+              <color>0 0 0 1</color>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_images>
+    <image id="Map__44" name="Map__44_1">
+      <init_from>file:///E:/%E6%A8%A1%E5%9E%8B%E5%BA????%E5%8A%9E%E5%85%AC/maps/%E4%B9</init_from>
+      <extra>
+        <technique profile="OpenCOLLADAMaya">
+          <dgnode_type>kFile</dgnode_type>
+          <image_sequence>0</image_sequence>
+          <originalMayaNodeId>Map__44_1</originalMayaNodeId>
+        </technique>
+      </extra>
+    </image>
+  </library_images>
+  <library_geometries>
+    <geometry id="polySurfaceShape216" name="polySurfaceShape216">
+      <mesh>
+        <source id="polySurfaceShape216-positions" name="polySurfaceShape216-positions">
+          <float_array id="polySurfaceShape216-positions-array" count="12">0.3038508 0 0.2508725 0.3038508 0 0.06697118 0.05661607 0 0.06697118 0.05661607 0 0.2508725</float_array>
+          <technique_common>
+            <accessor source="#polySurfaceShape216-positions-array" count="4" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="polySurfaceShape216-vertices" name="polySurfaceShape216-vertices">
+          <input semantic="POSITION" source="#polySurfaceShape216-positions"/>
+        </vertices>
+        <polylist material="mfhhdjfrtSG" count="1">
+          <input semantic="VERTEX" source="#polySurfaceShape216-vertices" offset="0"/>
+          <vcount>4</vcount>
+          <p>0 1 2 3</p>
+        </polylist>
+      </mesh>
+      <extra>
+        <technique profile="OpenCOLLADAMaya">
+          <originalMayaNodeId>polySurfaceShape216</originalMayaNodeId>
+          <double_sided>1</double_sided>
+        </technique>
+      </extra>
+    </geometry>
+    <geometry id="polySurfaceShape217" name="polySurfaceShape217">
+      <mesh>
+        <source id="polySurfaceShape217-positions" name="polySurfaceShape217-positions">
+          <float_array id="polySurfaceShape217-positions-array" count="12">0.04609993 0 0.06658941 0.04609993 0 0.06185493 0.3056884 0 0.06689052 0.3056884 0 0.06215604</float_array>
+          <technique_common>
+            <accessor source="#polySurfaceShape217-positions-array" count="4" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="polySurfaceShape217-vertices" name="polySurfaceShape217-vertices">
+          <input semantic="POSITION" source="#polySurfaceShape217-positions"/>
+        </vertices>
+        <polylist material="Material_yrshgaweSG" count="1">
+          <input semantic="VERTEX" source="#polySurfaceShape217-vertices" offset="0"/>
+          <vcount>4</vcount>
+          <p>3 2 0 1</p>
+        </polylist>
+      </mesh>
+      <extra>
+        <technique profile="OpenCOLLADAMaya">
+          <originalMayaNodeId>polySurfaceShape217</originalMayaNodeId>
+          <double_sided>1</double_sided>
+        </technique>
+      </extra>
+    </geometry>
+    <geometry id="polySurfaceShape218" name="polySurfaceShape218">
+      <mesh>
+        <source id="polySurfaceShape218-positions" name="polySurfaceShape218-positions">
+          <float_array id="polySurfaceShape218-positions-array" count="12">0.2993663 0 0.2557481 0.2993663 0 0.06678163 0.0484954 0 0.06678163 0.0484954 0 0.2557481</float_array>
+          <technique_common>
+            <accessor source="#polySurfaceShape218-positions-array" count="4" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="polySurfaceShape218-vertices" name="polySurfaceShape218-vertices">
+          <input semantic="POSITION" source="#polySurfaceShape218-positions"/>
+        </vertices>
+        <polylist material="Material_4444444tSG" count="1">
+          <input semantic="VERTEX" source="#polySurfaceShape218-vertices" offset="0"/>
+          <vcount>4</vcount>
+          <p>1 2 3 0</p>
+        </polylist>
+      </mesh>
+      <extra>
+        <technique profile="OpenCOLLADAMaya">
+          <originalMayaNodeId>polySurfaceShape218</originalMayaNodeId>
+          <double_sided>1</double_sided>
+        </technique>
+      </extra>
+    </geometry>
+    <geometry id="polySurfaceShape219" name="polySurfaceShape219">
+      <mesh>
+        <source id="polySurfaceShape219-positions" name="polySurfaceShape219-positions">
+          <float_array id="polySurfaceShape219-positions-array" count="12">0.09847897 0 0.01778072 0.09657953 0 0.02156615 0.329553 0 0.1252045 0.3311177 0 0.1213585</float_array>
+          <technique_common>
+            <accessor source="#polySurfaceShape219-positions-array" count="4" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="polySurfaceShape219-vertices" name="polySurfaceShape219-vertices">
+          <input semantic="POSITION" source="#polySurfaceShape219-positions"/>
+        </vertices>
+        <polylist material="Material_ytdkSG" count="1">
+          <input semantic="VERTEX" source="#polySurfaceShape219-vertices" offset="0"/>
+          <vcount>4</vcount>
+          <p>3 0 1 2</p>
+        </polylist>
+      </mesh>
+      <extra>
+        <technique profile="OpenCOLLADAMaya">
+          <originalMayaNodeId>polySurfaceShape219</originalMayaNodeId>
+          <double_sided>1</double_sided>
+        </technique>
+      </extra>
+    </geometry>
+    <geometry id="polySurfaceShape220" name="polySurfaceShape220">
+      <mesh>
+        <source id="polySurfaceShape220-positions" name="polySurfaceShape220-positions">
+          <float_array id="polySurfaceShape220-positions-array" count="12">0.09869271 0 0.02251923 0.02178364 0 0.195731 0.25102 0 0.2976164 0.3278767 0 0.1245565</float_array>
+          <technique_common>
+            <accessor source="#polySurfaceShape220-positions-array" count="4" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="polySurfaceShape220-vertices" name="polySurfaceShape220-vertices">
+          <input semantic="POSITION" source="#polySurfaceShape220-positions"/>
+        </vertices>
+        <polylist material="ftghrSG" count="1">
+          <input semantic="VERTEX" source="#polySurfaceShape220-vertices" offset="0"/>
+          <vcount>4</vcount>
+          <p>3 0 1 2</p>
+        </polylist>
+      </mesh>
+      <extra>
+        <technique profile="OpenCOLLADAMaya">
+          <originalMayaNodeId>polySurfaceShape220</originalMayaNodeId>
+          <double_sided>1</double_sided>
+        </technique>
+      </extra>
+    </geometry>
+    <geometry id="polySurfaceShape221" name="polySurfaceShape221">
+      <mesh>
+        <source id="polySurfaceShape221-positions" name="polySurfaceShape221-positions">
+          <float_array id="polySurfaceShape221-positions-array" count="12">0.2514153 0 0.2967386 0.3262125 0 0.1287358 0.1003529 0 0.02817587 0.02555563 0 0.1961786</float_array>
+          <technique_common>
+            <accessor source="#polySurfaceShape221-positions-array" count="4" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="polySurfaceShape221-vertices" name="polySurfaceShape221-vertices">
+          <input semantic="POSITION" source="#polySurfaceShape221-positions"/>
+        </vertices>
+        <polylist material="mfhhdjfrtSG" count="1">
+          <input semantic="VERTEX" source="#polySurfaceShape221-vertices" offset="0"/>
+          <vcount>4</vcount>
+          <p>0 1 2 3</p>
+        </polylist>
+      </mesh>
+      <extra>
+        <technique profile="OpenCOLLADAMaya">
+          <originalMayaNodeId>polySurfaceShape221</originalMayaNodeId>
+          <double_sided>1</double_sided>
+        </technique>
+      </extra>
+    </geometry>
+  </library_geometries>
+  <library_visual_scenes>
+    <visual_scene id="VisualSceneNode" name="xiangkuang2012-5-11P">
+      <node id="polySurface215" name="polySurface215" type="NODE">
+        <translate sid="translate">0 0 0</translate>
+        <rotate sid="rotateZ">0 0 1 0</rotate>
+        <rotate sid="rotateY">0 1 0 0</rotate>
+        <rotate sid="rotateX">1 0 0 0</rotate>
+        <scale sid="scale">1 1 1</scale>
+        <instance_geometry url="#polySurfaceShape216">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="mfhhdjfrtSG" target="#mfhhdjfrt"/>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+        <extra>
+          <technique profile="OpenCOLLADAMaya">
+            <originalMayaNodeId>polySurface215</originalMayaNodeId>
+          </technique>
+        </extra>
+      </node>
+      <node id="polySurface216" name="polySurface216" type="NODE">
+        <translate sid="translate">0 0 0</translate>
+        <scale sid="scale">1 1 1</scale>
+        <instance_geometry url="#polySurfaceShape217">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="Material_yrshgaweSG" target="#Material_yrshgawe">
+                <bind_vertex_input semantic="TEX0" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+        <extra>
+          <technique profile="OpenCOLLADAMaya">
+            <originalMayaNodeId>polySurface216</originalMayaNodeId>
+          </technique>
+        </extra>
+      </node>
+      <node id="polySurface217" name="polySurface217" type="NODE">
+        <translate sid="translate">0 0 0</translate>
+        <scale sid="scale">1 1 1</scale>
+        <instance_geometry url="#polySurfaceShape218">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="Material_4444444tSG" target="#Material_4444444t">
+                <bind_vertex_input semantic="TEX0" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+        <extra>
+          <technique profile="OpenCOLLADAMaya">
+            <originalMayaNodeId>polySurface217</originalMayaNodeId>
+          </technique>
+        </extra>
+      </node>
+      <node id="polySurface218" name="polySurface218" type="NODE">
+        <translate sid="translate">0 0 0</translate>
+        <scale sid="scale">1 1 1</scale>
+        <instance_geometry url="#polySurfaceShape219">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="Material_ytdkSG" target="#Material_ytdk">
+                <bind_vertex_input semantic="TEX0" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+        <extra>
+          <technique profile="OpenCOLLADAMaya">
+            <originalMayaNodeId>polySurface218</originalMayaNodeId>
+          </technique>
+        </extra>
+      </node>
+      <node id="polySurface219" name="polySurface219" type="NODE">
+        <translate sid="translate">0 0 0</translate>
+        <scale sid="scale">1 1 1</scale>
+        <instance_geometry url="#polySurfaceShape220">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="ftghrSG" target="#ftghr">
+                <bind_vertex_input semantic="TEX0" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+        <extra>
+          <technique profile="OpenCOLLADAMaya">
+            <originalMayaNodeId>polySurface219</originalMayaNodeId>
+          </technique>
+        </extra>
+      </node>
+      <node id="polySurface220" name="polySurface220" type="NODE">
+        <translate sid="translate">0 0 0</translate>
+        <scale sid="scale">1 1 1</scale>
+        <instance_geometry url="#polySurfaceShape221">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="mfhhdjfrtSG" target="#mfhhdjfrt"/>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+        <extra>
+          <technique profile="OpenCOLLADAMaya">
+            <originalMayaNodeId>polySurface220</originalMayaNodeId>
+          </technique>
+        </extra>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#VisualSceneNode"/>
+  </scene>
+</COLLADA>

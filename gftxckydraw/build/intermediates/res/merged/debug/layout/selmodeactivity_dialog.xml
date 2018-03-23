@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+    android:layout_width="300dp"
+    android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="选择模型"
+        android:textColor="@color/sel_model_text_color"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/sel_model_split_line"
+        />
+    <Button android:textSize="15sp" android:id="@id/normalMode" android:background="@drawable/button_selector2" android:layout_width="fill_parent" android:layout_height="50dp" android:text="普通模式"
+        android:textColor="@color/sel_model_text_color"/>
+    <Button android:textSize="15sp" android:id="@id/expertMode"  android:background="@drawable/button_selector2" android:layout_width="fill_parent" android:layout_height="50dp" android:text="专业模式"
+        android:textColor="@color/sel_model_text_color"/>
+    <Button android:textSize="15sp" android:id="@+id/editnormalmode"  android:background="@drawable/button_selector2" android:layout_width="fill_parent" android:layout_height="50dp" android:text="普通模式编辑"
+        android:textColor="@color/sel_model_text_color"/>
+    <Button android:textSize="15sp" android:id="@+id/editexperMode"  android:background="@drawable/button_selector2" android:layout_width="fill_parent" android:layout_height="50dp" android:text="专业模式编辑"
+        android:textColor="@color/sel_model_text_color"/>
+</LinearLayout>

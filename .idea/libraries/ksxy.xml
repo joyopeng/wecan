@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="ksxy">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/app/libs/ksxy.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

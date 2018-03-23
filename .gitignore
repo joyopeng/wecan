@@ -1,0 +1,8 @@
+# Gradle files
+gftxckydraw/build/
+build/
+.gradle/
+gradlew
+.idea/
+
+

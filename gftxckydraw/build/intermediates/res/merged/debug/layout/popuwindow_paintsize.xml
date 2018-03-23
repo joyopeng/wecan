@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageButton android:id="@id/paintsize_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@android:drawable/ic_dialog_info" />
+    <ImageButton android:id="@id/paintsize_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@android:drawable/ic_input_add" />
+    <ImageButton android:id="@id/paintsize_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@android:drawable/ic_delete" />
+    <ImageButton android:id="@id/paintsize_4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@android:drawable/btn_dialog" />
+</LinearLayout>

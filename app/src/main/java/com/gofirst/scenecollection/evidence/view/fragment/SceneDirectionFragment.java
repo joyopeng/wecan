@@ -247,7 +247,7 @@ public class SceneDirectionFragment extends Fragment implements Animation.Animat
                                 @Override
                                 public void run() {
 //                                    BitmapUtils.saveBitmap("map", getActivity(), reCanvasBitmap(bitmap), System.currentTimeMillis() + "", getArguments().getString("father"), System.currentTimeMillis() + "", SceneDirectionFragment.this, getArguments().getString("caseId"));
-                                    BitmapUtils.saveBitmap("map", getActivity(), bitmap, System.currentTimeMillis() + "", getArguments().getString("father"), System.currentTimeMillis() + "", SceneDirectionFragment.this, getArguments().getString("caseId"));
+                                    BitmapUtils.saveBitmap("map", getActivity(), reCanvasBitmap(bitmap), System.currentTimeMillis() + "", getArguments().getString("father"), System.currentTimeMillis() + "", SceneDirectionFragment.this, getArguments().getString("caseId"));
                                 }
                             }).start();
                         }
@@ -289,7 +289,7 @@ public class SceneDirectionFragment extends Fragment implements Animation.Animat
         });
     }
 
-    private Bitmap reCanvasBitmap(Bitmap bp) {
+    private Bitmap[] reCanvasBitmap(Bitmap bp) {
         Bitmap[] resultset = new Bitmap[2];
         int width = bp.getWidth();
         int height = bp.getHeight();
@@ -314,7 +314,7 @@ public class SceneDirectionFragment extends Fragment implements Animation.Animat
         title.append(caseInfo.getAlarmCategoryName());
         resultset[0]= result;
         resultset[1] = drawNewBitmap(canvas, result, compass, location_sample, title.toString(), 36, "宋体", new String[]{orgName, userName, time}, 16);
-        return resultset[0];
+        return resultset;
     }
 
     @Override
