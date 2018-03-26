@@ -7,8 +7,8 @@ android {
         applicationId "com.gofirst.scenecollection.evidence"
         minSdkVersion 19
         targetSdkVersion 22
-        versionCode 100
-        versionName "1.0.100"
+        versionCode 101
+        versionName "1.0.101"
         multiDexEnabled true
     }
     signingConfigs {

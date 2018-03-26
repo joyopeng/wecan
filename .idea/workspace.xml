@@ -10,176 +10,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1f6eb7d8-c213-4d8a-8e78-54425d28285d" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/__local_aars____home_joyopeng_project_wecan_app_libs_AMap3DMap_3_3_3_AMapLocation_2_7_0_20160726_jar_unspecified_jar.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/__local_aars____home_joyopeng_project_wecan_app_libs_AraBMApiDev_jar_unspecified_jar.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/__local_aars____home_joyopeng_project_wecan_app_libs_AraBMApiFp_jar_unspecified_jar.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/__local_aars____home_joyopeng_project_wecan_app_libs_AraBTIdCardInfo_jar_unspecified_jar.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/__local_aars____home_joyopeng_project_wecan_app_libs_ArateIDCardBT_jar_unspecified_jar.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/__local_aars____home_joyopeng_project_wecan_app_libs_ModuleAPI_Android_Blue_2_4_4_1_jar_unspecified_jar.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/__local_aars____home_joyopeng_project_wecan_app_libs_PSTORE_ANDROID_SDK_V1_12_0_jar_unspecified_jar.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/__local_aars____home_joyopeng_project_wecan_app_libs_afinal_jar_unspecified_jar.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/__local_aars____home_joyopeng_project_wecan_app_libs_asmack_jar_unspecified_jar.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/__local_aars____home_joyopeng_project_wecan_app_libs_idcardrec_jar_unspecified_jar.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/__local_aars____home_joyopeng_project_wecan_app_libs_ksxy_jar_unspecified_jar.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/__local_aars____home_joyopeng_project_wecan_app_libs_libs_jar_unspecified_jar.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/__local_aars____home_joyopeng_project_wecan_app_libs_policesdks_jar_unspecified_jar.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/__local_aars____home_joyopeng_project_wecan_app_libs_sdk_v1_0_0_jar_unspecified_jar.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/__local_aars____home_joyopeng_project_wecan_app_libs_smartshellUsb_jar_unspecified_jar.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/__local_aars____home_joyopeng_project_wecan_app_libs_sun_misc_BASE64Decoder_jar_unspecified_jar.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/__local_aars____home_joyopeng_project_wecan_app_libs_usc_jar_unspecified_jar.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/__local_aars____home_joyopeng_project_wecan_app_libs_user_jar_jar_unspecified_jar.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/com_alibaba_fastjson_1_2_12_jar.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_animated_vector_drawable_23_2_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_appcompat_v7_23_2_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_cardview_v7_23_2_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_design_23_2_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_multidex_1_0_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_multidex_instrumentation_1_0_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_recyclerview_v7_23_2_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_support_annotations_23_0_1_jar.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_support_annotations_23_2_0_jar.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_support_v4_23_0_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_support_v4_23_2_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_support_vector_drawable_23_2_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/com_bm_photoview_library_1_3_6.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/com_cjj_materialrefeshlayout_library_1_3_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/com_duowan_android_netroid_netroid_1_2_1_jar.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/com_getbase_floatingactionbutton_1_10_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/com_github_fangx_haorefresh_1_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/com_github_thinkcool_circletextimageview_1_0_20151218.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_code_gson_gson_2_7_jar.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_zxing_core_3_3_0_jar.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/com_huxq17_xrefreshview_xrefreshview_3_5_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/com_jpardogo_materialtabstrip_library_1_1_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/com_melnykov_floatingactionbutton_1_3_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/com_nineoldandroids_library_2_4_0_jar.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/com_nostra13_universalimageloader_universal_image_loader_1_9_5_jar.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/com_oguzdev_CircularFloatingActionMenu_1_0_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/com_squareup_okhttp3_logging_interceptor_3_4_1_jar.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/com_squareup_okhttp3_okhttp_3_4_1_jar.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/com_squareup_okio_okio_1_9_0_jar.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/com_squareup_retrofit2_converter_gson_2_1_0_jar.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/com_squareup_retrofit2_retrofit_2_1_0_jar.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/info_hoang8f_android_segmented_1_0_6.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/io_reactivex_rxandroid_1_2_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/io_reactivex_rxjava_1_1_6_jar.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/io_saeid_fab_loading_0_6_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/io_saeid_support_animator_0_2_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/junit_junit_4_12_jar.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/org_hamcrest_hamcrest_core_1_3_jar.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/pen_v4_1_1_light__aar.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gftxckydraw/build/generated/source/r/debug/android/support/v4/R.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/android/support/v4/R.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gftxckydraw/build/intermediates/bundles/debug/classes.jar" afterPath="$PROJECT_DIR$/gftxckydraw/build/intermediates/bundles/debug/classes.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/ExperModeActivity$1.class" afterPath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/ExperModeActivity$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/ExperModeActivity$10.class" afterPath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/ExperModeActivity$10.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/ExperModeActivity$11$1.class" afterPath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/ExperModeActivity$11$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/ExperModeActivity$11$2.class" afterPath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/ExperModeActivity$11$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/ExperModeActivity$11$3.class" afterPath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/ExperModeActivity$11$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/ExperModeActivity$11.class" afterPath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/ExperModeActivity$11.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/ExperModeActivity$12.class" afterPath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/ExperModeActivity$12.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/ExperModeActivity$13.class" afterPath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/ExperModeActivity$13.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/ExperModeActivity$14.class" afterPath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/ExperModeActivity$14.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/ExperModeActivity$15$1.class" afterPath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/ExperModeActivity$15$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/ExperModeActivity$15$2.class" afterPath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/ExperModeActivity$15$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/ExperModeActivity$15.class" afterPath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/ExperModeActivity$15.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/ExperModeActivity$16.class" afterPath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/ExperModeActivity$16.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/ExperModeActivity$17.class" afterPath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/ExperModeActivity$17.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/ExperModeActivity$18.class" afterPath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/ExperModeActivity$18.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/ExperModeActivity$19.class" afterPath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/ExperModeActivity$19.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/ExperModeActivity$2.class" afterPath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/ExperModeActivity$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/ExperModeActivity$20.class" afterPath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/ExperModeActivity$20.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/ExperModeActivity$21.class" afterPath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/ExperModeActivity$21.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/ExperModeActivity$3.class" afterPath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/ExperModeActivity$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/ExperModeActivity$4.class" afterPath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/ExperModeActivity$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/ExperModeActivity$5.class" afterPath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/ExperModeActivity$5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/ExperModeActivity$6.class" afterPath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/ExperModeActivity$6.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/ExperModeActivity$7.class" afterPath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/ExperModeActivity$7.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/ExperModeActivity$8.class" afterPath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/ExperModeActivity$8.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/ExperModeActivity$9.class" afterPath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/ExperModeActivity$9.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/ExperModeActivity$TableTextWatcher.class" afterPath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/ExperModeActivity$TableTextWatcher.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/ExperModeActivity.class" afterPath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/ExperModeActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/ExperModeCanvas$ExperModeStatus.class" afterPath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/ExperModeCanvas$ExperModeStatus.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/ExperModeCanvas$MoveOperType.class" afterPath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/ExperModeCanvas$MoveOperType.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/ExperModeCanvas.class" afterPath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/ExperModeCanvas.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/ExperModeCanvasUtil.class" afterPath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/ExperModeCanvasUtil.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/Md5.class" afterPath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/Md5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/ModListAdapter$ModNameTextView.class" afterPath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/ModListAdapter$ModNameTextView.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/ModListAdapter$ModeTextOnClickListener$1$1.class" afterPath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/ModListAdapter$ModeTextOnClickListener$1$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/ModListAdapter$ModeTextOnClickListener$1.class" afterPath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/ModListAdapter$ModeTextOnClickListener$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/ModListAdapter$ModeTextOnClickListener.class" afterPath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/ModListAdapter$ModeTextOnClickListener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/ModListAdapter.class" afterPath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/ModListAdapter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/MouldBeanLoader.class" afterPath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/MouldBeanLoader.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/MouldData.class" afterPath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/MouldData.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/NormalModeActivity$1.class" afterPath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/NormalModeActivity$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/NormalModeActivity$2.class" afterPath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/NormalModeActivity$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/NormalModeActivity$3.class" afterPath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/NormalModeActivity$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/NormalModeActivity$4$1.class" afterPath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/NormalModeActivity$4$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/NormalModeActivity$4$2.class" afterPath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/NormalModeActivity$4$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/NormalModeActivity$4$3.class" afterPath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/NormalModeActivity$4$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/NormalModeActivity$4$4.class" afterPath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/NormalModeActivity$4$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/NormalModeActivity$4.class" afterPath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/NormalModeActivity$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/NormalModeActivity$5.class" afterPath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/NormalModeActivity$5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/NormalModeActivity$6.class" afterPath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/NormalModeActivity$6.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/NormalModeActivity$7.class" afterPath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/NormalModeActivity$7.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/NormalModeActivity$8$1.class" afterPath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/NormalModeActivity$8$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/NormalModeActivity$8$2.class" afterPath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/NormalModeActivity$8$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/NormalModeActivity$8.class" afterPath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/NormalModeActivity$8.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/NormalModeActivity$9.class" afterPath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/NormalModeActivity$9.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/NormalModeActivity.class" afterPath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/NormalModeActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/NormalModeCanvas.class" afterPath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/NormalModeCanvas.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/R$array.class" afterPath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/R$array.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/R$color.class" afterPath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/R$color.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/R$dimen.class" afterPath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/R$dimen.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/R$drawable.class" afterPath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/R$drawable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/R$id.class" afterPath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/R$id.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/R$layout.class" afterPath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/R$layout.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/R$menu.class" afterPath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/R$menu.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/R$string.class" afterPath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/R$string.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/R$style.class" afterPath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/R$style.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/R.class" afterPath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/R.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/SelModeActivity$1.class" afterPath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/SelModeActivity$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/SelModeActivity$2.class" afterPath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/SelModeActivity$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/SelModeActivity$3.class" afterPath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/SelModeActivity$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/SelModeActivity$4.class" afterPath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/SelModeActivity$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/SelModeActivity$5.class" afterPath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/SelModeActivity$5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/SelModeActivity.class" afterPath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/SelModeActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/Serializer.class" afterPath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/Serializer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/ShowBitMapActivity.class" afterPath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/ShowBitMapActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/primitive/BezierBean.class" afterPath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/primitive/BezierBean.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/primitive/DoorBean.class" afterPath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/primitive/DoorBean.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/primitive/DrawTextBean.class" afterPath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/primitive/DrawTextBean.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/primitive/GatherBean.class" afterPath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/primitive/GatherBean.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/primitive/LineBean.class" afterPath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/primitive/LineBean.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/primitive/MatrixBean.class" afterPath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/primitive/MatrixBean.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/primitive/MouldBean.class" afterPath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/primitive/MouldBean.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/primitive/MouldPathBean.class" afterPath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/primitive/MouldPathBean.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/primitive/PathPointBean.class" afterPath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/primitive/PathPointBean.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/primitive/TableBean.class" afterPath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/primitive/TableBean.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/primitive/XCKYPath$1.class" afterPath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/primitive/XCKYPath$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/primitive/XCKYPath$ActionArc.class" afterPath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/primitive/XCKYPath$ActionArc.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/primitive/XCKYPath$ActionCircle.class" afterPath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/primitive/XCKYPath$ActionCircle.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/primitive/XCKYPath$ActionClose.class" afterPath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/primitive/XCKYPath$ActionClose.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/primitive/XCKYPath$ActionCubic.class" afterPath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/primitive/XCKYPath$ActionCubic.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/primitive/XCKYPath$ActionLine.class" afterPath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/primitive/XCKYPath$ActionLine.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/primitive/XCKYPath$ActionMove.class" afterPath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/primitive/XCKYPath$ActionMove.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/primitive/XCKYPath$ActionPath.class" afterPath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/primitive/XCKYPath$ActionPath.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/primitive/XCKYPath$ActionRect.class" afterPath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/primitive/XCKYPath$ActionRect.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/primitive/XCKYPath$PathAction$PathActionType.class" afterPath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/primitive/XCKYPath$PathAction$PathActionType.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/primitive/XCKYPath.class" afterPath="$PROJECT_DIR$/gftxckydraw/build/intermediates/classes/debug/com/gftxcky/draw/primitive/XCKYPath.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gftxckydraw/build/outputs/aar/gftxckydraw-debug.aar" afterPath="$PROJECT_DIR$/gftxckydraw/build/outputs/aar/gftxckydraw-debug.aar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/gradle.xml" afterPath="$PROJECT_DIR$/.idea/gradle.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build.gradle" afterPath="$PROJECT_DIR$/app/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/gofirst/scenecollection/evidence/utils/BitmapUtils.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/gofirst/scenecollection/evidence/utils/BitmapUtils.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/gofirst/scenecollection/evidence/view/activity/Splash.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/gofirst/scenecollection/evidence/view/activity/Splash.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/gofirst/scenecollection/evidence/view/fragment/SceneDirectionFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/gofirst/scenecollection/evidence/view/fragment/SceneDirectionFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gftxckydraw/build/generated/source/r/debug/com/gftxcky/draw/R.java" afterPath="$PROJECT_DIR$/gftxckydraw/build/generated/source/r/debug/com/gftxcky/draw/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gftxckydraw/build/intermediates/bundles/debug/R.txt" afterPath="$PROJECT_DIR$/gftxckydraw/build/intermediates/bundles/debug/R.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gftxckydraw/build/intermediates/incremental/packageDebugResources/merger.xml" afterPath="$PROJECT_DIR$/gftxckydraw/build/intermediates/incremental/packageDebugResources/merger.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gftxckydraw/gftxckydraw.iml" afterPath="$PROJECT_DIR$/gftxckydraw/gftxckydraw.iml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -281,46 +116,39 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="SceneDirectionFragment.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/gofirst/scenecollection/evidence/view/fragment/SceneDirectionFragment.java">
+      <file leaf-file-name="Splash.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/gofirst/scenecollection/evidence/view/activity/Splash.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="304" column="46" selection-start-line="304" selection-start-column="46" selection-end-line="304" selection-end-column="46" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BitmapUtils.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/gofirst/scenecollection/evidence/utils/BitmapUtils.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="86" column="14" selection-start-line="86" selection-start-column="12" selection-end-line="86" selection-end-column="14" />
+              <caret line="163" column="35" selection-start-line="163" selection-start-column="35" selection-end-line="163" selection-end-column="35" />
               <folding>
-                <element signature="e#932#943#0" expanded="true" />
-                <element signature="e#1027#1044#0" expanded="true" />
-                <element signature="e#1103#1111#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ScenePlanAdapter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/gofirst/scenecollection/evidence/view/adapter/ScenePlanAdapter.java">
+      <file leaf-file-name="PermissionSetting.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/gofirst/scenecollection/evidence/view/activity/PermissionSetting.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="32" column="15" selection-start-line="32" selection-start-column="15" selection-end-line="32" selection-end-column="15" />
-              <folding />
+            <state vertical-scroll-proportion="0.5487805">
+              <caret line="672" column="0" selection-start-line="664" selection-start-column="0" selection-end-line="672" selection-end-column="0" />
+              <folding>
+                <element signature="e#16489#16945#0" expanded="true" />
+                <element signature="e#16944#16945#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ScenePlan.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/gofirst/scenecollection/evidence/view/fragment/ScenePlan.java">
+      <file leaf-file-name="PersonCenterFragment.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/gofirst/scenecollection/evidence/view/fragment/PersonCenterFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.18489985">
-              <caret line="307" column="0" selection-start-line="307" selection-start-column="0" selection-end-line="307" selection-end-column="0" />
-              <folding />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="64" column="50" selection-start-line="64" selection-start-column="42" selection-end-line="64" selection-end-column="50" />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -2698,7 +2526,7 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="6044493931941" />
+        <entry key="$PROJECT_DIR$" value="6044509343306" />
       </map>
     </option>
     <option name="projectBuildClasspath">
@@ -3279,11 +3107,11 @@
         <option value="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" />
         <option value="$PROJECT_DIR$/gradle.properties" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/gofirst/scenecollection/evidence/view/activity/Splash.java" />
-        <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/gofirst/scenecollection/evidence/utils/BitmapUtils.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/gofirst/scenecollection/evidence/view/fragment/SceneDirectionFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/gofirst/scenecollection/evidence/view/fragment/ScenePlan.java" />
+        <option value="$PROJECT_DIR$/app/build.gradle" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/gofirst/scenecollection/evidence/view/activity/Splash.java" />
       </list>
     </option>
   </component>
@@ -3318,6 +3146,22 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wecan" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wecan" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -3335,10 +3179,6 @@
               <option name="myItemId" value="wecan" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gftxckydraw" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -3346,49 +3186,19 @@
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="gftxckydraw" />
+              <option name="myItemId" value="app" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="draw" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wecan" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wecan" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wecan" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="device.picker.selection" value="GWY7N16A26001351" />
-    <property name="SearchEverywhereHistoryKey" value="dire&#9;FILE&#9;file:///home/joyopeng/project/wecan/app/src/main/java/com/gofirst/scenecollection/evidence/view/fragment/SceneDirectionFragment.java&#10;FloatWindowService&#9;FILE&#9;file:///home/joyopeng/project/wecan/app/src/main/java/com/gofirst/scenecollection/evidence/sync/FloatWindowService.java&#10;person&#9;PSI&#9;JAVA://com.gofirst.scenecollection.evidence.view.fragment.PersonCenterFragment&#10;pub&#9;FILE&#9;file:///home/joyopeng/project/wecan/app/src/main/java/com/gofirst/scenecollection/evidence/Application/PublicMsg.java&#10;spl&#9;FILE&#9;file:///home/joyopeng/project/wecan/app/src/main/java/com/gofirst/scenecollection/evidence/view/activity/Splash.java&#10;lost&#9;FILE&#9;file:///home/joyopeng/project/wecan/app/src/main/java/com/gofirst/scenecollection/evidence/view/activity/LostGoodDetail.java&#10;NewestStateDetail&#9;PSI&#9;JAVA://com.gofirst.scenecollection.evidence.view.activity.NewestStateDetail&#10;pro&#9;PSI&#9;JAVA://com.gofirst.scenecollection.evidence.model.ProspectInfo&#10;LostGoodDetail&#9;PSI&#9;JAVA://com.gofirst.scenecollection.evidence.view.activity.LostGoodDetail&#10;upload&#9;PSI&#9;JAVA://com.gofirst.scenecollection.evidence.sync.UpLoadSingleBlock&#10;uploa&#9;FILE&#9;file:///home/joyopeng/project/wecan/app/src/main/java/com/gofirst/scenecollection/evidence/sync/UpLoadService.java&#10;dir&#9;FILE&#9;file:///home/joyopeng/project/wecan/app/src/main/java/com/gofirst/scenecollection/evidence/view/fragment/SceneDirectionFragment.java&#10;camera&#9;PSI&#9;JAVA://com.gofirst.scenecollection.evidence.view.activity.CameraActivity&#10;location&#9;PSI&#9;JAVA://android.location.Location&#10;net&#9;PSI&#9;JAVA://com.gofirst.scenecollection.evidence.utils.NetUtilPing&#10;ProspectPreview&#9;PSI&#9;JAVA://com.gofirst.scenecollection.evidence.view.activity.ProspectPreview&#10;ShowPlanActivity&#9;FILE&#9;file:///home/joyopeng/project/wecan/app/src/main/java/com/gofirst/scenecollection/evidence/view/activity/ShowPlanActivity.java&#10;EvidencePhotoExplorer&#9;PSI&#9;JAVA://com.gofirst.scenecollection.evidence.view.activity.EvidencePhotoExplorer&#10;ExperModeCanvas&#9;FILE&#9;file:///home/joyopeng/project/wecan/gftxckydraw/src/main/java/com/gftxcky/draw/ExperModeCanvas.java&#10;ScenePlanAdapter&#9;FILE&#9;file:///home/joyopeng/project/wecan/app/src/main/java/com/gofirst/scenecollection/evidence/view/adapter/ScenePlanAdapter.java&#10;showbit&#9;PSI&#9;JAVA://com.gftxcky.draw.ShowBitMapActivity&#10;XCKYPoint&#9;FILE&#9;file:///home/joyopeng/project/wecan/gftxckydraw/src/main/java/com/gftxcky/draw/primitive/XCKYPoint.java&#10;UpLoadSingleBlock&#9;FILE&#9;file:///home/joyopeng/project/wecan/app/src/main/java/com/gofirst/scenecollection/evidence/sync/UpLoadSingleBlock.java&#10;un&#9;FILE&#9;file:///home/joyopeng/project/wecan/app/src/main/java/com/gofirst/scenecollection/evidence/model/UnUpLoadBlock.java&#10;photo&#9;FILE&#9;file:///home/joyopeng/project/wecan/app/src/main/java/com/gofirst/scenecollection/evidence/view/activity/ShowBlindPhotoActivity.java&#10;came&#9;FILE&#9;file:///home/joyopeng/project/wecan/app/src/main/java/com/gofirst/scenecollection/evidence/view/activity/CameraActivity.java&#10;uploadj&#9;PSI&#9;JAVA://com.gofirst.scenecollection.evidence.model.UnUploadJson&#10;dowlo&#9;PSI&#9;JAVA://com.gofirst.scenecollection.evidence.utils.DownLoadAsync&#10;login&#9;FILE&#9;file:///home/joyopeng/project/wecan/app/src/main/java/com/gofirst/scenecollection/evidence/view/activity/Login.java&#10;cam&#9;PSI&#9;JAVA://com.gofirst.scenecollection.evidence.view.activity.CameraActivity&#10;PhotoDialogActivity&#9;PSI&#9;JAVA://com.gofirst.scenecollection.evidence.view.activity.PhotoDialogActivity&#10;note&#9;FILE&#9;file:///home/joyopeng/project/wecan/app/src/main/java/com/gofirst/scenecollection/evidence/view/activity/NoteActivity.java&#10;sp&#9;FILE&#9;file:///home/joyopeng/project/wecan/app/src/main/java/com/gofirst/scenecollection/evidence/view/activity/Splash.java&#10;pu&#9;FILE&#9;file:///home/joyopeng/project/wecan/app/src/main/java/com/gofirst/scenecollection/evidence/Application/PublicMsg.java&#10;pers&#9;FILE&#9;file:///home/joyopeng/project/wecan/app/src/main/java/com/gofirst/scenecollection/evidence/view/fragment/PersonCenterFragment.java&#10;spi&#9;FILE&#9;file:///home/joyopeng/project/wecan/app/src/main/java/com/gofirst/scenecollection/evidence/view/customview/SpinnerPopPerson.java&#10;do&#9;PSI&#9;JAVA://com.gofirst.scenecollection.evidence.utils.DownLoadAsync&#10;off&#9;PSI&#9;JAVA://com.gofirst.scenecollection.evidence.view.adapter.OfflineAllCitysAdapter&#10;offmap&#9;PSI&#9;JAVA://com.amap.api.maps.offlinemap.OfflineMapManager&#10;crea&#9;FILE&#9;file:///home/joyopeng/project/wecan/app/src/main/java/com/gofirst/scenecollection/evidence/sync/CreateFileBlocks.java&#10;logi&#9;FILE&#9;file:///home/joyopeng/project/wecan/app/src/main/java/com/gofirst/scenecollection/evidence/view/activity/Login.java&#10;appli&#9;PSI&#9;JAVA://com.gofirst.scenecollection.evidence.Application.EvidenceApplication&#10;hy&#9;FILE&#9;file:///home/joyopeng/project/wecan/app/src/main/java/com/gofirst/scenecollection/evidence/model/HyEmployees.java&#10;NoteActivity&#9;PSI&#9;JAVA://com.gofirst.scenecollection.evidence.view.activity.NoteActivity&#10;AddNewCase&#9;PSI&#9;JAVA://com.gofirst.scenecollection.evidence.view.activity.AddNewCase&#10;add&#9;PSI&#9;JAVA://com.gofirst.scenecollection.evidence.view.activity.AddEvidence&#10;uti&#9;FILE&#9;file:///home/joyopeng/project/wecan/app/src/main/java/com/gofirst/scenecollection/evidence/utils/Utils.java&#10;SpinnerPopPerson&#9;PSI&#9;JAVA://com.gofirst.scenecollection.evidence.view.customview.SpinnerPopPerson&#10;mana&#9;PSI&#9;JAVA://com.gofirst.scenecollection.evidence.view.fragment.ManagerFragment&#10;di&#9;FILE&#9;file:///home/joyopeng/project/wecan/app/src/main/java/com/gofirst/scenecollection/evidence/view/fragment/SceneDirectionFragment.java" />
+    <property name="SearchEverywhereHistoryKey" value="permi&#9;PSI&#9;JAVA://com.gofirst.scenecollection.evidence.view.activity.PermissionSetting&#10;perso&#9;FILE&#9;file:///home/joyopeng/project/wecan/app/src/main/java/com/gofirst/scenecollection/evidence/view/fragment/PersonCenterFragment.java&#10;spl&#9;FILE&#9;file:///home/joyopeng/project/wecan/app/src/main/java/com/gofirst/scenecollection/evidence/view/activity/Splash.java&#10;pers&#9;FILE&#9;file:///home/joyopeng/project/wecan/app/src/main/java/com/gofirst/scenecollection/evidence/view/fragment/PersonCenterFragment.java&#10;pho&#9;FILE&#9;file:///home/joyopeng/project/wecan/app/src/main/java/com/gofirst/scenecollection/evidence/view/activity/PhotoDialogActivity.java&#10;dire&#9;FILE&#9;file:///home/joyopeng/project/wecan/app/src/main/java/com/gofirst/scenecollection/evidence/view/fragment/SceneDirectionFragment.java&#10;FloatWindowService&#9;FILE&#9;file:///home/joyopeng/project/wecan/app/src/main/java/com/gofirst/scenecollection/evidence/sync/FloatWindowService.java&#10;person&#9;PSI&#9;JAVA://com.gofirst.scenecollection.evidence.view.fragment.PersonCenterFragment&#10;pub&#9;FILE&#9;file:///home/joyopeng/project/wecan/app/src/main/java/com/gofirst/scenecollection/evidence/Application/PublicMsg.java&#10;lost&#9;FILE&#9;file:///home/joyopeng/project/wecan/app/src/main/java/com/gofirst/scenecollection/evidence/view/activity/LostGoodDetail.java&#10;NewestStateDetail&#9;PSI&#9;JAVA://com.gofirst.scenecollection.evidence.view.activity.NewestStateDetail&#10;pro&#9;PSI&#9;JAVA://com.gofirst.scenecollection.evidence.model.ProspectInfo&#10;LostGoodDetail&#9;PSI&#9;JAVA://com.gofirst.scenecollection.evidence.view.activity.LostGoodDetail&#10;upload&#9;PSI&#9;JAVA://com.gofirst.scenecollection.evidence.sync.UpLoadSingleBlock&#10;uploa&#9;FILE&#9;file:///home/joyopeng/project/wecan/app/src/main/java/com/gofirst/scenecollection/evidence/sync/UpLoadService.java&#10;dir&#9;FILE&#9;file:///home/joyopeng/project/wecan/app/src/main/java/com/gofirst/scenecollection/evidence/view/fragment/SceneDirectionFragment.java&#10;camera&#9;PSI&#9;JAVA://com.gofirst.scenecollection.evidence.view.activity.CameraActivity&#10;location&#9;PSI&#9;JAVA://android.location.Location&#10;net&#9;PSI&#9;JAVA://com.gofirst.scenecollection.evidence.utils.NetUtilPing&#10;ProspectPreview&#9;PSI&#9;JAVA://com.gofirst.scenecollection.evidence.view.activity.ProspectPreview&#10;ShowPlanActivity&#9;FILE&#9;file:///home/joyopeng/project/wecan/app/src/main/java/com/gofirst/scenecollection/evidence/view/activity/ShowPlanActivity.java&#10;EvidencePhotoExplorer&#9;PSI&#9;JAVA://com.gofirst.scenecollection.evidence.view.activity.EvidencePhotoExplorer&#10;ExperModeCanvas&#9;FILE&#9;file:///home/joyopeng/project/wecan/gftxckydraw/src/main/java/com/gftxcky/draw/ExperModeCanvas.java&#10;ScenePlanAdapter&#9;FILE&#9;file:///home/joyopeng/project/wecan/app/src/main/java/com/gofirst/scenecollection/evidence/view/adapter/ScenePlanAdapter.java&#10;showbit&#9;PSI&#9;JAVA://com.gftxcky.draw.ShowBitMapActivity&#10;XCKYPoint&#9;FILE&#9;file:///home/joyopeng/project/wecan/gftxckydraw/src/main/java/com/gftxcky/draw/primitive/XCKYPoint.java&#10;UpLoadSingleBlock&#9;FILE&#9;file:///home/joyopeng/project/wecan/app/src/main/java/com/gofirst/scenecollection/evidence/sync/UpLoadSingleBlock.java&#10;un&#9;FILE&#9;file:///home/joyopeng/project/wecan/app/src/main/java/com/gofirst/scenecollection/evidence/model/UnUpLoadBlock.java&#10;photo&#9;FILE&#9;file:///home/joyopeng/project/wecan/app/src/main/java/com/gofirst/scenecollection/evidence/view/activity/ShowBlindPhotoActivity.java&#10;came&#9;FILE&#9;file:///home/joyopeng/project/wecan/app/src/main/java/com/gofirst/scenecollection/evidence/view/activity/CameraActivity.java&#10;uploadj&#9;PSI&#9;JAVA://com.gofirst.scenecollection.evidence.model.UnUploadJson&#10;dowlo&#9;PSI&#9;JAVA://com.gofirst.scenecollection.evidence.utils.DownLoadAsync&#10;login&#9;FILE&#9;file:///home/joyopeng/project/wecan/app/src/main/java/com/gofirst/scenecollection/evidence/view/activity/Login.java&#10;cam&#9;PSI&#9;JAVA://com.gofirst.scenecollection.evidence.view.activity.CameraActivity&#10;PhotoDialogActivity&#9;PSI&#9;JAVA://com.gofirst.scenecollection.evidence.view.activity.PhotoDialogActivity&#10;note&#9;FILE&#9;file:///home/joyopeng/project/wecan/app/src/main/java/com/gofirst/scenecollection/evidence/view/activity/NoteActivity.java&#10;sp&#9;FILE&#9;file:///home/joyopeng/project/wecan/app/src/main/java/com/gofirst/scenecollection/evidence/view/activity/Splash.java&#10;pu&#9;FILE&#9;file:///home/joyopeng/project/wecan/app/src/main/java/com/gofirst/scenecollection/evidence/Application/PublicMsg.java&#10;spi&#9;FILE&#9;file:///home/joyopeng/project/wecan/app/src/main/java/com/gofirst/scenecollection/evidence/view/customview/SpinnerPopPerson.java&#10;do&#9;PSI&#9;JAVA://com.gofirst.scenecollection.evidence.utils.DownLoadAsync&#10;off&#9;PSI&#9;JAVA://com.gofirst.scenecollection.evidence.view.adapter.OfflineAllCitysAdapter&#10;offmap&#9;PSI&#9;JAVA://com.amap.api.maps.offlinemap.OfflineMapManager&#10;crea&#9;FILE&#9;file:///home/joyopeng/project/wecan/app/src/main/java/com/gofirst/scenecollection/evidence/sync/CreateFileBlocks.java&#10;logi&#9;FILE&#9;file:///home/joyopeng/project/wecan/app/src/main/java/com/gofirst/scenecollection/evidence/view/activity/Login.java&#10;appli&#9;PSI&#9;JAVA://com.gofirst.scenecollection.evidence.Application.EvidenceApplication&#10;hy&#9;FILE&#9;file:///home/joyopeng/project/wecan/app/src/main/java/com/gofirst/scenecollection/evidence/model/HyEmployees.java&#10;NoteActivity&#9;PSI&#9;JAVA://com.gofirst.scenecollection.evidence.view.activity.NoteActivity&#10;AddNewCase&#9;PSI&#9;JAVA://com.gofirst.scenecollection.evidence.view.activity.AddNewCase&#10;add&#9;PSI&#9;JAVA://com.gofirst.scenecollection.evidence.view.activity.AddEvidence&#10;uti&#9;FILE&#9;file:///home/joyopeng/project/wecan/app/src/main/java/com/gofirst/scenecollection/evidence/utils/Utils.java" />
     <property name="DEBUGGABLE_DEVICE" value="huawei-mha_al00-GWY7N16A26001351" />
     <property name="DEBUGGABLE_PROCESS" value="com.gofirst.scenecollection.evidence" />
     <property name="SHOW_ALL_PROCESSES" value="false" />
@@ -3910,7 +3720,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19988957" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23819743" sideWeight="0.4826063" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23819743" sideWeight="0.4826063" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29853863" sideWeight="0.49806738" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -4003,18 +3813,11 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="268" />
+      <option name="time" value="269" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/gftxckydraw/src/main/java/com/gftxcky/draw/primitive/PathBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="118" column="22" selection-start-line="118" selection-start-column="22" selection-end-line="118" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Android/Sdk/sources/android-23/android/provider/MediaStore.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -4026,13 +3829,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="1591" column="92" selection-start-line="1591" selection-start-column="72" selection-end-line="1591" selection-end-column="92" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/gofirst/scenecollection/evidence/view/activity/PermissionSetting.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="713" column="37" selection-start-line="713" selection-start-column="37" selection-end-line="713" selection-end-column="37" />
         </state>
       </provider>
     </entry>
@@ -4223,9 +4019,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -4233,25 +4026,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="18" column="49" selection-start-line="18" selection-start-column="49" selection-end-line="18" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/gofirst/scenecollection/evidence/view/activity/LostGoodDetail.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="137" column="53" selection-start-line="137" selection-start-column="53" selection-end-line="137" selection-end-column="53" />
-          <folding>
-            <element signature="e#6223#6224#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/gofirst/scenecollection/evidence/view/activity/PhotoDialogActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="57" column="56" selection-start-line="57" selection-start-column="56" selection-end-line="57" selection-end-column="56" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -4282,9 +4056,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.2642369">
           <caret line="74" column="0" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
-          <folding>
-            <marker date="1521716997383" expanded="true" signature="23588:23607" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -4299,14 +4070,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.19955654">
           <caret line="15" column="47" selection-start-line="15" selection-start-column="47" selection-end-line="15" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/gofirst/scenecollection/evidence/view/activity/Splash.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.18489985">
-          <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -4317,29 +4080,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.46563193">
-          <caret line="28" column="58" selection-start-line="28" selection-start-column="58" selection-end-line="28" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gftxckydraw/src/main/java/com/gftxcky/draw/ExperModeActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.9354838">
-          <caret line="57" column="20" selection-start-line="57" selection-start-column="20" selection-end-line="57" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/gofirst/scenecollection/evidence/view/activity/ProspectInterface.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.516129">
           <caret line="487" column="17" selection-start-line="487" selection-start-column="17" selection-end-line="487" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -4347,51 +4091,101 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.75">
           <caret line="105" column="26" selection-start-line="105" selection-start-column="26" selection-end-line="105" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/gofirst/scenecollection/evidence/view/fragment/PersonCenterFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.75">
-          <caret line="95" column="30" selection-start-line="95" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/gofirst/scenecollection/evidence/view/adapter/ScenePlanAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.15441176">
           <caret line="32" column="15" selection-start-line="32" selection-start-column="15" selection-end-line="32" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/gofirst/scenecollection/evidence/utils/BitmapUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="86" column="14" selection-start-line="86" selection-start-column="12" selection-end-line="86" selection-end-column="14" />
-          <folding>
-            <element signature="e#932#943#0" expanded="true" />
-            <element signature="e#1027#1044#0" expanded="true" />
-            <element signature="e#1103#1111#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/gofirst/scenecollection/evidence/view/fragment/SceneDirectionFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.42058823">
           <caret line="304" column="46" selection-start-line="304" selection-start-column="46" selection-end-line="304" selection-end-column="46" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/gofirst/scenecollection/evidence/view/fragment/ScenePlan.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.18489985">
-          <caret line="307" column="0" selection-start-line="307" selection-start-column="0" selection-end-line="307" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.43913713">
+          <caret line="321" column="73" selection-start-line="321" selection-start-column="12" selection-end-line="321" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/gofirst/scenecollection/evidence/utils/BitmapUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7294118">
+          <caret line="94" column="86" selection-start-line="94" selection-start-column="86" selection-end-line="94" selection-end-column="87" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gftxckydraw/src/main/java/com/gftxcky/draw/ExperModeActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6632353">
+          <caret line="683" column="34" selection-start-line="683" selection-start-column="29" selection-end-line="683" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1985294">
+          <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/gofirst/scenecollection/evidence/view/activity/PhotoDialogActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.15441176">
+          <caret line="32" column="21" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/gofirst/scenecollection/evidence/view/activity/LostGoodDetail.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="248" column="51" selection-start-line="248" selection-start-column="51" selection-end-line="248" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/gofirst/scenecollection/evidence/view/activity/NoteActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.9705882">
+          <caret line="76" column="32" selection-start-line="76" selection-start-column="32" selection-end-line="76" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/gofirst/scenecollection/evidence/view/activity/Splash.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="163" column="35" selection-start-line="163" selection-start-column="35" selection-end-line="163" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/gofirst/scenecollection/evidence/view/fragment/PersonCenterFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="64" column="50" selection-start-line="64" selection-start-column="42" selection-end-line="64" selection-end-column="50" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/gofirst/scenecollection/evidence/view/activity/PermissionSetting.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5487805">
+          <caret line="672" column="0" selection-start-line="664" selection-start-column="0" selection-end-line="672" selection-end-column="0" />
+          <folding>
+            <element signature="e#16489#16945#0" expanded="true" />
+            <element signature="e#16944#16945#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

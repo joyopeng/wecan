@@ -244,6 +244,8 @@ public class Splash extends Activity {
 //        final String user = ps.getUserAccount();
         //德州项目
         final String user;
+        final String name;
+
 //        writerInfo("start get PoliceAccount is " + user);
 //        ToastUtil.show(this, "获取到用户信息为" + user, Toast.LENGTH_SHORT);
         writerInfo("request loginNoPassword ");
@@ -251,10 +253,12 @@ public class Splash extends Activity {
                 this);
         if(userInfo != null){
             user = userInfo.get("idcard");
+            name = userInfo.get("name");
             writerInfo("start get PoliceAccount is " + user);
             ToastUtil.show(this, "获取到用户信息为" + user, Toast.LENGTH_SHORT);
         }else {
             user = "";
+            name = "";
         }
 
 //        if(userInfo != null){
@@ -284,7 +288,7 @@ public class Splash extends Activity {
         writerInfo("ip is   " + ip);
         writerInfo("port is " + port);
         PublicMsg.BASEURL = "http://"+ip+":6253"+"/EvidenceService/app";
-        Netroid.GetHttp("/loginNoPasswordByGet?account=" + user, new Netroid.OnLister<JSONObject>() {
+        Netroid.GetHttp("/loginNoPasswordByGet?account=" + user+","+name, new Netroid.OnLister<JSONObject>() {
             @Override
             public void onSuccess(JSONObject response) {
                 boolean isSuccess = false;
