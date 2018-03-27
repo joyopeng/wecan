@@ -444,6 +444,12 @@ public class ProspectPreview extends Activity implements View.OnClickListener, S
                 dir.setNeedRec(true);
                 withCaseList.add(dir);
 
+                ProspectPreViewItemData dirscen = new ProspectPreViewItemData();
+                dirscen.setName("现场平面图");
+                dirscen.setField("SCENE_PICTURE$1010");
+                dirscen.setNeedRec(true);
+                withCaseList.add(dirscen);
+
                 initAwaysItem();
             }else {
               /* initItemFromLastCaseJson();

@@ -299,10 +299,10 @@ public class Splash extends Activity {
                         Log.i("zhangsh", "reponse = " + response);
                         JSONObject data = response.getJSONObject("data");
                         sharePre.put("token", data.getString("token"));
-                        sharePre.put("user_name", user);
                         sharePre.put("organizationId", data.getString("organizationId"));
                         //add on
                         JSONObject userData = data.getJSONObject("user");
+                        sharePre.put("user_name", userData.getString("userName"));
                         JSONObject hyEmployees = data.getJSONObject("hyEmployees");
                         JSONObject hyOrganizations = data.getJSONObject("hyOrganizations");
                         JSONObject hyCompartments = null;
